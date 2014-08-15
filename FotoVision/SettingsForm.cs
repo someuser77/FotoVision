@@ -626,7 +626,7 @@ namespace FotoVision
 			this.radioLow.set_TabIndex(9);
 			this.radioLow.set_Text("L&ow");
 			this.labelWebsite.set_FlatStyle(3);
-			this.labelWebsite.set_Font(new Font("Microsoft Sans Serif", 8.25f, 1, 3, 0));
+            this.labelWebsite.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
 			Control arg_502_0 = this.labelWebsite;
 			location = new Point(8, 8);
 			arg_502_0.set_Location(location);
@@ -732,7 +732,7 @@ namespace FotoVision
 			this.labelLocation.set_TabIndex(1);
 			this.labelLocation.set_Text("&Location:");
 			this.labelPublish.set_FlatStyle(3);
-			this.labelPublish.set_Font(new Font("Microsoft Sans Serif", 8.25f, 1, 3, 0));
+            this.labelPublish.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
 			Control arg_8A7_0 = this.labelPublish;
 			location = new Point(8, 112);
 			arg_8A7_0.set_Location(location);
@@ -830,7 +830,7 @@ namespace FotoVision
 			this.checkUpload.set_TabIndex(6);
 			this.checkUpload.set_Text("Close &upload window after uploading is complete");
 			this.labelApplication.set_FlatStyle(3);
-			this.labelApplication.set_Font(new Font("Microsoft Sans Serif", 8.25f, 1, 3, 0));
+            this.labelApplication.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
 			Control arg_D26_0 = this.labelApplication;
 			location = new Point(8, 8);
 			arg_D26_0.set_Location(location);
@@ -851,7 +851,7 @@ namespace FotoVision
 			this.labelAppDesc.set_TabIndex(1);
 			this.labelAppDesc.set_Text("You can notify your friends with your latest changes.");
 			this.labelSettings.set_FlatStyle(3);
-			this.labelSettings.set_Font(new Font("Microsoft Sans Serif", 8.25f, 1, 3, 0));
+            this.labelSettings.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
 			Control arg_E15_0 = this.labelSettings;
 			location = new Point(8, 112);
 			arg_E15_0.set_Location(location);

@@ -326,7 +326,7 @@ namespace FotoVision
 			this.pictCurrent.set_TabIndex(1);
 			this.pictCurrent.set_TabStop(false);
 			this.labelExisting.set_FlatStyle(3);
-			this.labelExisting.set_Font(new Font("Microsoft Sans Serif", 8.25f, 1, 3, 0));
+			this.labelExisting.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
 			Control arg_1CC_0 = this.labelExisting;
 			location = new Point(56, 56);
 			arg_1CC_0.set_Location(location);
@@ -337,7 +337,7 @@ namespace FotoVision
 			this.labelExisting.set_TabIndex(5);
 			this.labelExisting.set_Text("Existing photo");
 			this.labelNew.set_FlatStyle(3);
-			this.labelNew.set_Font(new Font("Microsoft Sans Serif", 8.25f, 1, 3, 0));
+            this.labelNew.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
 			Control arg_252_0 = this.labelNew;
 			location = new Point(56, 152);
 			arg_252_0.set_Location(location);
@@ -449,7 +449,7 @@ namespace FotoVision
 			arg_6D3_0.set_Size(size);
 			this.panelProgress.set_TabIndex(13);
 			this.labelProgress.set_FlatStyle(3);
-			this.labelProgress.set_Font(new Font("Microsoft Sans Serif", 8.25f, 0, 3, 0));
+			this.labelProgress.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0));
 			this.labelProgress.set_ForeColor(SystemColors.get_ControlText());
 			Control arg_72F_0 = this.labelProgress;
 			location = new Point(48, 8);

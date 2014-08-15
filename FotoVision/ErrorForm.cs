@@ -266,7 +266,7 @@ namespace FotoVision
 			this.textType.set_Text("");
 			this.labelHeader.set_Anchor(13);
 			this.labelHeader.set_FlatStyle(3);
-			this.labelHeader.set_Font(new Font("Microsoft Sans Serif", 8.25f, 1, 3, 0));
+            this.labelHeader.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
 			Control arg_380_0 = this.labelHeader;
 			location = new Point(56, 8);
 			arg_380_0.set_Location(location);
@@ -277,7 +277,7 @@ namespace FotoVision
 			this.labelHeader.set_TabIndex(1);
 			this.labelHeader.set_Text("An error occurred");
 			this.labelInfo.set_FlatStyle(3);
-			this.labelInfo.set_Font(new Font("Microsoft Sans Serif", 8.25f, 1, 3, 0));
+            this.labelInfo.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
 			Control arg_405_0 = this.labelInfo;
 			location = new Point(8, 56);
 			arg_405_0.set_Location(location);

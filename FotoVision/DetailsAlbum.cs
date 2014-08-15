@@ -337,7 +337,7 @@ namespace FotoVision
 			this.textLocation = new TextBox();
 			this.SuspendLayout();
 			this.labelWebsiteHeader.set_FlatStyle(3);
-			this.labelWebsiteHeader.set_Font(new Font("Microsoft Sans Serif", 8.25f, 1, 3, 0));
+            this.labelWebsiteHeader.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
 			Control arg_E4_0 = this.labelWebsiteHeader;
 			Point location = new Point(8, 8);
 			arg_E4_0.set_Location(location);
@@ -422,7 +422,7 @@ namespace FotoVision
 			this.radioDontPublish.set_TabIndex(8);
 			this.radioDontPublish.set_Text("         View album in FotoVision only");
 			this.labelPublishHeader.set_FlatStyle(3);
-			this.labelPublishHeader.set_Font(new Font("Microsoft Sans Serif", 8.25f, 1, 3, 0));
+            this.labelPublishHeader.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
 			Control arg_489_0 = this.labelPublishHeader;
 			location = new Point(8, 216);
 			arg_489_0.set_Location(location);
@@ -433,7 +433,7 @@ namespace FotoVision
 			this.labelPublishHeader.set_TabIndex(6);
 			this.labelPublishHeader.set_Text("Publishing settings");
 			this.labelLocationHeader.set_FlatStyle(3);
-			this.labelLocationHeader.set_Font(new Font("Microsoft Sans Serif", 8.25f, 1, 3, 0));
+            this.labelLocationHeader.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
 			Control arg_50E_0 = this.labelLocationHeader;
 			location = new Point(8, 304);
 			arg_50E_0.set_Location(location);

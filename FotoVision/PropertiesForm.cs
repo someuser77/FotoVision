@@ -403,7 +403,7 @@ namespace FotoVision
 			this.textActions.set_Text("");
 			this.textActions.set_WordWrap(false);
 			this.labelFileName.set_FlatStyle(3);
-			this.labelFileName.set_Font(new Font("Microsoft Sans Serif", 8.25f, 1, 3, 0));
+            this.labelFileName.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
 			Control arg_485_0 = this.labelFileName;
 			location = new Point(64, 16);
 			arg_485_0.set_Location(location);
@@ -434,7 +434,7 @@ namespace FotoVision
 			arg_596_0.set_Size(size);
 			this.panelProgress.set_TabIndex(14);
 			this.labelProgress.set_FlatStyle(3);
-			this.labelProgress.set_Font(new Font("Microsoft Sans Serif", 8.25f, 0, 3, 0));
+            this.labelProgress.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0));
 			this.labelProgress.set_ForeColor(SystemColors.get_ControlText());
 			Control arg_5F2_0 = this.labelProgress;
 			location = new Point(48, 8);
