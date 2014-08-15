@@ -639,7 +639,7 @@ namespace FotoVision
 			int photoCount = FileManager.GetPhotoCount(this.SelectedAlbum);
 			string text = StringType.FromObject(Interaction.IIf(photoCount == 0, "The album will be deleted. Do you want to continue?", "All the photos in the album will be deleted. FotoVision only deletes the copies of the original photos it created during the import.\r\n\r\nDo you want to continue?"));
 			DialogResult dialogResult = MessageBox.Show(this.TopLevelControl, text, "Confirm Album Delete", 4, 32);
-			if (dialogResult != 6)
+            if (dialogResult != DialogResult.Yes)
 			{
 				return;
 			}
@@ -984,7 +984,7 @@ namespace FotoVision
 		private void ProcessDroppedFiles(string[] files, ListViewItem item, bool moveFiles)
 		{
 			string text = item.Text;
-			DialogResult dialogResult = 1;
+            DialogResult dialogResult = DialogResult.OK;
 			bool flag = false;
 			this.AddFiles(text, files, moveFiles, ref dialogResult, ref flag);
 			int arg_23_0 = 0;
@@ -992,7 +992,7 @@ namespace FotoVision
 			{
 				int num = files.Length - 1;
 				int num2 = arg_23_0;
-				while (num2 <= num && dialogResult != 2)
+				while (num2 <= num && dialogResult != DialogResult.Cancel)
 				{
 					if (Directory.Exists(files[num2]))
 					{
@@ -1009,7 +1009,7 @@ namespace FotoVision
 		}
 		private void ProcessDroppedFilesRoot(string[] files, bool moveFiles)
 		{
-			DialogResult dialogResult = 1;
+            DialogResult dialogResult = DialogResult.OK;
 			bool flag = false;
 			bool flag2 = false;
 			int arg_11_0 = 0;
@@ -1091,7 +1091,7 @@ namespace FotoVision
 		}
 		private DialogResult AddFile(string folder, string file, bool alwaysReplaceFile, bool moveFile)
 		{
-			DialogResult dialogResult = 1;
+            DialogResult dialogResult = DialogResult.OK;
 			try
 			{
 				string text = Path.Combine(FileManager.GetLocation(folder), Path.GetFileName(file));
