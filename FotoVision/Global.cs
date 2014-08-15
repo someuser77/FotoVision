@@ -18,7 +18,7 @@ namespace FotoVision
 		{
 			get
 			{
-				return Path.Combine(Environment.GetFolderPath(5), Application.ProductName);
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), Application.ProductName);
 			}
 		}
 		public static Settings Settings

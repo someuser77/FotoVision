@@ -156,7 +156,7 @@ namespace FotoVision
 				'.'
 			});
 			string text = string.Format("{0}\\{1}.{2}", Application.ProductName, array[0], array[1]);
-			string text2 = Path.Combine(Environment.GetFolderPath(26), text);
+			string text2 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), text);
 			if (!Directory.Exists(text2))
 			{
 				Directory.CreateDirectory(text2);
