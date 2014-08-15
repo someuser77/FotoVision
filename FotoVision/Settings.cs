@@ -59,7 +59,7 @@ namespace FotoVision
 		}
 		public void SetValue(SettingKey key, object value)
 		{
-			this._list.Item = key.ToString(), RuntimeHelpers.GetObjectValue(value);
+            this._list.Add(key.ToString(), RuntimeHelpers.GetObjectValue(value));
 			if (this._autoWrite)
 			{
 				this.Write();
@@ -67,7 +67,7 @@ namespace FotoVision
 		}
 		public string GetString(SettingKey key)
 		{
-			object objectValue = RuntimeHelpers.GetObjectValue(this._list.Item(key.ToString));
+			object objectValue = RuntimeHelpers.GetObjectValue(this._list[key.ToString()]);
 			if (objectValue == null)
 			{
 				return "";
@@ -97,7 +97,7 @@ namespace FotoVision
 				int num = this._defaultValues.GetLength(0) - 1;
 				for (int i = arg_1B_0; i <= num; i++)
 				{
-					this._list.Item = this._defaultValues[i][0], this._defaultValues[i][1];
+					this._list.Add(this._defaultValues[i][0], this._defaultValues[i][1]);
 				}
 				if (File.Exists(this.FilePath))
 				{
@@ -106,7 +106,7 @@ namespace FotoVision
 					{
 						if (xmlTextReader.NodeType == 1 & StringType.StrCmp(xmlTextReader.Name, "add", false) == 0)
 						{
-							this._list.Item = xmlTextReader.GetAttribute("key"), xmlTextReader.GetAttribute("value");
+							this._list.Add(xmlTextReader.GetAttribute("key"), xmlTextReader.GetAttribute("value"));
 						}
 					}
 					xmlTextReader.Close();

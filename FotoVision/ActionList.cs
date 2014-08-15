@@ -104,7 +104,7 @@ namespace FotoVision
 		}
 		public ActionItem GetAt(int index)
 		{
-			return (ActionItem)this._list.get_Item(index);
+			return (ActionItem)this._list[index];
 		}
 		public void RemoveLast()
 		{
