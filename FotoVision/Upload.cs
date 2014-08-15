@@ -151,7 +151,7 @@ namespace FotoVision
 				{
 					ProjectData.SetProjectError(expr_E3);
 					WebException ex2 = (WebException)expr_E3;
-					string message = string.Format("An error occurred when accessing the site '{0}'. Please make sure the FotoVision Web package is installed on the computer. Additional information: {1}", Global.Settings.GetString(SettingKey.ServiceLocation), ex2.get_Message());
+					string message = string.Format("An error occurred when accessing the site '{0}'. Please make sure the FotoVision Web package is installed on the computer. Additional information: {1}", Global.Settings.GetString(SettingKey.ServiceLocation), ex2.Message);
 					if (this.UpdateMessageEvent != null)
 					{
 						this.UpdateMessageEvent(this, new UploadMessageEventArgs(message, false, true));
@@ -165,7 +165,7 @@ namespace FotoVision
 					Exception ex3 = expr_135;
 					if (this.UpdateMessageEvent != null)
 					{
-						this.UpdateMessageEvent(this, new UploadMessageEventArgs("Upload error - " + ex3.get_Message(), false, true));
+						this.UpdateMessageEvent(this, new UploadMessageEventArgs("Upload error - " + ex3.Message, false, true));
 					}
 					errorOccurred = true;
 					ProjectData.ClearProjectError();
@@ -244,8 +244,8 @@ namespace FotoVision
 			}
 			checked
 			{
-				string[] array = new string[albums.get_Length() - 1 + 1];
-				Array.Copy(albums, array, albums.get_Length());
+				string[] array = new string[albums.Length - 1 + 1];
+				Array.Copy(albums, array, albums.Length);
 				AlbumHashCode[] array2 = albumHashCodes;
 				for (int i = 0; i < array2.Length; i++)
 				{
@@ -365,8 +365,8 @@ namespace FotoVision
 			Array.Sort(photos);
 			checked
 			{
-				string[] array = new string[photos.get_Length() - 1 + 1];
-				Array.Copy(photos, array, photos.get_Length());
+				string[] array = new string[photos.Length - 1 + 1];
+				Array.Copy(photos, array, photos.Length);
 				PhotoHashCode[] array2 = photoHashCodes;
 				for (int i = 0; i < array2.Length; i++)
 				{
@@ -496,10 +496,10 @@ namespace FotoVision
 				try
 				{
 					FileInfo fileInfo = new FileInfo(filePath);
-					byte[] array = new byte[(int)fileInfo.get_Length() + 1];
+					byte[] array = new byte[(int)fileInfo.Length + 1];
 					FileStream fileStream = new FileStream(filePath, 3, 1);
 					BinaryReader binaryReader = new BinaryReader(fileStream);
-					array = binaryReader.ReadBytes((int)fileInfo.get_Length());
+					array = binaryReader.ReadBytes((int)fileInfo.Length);
 					result = array;
 				}
 				finally

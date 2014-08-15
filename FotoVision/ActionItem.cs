@@ -90,7 +90,7 @@ namespace FotoVision
 			}
 			if (this._action == PhotoAction.Crop)
 			{
-				return string.Format("{0} ({1} x {2} pixels)", text, this._bounds.get_Width(), this._bounds.get_Height());
+				return string.Format("{0} ({1} x {2} pixels)", text, this._bounds.Width, this._bounds.Height);
 			}
 			if (this._action == PhotoAction.Brightness || this._action == PhotoAction.Contrast || this._action == PhotoAction.Gamma || this._action == PhotoAction.Saturation)
 			{

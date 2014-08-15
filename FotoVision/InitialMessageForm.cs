@@ -157,10 +157,10 @@ namespace FotoVision
 			this.set_CancelButton(this.buttonOK);
 			size = new Size(346, 120);
 			this.set_ClientSize(size);
-			this.get_Controls().Add(this.checkDontShow);
-			this.get_Controls().Add(this.labelMessage);
-			this.get_Controls().Add(this.buttonOK);
-			this.get_Controls().Add(this.pictIcon);
+			this.Controls.Add(this.checkDontShow);
+			this.Controls.Add(this.labelMessage);
+			this.Controls.Add(this.buttonOK);
+			this.Controls.Add(this.pictIcon);
 			this.set_FormBorderStyle(3);
 			this.set_MaximizeBox(false);
 			this.set_MinimizeBox(false);
@@ -178,11 +178,11 @@ namespace FotoVision
 		protected override void OnClosing(CancelEventArgs e)
 		{
 			base.OnClosing(e);
-			Global.Settings.SetValue(SettingKey.PromptInitialMessage, !this.checkDontShow.get_Checked());
+			Global.Settings.SetValue(SettingKey.PromptInitialMessage, !this.checkDontShow.Checked);
 		}
 		private void pictIcon_Paint(object sender, PaintEventArgs e)
 		{
-			e.get_Graphics().DrawIcon(SystemIcons.get_Information(), 0, 0);
+			e.Graphics.DrawIcon(SystemIcons.Information, 0, 0);
 		}
 	}
 }

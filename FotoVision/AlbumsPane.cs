@@ -167,7 +167,7 @@ namespace FotoVision
 		{
 			get
 			{
-				return this.listView.get_Items().get_Count();
+				return this.listView.Items.Count;
 			}
 		}
 		[Browsable(false)]
@@ -175,7 +175,7 @@ namespace FotoVision
 		{
 			get
 			{
-				return this.listView.get_SelectedItems().get_Count();
+				return this.listView.SelectedItems.Count;
 			}
 		}
 		[Browsable(false)]
@@ -183,9 +183,9 @@ namespace FotoVision
 		{
 			get
 			{
-				if (this.listView.get_SelectedItems().get_Count() == 1)
+				if (this.listView.SelectedItems.Count == 1)
 				{
-					return this.listView.get_SelectedItems().get_Item(0).get_Text();
+					return this.listView.SelectedItems.Item(0).get_Text;
 				}
 				return "";
 			}
@@ -193,11 +193,11 @@ namespace FotoVision
 			{
 				try
 				{
-					IEnumerator enumerator = this.listView.get_Items().GetEnumerator();
+					IEnumerator enumerator = this.listView.Items.GetEnumerator();
 					while (enumerator.MoveNext())
 					{
-						ListViewItem listViewItem = (ListViewItem)enumerator.get_Current();
-						if (StringType.StrCmp(listViewItem.get_Text(), value, false) == 0)
+						ListViewItem listViewItem = (ListViewItem)enumerator.Current;
+						if (StringType.StrCmp(listViewItem.Text, value, false) == 0)
 						{
 							listViewItem.set_Selected(true);
 							break;
@@ -219,9 +219,9 @@ namespace FotoVision
 		{
 			get
 			{
-				if (this.listView.get_SelectedItems().get_Count() == 1)
+				if (this.listView.SelectedItems.Count == 1)
 				{
-					return this.listView.get_SelectedItems().get_Item(0);
+					return this.listView.SelectedItems.get_Item(0);
 				}
 				return null;
 			}
@@ -520,7 +520,7 @@ namespace FotoVision
 			this.SuspendLayout();
 			this.listView.set_AllowDrop(true);
 			this.listView.set_BorderStyle(0);
-			this.listView.get_Columns().AddRange(new ColumnHeader[]
+			this.listView.Columns.AddRange(new ColumnHeader[]
 			{
 				this.colName,
 				this.colPhotos
@@ -546,7 +546,7 @@ namespace FotoVision
 			this.colPhotos.set_Text("Photos");
 			this.colPhotos.set_TextAlign(1);
 			this.colPhotos.set_Width(50);
-			this.menuAlbum.get_MenuItems().AddRange(new MenuItem[]
+			this.menuAlbum.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuImportPhotos,
 				this.menuImportFolder,
@@ -577,13 +577,13 @@ namespace FotoVision
 			size = new Size(24, 18);
 			arg_350_0.set_ImageSize(size);
 			this.imageList.set_ImageStream((ImageListStreamer)resourceManager.GetObject("imageList.ImageStream"));
-			this.imageList.set_TransparentColor(Color.get_Lime());
-			this.get_Controls().Add(this.listView);
-			this.get_DockPadding().set_All(2);
+			this.imageList.set_TransparentColor(Color.Lime);
+			this.Controls.Add(this.listView);
+			this.DockPadding.set_All(2);
 			this.set_Name("AlbumsPane");
 			size = new Size(224, 264);
 			this.set_Size(size);
-			this.get_Controls().SetChildIndex(this.listView, 0);
+			this.Controls.SetChildIndex(this.listView, 0);
 			this.ResumeLayout(false);
 		}
 		public void ImportPhotos()
@@ -596,12 +596,12 @@ namespace FotoVision
 			openFileDialog.set_InitialDirectory(Global.Settings.GetString(SettingKey.ImportLocation));
 			if (openFileDialog.ShowDialog() == 1)
 			{
-				Global.Settings.SetValue(SettingKey.ImportFilterIndex, openFileDialog.get_FilterIndex());
-				if (openFileDialog.get_FileNames().get_Length() > 0)
+				Global.Settings.SetValue(SettingKey.ImportFilterIndex, openFileDialog.FilterIndex);
+				if (openFileDialog.FileNames.Length > 0)
 				{
-					Global.Settings.SetValue(SettingKey.ImportLocation, Path.GetDirectoryName(openFileDialog.get_FileName()));
+					Global.Settings.SetValue(SettingKey.ImportLocation, Path.GetDirectoryName(openFileDialog.FileName));
 				}
-				this.ImportFiles(openFileDialog.get_FileNames());
+				this.ImportFiles(openFileDialog.FileNames);
 			}
 		}
 		public void ImportFolder()
@@ -612,10 +612,10 @@ namespace FotoVision
 			folderBrowserDialog.set_SelectedPath(Global.Settings.GetString(SettingKey.ImportLocation));
 			if (folderBrowserDialog.ShowDialog() == 1)
 			{
-				Global.Settings.SetValue(SettingKey.ImportLocation, folderBrowserDialog.get_SelectedPath());
+				Global.Settings.SetValue(SettingKey.ImportLocation, folderBrowserDialog.SelectedPath);
 				this.ProcessDroppedFilesRoot(new string[]
 				{
-					folderBrowserDialog.get_SelectedPath()
+					folderBrowserDialog.SelectedPath
 				}, false);
 			}
 		}
@@ -625,9 +625,9 @@ namespace FotoVision
 			{
 				return;
 			}
-			if (this.listView.get_SelectedItems().get_Count() == 1)
+			if (this.listView.SelectedItems.Count == 1)
 			{
-				this.listView.get_SelectedItems().get_Item(0).BeginEdit();
+				this.listView.SelectedItems.Item(0).BeginEdit;
 			}
 		}
 		public void Delete()
@@ -638,7 +638,7 @@ namespace FotoVision
 			}
 			int photoCount = FileManager.GetPhotoCount(this.SelectedAlbum);
 			string text = StringType.FromObject(Interaction.IIf(photoCount == 0, "The album will be deleted. Do you want to continue?", "All the photos in the album will be deleted. FotoVision only deletes the copies of the original photos it created during the import.\r\n\r\nDo you want to continue?"));
-			DialogResult dialogResult = MessageBox.Show(this.get_TopLevelControl(), text, "Confirm Album Delete", 4, 32);
+			DialogResult dialogResult = MessageBox.Show(this.TopLevelControl, text, "Confirm Album Delete", 4, 32);
 			if (dialogResult != 6)
 			{
 				return;
@@ -654,17 +654,17 @@ namespace FotoVision
 			else
 			{
 				ListViewItem selectedItem = this.SelectedItem;
-				int index = selectedItem.get_Index();
+				int index = selectedItem.Index;
 				selectedItem.Remove();
 				if (index < this.Count)
 				{
-					this.listView.get_Items().get_Item(index).set_Selected(true);
+					this.listView.Items.get_Item(index).set_Selected(true);
 				}
 				else
 				{
 					if (this.Count > 0)
 					{
-						this.listView.get_Items().get_Item(checked(index - 1)).set_Selected(true);
+						this.listView.Items.get_Item(checked(index - 1)).set_Selected(true);
 					}
 					else
 					{
@@ -702,11 +702,11 @@ namespace FotoVision
 				int num;
 				try
 				{
-					IEnumerator enumerator = this.listView.get_Items().GetEnumerator();
+					IEnumerator enumerator = this.listView.Items.GetEnumerator();
 					while (enumerator.MoveNext())
 					{
-						ListViewItem listViewItem = (ListViewItem)enumerator.get_Current();
-						if (listViewItem.get_ImageIndex() == 0)
+						ListViewItem listViewItem = (ListViewItem)enumerator.Current;
+						if (listViewItem.ImageIndex == 0)
 						{
 							num++;
 						}
@@ -727,14 +727,14 @@ namespace FotoVision
 				string[] array = new string[num - 1 + 1];
 				try
 				{
-					IEnumerator enumerator2 = this.listView.get_Items().GetEnumerator();
+					IEnumerator enumerator2 = this.listView.Items.GetEnumerator();
 					while (enumerator2.MoveNext())
 					{
-						ListViewItem listViewItem2 = (ListViewItem)enumerator2.get_Current();
-						if (listViewItem2.get_ImageIndex() == 0)
+						ListViewItem listViewItem2 = (ListViewItem)enumerator2.Current;
+						if (listViewItem2.ImageIndex == 0)
 						{
 							int num2;
-							array[num2] = listViewItem2.get_Text();
+							array[num2] = listViewItem2.Text;
 							num2++;
 						}
 					}
@@ -752,11 +752,11 @@ namespace FotoVision
 		}
 		public void SelectFirstAlbum()
 		{
-			if (this.listView.get_Items().get_Count() == 0)
+			if (this.listView.Items.Count == 0)
 			{
 				return;
 			}
-			this.listView.get_Items().get_Item(0).set_Selected(true);
+			this.listView.Items.get_Item(0).set_Selected(true);
 		}
 		public void AddBitmap(Bitmap image)
 		{
@@ -768,9 +768,9 @@ namespace FotoVision
 					string albumName = FileManager.AddNewAlbum();
 					listViewItem = this.AddItem(albumName);
 				}
-				string text = listViewItem.get_Text();
+				string text = listViewItem.Text;
 				string newPhotoName = FileManager.GetNewPhotoName(text);
-				image.Save(Path.Combine(FileManager.GetLocation(text), newPhotoName), ImageFormat.get_Jpeg());
+				image.Save(Path.Combine(FileManager.GetLocation(text), newPhotoName), ImageFormat.Jpeg);
 				if (this.PhotosAddedEvent != null)
 				{
 					this.PhotosAddedEvent(this, new AlbumNameEventArgs(text));
@@ -795,13 +795,13 @@ namespace FotoVision
 			this.ProcessDroppedFiles(files, listViewItem, false);
 			if (this.PhotosAddedEvent != null)
 			{
-				this.PhotosAddedEvent(this, new AlbumNameEventArgs(listViewItem.get_Text()));
+				this.PhotosAddedEvent(this, new AlbumNameEventArgs(listViewItem.Text));
 			}
 		}
 		public bool UpdateAlbum(string albumName, Album album)
 		{
 			ListViewItem listViewItem = this.FindItem(albumName);
-			listViewItem.get_SubItems().get_Item(1).set_Text(this.GetPhotoCount(album.Name));
+			listViewItem.SubItems.get_Item(1).set_Text(this.GetPhotoCount(album.Name));
 			listViewItem.set_ImageIndex(IntegerType.FromObject(Interaction.IIf(album.Publish, AlbumsPane.PublishImage.Yes, AlbumsPane.PublishImage.No)));
 			if (StringType.StrCmp(albumName, album.Name, false) != 0)
 			{
@@ -820,7 +820,7 @@ namespace FotoVision
 			{
 				return;
 			}
-			listViewItem.get_SubItems().get_Item(1).set_Text(this.GetPhotoCount(albumName));
+			listViewItem.SubItems.get_Item(1).set_Text(this.GetPhotoCount(albumName));
 		}
 		protected override void OnLoad(EventArgs e)
 		{
@@ -829,14 +829,14 @@ namespace FotoVision
 		}
 		private void AlbumsPane_Resize(object sender, EventArgs e)
 		{
-			int num = this.listView.get_Columns().get_Item(1).get_Width();
+			int num = this.listView.Columns.Item(1).get_Width;
 			checked
 			{
-				if (this.listView.get_Width() > this.listView.get_DisplayRectangle().get_Width() + SystemInformation.get_Border3DSize().get_Width() * 2)
+				if (this.listView.Width > this.listView.DisplayRectangle.Width + SystemInformation.Border3DSize.Width * 2)
 				{
-					num += SystemInformation.get_VerticalScrollBarWidth();
+					num += SystemInformation.VerticalScrollBarWidth;
 				}
-				this.listView.get_Columns().get_Item(0).set_Width(this.listView.get_Width() - num);
+				this.listView.Columns.Item(0).set_Width(this.listView.get_Width - num);
 			}
 		}
 		private void listView_BeforeLabelEdit(object sender, LabelEditEventArgs e)
@@ -846,13 +846,13 @@ namespace FotoVision
 		private void listView_AfterLabelEdit(object sender, LabelEditEventArgs e)
 		{
 			this._inLabelEdit = false;
-			if (e.get_Label() == null)
+			if (e.Label == null)
 			{
 				e.set_CancelEdit(true);
 				return;
 			}
-			string text = this.listView.get_Items().get_Item(e.get_Item()).get_Text();
-			string text2 = e.get_Label();
+			string text = this.listView.Items.Item(e.get_Item).Text;
+			string text2 = e.Label;
 			if (!FileManager.IsValidAlbumName(text2))
 			{
 				e.set_CancelEdit(true);
@@ -865,7 +865,7 @@ namespace FotoVision
 			}
 			if (FileManager.AlbumExists(text2.Trim()))
 			{
-				MessageBox.Show(this.get_TopLevelControl(), string.Format("The album '{0}' already exist. Please use a different album name.", text2.Trim()), "Cannot Rename Album", 0, 48);
+				MessageBox.Show(this.TopLevelControl, string.Format("The album '{0}' already exist. Please use a different album name.", text2.Trim()), "Cannot Rename Album", 0, 48);
 				e.set_CancelEdit(true);
 				return;
 			}
@@ -900,11 +900,11 @@ namespace FotoVision
 		{
 			try
 			{
-				IEnumerator enumerator = this.listView.get_Items().GetEnumerator();
+				IEnumerator enumerator = this.listView.Items.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
-					ListViewItem listViewItem = (ListViewItem)enumerator.get_Current();
-					if (StringType.StrCmp(listViewItem.get_Text(), itemName, false) == 0)
+					ListViewItem listViewItem = (ListViewItem)enumerator.Current;
+					if (StringType.StrCmp(listViewItem.Text, itemName, false) == 0)
 					{
 						return listViewItem;
 					}
@@ -943,7 +943,7 @@ namespace FotoVision
 		}
 		private void InitItems()
 		{
-			this.listView.get_Items().Clear();
+			this.listView.Items.Clear();
 			string[] albums = FileManager.GetAlbums();
 			checked
 			{
@@ -962,8 +962,8 @@ namespace FotoVision
 		{
 			Album album = new Album();
 			album.ReadXml(albumName);
-			ListViewItem listViewItem = this.listView.get_Items().Add(albumName);
-			listViewItem.get_SubItems().Add(this.GetPhotoCount(album.Name));
+			ListViewItem listViewItem = this.listView.Items.Add(albumName);
+			listViewItem.SubItems.Add(this.GetPhotoCount(album.Name));
 			listViewItem.set_ImageIndex(IntegerType.FromObject(Interaction.IIf(album.Publish, AlbumsPane.PublishImage.Yes, AlbumsPane.PublishImage.No)));
 			return listViewItem;
 		}
@@ -983,14 +983,14 @@ namespace FotoVision
 		}
 		private void ProcessDroppedFiles(string[] files, ListViewItem item, bool moveFiles)
 		{
-			string text = item.get_Text();
+			string text = item.Text;
 			DialogResult dialogResult = 1;
 			bool flag = false;
 			this.AddFiles(text, files, moveFiles, ref dialogResult, ref flag);
 			int arg_23_0 = 0;
 			checked
 			{
-				int num = files.get_Length() - 1;
+				int num = files.Length - 1;
 				int num2 = arg_23_0;
 				while (num2 <= num && dialogResult != 2)
 				{
@@ -1015,7 +1015,7 @@ namespace FotoVision
 			int arg_11_0 = 0;
 			checked
 			{
-				int num = files.get_Length() - 1;
+				int num = files.Length - 1;
 				int num2 = arg_11_0;
 				while (num2 <= num && !flag2)
 				{
@@ -1030,7 +1030,7 @@ namespace FotoVision
 					this.AddFiles(text, files, moveFiles, ref dialogResult, ref flag);
 				}
 				int arg_5A_0 = 0;
-				int num3 = files.get_Length() - 1;
+				int num3 = files.Length - 1;
 				int num4 = arg_5A_0;
 				while (num4 <= num3 && dialogResult != 2)
 				{
@@ -1053,7 +1053,7 @@ namespace FotoVision
 				Global.Progress.Complete(this);
 				if (listViewItem != null && this.PhotosAddedEvent != null)
 				{
-					this.PhotosAddedEvent(this, new AlbumNameEventArgs(listViewItem.get_Text()));
+					this.PhotosAddedEvent(this, new AlbumNameEventArgs(listViewItem.Text));
 				}
 			}
 		}
@@ -1062,11 +1062,11 @@ namespace FotoVision
 			int arg_0A_0 = 0;
 			checked
 			{
-				int num = files.get_Length() - 1;
+				int num = files.Length - 1;
 				int num2 = arg_0A_0;
 				while (num2 <= num && result != 2)
 				{
-					Global.Progress.Update(this, string.Format("{0} files", RuntimeHelpers.GetObjectValue(Interaction.IIf(moveFiles, "Moving", "Copying"))), num2 + 1, files.get_Length());
+					Global.Progress.Update(this, string.Format("{0} files", RuntimeHelpers.GetObjectValue(Interaction.IIf(moveFiles, "Moving", "Copying"))), num2 + 1, files.Length);
 					if (FileManager.IsSupportedFile(files[num2]))
 					{
 						result = this.AddFile(folder, files[num2], alwaysReplaceFile, moveFiles);
@@ -1107,7 +1107,7 @@ namespace FotoVision
 				if (File.Exists(text) & !alwaysReplaceFile)
 				{
 					ConfirmPhotoForm confirmPhotoForm = new ConfirmPhotoForm(text, file);
-					dialogResult = confirmPhotoForm.ShowDialog(this.get_ParentForm());
+					dialogResult = confirmPhotoForm.ShowDialog(this.ParentForm);
 				}
 				if (dialogResult == 1 | dialogResult == 6)
 				{
@@ -1151,7 +1151,7 @@ namespace FotoVision
 		private void listView_DragDrop(object sender, DragEventArgs e)
 		{
 			string[] array = this._dropData.Drop(e);
-			if (array == null || array.get_Length() == 0)
+			if (array == null || array.Length == 0)
 			{
 				this.ReselectOrgSelection();
 				return;
@@ -1165,19 +1165,19 @@ namespace FotoVision
 				}
 				e.set_Effect(dropContextMenu.Display(this));
 			}
-			if (e.get_Effect() == 0)
+			if (e.Effect == 0)
 			{
 				this.ReselectOrgSelection();
 				return;
 			}
 			this.ReselectOrgSelection();
-			bool moveFiles = BooleanType.FromObject(Interaction.IIf(e.get_Effect() == 2, true, false));
+			bool moveFiles = BooleanType.FromObject(Interaction.IIf(e.Effect == 2, true, false));
 			if (this._dropData.TargetItem != null)
 			{
 				this.ProcessDroppedFiles(array, this._dropData.TargetItem, moveFiles);
 				if (this.PhotosAddedEvent != null)
 				{
-					this.PhotosAddedEvent(this, new AlbumNameEventArgs(this._dropData.TargetItem.get_Text()));
+					this.PhotosAddedEvent(this, new AlbumNameEventArgs(this._dropData.TargetItem.Text));
 				}
 			}
 			else
@@ -1187,7 +1187,7 @@ namespace FotoVision
 		}
 		private void menuAlbum_Popup(object sender, EventArgs e)
 		{
-			bool enabled = BooleanType.FromObject(Interaction.IIf(this.listView.get_SelectedItems().get_Count() > 0, true, false));
+			bool enabled = BooleanType.FromObject(Interaction.IIf(this.listView.SelectedItems.Count > 0, true, false));
 			this.menuDelete.set_Enabled(enabled);
 			this.menuRename.set_Enabled(enabled);
 			this.menuPublish.set_Enabled(enabled);
@@ -1197,7 +1197,7 @@ namespace FotoVision
 			}
 			else
 			{
-				this.menuPublish.set_Checked(BooleanType.FromObject(Interaction.IIf(this.SelectedItem.get_ImageIndex() == 0, true, false)));
+				this.menuPublish.set_Checked(BooleanType.FromObject(Interaction.IIf(this.SelectedItem.ImageIndex == 0, true, false)));
 			}
 		}
 		private void menuImportPhotos_Click(object sender, EventArgs e)
@@ -1224,7 +1224,7 @@ namespace FotoVision
 		{
 			if (this.PublishAlbumClickedEvent != null)
 			{
-				this.PublishAlbumClickedEvent(this, new PublishAlbumEventArgs(this.SelectedAlbum, !this.menuPublish.get_Checked()));
+				this.PublishAlbumClickedEvent(this, new PublishAlbumEventArgs(this.SelectedAlbum, !this.menuPublish.Checked));
 			}
 		}
 	}

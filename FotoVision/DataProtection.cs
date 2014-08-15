@@ -14,7 +14,7 @@ namespace FotoVision
 		}
 		private class Consts
 		{
-			public static byte[] EntropyData = Encoding.get_ASCII().GetBytes("9EA4882F-F8D8-4f24-9402-FF951E5B4929");
+			public static byte[] EntropyData = Encoding.ASCII.GetBytes("9EA4882F-F8D8-4f24-9402-FF951E5B4929");
 		}
 		private class Win32
 		{
@@ -44,7 +44,7 @@ namespace FotoVision
 			try
 			{
 				int dwFlags = 1 | IntegerType.FromObject(Interaction.IIf(store == DataProtection.Store.Machine, 4, 0));
-				DataProtection.SetBlobData(ref dATA_BLOB, Encoding.get_ASCII().GetBytes(data));
+				DataProtection.SetBlobData(ref dATA_BLOB, Encoding.ASCII.GetBytes(data));
 				DataProtection.SetBlobData(ref dATA_BLOB2, DataProtection.Consts.EntropyData);
 				if (DataProtection.Win32.CryptProtectData(ref dATA_BLOB, "", ref dATA_BLOB2, IntPtr.Zero, IntPtr.Zero, dwFlags, ref dATA_BLOB3))
 				{
@@ -90,7 +90,7 @@ namespace FotoVision
 					byte[] blobData = DataProtection.GetBlobData(ref dATA_BLOB3);
 					if (blobData != null)
 					{
-						result = Encoding.get_ASCII().GetString(blobData);
+						result = Encoding.ASCII.GetString(blobData);
 					}
 				}
 			}
@@ -114,9 +114,9 @@ namespace FotoVision
 		}
 		private static void SetBlobData(ref DataProtection.Win32.DATA_BLOB blob, byte[] bits)
 		{
-			blob.cbData = bits.get_Length();
-			blob.pbData = Marshal.AllocHGlobal(bits.get_Length());
-			Marshal.Copy(bits, 0, blob.pbData, bits.get_Length());
+			blob.cbData = bits.Length;
+			blob.pbData = Marshal.AllocHGlobal(bits.Length);
+			Marshal.Copy(bits, 0, blob.pbData, bits.Length);
 		}
 		private static byte[] GetBlobData(ref DataProtection.Win32.DATA_BLOB blob)
 		{

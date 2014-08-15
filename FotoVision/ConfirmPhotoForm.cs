@@ -410,7 +410,7 @@ namespace FotoVision
 			arg_510_0.set_Size(size);
 			this.pictIcon.set_TabIndex(11);
 			this.pictIcon.set_TabStop(false);
-			this.textCurrent.set_BackColor(SystemColors.get_Info());
+			this.textCurrent.set_BackColor(SystemColors.Info);
 			Control arg_553_0 = this.textCurrent;
 			location = new Point(128, 72);
 			arg_553_0.set_Location(location);
@@ -423,7 +423,7 @@ namespace FotoVision
 			arg_5A1_0.set_Size(size);
 			this.textCurrent.set_TabIndex(6);
 			this.textCurrent.set_Text("");
-			this.textNew.set_BackColor(SystemColors.get_Info());
+			this.textNew.set_BackColor(SystemColors.Info);
 			Control arg_5EA_0 = this.textNew;
 			location = new Point(128, 168);
 			arg_5EA_0.set_Location(location);
@@ -437,9 +437,9 @@ namespace FotoVision
 			this.textNew.set_TabIndex(8);
 			this.textNew.set_Text("");
 			this.timer.set_Interval(1);
-			this.panelProgress.set_BackColor(SystemColors.get_Info());
+			this.panelProgress.set_BackColor(SystemColors.Info);
 			this.panelProgress.set_BorderStyle(1);
-			this.panelProgress.get_Controls().Add(this.labelProgress);
+			this.panelProgress.Controls.Add(this.labelProgress);
 			Control arg_6A9_0 = this.panelProgress;
 			location = new Point(72, 120);
 			arg_6A9_0.set_Location(location);
@@ -450,7 +450,7 @@ namespace FotoVision
 			this.panelProgress.set_TabIndex(13);
 			this.labelProgress.set_FlatStyle(3);
 			this.labelProgress.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0));
-			this.labelProgress.set_ForeColor(SystemColors.get_ControlText());
+			this.labelProgress.set_ForeColor(SystemColors.ControlText);
 			Control arg_72F_0 = this.labelProgress;
 			location = new Point(48, 8);
 			arg_72F_0.set_Location(location);
@@ -466,19 +466,19 @@ namespace FotoVision
 			this.set_CancelButton(this.buttonCancel);
 			size = new Size(362, 280);
 			this.set_ClientSize(size);
-			this.get_Controls().Add(this.panelProgress);
-			this.get_Controls().Add(this.textCurrent);
-			this.get_Controls().Add(this.pictIcon);
-			this.get_Controls().Add(this.buttonOK);
-			this.get_Controls().Add(this.labelExisting);
-			this.get_Controls().Add(this.labelNew);
-			this.get_Controls().Add(this.labelHeader);
-			this.get_Controls().Add(this.buttonYesToAll);
-			this.get_Controls().Add(this.buttonNo);
-			this.get_Controls().Add(this.buttonCancel);
-			this.get_Controls().Add(this.pictCurrent);
-			this.get_Controls().Add(this.pictNew);
-			this.get_Controls().Add(this.textNew);
+			this.Controls.Add(this.panelProgress);
+			this.Controls.Add(this.textCurrent);
+			this.Controls.Add(this.pictIcon);
+			this.Controls.Add(this.buttonOK);
+			this.Controls.Add(this.labelExisting);
+			this.Controls.Add(this.labelNew);
+			this.Controls.Add(this.labelHeader);
+			this.Controls.Add(this.buttonYesToAll);
+			this.Controls.Add(this.buttonNo);
+			this.Controls.Add(this.buttonCancel);
+			this.Controls.Add(this.pictCurrent);
+			this.Controls.Add(this.pictNew);
+			this.Controls.Add(this.textNew);
 			this.set_FormBorderStyle(3);
 			this.set_MaximizeBox(false);
 			this.set_MinimizeBox(false);
@@ -503,27 +503,27 @@ namespace FotoVision
 		}
 		protected override void OnClosed(EventArgs e)
 		{
-			if (this.pictCurrent.get_Image() != null)
+			if (this.pictCurrent.Image != null)
 			{
-				this.pictCurrent.get_Image().Dispose();
+				this.pictCurrent.Image.Dispose();
 			}
-			if (this.pictNew.get_Image() != null)
+			if (this.pictNew.Image != null)
 			{
-				this.pictNew.get_Image().Dispose();
+				this.pictNew.Image.Dispose();
 			}
 			base.OnClosed(e);
 		}
 		private void pictIcon_Paint(object sender, PaintEventArgs e)
 		{
-			e.get_Graphics().DrawIcon(SystemIcons.get_Question(), 0, 0);
+			e.Graphics.DrawIcon(SystemIcons.Question, 0, 0);
 		}
 		private void timer_Tick(object sender, EventArgs e)
 		{
 			this.timer.set_Enabled(false);
-			Cursor.set_Current(Cursors.get_WaitCursor());
+			Cursor.set_Current(Cursors.WaitCursor);
 			this.GetInfo();
 			this.panelProgress.set_Visible(false);
-			Cursor.set_Current(Cursors.get_Default());
+			Cursor.set_Current(Cursors.Default);
 		}
 		private void GetInfo()
 		{
@@ -531,11 +531,11 @@ namespace FotoVision
 			{
 				Bitmap bitmap = new Bitmap(this._pathCur);
 				this.textCurrent.set_Text(this.GetPhotoInfo(this._pathCur, bitmap));
-				this.pictCurrent.set_Image(PhotoHelper.GetThumbnail(bitmap, this.pictCurrent.get_Width()));
+				this.pictCurrent.set_Image(PhotoHelper.GetThumbnail(bitmap, this.pictCurrent.Width));
 				bitmap.Dispose();
 				bitmap = new Bitmap(this._pathNew);
 				this.textNew.set_Text(this.GetPhotoInfo(this._pathNew, bitmap));
-				this.pictNew.set_Image(PhotoHelper.GetThumbnail(bitmap, this.pictNew.get_Width()));
+				this.pictNew.set_Image(PhotoHelper.GetThumbnail(bitmap, this.pictNew.Width));
 			}
 			catch (Exception expr_88)
 			{
@@ -557,13 +557,13 @@ namespace FotoVision
 			try
 			{
 				PhotoInfo photoInfo = default(PhotoInfo);
-				photoInfo.Read(path, image, image.get_RawFormat());
+				photoInfo.Read(path, image, image.RawFormat);
 				result = string.Format("{0}{1}{2} x {3} pixels{4}{5}{6}{7}", new object[]
 				{
 					photoInfo.FileName,
 					"\r\n",
-					photoInfo.ImageSize.get_Width(),
-					photoInfo.ImageSize.get_Height(),
+					photoInfo.ImageSize.Width,
+					photoInfo.ImageSize.Height,
 					"\r\n",
 					photoInfo.DateModified.ToLongDateString(),
 					"\r\n",

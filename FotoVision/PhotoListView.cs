@@ -15,7 +15,7 @@ namespace FotoVision
 			public const int SelectedFrameSize = 3;
 			public static Color FrameColor = Color.FromArgb(225, 223, 208);
 			public static Color SelectedColor = Color.FromArgb(240, 237, 219);
-			public static Color BackColor = Color.get_DarkGray();
+			public static Color BackColor = Color.DarkGray;
 		}
 		public delegate void FilesDroppedEventHandler(object sender, FilesDroppedEventArgs e);
 		public delegate void FilesDraggedEventHandler(object sender, EventArgs e);
@@ -133,7 +133,7 @@ namespace FotoVision
 		}
 		public void ClearThumbnails()
 		{
-			this.get_Items().Clear();
+			this.Items.Clear();
 			this._backgroundDirty = true;
 		}
 		public void SetThumbnails(string album, Photo[] list)
@@ -143,14 +143,14 @@ namespace FotoVision
 			{
 				if (list != null)
 				{
-					if (list.get_Length() == 0)
+					if (list.Length == 0)
 					{
 						return;
 					}
 					for (int i = 0; i < list.Length; i++)
 					{
 						Photo photo = list[i];
-						ListViewItem listViewItem = this.get_Items().Add(photo.Title);
+						ListViewItem listViewItem = this.Items.Add(photo.Title);
 						listViewItem.set_Tag(photo);
 					}
 					this._backgroundDirty = true;
@@ -165,14 +165,14 @@ namespace FotoVision
 			}
 			try
 			{
-				IEnumerator enumerator = this.get_Items().GetEnumerator();
+				IEnumerator enumerator = this.Items.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
-					ListViewItem listViewItem = (ListViewItem)enumerator.get_Current();
-					Photo photo2 = (Photo)listViewItem.get_Tag();
+					ListViewItem listViewItem = (ListViewItem)enumerator.Current;
+					Photo photo2 = (Photo)listViewItem.Tag;
 					if (photo2.Equals(photo))
 					{
-						return listViewItem.get_Index();
+						return listViewItem.Index;
 					}
 				}
 			}
@@ -190,7 +190,7 @@ namespace FotoVision
 		{
 			this._penFrame = new Pen(PhotoListView.Consts.FrameColor);
 			this._penSelected = new Pen(PhotoListView.Consts.SelectedColor, 3f);
-			this._penBack = new Pen(Color.get_DarkGray(), 3f);
+			this._penBack = new Pen(Color.DarkGray, 3f);
 			this._brushSelected = new SolidBrush(PhotoListView.Consts.SelectedColor);
 			this._brushBack = new SolidBrush(PhotoListView.Consts.BackColor);
 			this._format = new StringFormat();
@@ -200,14 +200,14 @@ namespace FotoVision
 		protected override void OnAfterLabelEdit(LabelEditEventArgs e)
 		{
 			this._backgroundDirty = true;
-			Photo photo = (Photo)this.get_Items().get_Item(e.get_Item()).get_Tag();
-			if (e.get_Label() == null || e.get_Label().Trim().get_Length() == 0)
+			Photo photo = (Photo)this.Items.Item(e.get_Item).Tag;
+			if (e.Label == null || e.Label.Trim().Length == 0)
 			{
 				e.set_CancelEdit(true);
 			}
 			else
 			{
-				photo.Title = e.get_Label();
+				photo.Title = e.Label;
 				photo.WriteXml();
 			}
 			if (this.PhotoMetadataChangedEvent != null)
@@ -218,16 +218,16 @@ namespace FotoVision
 		}
 		private void DrawItem(Graphics g, int index)
 		{
-			ListViewItem listViewItem = this.get_Items().get_Item(index);
-			int height = this.get_Font().get_Height();
+			ListViewItem listViewItem = this.Items.get_Item(index);
+			int height = this.Font.Height;
 			checked
 			{
-				Rectangle rectangle = new Rectangle(listViewItem.get_Bounds().get_Left() + (listViewItem.get_Bounds().get_Width() - 120) / 2, listViewItem.get_Bounds().get_Top() + 2, 120, 120);
+				Rectangle rectangle = new Rectangle(listViewItem.Bounds.Left + (listViewItem.Bounds.Width - 120) / 2, listViewItem.Bounds.Top + 2, 120, 120);
 				try
 				{
-					Photo photo = (Photo)listViewItem.get_Tag();
+					Photo photo = (Photo)listViewItem.Tag;
 					Bitmap bitmap = new Bitmap(photo.ThumbnailPath);
-					g.DrawImage(bitmap, rectangle.get_Left() + (120 - bitmap.get_Width()) / 2, rectangle.get_Top() + (120 - bitmap.get_Height()) / 2, bitmap.get_Width(), bitmap.get_Height());
+					g.DrawImage(bitmap, rectangle.Left + (120 - bitmap.Width) / 2, rectangle.Top + (120 - bitmap.Height) / 2, bitmap.Width, bitmap.Height);
 				}
 				catch (Exception expr_AF)
 				{
@@ -242,35 +242,35 @@ namespace FotoVision
 						bitmap.Dispose();
 					}
 				}
-				if (!listViewItem.get_Selected())
+				if (!listViewItem.Selected)
 				{
 					g.DrawRectangle(this._penBack, rectangle);
 				}
-				g.DrawRectangle((Pen)Interaction.IIf(listViewItem.get_Selected(), this._penSelected, this._penFrame), rectangle);
-				RectangleF rectangleF = new RectangleF((float)rectangle.get_Left(), (float)(rectangle.get_Bottom() + 4), (float)rectangle.get_Width(), (float)(height + 1));
-				g.FillRectangle((SolidBrush)Interaction.IIf(listViewItem.get_Selected(), this._brushSelected, this._brushBack), rectangleF);
-				g.DrawString(listViewItem.get_Text(), this.get_Font(), Brushes.get_Black(), rectangleF, this._format);
+				g.DrawRectangle((Pen)Interaction.IIf(listViewItem.Selected, this._penSelected, this._penFrame), rectangle);
+				RectangleF rectangleF = new RectangleF((float)rectangle.Left, (float)(rectangle.Bottom + 4), (float)rectangle.Width, (float)(height + 1));
+				g.FillRectangle((SolidBrush)Interaction.IIf(listViewItem.Selected, this._brushSelected, this._brushBack), rectangleF);
+				g.DrawString(listViewItem.Text, this.Font, Brushes.Black, rectangleF, this._format);
 			}
 		}
 		[PermissionSet(SecurityAction.LinkDemand, XML = "<PermissionSet class=\"System.Security.PermissionSet\"\r\n               version=\"1\">\r\n   <IPermission class=\"System.Security.Permissions.SecurityPermission, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\r\n                version=\"1\"\r\n                Flags=\"UnmanagedCode\"/>\r\n</PermissionSet>\r\n")]
 		protected override void WndProc(ref Message m)
 		{
-			if (m.get_Msg() == 133)
+			if (m.Msg == 133)
 			{
 				this._backgroundDirty = true;
 			}
-			if (m.get_Msg() == 20 && !this.ProcessBackground())
+			if (m.Msg == 20 && !this.ProcessBackground())
 			{
 				return;
 			}
-			if (m.get_Msg() == 8270)
+			if (m.Msg == 8270)
 			{
 				PhotoListView.Win32.NMHDR nMHDR = (PhotoListView.Win32.NMHDR)(m.GetLParam(typeof(PhotoListView.Win32.NMHDR)) ?? Activator.CreateInstance(typeof(PhotoListView.Win32.NMHDR)));
 				if (nMHDR.code == -101)
 				{
 					this._paintBackground = false;
 				}
-				if (nMHDR.hwndFrom.Equals(this.get_Handle()) & nMHDR.code == -12)
+				if (nMHDR.hwndFrom.Equals(this.Handle) & nMHDR.code == -12)
 				{
 					this._paintBackground = true;
 					if (this.ProcessListCustomDraw(ref m))
@@ -324,9 +324,9 @@ namespace FotoVision
 		private bool ProcessBackground()
 		{
 			bool result = true;
-			if (!this._backgroundDirty && !this._paintBackground && this.get_Items().get_Count() > 0 && !this._topItemPos.Equals(this.GetItemRect(0).get_Location()))
+			if (!this._backgroundDirty && !this._paintBackground && this.Items.Count > 0 && !this._topItemPos.Equals(this.GetItemRect(0).Location))
 			{
-				this._topItemPos = this.GetItemRect(0).get_Location();
+				this._topItemPos = this.GetItemRect(0).Location;
 				this._paintBackground = true;
 			}
 			if (!this._paintBackground && !this._backgroundDirty)
@@ -338,12 +338,12 @@ namespace FotoVision
 		}
 		private bool IsItemVisible(int index)
 		{
-			if (this.get_Items().get_Count() <= index)
+			if (this.Items.Count <= index)
 			{
 				return false;
 			}
 			Rectangle itemRect = this.GetItemRect(index);
-			return this.get_DisplayRectangle().Contains(itemRect.get_Left(), itemRect.get_Top()) | this.get_DisplayRectangle().Contains(itemRect.get_Right(), itemRect.get_Bottom());
+			return this.DisplayRectangle.Contains(itemRect.Left, itemRect.Top) | this.DisplayRectangle.Contains(itemRect.Right, itemRect.Bottom);
 		}
 		protected override void OnDragEnter(DragEventArgs drgevent)
 		{
@@ -379,7 +379,7 @@ namespace FotoVision
 				if (dragDropEffects == 1)
 				{
 					string[] array = this._dropData.Drop(drgevent);
-					if (array != null && array.get_Length() > 0 && this.FilesDroppedEvent != null)
+					if (array != null && array.Length > 0 && this.FilesDroppedEvent != null)
 					{
 						this.FilesDroppedEvent(this, new FilesDroppedEventArgs(array));
 					}
@@ -392,14 +392,14 @@ namespace FotoVision
 			Global.PerformingDrag = true;
 			checked
 			{
-				if (this.get_SelectedItems().get_Count() > 0)
+				if (this.SelectedItems.Count > 0)
 				{
-					string[] array = new string[this.get_SelectedItems().get_Count() - 1 + 1];
+					string[] array = new string[this.SelectedItems.Count - 1 + 1];
 					int arg_37_0 = 0;
-					int num = array.get_Length() - 1;
+					int num = array.Length - 1;
 					for (int i = arg_37_0; i <= num; i++)
 					{
-						Photo photo = (Photo)this.get_SelectedItems().get_Item(i).get_Tag();
+						Photo photo = (Photo)this.SelectedItems.Item(i).get_Tag;
 						array[i] = photo.PhotoPath;
 					}
 					DataObject dataObject = new DataObject();

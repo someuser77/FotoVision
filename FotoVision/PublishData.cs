@@ -110,8 +110,8 @@ namespace FotoVision
 				{
 					XmlDocument xmlDocument = new XmlDocument();
 					xmlDocument.Load(text);
-					XmlNode firstChild = xmlDocument.get_DocumentElement().get_FirstChild();
-					return firstChild.get_Attributes().get_ItemOf("hashcode").get_Value();
+					XmlNode firstChild = xmlDocument.DocumentElement.FirstChild;
+					return firstChild.Attributes.ItemOf("hashcode").get_Value;
 				}
 				catch (Exception expr_45)
 				{

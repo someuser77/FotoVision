@@ -36,11 +36,11 @@ namespace FotoVision
 			{
 				return;
 			}
-			Cursor.set_Current(Cursors.get_WaitCursor());
+			Cursor.set_Current(Cursors.WaitCursor);
 			this.AdjustDimensions(ref image, scale);
 			this.AdjustColor(image);
 			Global.Progress.Complete(this);
-			Cursor.set_Current(Cursors.get_Default());
+			Cursor.set_Current(Cursors.Default);
 		}
 		private void AdjustColor(Bitmap image)
 		{
@@ -186,10 +186,10 @@ namespace FotoVision
 						this._crop = at.Bounds;
 						if (scale > 0f)
 						{
-							this._crop.set_X((int)Math.Round((double)((float)this._crop.get_X() / scale)));
-							this._crop.set_Y((int)Math.Round((double)((float)this._crop.get_Y() / scale)));
-							this._crop.set_Width((int)Math.Round((double)((float)this._crop.get_Width() / scale)));
-							this._crop.set_Height((int)Math.Round((double)((float)this._crop.get_Height() / scale)));
+							this._crop.set_X((int)Math.Round((double)((float)this._crop.X / scale)));
+							this._crop.set_Y((int)Math.Round((double)((float)this._crop.Y / scale)));
+							this._crop.set_Width((int)Math.Round((double)((float)this._crop.Width / scale)));
+							this._crop.set_Height((int)Math.Round((double)((float)this._crop.Height / scale)));
 						}
 						break;
 					}

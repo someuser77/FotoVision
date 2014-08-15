@@ -559,7 +559,7 @@ namespace FotoVision
 			Point location = new Point(0, 248);
 			arg_14F_0.set_Location(location);
 			this.statusBar.set_Name("statusBar");
-			this.statusBar.get_Panels().AddRange(new StatusBarPanel[]
+			this.statusBar.Panels.AddRange(new StatusBarPanel[]
 			{
 				this.statusTasks,
 				this.statusErrors,
@@ -579,7 +579,7 @@ namespace FotoVision
 			size = new Size(22, 18);
 			arg_221_0.set_ImageSize(size);
 			this.imageList.set_ImageStream((ImageListStreamer)resourceManager.GetObject("imageList.ImageStream"));
-			this.imageList.set_TransparentColor(Color.get_Lime());
+			this.imageList.set_TransparentColor(Color.Lime);
 			this.buttonDetails.set_Anchor(9);
 			this.buttonDetails.set_FlatStyle(3);
 			Control arg_280_0 = this.buttonDetails;
@@ -606,8 +606,8 @@ namespace FotoVision
 			arg_359_0.set_Size(size);
 			this.progressBar.set_TabIndex(1);
 			this.tabControl.set_Anchor(15);
-			this.tabControl.get_Controls().Add(this.pageTasks);
-			this.tabControl.get_Controls().Add(this.pageErrors);
+			this.tabControl.Controls.Add(this.pageTasks);
+			this.tabControl.Controls.Add(this.pageErrors);
 			Control arg_3B5_0 = this.tabControl;
 			location = new Point(0, 80);
 			arg_3B5_0.set_Location(location);
@@ -617,7 +617,7 @@ namespace FotoVision
 			size = new Size(472, 168);
 			arg_3EE_0.set_Size(size);
 			this.tabControl.set_TabIndex(5);
-			this.pageTasks.get_Controls().Add(this.listTasks);
+			this.pageTasks.Controls.Add(this.listTasks);
 			Control arg_427_0 = this.pageTasks;
 			location = new Point(4, 22);
 			arg_427_0.set_Location(location);
@@ -627,7 +627,7 @@ namespace FotoVision
 			arg_454_0.set_Size(size);
 			this.pageTasks.set_TabIndex(0);
 			this.pageTasks.set_Text("Tasks");
-			this.listTasks.get_Columns().AddRange(new ColumnHeader[]
+			this.listTasks.Columns.AddRange(new ColumnHeader[]
 			{
 				this.colMessage
 			});
@@ -644,8 +644,8 @@ namespace FotoVision
 			this.listTasks.set_TabIndex(0);
 			this.listTasks.set_View(1);
 			this.colMessage.set_Width(404);
-			this.pageErrors.get_Controls().Add(this.textError);
-			this.pageErrors.get_Controls().Add(this.listErrors);
+			this.pageErrors.Controls.Add(this.textError);
+			this.pageErrors.Controls.Add(this.listErrors);
 			Control arg_568_0 = this.pageErrors;
 			location = new Point(4, 22);
 			arg_568_0.set_Location(location);
@@ -657,7 +657,7 @@ namespace FotoVision
 			this.pageErrors.set_Text("Errors");
 			this.pageErrors.set_Visible(false);
 			this.textError.set_AcceptsReturn(true);
-			this.textError.set_BackColor(SystemColors.get_Info());
+			this.textError.set_BackColor(SystemColors.Info);
 			this.textError.set_Dock(2);
 			Control arg_5FC_0 = this.textError;
 			location = new Point(0, 110);
@@ -671,7 +671,7 @@ namespace FotoVision
 			arg_64A_0.set_Size(size);
 			this.textError.set_TabIndex(2);
 			this.textError.set_Text("");
-			this.listErrors.get_Columns().AddRange(new ColumnHeader[]
+			this.listErrors.Columns.AddRange(new ColumnHeader[]
 			{
 				this.colErrors
 			});
@@ -719,14 +719,14 @@ namespace FotoVision
 			this.set_AutoScaleBaseSize(size);
 			size = new Size(472, 270);
 			this.set_ClientSize(size);
-			this.get_Controls().Add(this.buttonClose);
-			this.get_Controls().Add(this.checkCloseComplete);
-			this.get_Controls().Add(this.buttonDetails);
-			this.get_Controls().Add(this.buttonCancel);
-			this.get_Controls().Add(this.progressBar);
-			this.get_Controls().Add(this.tabControl);
-			this.get_Controls().Add(this.labelMessage);
-			this.get_Controls().Add(this.statusBar);
+			this.Controls.Add(this.buttonClose);
+			this.Controls.Add(this.checkCloseComplete);
+			this.Controls.Add(this.buttonDetails);
+			this.Controls.Add(this.buttonCancel);
+			this.Controls.Add(this.progressBar);
+			this.Controls.Add(this.tabControl);
+			this.Controls.Add(this.labelMessage);
+			this.Controls.Add(this.statusBar);
 			this.set_FormBorderStyle(6);
 			this.set_Icon((Icon)resourceManager.GetObject("$this.Icon"));
 			this.set_MaximizeBox(false);
@@ -751,8 +751,8 @@ namespace FotoVision
 			this._progressBar.set_Minimum(0);
 			this._progressBar.set_Maximum(0);
 			this.tabControl.set_SelectedIndex(0);
-			this.listTasks.get_Items().Clear();
-			this.listErrors.get_Items().Clear();
+			this.listTasks.Items.Clear();
+			this.listErrors.Items.Clear();
 			this.textError.set_Visible(false);
 			this.textError.set_Text("");
 			this.buttonCancel.set_Enabled(true);
@@ -787,8 +787,8 @@ namespace FotoVision
 		protected override void OnLoad(EventArgs e)
 		{
 			base.OnLoad(e);
-			this._heightDetails = this.get_Height();
-			this._heightNoDetails = checked(this.get_Height() - this.tabControl.get_Height());
+			this._heightDetails = this.Height;
+			this._heightNoDetails = checked(this.Height - this.tabControl.Height);
 			Size minimumSize = new Size(350, this._heightNoDetails);
 			this.set_MinimumSize(minimumSize);
 			this.set_Location(this._initialLocation);
@@ -799,7 +799,7 @@ namespace FotoVision
 		{
 			base.OnClosing(e);
 			e.set_Cancel(true);
-			if (this.buttonCancel.get_Enabled())
+			if (this.buttonCancel.Enabled)
 			{
 				this.buttonCancel_Click(this, EventArgs.Empty);
 			}
@@ -811,10 +811,10 @@ namespace FotoVision
 		private void buttonCancel_Click(object sender, EventArgs e)
 		{
 			this.buttonCancel.set_Enabled(false);
-			this.set_Cursor(Cursors.get_WaitCursor());
+			this.set_Cursor(Cursors.WaitCursor);
 			this._thread.Abort();
 			this._thread.Join();
-			this.set_Cursor(Cursors.get_Default());
+			this.set_Cursor(Cursors.Default);
 			this.UpdateMessage("Operation was canceled", false, true);
 			this.statusMessage.set_Text("Operation was canceled");
 			this.labelMessage.set_Text("Uploading was canceled");
@@ -849,7 +849,7 @@ namespace FotoVision
 			}
 			else
 			{
-				this._heightDetails = this.get_Height();
+				this._heightDetails = this.Height;
 				this.buttonDetails.set_Text("Details >>");
 				this.set_Height(this._heightNoDetails);
 				this.tabControl.set_Visible(false);
@@ -857,33 +857,33 @@ namespace FotoVision
 		}
 		private void listTasks_Resize(object sender, EventArgs e)
 		{
-			int num = this.listTasks.get_DisplayRectangle().get_Width();
+			int num = this.listTasks.DisplayRectangle.Width;
 			checked
 			{
-				if (this.listTasks.get_Width() > this.listTasks.get_DisplayRectangle().get_Width() + SystemInformation.get_Border3DSize().get_Width() * 2)
+				if (this.listTasks.Width > this.listTasks.DisplayRectangle.Width + SystemInformation.Border3DSize.Width * 2)
 				{
-					num -= SystemInformation.get_VerticalScrollBarWidth();
+					num -= SystemInformation.VerticalScrollBarWidth;
 				}
-				this.listTasks.get_Columns().get_Item(0).set_Width(num);
+				this.listTasks.Columns.get_Item(0).set_Width(num);
 			}
 		}
 		private void listErrors_Resize(object sender, EventArgs e)
 		{
-			int num = this.listErrors.get_DisplayRectangle().get_Width();
+			int num = this.listErrors.DisplayRectangle.Width;
 			checked
 			{
-				if (this.listErrors.get_Width() > this.listErrors.get_DisplayRectangle().get_Width() + SystemInformation.get_Border3DSize().get_Width() * 2)
+				if (this.listErrors.Width > this.listErrors.DisplayRectangle.Width + SystemInformation.Border3DSize.Width * 2)
 				{
-					num -= SystemInformation.get_VerticalScrollBarWidth();
+					num -= SystemInformation.VerticalScrollBarWidth;
 				}
-				this.listErrors.get_Columns().get_Item(0).set_Width(num);
+				this.listErrors.Columns.get_Item(0).set_Width(num);
 			}
 		}
 		private void listErrors_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (this.listErrors.get_SelectedItems() != null && this.listErrors.get_SelectedItems().get_Count() > 0)
+			if (this.listErrors.SelectedItems != null && this.listErrors.SelectedItems.Count > 0)
 			{
-				this.textError.set_Text(this.listErrors.get_SelectedItems().get_Item(0).get_Text());
+				this.textError.set_Text(this.listErrors.SelectedItems.Item(0).get_Text);
 			}
 			else
 			{
@@ -892,7 +892,7 @@ namespace FotoVision
 		}
 		private void checkCloseComplete_CheckedChanged(object sender, EventArgs e)
 		{
-			Global.Settings.SetValue(SettingKey.CloseAfterUpload, this.checkCloseComplete.get_Checked());
+			Global.Settings.SetValue(SettingKey.CloseAfterUpload, this.checkCloseComplete.Checked);
 		}
 		private void common_UpdateProgress(object sender, UploadProgressEventArgs e)
 		{
@@ -935,7 +935,7 @@ namespace FotoVision
 			{
 				if (success)
 				{
-					ListViewItem listViewItem = this.listTasks.get_Items().Add(message, 1);
+					ListViewItem listViewItem = this.listTasks.Items.Add(message, 1);
 					listViewItem.EnsureVisible();
 					this.listTasks.Update();
 					this._taskCount++;
@@ -945,7 +945,7 @@ namespace FotoVision
 				{
 					string text = message.Replace('\r', ' ');
 					text = text.Replace('\n', ' ');
-					ListViewItem listViewItem = this.listErrors.get_Items().Add(text, 0);
+					ListViewItem listViewItem = this.listErrors.Items.Add(text, 0);
 					listViewItem.EnsureVisible();
 					this.listErrors.Update();
 					this.textError.set_Visible(true);
@@ -973,7 +973,7 @@ namespace FotoVision
 			else
 			{
 				this.labelMessage.set_Text("Uploading is complete");
-				if (!errorOccurred & this.checkCloseComplete.get_Checked())
+				if (!errorOccurred & this.checkCloseComplete.Checked)
 				{
 					this.Hide();
 				}

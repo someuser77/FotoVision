@@ -410,7 +410,7 @@ namespace FotoVision
 			size = new Size(16, 16);
 			arg_3B0_0.set_ImageSize(size);
 			this.imageList.set_ImageStream((ImageListStreamer)resourceManager.GetObject("imageList.ImageStream"));
-			this.imageList.set_TransparentColor(Color.get_Lime());
+			this.imageList.set_TransparentColor(Color.Lime);
 			this.radioDontPublish.set_FlatStyle(3);
 			Control arg_401_0 = this.radioDontPublish;
 			location = new Point(16, 256);
@@ -455,17 +455,17 @@ namespace FotoVision
 			arg_5BC_0.set_Size(size);
 			this.textLocation.set_TabIndex(10);
 			this.textLocation.set_Text("");
-			this.get_Controls().Add(this.radioPublish);
-			this.get_Controls().Add(this.textTitle);
-			this.get_Controls().Add(this.labelAlbumTitle);
-			this.get_Controls().Add(this.labelWebsiteHeader);
-			this.get_Controls().Add(this.textDesc);
-			this.get_Controls().Add(this.labelDate);
-			this.get_Controls().Add(this.textDate);
-			this.get_Controls().Add(this.radioDontPublish);
-			this.get_Controls().Add(this.labelPublishHeader);
-			this.get_Controls().Add(this.labelLocationHeader);
-			this.get_Controls().Add(this.textLocation);
+			this.Controls.Add(this.radioPublish);
+			this.Controls.Add(this.textTitle);
+			this.Controls.Add(this.labelAlbumTitle);
+			this.Controls.Add(this.labelWebsiteHeader);
+			this.Controls.Add(this.textDesc);
+			this.Controls.Add(this.labelDate);
+			this.Controls.Add(this.textDate);
+			this.Controls.Add(this.radioDontPublish);
+			this.Controls.Add(this.labelPublishHeader);
+			this.Controls.Add(this.labelLocationHeader);
+			this.Controls.Add(this.textLocation);
 			this.set_Name("DetailsAlbum");
 			size = new Size(304, 368);
 			this.set_Size(size);
@@ -505,12 +505,12 @@ namespace FotoVision
 		{
 			checked
 			{
-				this.imageList.Draw(e.get_Graphics(), this.radioPublish.get_Left() + 20, this.radioPublish.get_Top() + (this.radioPublish.get_Height() - this.imageList.get_ImageSize().get_Height()) / 2, IntegerType.FromObject(Interaction.IIf(this.radioPublish.get_Enabled(), 0, 2)));
-				this.imageList.Draw(e.get_Graphics(), this.radioDontPublish.get_Left() + 20, this.radioDontPublish.get_Top() + (this.radioDontPublish.get_Height() - this.imageList.get_ImageSize().get_Height()) / 2, IntegerType.FromObject(Interaction.IIf(this.radioDontPublish.get_Enabled(), 1, 3)));
-				int left = this.textTitle.get_Left();
-				int width = this.textTitle.get_Width();
-				e.get_Graphics().DrawLine(SystemPens.get_ControlDark(), left, this.labelPublishHeader.get_Top() - 14, width, this.labelPublishHeader.get_Top() - 14);
-				e.get_Graphics().DrawLine(SystemPens.get_ControlDark(), left, this.labelLocationHeader.get_Top() - 14, width, this.labelLocationHeader.get_Top() - 14);
+				this.imageList.Draw(e.Graphics, this.radioPublish.Left + 20, this.radioPublish.Top + (this.radioPublish.Height - this.imageList.ImageSize.Height) / 2, IntegerType.FromObject(Interaction.IIf(this.radioPublish.Enabled, 0, 2)));
+				this.imageList.Draw(e.Graphics, this.radioDontPublish.Left + 20, this.radioDontPublish.Top + (this.radioDontPublish.Height - this.imageList.ImageSize.Height) / 2, IntegerType.FromObject(Interaction.IIf(this.radioDontPublish.Enabled, 1, 3)));
+				int left = this.textTitle.Left;
+				int width = this.textTitle.Width;
+				e.Graphics.DrawLine(SystemPens.ControlDark, left, this.labelPublishHeader.Top - 14, width, this.labelPublishHeader.Top - 14);
+				e.Graphics.DrawLine(SystemPens.ControlDark, left, this.labelLocationHeader.Top - 14, width, this.labelLocationHeader.Top - 14);
 			}
 		}
 		private void UpdateFields()
@@ -525,10 +525,10 @@ namespace FotoVision
 		}
 		private void UpdateXmlFile()
 		{
-			this._album.Name = this.textTitle.get_Text().Trim();
-			this._album.Description = this.textDesc.get_Text();
-			this._album.DateCreated = this.textDate.get_Text();
-			this._album.Publish = this.radioPublish.get_Checked();
+			this._album.Name = this.textTitle.Text.Trim();
+			this._album.Description = this.textDesc.Text;
+			this._album.DateCreated = this.textDate.Text;
+			this._album.Publish = this.radioPublish.Checked;
 			this._album.WriteXml();
 		}
 		private void CheckUpdate()
@@ -547,18 +547,18 @@ namespace FotoVision
 		}
 		private void ValidateFields()
 		{
-			if (!Global.ValidateDate(this.textDate.get_Text().Trim()))
+			if (!Global.ValidateDate(this.textDate.Text.Trim()))
 			{
 				this.textDate.set_Text(this._album.DateCreated);
 			}
-			if (!FileManager.IsValidAlbumName(this.textTitle.get_Text()))
+			if (!FileManager.IsValidAlbumName(this.textTitle.Text))
 			{
 				this.textTitle.set_Text(this._album.Name);
 			}
-			string text = this.textTitle.get_Text().Trim();
-			if (StringType.StrCmp(text, this._album.Name, false) != 0 && FileManager.AlbumExists(this.textTitle.get_Text().Trim()))
+			string text = this.textTitle.Text.Trim();
+			if (StringType.StrCmp(text, this._album.Name, false) != 0 && FileManager.AlbumExists(this.textTitle.Text.Trim()))
 			{
-				MessageBox.Show(this.get_TopLevelControl(), string.Format("The album '{0}' already exist. Please use a different album name.", text), "Cannot Rename Album", 0, 48);
+				MessageBox.Show(this.TopLevelControl, string.Format("The album '{0}' already exist. Please use a different album name.", text), "Cannot Rename Album", 0, 48);
 				this.textTitle.set_Text(this._album.Name);
 			}
 		}

@@ -769,8 +769,8 @@ namespace FotoVision
 			this.panelCrop.SuspendLayout();
 			this.panelSave.SuspendLayout();
 			this.SuspendLayout();
-			this.tabControl.get_Controls().Add(this.pageAdjust);
-			this.tabControl.get_Controls().Add(this.pageCrop);
+			this.tabControl.Controls.Add(this.pageAdjust);
+			this.tabControl.Controls.Add(this.pageCrop);
 			this.tabControl.set_Dock(5);
 			Control arg_280_0 = this.tabControl;
 			Point location = new Point(2, 2);
@@ -781,7 +781,7 @@ namespace FotoVision
 			Size size = new Size(308, 388);
 			arg_2B9_0.set_Size(size);
 			this.tabControl.set_TabIndex(0);
-			this.pageAdjust.get_Controls().Add(this.panelAdjust);
+			this.pageAdjust.Controls.Add(this.panelAdjust);
 			Control arg_2F2_0 = this.pageAdjust;
 			location = new Point(4, 22);
 			arg_2F2_0.set_Location(location);
@@ -791,21 +791,21 @@ namespace FotoVision
 			arg_31F_0.set_Size(size);
 			this.pageAdjust.set_TabIndex(1);
 			this.pageAdjust.set_Text("Adjust");
-			this.panelAdjust.get_Controls().Add(this.numContrast);
-			this.panelAdjust.get_Controls().Add(this.labelSat);
-			this.panelAdjust.get_Controls().Add(this.labelBright);
-			this.panelAdjust.get_Controls().Add(this.sliderBright);
-			this.panelAdjust.get_Controls().Add(this.buttonGrayscale);
-			this.panelAdjust.get_Controls().Add(this.buttonSepia);
-			this.panelAdjust.get_Controls().Add(this.labelContrast);
-			this.panelAdjust.get_Controls().Add(this.sliderContrast);
-			this.panelAdjust.get_Controls().Add(this.sliderSat);
-			this.panelAdjust.get_Controls().Add(this.labelGamma);
-			this.panelAdjust.get_Controls().Add(this.sliderGamma);
-			this.panelAdjust.get_Controls().Add(this.labelColors);
-			this.panelAdjust.get_Controls().Add(this.numBright);
-			this.panelAdjust.get_Controls().Add(this.numGamma);
-			this.panelAdjust.get_Controls().Add(this.numSat);
+			this.panelAdjust.Controls.Add(this.numContrast);
+			this.panelAdjust.Controls.Add(this.labelSat);
+			this.panelAdjust.Controls.Add(this.labelBright);
+			this.panelAdjust.Controls.Add(this.sliderBright);
+			this.panelAdjust.Controls.Add(this.buttonGrayscale);
+			this.panelAdjust.Controls.Add(this.buttonSepia);
+			this.panelAdjust.Controls.Add(this.labelContrast);
+			this.panelAdjust.Controls.Add(this.sliderContrast);
+			this.panelAdjust.Controls.Add(this.sliderSat);
+			this.panelAdjust.Controls.Add(this.labelGamma);
+			this.panelAdjust.Controls.Add(this.sliderGamma);
+			this.panelAdjust.Controls.Add(this.labelColors);
+			this.panelAdjust.Controls.Add(this.numBright);
+			this.panelAdjust.Controls.Add(this.numGamma);
+			this.panelAdjust.Controls.Add(this.numSat);
 			this.panelAdjust.set_Dock(5);
 			Control arg_4A7_0 = this.panelAdjust;
 			location = new Point(0, 0);
@@ -999,7 +999,7 @@ namespace FotoVision
 			size = new Size(48, 20);
 			arg_BC2_0.set_Size(size);
 			this.numSat.set_TabIndex(11);
-			this.pageCrop.get_Controls().Add(this.panelCrop);
+			this.pageCrop.Controls.Add(this.panelCrop);
 			Control arg_BFC_0 = this.pageCrop;
 			location = new Point(4, 22);
 			arg_BFC_0.set_Location(location);
@@ -1009,14 +1009,14 @@ namespace FotoVision
 			arg_C29_0.set_Size(size);
 			this.pageCrop.set_TabIndex(0);
 			this.pageCrop.set_Text("Crop");
-			this.panelCrop.get_Controls().Add(this.buttonCrop);
-			this.panelCrop.get_Controls().Add(this.pictCropCoord);
-			this.panelCrop.get_Controls().Add(this.panelCropSep);
-			this.panelCrop.get_Controls().Add(this.labelCrop);
-			this.panelCrop.get_Controls().Add(this.labelPicture);
-			this.panelCrop.get_Controls().Add(this.panelPictureSep);
-			this.panelCrop.get_Controls().Add(this.pictCropDim);
-			this.panelCrop.get_Controls().Add(this.buttonClearCrop);
+			this.panelCrop.Controls.Add(this.buttonCrop);
+			this.panelCrop.Controls.Add(this.pictCropCoord);
+			this.panelCrop.Controls.Add(this.panelCropSep);
+			this.panelCrop.Controls.Add(this.labelCrop);
+			this.panelCrop.Controls.Add(this.labelPicture);
+			this.panelCrop.Controls.Add(this.panelPictureSep);
+			this.panelCrop.Controls.Add(this.pictCropDim);
+			this.panelCrop.Controls.Add(this.buttonClearCrop);
 			this.panelCrop.set_Dock(5);
 			Control arg_D17_0 = this.panelCrop;
 			location = new Point(0, 0);
@@ -1043,7 +1043,7 @@ namespace FotoVision
 			arg_DF1_0.set_Size(size);
 			this.pictCropCoord.set_TabIndex(2);
 			this.pictCropCoord.set_TabStop(false);
-			this.panelCropSep.set_BackColor(SystemColors.get_ControlDark());
+			this.panelCropSep.set_BackColor(SystemColors.ControlDark);
 			Control arg_E30_0 = this.panelCropSep;
 			location = new Point(8, 32);
 			arg_E30_0.set_Location(location);
@@ -1072,7 +1072,7 @@ namespace FotoVision
 			arg_F1B_0.set_Size(size);
 			this.labelPicture.set_TabIndex(2);
 			this.labelPicture.set_Text("Picture Dimensions");
-			this.panelPictureSep.set_BackColor(SystemColors.get_ControlDark());
+			this.panelPictureSep.set_BackColor(SystemColors.ControlDark);
 			Control arg_F61_0 = this.panelPictureSep;
 			location = new Point(8, 136);
 			arg_F61_0.set_Location(location);
@@ -1098,10 +1098,10 @@ namespace FotoVision
 			this.buttonClearCrop.set_Name("buttonClearCrop");
 			this.buttonClearCrop.set_TabIndex(5);
 			this.buttonClearCrop.set_Text("C&lear Crop");
-			this.panelSave.get_Controls().Add(this.buttonSave);
-			this.panelSave.get_Controls().Add(this.buttonReset);
-			this.panelSave.get_Controls().Add(this.buttonUndo);
-			this.panelSave.get_Controls().Add(this.buttonRedo);
+			this.panelSave.Controls.Add(this.buttonSave);
+			this.panelSave.Controls.Add(this.buttonReset);
+			this.panelSave.Controls.Add(this.buttonUndo);
+			this.panelSave.Controls.Add(this.buttonRedo);
 			this.panelSave.set_Dock(2);
 			Control arg_10D0_0 = this.panelSave;
 			location = new Point(2, 390);
@@ -1155,10 +1155,10 @@ namespace FotoVision
 			size = new Size(23, 23);
 			arg_12BB_0.set_ImageSize(size);
 			this.imageList.set_ImageStream((ImageListStreamer)resourceManager.GetObject("imageList.ImageStream"));
-			this.imageList.set_TransparentColor(Color.get_Lime());
-			this.get_Controls().Add(this.tabControl);
-			this.get_Controls().Add(this.panelSave);
-			this.get_DockPadding().set_All(2);
+			this.imageList.set_TransparentColor(Color.Lime);
+			this.Controls.Add(this.tabControl);
+			this.Controls.Add(this.panelSave);
+			this.DockPadding.set_All(2);
 			this.set_Name("DetailsActions");
 			size = new Size(312, 432);
 			this.set_Size(size);
@@ -1191,7 +1191,7 @@ namespace FotoVision
 			this.numGamma.set_Tag(this.sliderGamma);
 			this.numSat.set_Tag(this.sliderSat);
 			this.InitCropDrawing();
-			this.panelSave.set_BackColor(SystemColors.get_Control());
+			this.panelSave.set_BackColor(SystemColors.Control);
 			this.buttonSave.set_Tag(DetailsCommandButton.Save);
 			this.buttonReset.set_Tag(DetailsCommandButton.Reset);
 			this.buttonUndo.set_Tag(DetailsCommandButton.Undo);
@@ -1216,8 +1216,8 @@ namespace FotoVision
 			this._cropBounds = cropBounds;
 			this.DrawCropCoords(cropBounds);
 			this.DrawCropDim(orgSize, newSize);
-			this.buttonCrop.set_Enabled(BooleanType.FromObject(Interaction.IIf(this._cropBounds.get_Width() > 0 & this._cropBounds.get_Height() > 0, true, false)));
-			this.buttonClearCrop.set_Enabled(this.buttonCrop.get_Enabled());
+			this.buttonCrop.set_Enabled(BooleanType.FromObject(Interaction.IIf(this._cropBounds.Width > 0 & this._cropBounds.Height > 0, true, false)));
+			this.buttonClearCrop.set_Enabled(this.buttonCrop.Enabled);
 		}
 		private void buttonGrayscale_Click(object sender, EventArgs e)
 		{
@@ -1231,7 +1231,7 @@ namespace FotoVision
 		{
 			if (this.CropModeChangedEvent != null)
 			{
-				this.CropModeChangedEvent(this, new CropModeChangedEventArgs(BooleanType.FromObject(Interaction.IIf(this.tabControl.get_SelectedIndex() == 1, true, false))));
+				this.CropModeChangedEvent(this, new CropModeChangedEventArgs(BooleanType.FromObject(Interaction.IIf(this.tabControl.SelectedIndex == 1, true, false))));
 			}
 		}
 		private void buttonCrop_Click(object sender, EventArgs e)
@@ -1250,85 +1250,85 @@ namespace FotoVision
 			Button button = (Button)sender;
 			if (this.CommandButtonClickedEvent != null)
 			{
-				this.CommandButtonClickedEvent(this, new CommandButtonClickedEventArgs((DetailsCommandButton)button.get_Tag()));
+				this.CommandButtonClickedEvent(this, new CommandButtonClickedEventArgs((DetailsCommandButton)button.Tag));
 			}
 		}
 		private void panelAdjust_Paint(object sender, PaintEventArgs e)
 		{
-			this.DrawSliderIcons(e.get_Graphics(), this.sliderContrast);
-			this.DrawSliderIcons(e.get_Graphics(), this.sliderBright);
-			this.DrawSliderIcons(e.get_Graphics(), this.sliderGamma);
-			this.DrawSliderIcons(e.get_Graphics(), this.sliderSat);
+			this.DrawSliderIcons(e.Graphics, this.sliderContrast);
+			this.DrawSliderIcons(e.Graphics, this.sliderBright);
+			this.DrawSliderIcons(e.Graphics, this.sliderGamma);
+			this.DrawSliderIcons(e.Graphics, this.sliderSat);
 		}
 		private void slider_ValueChanged(object sender, EventArgs e)
 		{
 			TrackBar trackBar = (TrackBar)sender;
-			DetailsActions.SliderData sliderData = (DetailsActions.SliderData)trackBar.get_Tag();
+			DetailsActions.SliderData sliderData = (DetailsActions.SliderData)trackBar.Tag;
 			this._updatingSlider = true;
-			sliderData.NumericUpDown.set_Value(new decimal(trackBar.get_Value()));
+			sliderData.NumericUpDown.set_Value(new decimal(trackBar.Value));
 			this._updatingSlider = false;
 			sliderData.ValueChanged = true;
 		}
 		private void slider_KeyUp(object sender, KeyEventArgs e)
 		{
 			TrackBar trackBar = (TrackBar)sender;
-			DetailsActions.SliderData sliderData = (DetailsActions.SliderData)trackBar.get_Tag();
+			DetailsActions.SliderData sliderData = (DetailsActions.SliderData)trackBar.Tag;
 			if (sliderData.ValueChanged)
 			{
-				this.OnNewAction(new ActionItem(sliderData.Action, trackBar.get_Value()));
+				this.OnNewAction(new ActionItem(sliderData.Action, trackBar.Value));
 				sliderData.ValueChanged = false;
 			}
 		}
 		private void slider_MouseUp(object sender, MouseEventArgs e)
 		{
 			TrackBar trackBar = (TrackBar)sender;
-			DetailsActions.SliderData sliderData = (DetailsActions.SliderData)trackBar.get_Tag();
+			DetailsActions.SliderData sliderData = (DetailsActions.SliderData)trackBar.Tag;
 			if (sliderData.ValueChanged)
 			{
-				this.OnNewAction(new ActionItem(sliderData.Action, trackBar.get_Value()));
+				this.OnNewAction(new ActionItem(sliderData.Action, trackBar.Value));
 				sliderData.ValueChanged = false;
 			}
 		}
 		private void spinner_Enter(object sender, EventArgs e)
 		{
 			NumericUpDown numericUpDown = (NumericUpDown)sender;
-			numericUpDown.Select(0, numericUpDown.get_Text().get_Length());
+			numericUpDown.Select(0, numericUpDown.Text.Length);
 		}
 		private void spinner_ValueChanged(object sender, EventArgs e)
 		{
 			if (!this._updatingSlider)
 			{
 				NumericUpDown numericUpDown = (NumericUpDown)sender;
-				TrackBar trackBar = (TrackBar)numericUpDown.get_Tag();
-				trackBar.set_Value(Convert.ToInt32(numericUpDown.get_Value(), CultureInfo.get_InvariantCulture()));
+				TrackBar trackBar = (TrackBar)numericUpDown.Tag;
+				trackBar.set_Value(Convert.ToInt32(numericUpDown.Value, CultureInfo.InvariantCulture));
 			}
 		}
 		private void spinner_KeyUp(object sender, KeyEventArgs e)
 		{
 			this.spinner_ValueChanged(RuntimeHelpers.GetObjectValue(sender), EventArgs.Empty);
 			NumericUpDown numericUpDown = (NumericUpDown)sender;
-			TrackBar trackBar = (TrackBar)numericUpDown.get_Tag();
-			DetailsActions.SliderData sliderData = (DetailsActions.SliderData)trackBar.get_Tag();
+			TrackBar trackBar = (TrackBar)numericUpDown.Tag;
+			DetailsActions.SliderData sliderData = (DetailsActions.SliderData)trackBar.Tag;
 			if (sliderData.ValueChanged)
 			{
-				this.OnNewAction(new ActionItem(sliderData.Action, trackBar.get_Value()));
+				this.OnNewAction(new ActionItem(sliderData.Action, trackBar.Value));
 				sliderData.ValueChanged = false;
 			}
 		}
 		private void spinner_MouseUp(object sender, MouseEventArgs e)
 		{
 			NumericUpDown numericUpDown = (NumericUpDown)sender;
-			TrackBar trackBar = (TrackBar)numericUpDown.get_Tag();
-			DetailsActions.SliderData sliderData = (DetailsActions.SliderData)trackBar.get_Tag();
+			TrackBar trackBar = (TrackBar)numericUpDown.Tag;
+			DetailsActions.SliderData sliderData = (DetailsActions.SliderData)trackBar.Tag;
 			if (sliderData.ValueChanged)
 			{
-				this.OnNewAction(new ActionItem(sliderData.Action, trackBar.get_Value()));
+				this.OnNewAction(new ActionItem(sliderData.Action, trackBar.Value));
 				sliderData.ValueChanged = false;
 			}
 		}
 		private void OnNewAction(ActionItem actionItem)
 		{
-			Global.SetSliderValues(this.sliderContrast.get_Value(), this.sliderBright.get_Value(), this.sliderGamma.get_Value(), this.sliderSat.get_Value());
+			Global.SetSliderValues(this.sliderContrast.Value, this.sliderBright.Value, this.sliderGamma.Value, this.sliderSat.Value);
 			if (this.ActionEvent != null)
 			{
 				this.ActionEvent(this, new ActionEventArgs(actionItem));
@@ -1336,26 +1336,26 @@ namespace FotoVision
 		}
 		private void DrawCropCoords(Rectangle bounds)
 		{
-			Brush brush = (Brush)Interaction.IIf(this.pictCropCoord.get_Enabled(), SystemBrushes.get_ControlText(), SystemBrushes.FromSystemColor(SystemColors.get_GrayText()));
-			Graphics graphics = Graphics.FromImage(this.pictCropCoord.get_Image());
+			Brush brush = (Brush)Interaction.IIf(this.pictCropCoord.Enabled, SystemBrushes.ControlText, SystemBrushes.FromSystemColor(SystemColors.GrayText));
+			Graphics graphics = Graphics.FromImage(this.pictCropCoord.Image);
 			checked
 			{
 				try
 				{
-					graphics.Clear(SystemColors.get_Control());
-					graphics.DrawString("Left:", this.get_Font(), brush, 0f, 0f);
-					graphics.DrawString("Right:", this.get_Font(), brush, 0f, (float)(this.get_Font().get_Height() + 3));
-					graphics.DrawString("Top:", this.get_Font(), brush, 0f, (float)((this.get_Font().get_Height() + 3) * 2));
-					graphics.DrawString("Bottom:", this.get_Font(), brush, 0f, (float)((this.get_Font().get_Height() + 3) * 3));
-					graphics.DrawString(StringType.FromInteger(bounds.get_Left()), this.get_Font(), brush, 48f, 0f);
-					graphics.DrawString(StringType.FromInteger(bounds.get_Right()), this.get_Font(), brush, 48f, (float)(this.get_Font().get_Height() + 3));
-					graphics.DrawString(StringType.FromInteger(bounds.get_Top()), this.get_Font(), brush, 48f, (float)((this.get_Font().get_Height() + 3) * 2));
-					graphics.DrawString(StringType.FromInteger(bounds.get_Bottom()), this.get_Font(), brush, 48f, (float)((this.get_Font().get_Height() + 3) * 3));
-					int width = graphics.MeasureString(StringType.FromInteger(Math.Max(bounds.get_Right(), bounds.get_Bottom())), this.get_Font()).ToSize().get_Width();
-					graphics.DrawString("pixels", this.get_Font(), brush, (float)(48 + width + 5), 0f);
-					graphics.DrawString("pixels", this.get_Font(), brush, (float)(48 + width + 5), (float)(this.get_Font().get_Height() + 3));
-					graphics.DrawString("pixels", this.get_Font(), brush, (float)(48 + width + 5), (float)((this.get_Font().get_Height() + 3) * 2));
-					graphics.DrawString("pixels", this.get_Font(), brush, (float)(48 + width + 5), (float)((this.get_Font().get_Height() + 3) * 3));
+					graphics.Clear(SystemColors.Control);
+					graphics.DrawString("Left:", this.Font, brush, 0f, 0f);
+					graphics.DrawString("Right:", this.Font, brush, 0f, (float)(this.Font.Height + 3));
+					graphics.DrawString("Top:", this.Font, brush, 0f, (float)((this.Font.Height + 3) * 2));
+					graphics.DrawString("Bottom:", this.Font, brush, 0f, (float)((this.Font.Height + 3) * 3));
+					graphics.DrawString(StringType.FromInteger(bounds.Left), this.Font, brush, 48f, 0f);
+					graphics.DrawString(StringType.FromInteger(bounds.Right), this.Font, brush, 48f, (float)(this.Font.Height + 3));
+					graphics.DrawString(StringType.FromInteger(bounds.Top), this.Font, brush, 48f, (float)((this.Font.Height + 3) * 2));
+					graphics.DrawString(StringType.FromInteger(bounds.Bottom), this.Font, brush, 48f, (float)((this.Font.Height + 3) * 3));
+					int width = graphics.MeasureString(StringType.FromInteger(Math.Max(bounds.Right, bounds.Bottom)), this.Font).ToSize().Width;
+					graphics.DrawString("pixels", this.Font, brush, (float)(48 + width + 5), 0f);
+					graphics.DrawString("pixels", this.Font, brush, (float)(48 + width + 5), (float)(this.Font.Height + 3));
+					graphics.DrawString("pixels", this.Font, brush, (float)(48 + width + 5), (float)((this.Font.Height + 3) * 2));
+					graphics.DrawString("pixels", this.Font, brush, (float)(48 + width + 5), (float)((this.Font.Height + 3) * 3));
 				}
 				finally
 				{
@@ -1366,17 +1366,17 @@ namespace FotoVision
 		}
 		private void DrawCropDim(Size orgSize, Size newSize)
 		{
-			Brush brush = (Brush)Interaction.IIf(this.pictCropDim.get_Enabled(), SystemBrushes.get_ControlText(), SystemBrushes.FromSystemColor(SystemColors.get_GrayText()));
-			Graphics graphics = Graphics.FromImage(this.pictCropDim.get_Image());
+			Brush brush = (Brush)Interaction.IIf(this.pictCropDim.Enabled, SystemBrushes.ControlText, SystemBrushes.FromSystemColor(SystemColors.GrayText));
+			Graphics graphics = Graphics.FromImage(this.pictCropDim.Image);
 			checked
 			{
 				try
 				{
-					graphics.Clear(SystemColors.get_Control());
-					graphics.DrawString("Original:", this.get_Font(), brush, 0f, 0f);
-					graphics.DrawString("Selection:", this.get_Font(), brush, 0f, (float)(this.get_Font().get_Height() + 3));
-					graphics.DrawString(string.Format("{0} x {1} pixels", orgSize.get_Width(), orgSize.get_Height()), this.get_Font(), brush, 55f, 0f);
-					graphics.DrawString(string.Format("{0} x {1} pixels", newSize.get_Width(), newSize.get_Height()), this.get_Font(), (Brush)Interaction.IIf(this.pictCropDim.get_Enabled(), Brushes.get_Firebrick(), brush), 55f, (float)(this.get_Font().get_Height() + 3));
+					graphics.Clear(SystemColors.Control);
+					graphics.DrawString("Original:", this.Font, brush, 0f, 0f);
+					graphics.DrawString("Selection:", this.Font, brush, 0f, (float)(this.Font.Height + 3));
+					graphics.DrawString(string.Format("{0} x {1} pixels", orgSize.Width, orgSize.Height), this.Font, brush, 55f, 0f);
+					graphics.DrawString(string.Format("{0} x {1} pixels", newSize.Width, newSize.Height), this.Font, (Brush)Interaction.IIf(this.pictCropDim.Enabled, Brushes.Firebrick, brush), 55f, (float)(this.Font.Height + 3));
 				}
 				finally
 				{
@@ -1387,16 +1387,16 @@ namespace FotoVision
 		}
 		private void InitCropDrawing()
 		{
-			this.pictCropCoord.set_Image(new Bitmap(this.pictCropCoord.get_Width(), this.pictCropCoord.get_Height()));
-			this.pictCropDim.set_Image(new Bitmap(this.pictCropDim.get_Width(), this.pictCropDim.get_Height()));
+			this.pictCropCoord.set_Image(new Bitmap(this.pictCropCoord.Width, this.pictCropCoord.Height));
+			this.pictCropDim.set_Image(new Bitmap(this.pictCropDim.Width, this.pictCropDim.Height));
 		}
 		private void DrawSliderIcons(Graphics g, TrackBar slider)
 		{
-			DetailsActions.SliderData sliderData = (DetailsActions.SliderData)slider.get_Tag();
+			DetailsActions.SliderData sliderData = (DetailsActions.SliderData)slider.Tag;
 			checked
 			{
-				this.imageList.Draw(g, slider.get_Left() - this.imageList.get_ImageSize().get_Width() - 3, slider.get_Top() - 3, sliderData.ImageIndexLow);
-				this.imageList.Draw(g, slider.get_Right() + 3, slider.get_Top() - 3, sliderData.ImageIndexHigh);
+				this.imageList.Draw(g, slider.Left - this.imageList.ImageSize.Width - 3, slider.Top - 3, sliderData.ImageIndexLow);
+				this.imageList.Draw(g, slider.Right + 3, slider.Top - 3, sliderData.ImageIndexHigh);
 			}
 		}
 	}

@@ -278,10 +278,10 @@ namespace FotoVision
 			[PermissionSet(SecurityAction.LinkDemand, XML = "<PermissionSet class=\"System.Security.PermissionSet\"\r\n               version=\"1\">\r\n   <IPermission class=\"System.Security.Permissions.SecurityPermission, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\r\n                version=\"1\"\r\n                Flags=\"UnmanagedCode\"/>\r\n</PermissionSet>\r\n")]
 			get
 			{
-				CreateParams createParams = base.get_CreateParams();
+				CreateParams createParams = base.CreateParams;
 				if (this.RunningOnXP())
 				{
-					createParams.set_ClassStyle(createParams.get_ClassStyle() | 131072);
+					createParams.set_ClassStyle(createParams.ClassStyle | 131072);
 				}
 				return createParams;
 			}
@@ -290,7 +290,7 @@ namespace FotoVision
 		{
 			this.InitializeComponent();
 			this._path = path;
-			this._fontHeader = this.labelFileName.get_Font();
+			this._fontHeader = this.labelFileName.Font;
 			this._format = new StringFormat();
 			this._format.set_Trimming(5);
 		}
@@ -343,9 +343,9 @@ namespace FotoVision
 			this.pictThumbnail.set_SizeMode(3);
 			this.pictThumbnail.set_TabIndex(2);
 			this.pictThumbnail.set_TabStop(false);
-			this.tabControl.get_Controls().Add(this.pageFile);
-			this.tabControl.get_Controls().Add(this.pageExif);
-			this.tabControl.get_Controls().Add(this.pageActions);
+			this.tabControl.Controls.Add(this.pageFile);
+			this.tabControl.Controls.Add(this.pageExif);
+			this.tabControl.Controls.Add(this.pageActions);
 			Control arg_1E7_0 = this.tabControl;
 			location = new Point(8, 64);
 			arg_1E7_0.set_Location(location);
@@ -355,7 +355,7 @@ namespace FotoVision
 			size = new Size(280, 186);
 			arg_220_0.set_Size(size);
 			this.tabControl.set_TabIndex(3);
-			this.pageFile.set_BackColor(SystemColors.get_Info());
+			this.pageFile.set_BackColor(SystemColors.Info);
 			Control arg_252_0 = this.pageFile;
 			location = new Point(4, 22);
 			arg_252_0.set_Location(location);
@@ -365,7 +365,7 @@ namespace FotoVision
 			arg_27F_0.set_Size(size);
 			this.pageFile.set_TabIndex(0);
 			this.pageFile.set_Text("File");
-			this.pageExif.set_BackColor(SystemColors.get_Info());
+			this.pageExif.set_BackColor(SystemColors.Info);
 			Control arg_2C1_0 = this.pageExif;
 			location = new Point(4, 22);
 			arg_2C1_0.set_Location(location);
@@ -375,8 +375,8 @@ namespace FotoVision
 			arg_2EE_0.set_Size(size);
 			this.pageExif.set_TabIndex(1);
 			this.pageExif.set_Text("Exif");
-			this.pageActions.set_BackColor(SystemColors.get_Info());
-			this.pageActions.get_Controls().Add(this.textActions);
+			this.pageActions.set_BackColor(SystemColors.Info);
+			this.pageActions.Controls.Add(this.textActions);
 			Control arg_346_0 = this.pageActions;
 			location = new Point(4, 22);
 			arg_346_0.set_Location(location);
@@ -386,7 +386,7 @@ namespace FotoVision
 			arg_373_0.set_Size(size);
 			this.pageActions.set_TabIndex(2);
 			this.pageActions.set_Text("Actions");
-			this.textActions.set_BackColor(SystemColors.get_Info());
+			this.textActions.set_BackColor(SystemColors.Info);
 			this.textActions.set_BorderStyle(0);
 			this.textActions.set_Dock(5);
 			Control arg_3CC_0 = this.textActions;
@@ -423,8 +423,8 @@ namespace FotoVision
 			arg_514_0.set_Size(size);
 			this.labelSize.set_TabIndex(4);
 			this.timer.set_Interval(1);
-			this.panelProgress.set_BackColor(SystemColors.get_Info());
-			this.panelProgress.get_Controls().Add(this.labelProgress);
+			this.panelProgress.set_BackColor(SystemColors.Info);
+			this.panelProgress.Controls.Add(this.labelProgress);
 			Control arg_56C_0 = this.panelProgress;
 			location = new Point(28, 140);
 			arg_56C_0.set_Location(location);
@@ -435,7 +435,7 @@ namespace FotoVision
 			this.panelProgress.set_TabIndex(14);
 			this.labelProgress.set_FlatStyle(3);
             this.labelProgress.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0));
-			this.labelProgress.set_ForeColor(SystemColors.get_ControlText());
+			this.labelProgress.set_ForeColor(SystemColors.ControlText);
 			Control arg_5F2_0 = this.labelProgress;
 			location = new Point(48, 8);
 			arg_5F2_0.set_Location(location);
@@ -448,17 +448,17 @@ namespace FotoVision
 			this.set_AcceptButton(this.buttonClose);
 			size = new Size(5, 13);
 			this.set_AutoScaleBaseSize(size);
-			this.set_BackColor(SystemColors.get_Info());
+			this.set_BackColor(SystemColors.Info);
 			this.set_CancelButton(this.buttonClose);
 			size = new Size(296, 288);
 			this.set_ClientSize(size);
 			this.set_ControlBox(false);
-			this.get_Controls().Add(this.panelProgress);
-			this.get_Controls().Add(this.labelFileName);
-			this.get_Controls().Add(this.tabControl);
-			this.get_Controls().Add(this.pictThumbnail);
-			this.get_Controls().Add(this.buttonClose);
-			this.get_Controls().Add(this.labelSize);
+			this.Controls.Add(this.panelProgress);
+			this.Controls.Add(this.labelFileName);
+			this.Controls.Add(this.tabControl);
+			this.Controls.Add(this.pictThumbnail);
+			this.Controls.Add(this.buttonClose);
+			this.Controls.Add(this.labelSize);
 			this.set_FormBorderStyle(0);
 			this.set_MaximizeBox(false);
 			this.set_MinimizeBox(false);
@@ -480,7 +480,7 @@ namespace FotoVision
 		}
 		protected override void OnClosed(EventArgs e)
 		{
-			this.pictThumbnail.get_Image().Dispose();
+			this.pictThumbnail.Image.Dispose();
 			base.OnClosed(e);
 		}
 		private void buttonClose_Click(object sender, EventArgs e)
@@ -490,10 +490,10 @@ namespace FotoVision
 		private void timer_Tick(object sender, EventArgs e)
 		{
 			this._timer.set_Enabled(false);
-			Cursor.set_Current(Cursors.get_WaitCursor());
+			Cursor.set_Current(Cursors.WaitCursor);
 			this.GetInfo();
 			this.panelProgress.set_Visible(false);
-			Cursor.set_Current(Cursors.get_Default());
+			Cursor.set_Current(Cursors.Default);
 		}
 		private void GetInfo()
 		{
@@ -501,11 +501,11 @@ namespace FotoVision
 			{
 				Bitmap bitmap = new Bitmap(this._path);
 				this._photoInfo = default(PhotoInfo);
-				this._photoInfo.Read(this._path, bitmap, bitmap.get_RawFormat());
+				this._photoInfo.Read(this._path, bitmap, bitmap.RawFormat);
 				this._exif = new Exif();
 				this._exif.Read(bitmap);
-				this.labelSize.set_Text(string.Format("{0} x {1} pixels", this._photoInfo.ImageSize.get_Width(), this._photoInfo.ImageSize.get_Height()));
-				this.pictThumbnail.set_Image(PhotoHelper.GetThumbnail(bitmap, this.pictThumbnail.get_Width()));
+				this.labelSize.set_Text(string.Format("{0} x {1} pixels", this._photoInfo.ImageSize.Width, this._photoInfo.ImageSize.Height));
+				this.pictThumbnail.set_Image(PhotoHelper.GetThumbnail(bitmap, this.pictThumbnail.Width));
 				this.textActions.set_Text(this.GetActionList());
 				this.pageFile.Invalidate();
 			}
@@ -552,12 +552,12 @@ namespace FotoVision
 		}
 		private bool RunningOnXP()
 		{
-			return Environment.get_OSVersion().get_Version().get_Major() >= 5 && (Environment.get_OSVersion().get_Version().get_Major() > 5 || Environment.get_OSVersion().get_Version().get_Minor() > 0);
+			return Environment.OSVersion.Version.Major >= 5 && (Environment.OSVersion.Version.Major > 5 || Environment.OSVersion.Version.Minor > 0);
 		}
 		[PermissionSet(SecurityAction.LinkDemand, XML = "<PermissionSet class=\"System.Security.PermissionSet\"\r\n               version=\"1\">\r\n   <IPermission class=\"System.Security.Permissions.SecurityPermission, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\r\n                version=\"1\"\r\n                Flags=\"UnmanagedCode\"/>\r\n</PermissionSet>\r\n")]
 		protected override void WndProc(ref Message m)
 		{
-			if (m.get_Msg() == 134 && m.get_WParam().ToInt32() == 0)
+			if (m.Msg == 134 && m.WParam.ToInt32() == 0)
 			{
 				this.Close();
 			}
@@ -565,20 +565,20 @@ namespace FotoVision
 		}
 		private void pageExif_Paint(object sender, PaintEventArgs e)
 		{
-			this.DrawExifInfo(e.get_Graphics());
+			this.DrawExifInfo(e.Graphics);
 		}
 		private void pageFile_Paint(object sender, PaintEventArgs e)
 		{
-			this.DrawFileInfo(e.get_Graphics());
+			this.DrawFileInfo(e.Graphics);
 		}
 		protected override void OnPaint(PaintEventArgs e)
 		{
-			RectangleF rectangleF = new RectangleF((float)this.labelFileName.get_Bounds().get_Left(), (float)this.labelFileName.get_Bounds().get_Top(), (float)this.labelFileName.get_Bounds().get_Width(), (float)this.get_Font().get_Height());
+			RectangleF rectangleF = new RectangleF((float)this.labelFileName.Bounds.Left, (float)this.labelFileName.Bounds.Top, (float)this.labelFileName.Bounds.Width, (float)this.Font.Height);
 			RectangleF rectangleF2 = rectangleF;
-			e.get_Graphics().DrawString(Path.GetFileName(this._path), this._fontHeader, SystemBrushes.get_ControlText(), rectangleF2, this._format);
+			e.Graphics.DrawString(Path.GetFileName(this._path), this._fontHeader, SystemBrushes.ControlText, rectangleF2, this._format);
 			checked
 			{
-				e.get_Graphics().DrawRectangle(SystemPens.get_ControlDark(), 0, 0, this.get_Width() - 1, this.get_Height() - 1);
+				e.Graphics.DrawRectangle(SystemPens.ControlDark, 0, 0, this.Width - 1, this.Height - 1);
 			}
 		}
 		private void DrawFileInfo(Graphics g)
@@ -591,28 +591,28 @@ namespace FotoVision
 			int num;
 			checked
 			{
-				rectangleF = new RectangleF(2f, 2f, (float)(this.pageExif.get_Width() - 4), (float)this.get_Font().get_Height());
-				num = this.get_Font().get_Height() + 2;
-				g.DrawString("Size", this._fontHeader, SystemBrushes.get_ControlText(), rectangleF);
+				rectangleF = new RectangleF(2f, 2f, (float)(this.pageExif.Width - 4), (float)this.Font.Height);
+				num = this.Font.Height + 2;
+				g.DrawString("Size", this._fontHeader, SystemBrushes.ControlText, rectangleF);
 			}
-			rectangleF.set_Y(rectangleF.get_Y() + (float)num);
-			g.DrawString(this._photoInfo.FileLengthString, this.get_Font(), SystemBrushes.get_ControlText(), rectangleF, this._format);
-			rectangleF.set_Y(rectangleF.get_Y() + (float)num);
-			rectangleF.set_Y(rectangleF.get_Y() + (float)(num / 2));
-			g.DrawString("Created", this._fontHeader, SystemBrushes.get_ControlText(), rectangleF);
-			rectangleF.set_Y(rectangleF.get_Y() + (float)num);
-			g.DrawString(this._photoInfo.DateCreated.ToLongDateString() + " " + this._photoInfo.DateCreated.ToLongTimeString(), this.get_Font(), SystemBrushes.get_ControlText(), rectangleF, this._format);
-			rectangleF.set_Y(rectangleF.get_Y() + (float)num);
-			rectangleF.set_Y(rectangleF.get_Y() + (float)(num / 2));
-			g.DrawString("Modified", this._fontHeader, SystemBrushes.get_ControlText(), rectangleF);
-			rectangleF.set_Y(rectangleF.get_Y() + (float)num);
-			g.DrawString(this._photoInfo.DateModified.ToLongDateString() + " " + this._photoInfo.DateModified.ToLongTimeString(), this.get_Font(), SystemBrushes.get_ControlText(), rectangleF, this._format);
-			rectangleF.set_Y(rectangleF.get_Y() + (float)num);
-			rectangleF.set_Y(rectangleF.get_Y() + (float)(num / 2));
-			g.DrawString("Location", this._fontHeader, SystemBrushes.get_ControlText(), rectangleF);
-			rectangleF.set_Y(rectangleF.get_Y() + (float)num);
-			rectangleF.set_Height((float)checked(this.get_Font().get_Height() * 2));
-			g.DrawString(Path.GetDirectoryName(this._path), this.get_Font(), SystemBrushes.get_ControlText(), rectangleF, this._format);
+			rectangleF.set_Y(rectangleF.Y + (float)num);
+			g.DrawString(this._photoInfo.FileLengthString, this.Font, SystemBrushes.ControlText, rectangleF, this._format);
+			rectangleF.set_Y(rectangleF.Y + (float)num);
+			rectangleF.set_Y(rectangleF.Y + (float)(num / 2));
+			g.DrawString("Created", this._fontHeader, SystemBrushes.ControlText, rectangleF);
+			rectangleF.set_Y(rectangleF.Y + (float)num);
+			g.DrawString(this._photoInfo.DateCreated.ToLongDateString() + " " + this._photoInfo.DateCreated.ToLongTimeString(), this.Font, SystemBrushes.ControlText, rectangleF, this._format);
+			rectangleF.set_Y(rectangleF.Y + (float)num);
+			rectangleF.set_Y(rectangleF.Y + (float)(num / 2));
+			g.DrawString("Modified", this._fontHeader, SystemBrushes.ControlText, rectangleF);
+			rectangleF.set_Y(rectangleF.Y + (float)num);
+			g.DrawString(this._photoInfo.DateModified.ToLongDateString() + " " + this._photoInfo.DateModified.ToLongTimeString(), this.Font, SystemBrushes.ControlText, rectangleF, this._format);
+			rectangleF.set_Y(rectangleF.Y + (float)num);
+			rectangleF.set_Y(rectangleF.Y + (float)(num / 2));
+			g.DrawString("Location", this._fontHeader, SystemBrushes.ControlText, rectangleF);
+			rectangleF.set_Y(rectangleF.Y + (float)num);
+			rectangleF.set_Height((float)checked(this.Font.Height * 2));
+			g.DrawString(Path.GetDirectoryName(this._path), this.Font, SystemBrushes.ControlText, rectangleF, this._format);
 		}
 		private void DrawExifInfo(Graphics g)
 		{
@@ -624,36 +624,36 @@ namespace FotoVision
 			int num;
 			checked
 			{
-				rectangleF = new RectangleF(2f, 2f, (float)(this.pageExif.get_Width() - 4), (float)this.get_Font().get_Height());
-				num = this.get_Font().get_Height() + 2;
-				g.DrawString("Camera", this._fontHeader, SystemBrushes.get_ControlText(), rectangleF);
+				rectangleF = new RectangleF(2f, 2f, (float)(this.pageExif.Width - 4), (float)this.Font.Height);
+				num = this.Font.Height + 2;
+				g.DrawString("Camera", this._fontHeader, SystemBrushes.ControlText, rectangleF);
 			}
-			rectangleF.set_Y(rectangleF.get_Y() + (float)num);
-			if (this._exif.Make.get_Length() == 0 && this._exif.Model.get_Length() == 0)
+			rectangleF.set_Y(rectangleF.Y + (float)num);
+			if (this._exif.Make.Length == 0 && this._exif.Model.Length == 0)
 			{
-				g.DrawString("(none)", this.get_Font(), SystemBrushes.get_ControlText(), rectangleF, this._format);
-				rectangleF.set_Y(rectangleF.get_Y() + (float)num);
+				g.DrawString("(none)", this.Font, SystemBrushes.ControlText, rectangleF, this._format);
+				rectangleF.set_Y(rectangleF.Y + (float)num);
 			}
 			else
 			{
-				if (this._exif.Make.get_Length() > 0)
+				if (this._exif.Make.Length > 0)
 				{
-					g.DrawString(this._exif.Make, this.get_Font(), SystemBrushes.get_ControlText(), rectangleF, this._format);
-					rectangleF.set_Y(rectangleF.get_Y() + (float)num);
+					g.DrawString(this._exif.Make, this.Font, SystemBrushes.ControlText, rectangleF, this._format);
+					rectangleF.set_Y(rectangleF.Y + (float)num);
 				}
-				if (this._exif.Model.get_Length() > 0)
+				if (this._exif.Model.Length > 0)
 				{
-					g.DrawString(this._exif.Model, this.get_Font(), SystemBrushes.get_ControlText(), rectangleF, this._format);
-					rectangleF.set_Y(rectangleF.get_Y() + (float)num);
+					g.DrawString(this._exif.Model, this.Font, SystemBrushes.ControlText, rectangleF, this._format);
+					rectangleF.set_Y(rectangleF.Y + (float)num);
 				}
 			}
-			rectangleF.set_Y(rectangleF.get_Y() + (float)(num / 2));
-			g.DrawString("Settings", this._fontHeader, SystemBrushes.get_ControlText(), rectangleF);
-			rectangleF.set_Y(rectangleF.get_Y() + (float)num);
+			rectangleF.set_Y(rectangleF.Y + (float)(num / 2));
+			g.DrawString("Settings", this._fontHeader, SystemBrushes.ControlText, rectangleF);
+			rectangleF.set_Y(rectangleF.Y + (float)num);
 			if (this._exif.ExposureTime == 0f && this._exif.Aperture == 0f && this._exif.Iso == 0)
 			{
-				g.DrawString("(none)", this.get_Font(), SystemBrushes.get_ControlText(), rectangleF, this._format);
-				rectangleF.set_Y(rectangleF.get_Y() + (float)num);
+				g.DrawString("(none)", this.Font, SystemBrushes.ControlText, rectangleF, this._format);
+				rectangleF.set_Y(rectangleF.Y + (float)num);
 			}
 			else
 			{
@@ -664,31 +664,31 @@ namespace FotoVision
 				}
 				else
 				{
-					text = this._exif.ExposureTime.ToString("f1", CultureInfo.get_CurrentCulture());
+					text = this._exif.ExposureTime.ToString("f1", CultureInfo.CurrentCulture);
 				}
-				g.DrawString(string.Format("{0} sec, F {1}", text, this._exif.Aperture.ToString("f1", CultureInfo.get_CurrentCulture())), this.get_Font(), SystemBrushes.get_ControlText(), rectangleF, this._format);
-				rectangleF.set_Y(rectangleF.get_Y() + (float)num);
+				g.DrawString(string.Format("{0} sec, F {1}", text, this._exif.Aperture.ToString("f1", CultureInfo.CurrentCulture)), this.Font, SystemBrushes.ControlText, rectangleF, this._format);
+				rectangleF.set_Y(rectangleF.Y + (float)num);
 				if (this._exif.Iso == 0)
 				{
-					g.DrawString(StringType.FromObject(Interaction.IIf(this._exif.Flash, "Flash", "No flash")), this.get_Font(), SystemBrushes.get_ControlText(), rectangleF, this._format);
+					g.DrawString(StringType.FromObject(Interaction.IIf(this._exif.Flash, "Flash", "No flash")), this.Font, SystemBrushes.ControlText, rectangleF, this._format);
 				}
 				else
 				{
-					g.DrawString(string.Format("ISO {0}, {1}", this._exif.Iso, StringType.FromObject(Interaction.IIf(this._exif.Flash, "Flash", "No flash"))), this.get_Font(), SystemBrushes.get_ControlText(), rectangleF, this._format);
+					g.DrawString(string.Format("ISO {0}, {1}", this._exif.Iso, StringType.FromObject(Interaction.IIf(this._exif.Flash, "Flash", "No flash"))), this.Font, SystemBrushes.ControlText, rectangleF, this._format);
 				}
-				rectangleF.set_Y(rectangleF.get_Y() + (float)num);
+				rectangleF.set_Y(rectangleF.Y + (float)num);
 			}
-			rectangleF.set_Y(rectangleF.get_Y() + (float)(num / 2));
-			g.DrawString("Comments", this._fontHeader, SystemBrushes.get_ControlText(), rectangleF);
-			rectangleF.set_Y(rectangleF.get_Y() + (float)num);
-			if (this._exif.UserComment.get_Length() == 0)
+			rectangleF.set_Y(rectangleF.Y + (float)(num / 2));
+			g.DrawString("Comments", this._fontHeader, SystemBrushes.ControlText, rectangleF);
+			rectangleF.set_Y(rectangleF.Y + (float)num);
+			if (this._exif.UserComment.Length == 0)
 			{
-				g.DrawString("(none)", this.get_Font(), SystemBrushes.get_ControlText(), rectangleF, this._format);
+				g.DrawString("(none)", this.Font, SystemBrushes.ControlText, rectangleF, this._format);
 			}
 			else
 			{
-				rectangleF.set_Height((float)checked(this.get_Font().get_Height() * 2));
-				g.DrawString(this._exif.UserComment, this.get_Font(), SystemBrushes.get_ControlText(), rectangleF, this._format);
+				rectangleF.set_Height((float)checked(this.Font.Height * 2));
+				g.DrawString(this._exif.UserComment, this.Font, SystemBrushes.ControlText, rectangleF, this._format);
 			}
 		}
 	}

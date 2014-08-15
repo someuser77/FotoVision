@@ -16,7 +16,7 @@ namespace FotoVision
 		}
 		public static bool Create()
 		{
-			string text = Application.get_ExecutablePath() + ".manifest";
+			string text = Application.ExecutablePath + ".manifest";
 			if (File.Exists(text))
 			{
 				return false;

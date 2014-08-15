@@ -41,7 +41,7 @@ namespace FotoVision
 		{
 			get
 			{
-				return this._list.get_Count();
+				return this._list.Count;
 			}
 		}
 		public bool OnlyRotates
@@ -53,7 +53,7 @@ namespace FotoVision
 					IEnumerator enumerator = this._list.GetEnumerator();
 					while (enumerator.MoveNext())
 					{
-						ActionItem actionItem = (ActionItem)enumerator.get_Current();
+						ActionItem actionItem = (ActionItem)enumerator.Current;
 						if (actionItem.Action != PhotoAction.RotateLeft && actionItem.Action != PhotoAction.RotateRight && actionItem.Action != PhotoAction.FlipHorizontal && actionItem.Action != PhotoAction.FlipVertical)
 						{
 							return false;

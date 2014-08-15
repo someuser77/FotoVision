@@ -78,8 +78,8 @@ namespace FotoVision
 			Size size = new Size(214, 20);
 			arg_72_0.set_Size(size);
 			this.caption.set_TabIndex(0);
-			this.get_Controls().Add(this.caption);
-			this.get_DockPadding().set_All(1);
+			this.Controls.Add(this.caption);
+			this.DockPadding.set_All(1);
 			this.set_Name("BasePane");
 			size = new Size(216, 248);
 			this.set_Size(size);
@@ -103,18 +103,18 @@ namespace FotoVision
 		{
 			checked
 			{
-				Rectangle rectangle = new Rectangle(0, 0, this.get_Width() - 1, this.get_Height() - 1);
-				rectangle.Inflate(0 - this.get_DockPadding().get_All() + 1, 0 - this.get_DockPadding().get_All() + 1);
-				e.get_Graphics().DrawRectangle(SystemPens.get_ControlDark(), rectangle);
+				Rectangle rectangle = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
+				rectangle.Inflate(0 - this.DockPadding.All + 1, 0 - this.DockPadding.All + 1);
+				e.Graphics.DrawRectangle(SystemPens.ControlDark, rectangle);
 				base.OnPaint(e);
 			}
 		}
 		protected override void OnResize(EventArgs e)
 		{
 			base.OnResize(e);
-			if (this.get_DesignMode())
+			if (this.DesignMode)
 			{
-				this.caption.set_Width(this.get_Width());
+				this.caption.set_Width(this.Width);
 			}
 		}
 	}

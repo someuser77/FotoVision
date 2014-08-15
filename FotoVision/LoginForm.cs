@@ -191,11 +191,11 @@ namespace FotoVision
 			this.set_CancelButton(this.buttonCancel);
 			size = new Size(258, 104);
 			this.set_ClientSize(size);
-			this.get_Controls().Add(this.image);
-			this.get_Controls().Add(this.labelPassword);
-			this.get_Controls().Add(this.buttonCancel);
-			this.get_Controls().Add(this.buttonOK);
-			this.get_Controls().Add(this.textPassword);
+			this.Controls.Add(this.image);
+			this.Controls.Add(this.labelPassword);
+			this.Controls.Add(this.buttonCancel);
+			this.Controls.Add(this.buttonOK);
+			this.Controls.Add(this.textPassword);
 			this.set_FormBorderStyle(3);
 			this.set_MaximizeBox(false);
 			this.set_MinimizeBox(false);
@@ -212,9 +212,9 @@ namespace FotoVision
 		}
 		protected override void OnClosing(CancelEventArgs e)
 		{
-			if (this.get_DialogResult() == 1)
+			if (this.DialogResult == 1)
 			{
-				Global.Settings.SetValue(SettingKey.ServicePassword, DataProtection.Encrypt(this.textPassword.get_Text(), DataProtection.Store.User));
+				Global.Settings.SetValue(SettingKey.ServicePassword, DataProtection.Encrypt(this.textPassword.Text, DataProtection.Store.User));
 			}
 			base.OnClosing(e);
 		}

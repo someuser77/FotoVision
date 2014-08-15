@@ -25,9 +25,9 @@ namespace FotoVision
 		{
 			checked
 			{
-				string[] array = new string[photos.get_Length() - 1 + 1];
+				string[] array = new string[photos.Length - 1 + 1];
 				int arg_1A_0 = 0;
-				int num = array.get_Length() - 1;
+				int num = array.Length - 1;
 				for (int i = arg_1A_0; i <= num; i++)
 				{
 					array[i] = photos[i].PhotoPath;

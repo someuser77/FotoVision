@@ -127,9 +127,9 @@ namespace FotoVision
 			}
 			checked
 			{
-				Photo[] array = new Photo[photoFileList.get_Length() - 1 + 1];
+				Photo[] array = new Photo[photoFileList.Length - 1 + 1];
 				int arg_27_0 = 0;
-				int num = photoFileList.get_Length() - 1;
+				int num = photoFileList.Length - 1;
 				for (int i = arg_27_0; i <= num; i++)
 				{
 					string thumbnailPath = Path.Combine(Path.Combine(Path.GetDirectoryName(photoFileList[i]), thumbnailFolder), Photo.GetThumbnailName(photoFileList[i]));
@@ -151,7 +151,7 @@ namespace FotoVision
 				if (!File.Exists(text))
 				{
 					Image thumbnail = PhotoHelper.GetThumbnail(photoPath, 120);
-					thumbnail.Save(text, ImageFormat.get_Jpeg());
+					thumbnail.Save(text, ImageFormat.Jpeg);
 					result = true;
 				}
 			}
@@ -231,7 +231,7 @@ namespace FotoVision
 		}
 		private static string GetThumbnailCode(string photoPath)
 		{
-			string text = Path.GetExtension(photoPath) + StringType.FromLong(File.GetLastWriteTime(photoPath).get_Ticks());
+			string text = Path.GetExtension(photoPath) + StringType.FromLong(File.GetLastWriteTime(photoPath).Ticks);
 			return text.Substring(1);
 		}
 		private static string GetThumbnailName(string photoPath)
@@ -249,12 +249,12 @@ namespace FotoVision
 				{
 					XmlDocument xmlDocument = new XmlDocument();
 					xmlDocument.Load(text);
-					XmlNode firstChild = xmlDocument.get_DocumentElement().get_FirstChild();
-					photo.Title = firstChild.get_Attributes().get_ItemOf("title").get_Value();
-					photo.Description = firstChild.get_Attributes().get_ItemOf("description").get_Value();
-					if (Global.ValidateDate(firstChild.get_Attributes().get_ItemOf("date").get_Value()))
+					XmlNode firstChild = xmlDocument.DocumentElement.FirstChild;
+					photo.Title = firstChild.Attributes.ItemOf("title").get_Value;
+					photo.Description = firstChild.Attributes.ItemOf("description").get_Value;
+					if (Global.ValidateDate(firstChild.Attributes.ItemOf("date").get_Value))
 					{
-						photo.DateTaken = DateTime.Parse(firstChild.get_Attributes().get_ItemOf("date").get_Value(), CultureInfo.get_CurrentCulture()).ToShortDateString();
+						photo.DateTaken = DateTime.Parse(firstChild.Attributes.ItemOf("date").get_Value, CultureInfo.CurrentCulture).ToShortDateString();
 						return photo;
 					}
 					photo.DateTaken = File.GetLastWriteTime(photoPath).ToShortDateString();

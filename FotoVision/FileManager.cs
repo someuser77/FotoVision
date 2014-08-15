@@ -124,7 +124,7 @@ namespace FotoVision
 			int arg_23_0 = 0;
 			checked
 			{
-				int num = directories.get_Length() - 1;
+				int num = directories.Length - 1;
 				for (int i = arg_23_0; i <= num; i++)
 				{
 					directories[i] = Path.GetFileName(directories[i]);
@@ -147,7 +147,7 @@ namespace FotoVision
 		}
 		public static bool IsSupportedFile(string file)
 		{
-			string text = Path.GetExtension(file).ToLower(CultureInfo.get_InvariantCulture());
+			string text = Path.GetExtension(file).ToLower(CultureInfo.InvariantCulture);
 			string[] photoFormats = FileManager.Consts.PhotoFormats;
 			checked
 			{
@@ -174,7 +174,7 @@ namespace FotoVision
 			{
 				return 0;
 			}
-			return photoFileList.get_Length();
+			return photoFileList.Length;
 		}
 		public static string[] GetPhotoFileList(string path)
 		{
@@ -186,16 +186,16 @@ namespace FotoVision
 				{
 					string text = photoFormats[i];
 					string[] files = Directory.GetFiles(path, "*" + text);
-					if (files.get_Length() > 0)
+					if (files.Length > 0)
 					{
-						if (stringBuilder.get_Length() > 0)
+						if (stringBuilder.Length > 0)
 						{
 							stringBuilder.Append(";");
 						}
 						stringBuilder.Append(string.Join(";", files));
 					}
 				}
-				if (stringBuilder.ToString().get_Length() > 0)
+				if (stringBuilder.ToString().Length > 0)
 				{
 					return stringBuilder.ToString().Split(new char[]
 					{
@@ -272,7 +272,7 @@ namespace FotoVision
 		}
 		public static bool IsValidAlbumName(string name)
 		{
-			return !Regex.IsMatch(name, "[\\\\/:*?\"<>|]") && name.get_Length() != 0 && name.get_Length() <= 100 && !name.StartsWith(".") && !name.EndsWith(".");
+			return !Regex.IsMatch(name, "[\\\\/:*?\"<>|]") && name.Length != 0 && name.Length <= 100 && !name.StartsWith(".") && !name.EndsWith(".");
 		}
 		public static bool DeleteFile(string path)
 		{
@@ -334,14 +334,14 @@ namespace FotoVision
 			int arg_37_0 = 0;
 			checked
 			{
-				int num = photoFileList.get_Length() - 1;
+				int num = photoFileList.Length - 1;
 				for (int i = arg_37_0; i <= num; i++)
 				{
 					string photoPath = photoFileList[i];
 					bool flag = Photo.CreateThumbnail(photoPath, text);
 					if (flag)
 					{
-						Global.Progress.Update(null, "Generating thumbnails", i + 1, photoFileList.get_Length());
+						Global.Progress.Update(null, "Generating thumbnails", i + 1, photoFileList.Length);
 					}
 				}
 				Global.Progress.Complete(null);

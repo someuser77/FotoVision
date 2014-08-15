@@ -22,7 +22,7 @@ namespace FotoVision
 					for (int i = 0; i < array.Length; i++)
 					{
 						ImageCodecInfo imageCodecInfo = array[i];
-						if (StringType.StrCmp(imageCodecInfo.get_MimeType(), "image/jpeg", false) == 0)
+						if (StringType.StrCmp(imageCodecInfo.MimeType, "image/jpeg", false) == 0)
 						{
 							JpegQuality._codec = imageCodecInfo;
 							return JpegQuality._codec;
@@ -39,12 +39,12 @@ namespace FotoVision
 		{
 			if (JpegQuality.Codec == null)
 			{
-				image.Save(imagePath, ImageFormat.get_Jpeg());
+				image.Save(imagePath, ImageFormat.Jpeg);
 			}
 			else
 			{
 				EncoderParameters encoderParameters = new EncoderParameters();
-				encoderParameters.get_Param()[0] = new EncoderParameter(Encoder.Quality, (long)quality);
+				encoderParameters.Param[0] = new EncoderParameter(Encoder.Quality, (long)quality);
 				image.Save(imagePath, JpegQuality.Codec, encoderParameters);
 				encoderParameters.Dispose();
 			}

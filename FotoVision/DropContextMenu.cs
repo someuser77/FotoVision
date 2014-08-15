@@ -78,7 +78,7 @@ namespace FotoVision
 		{
 			get
 			{
-				return this.menuCopy.get_Enabled();
+				return this.menuCopy.Enabled;
 			}
 			set
 			{
@@ -89,7 +89,7 @@ namespace FotoVision
 		{
 			get
 			{
-				return this.menuMove.get_Enabled();
+				return this.menuMove.Enabled;
 			}
 			set
 			{
@@ -104,7 +104,7 @@ namespace FotoVision
 			this.menuCopy = new MenuItem("Copy here");
 			this.menuMove = new MenuItem("Move here");
 			this.menuCancel = new MenuItem("Cancel");
-			this.contextMenu.get_MenuItems().AddRange(new MenuItem[]
+			this.contextMenu.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuCopy,
 				this.menuMove,
@@ -114,7 +114,7 @@ namespace FotoVision
 		}
 		public DragDropEffects Display(Control parent)
 		{
-			this.contextMenu.Show(parent, parent.PointToClient(Control.get_MousePosition()));
+			this.contextMenu.Show(parent, parent.PointToClient(Control.MousePosition));
 			Application.DoEvents();
 			return this._effect;
 		}

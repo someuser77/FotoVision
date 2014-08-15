@@ -251,7 +251,7 @@ namespace FotoVision
 			arg_304_0.set_Size(size);
 			this.textPhotoLocation.set_TabIndex(4);
 			this.textPhotoLocation.set_Text("");
-			this.listAssemblies.set_BackColor(SystemColors.get_Control());
+			this.listAssemblies.set_BackColor(SystemColors.Control);
 			Control arg_349_0 = this.listAssemblies;
 			location = new Point(8, 184);
 			arg_349_0.set_Location(location);
@@ -260,10 +260,10 @@ namespace FotoVision
 			size = new Size(288, 56);
 			arg_373_0.set_Size(size);
 			this.listAssemblies.set_TabIndex(6);
-			this.linkCompany.set_ActiveLinkColor(Color.get_RoyalBlue());
+			this.linkCompany.set_ActiveLinkColor(Color.RoyalBlue);
 			this.linkCompany.set_FlatStyle(3);
 			this.linkCompany.set_LinkBehavior(2);
-			this.linkCompany.set_LinkColor(SystemColors.get_ControlText());
+			this.linkCompany.set_LinkColor(SystemColors.ControlText);
 			Control arg_3CD_0 = this.linkCompany;
 			location = new Point(6, 56);
 			arg_3CD_0.set_Location(location);
@@ -274,21 +274,21 @@ namespace FotoVision
 			this.linkCompany.set_TabIndex(1);
 			this.linkCompany.set_TabStop(true);
 			this.linkCompany.set_Text("Developed by Vertigo Software, Inc.");
-			this.linkCompany.set_VisitedLinkColor(SystemColors.get_ControlText());
+			this.linkCompany.set_VisitedLinkColor(SystemColors.ControlText);
 			this.set_AcceptButton(this.buttonOk);
 			size = new Size(5, 13);
 			this.set_AutoScaleBaseSize(size);
 			this.set_CancelButton(this.buttonOk);
 			size = new Size(306, 288);
 			this.set_ClientSize(size);
-			this.get_Controls().Add(this.linkCompany);
-			this.get_Controls().Add(this.listAssemblies);
-			this.get_Controls().Add(this.textPhotoLocation);
-			this.get_Controls().Add(this.labelAssemblies);
-			this.get_Controls().Add(this.pictLogo);
-			this.get_Controls().Add(this.buttonOk);
-			this.get_Controls().Add(this.labelVersion);
-			this.get_Controls().Add(this.labelLocation);
+			this.Controls.Add(this.linkCompany);
+			this.Controls.Add(this.listAssemblies);
+			this.Controls.Add(this.textPhotoLocation);
+			this.Controls.Add(this.labelAssemblies);
+			this.Controls.Add(this.pictLogo);
+			this.Controls.Add(this.buttonOk);
+			this.Controls.Add(this.labelVersion);
+			this.Controls.Add(this.labelLocation);
 			this.set_FormBorderStyle(3);
 			this.set_MaximizeBox(false);
 			this.set_MinimizeBox(false);
@@ -301,7 +301,7 @@ namespace FotoVision
 		protected override void OnLoad(EventArgs e)
 		{
 			base.OnLoad(e);
-			string[] array = Application.get_ProductVersion().Split(new char[]
+			string[] array = Application.ProductVersion.Split(new char[]
 			{
 				'.'
 			});
@@ -313,7 +313,7 @@ namespace FotoVision
 				for (int i = 0; i < array2.Length; i++)
 				{
 					AssemblyName assemblyName = array2[i];
-					this.listAssemblies.get_Items().Add(string.Format("{0} ({1})", assemblyName.get_Name(), assemblyName.get_Version().ToString()));
+					this.listAssemblies.Items.Add(string.Format("{0} ({1})", assemblyName.Name, assemblyName.Version.ToString()));
 				}
 				this.textPhotoLocation.set_Text(Global.DataLocation);
 			}

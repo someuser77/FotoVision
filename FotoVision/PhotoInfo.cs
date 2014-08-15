@@ -77,32 +77,32 @@ namespace FotoVision
 			FileInfo fileInfo = new FileInfo(path);
 			this._path = path;
 			this._fileName = System.IO.Path.GetFileName(path);
-			this._fileLengthString = this.GetLengthString(fileInfo.get_Length());
-			this._dateCreated = fileInfo.get_CreationTime();
-			this._dateModified = fileInfo.get_LastWriteTime();
+			this._fileLengthString = this.GetLengthString(fileInfo.Length);
+			this._dateCreated = fileInfo.CreationTime;
+			this._dateModified = fileInfo.LastWriteTime;
 			this._readOnly = FileManager.IsFileReadOnly(path);
-			this._imageSize = image.get_Size();
+			this._imageSize = image.Size;
 			this._imageType = this.GetFileType(format);
 		}
 		private string GetFileType(ImageFormat format)
 		{
-			if (format.Equals(ImageFormat.get_Jpeg()))
+			if (format.Equals(ImageFormat.Jpeg))
 			{
 				return "Jpeg";
 			}
-			if (format.Equals(ImageFormat.get_Tiff()))
+			if (format.Equals(ImageFormat.Tiff))
 			{
 				return "Tiff";
 			}
-			if (format.Equals(ImageFormat.get_Png()))
+			if (format.Equals(ImageFormat.Png))
 			{
 				return "Png";
 			}
-			if (format.Equals(ImageFormat.get_Gif()))
+			if (format.Equals(ImageFormat.Gif))
 			{
 				return "Gif";
 			}
-			if (format.Equals(ImageFormat.get_Bmp()))
+			if (format.Equals(ImageFormat.Bmp))
 			{
 				return "Bmp";
 			}
@@ -116,9 +116,9 @@ namespace FotoVision
 			}
 			if (length < 1048576L)
 			{
-				return ((float)((double)length / 1024.0)).ToString("f1", CultureInfo.get_CurrentCulture()) + " KB";
+				return ((float)((double)length / 1024.0)).ToString("f1", CultureInfo.CurrentCulture) + " KB";
 			}
-			return ((float)((double)length / 1048576.0)).ToString("f1", CultureInfo.get_CurrentCulture()) + " MB";
+			return ((float)((double)length / 1048576.0)).ToString("f1", CultureInfo.CurrentCulture) + " MB";
 		}
 	}
 }

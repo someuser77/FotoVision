@@ -132,12 +132,12 @@ namespace FotoVision
 				{
 					XmlDocument xmlDocument = new XmlDocument();
 					xmlDocument.Load(text);
-					XmlNode firstChild = xmlDocument.get_DocumentElement().get_FirstChild();
-					this.Description = firstChild.get_Attributes().get_ItemOf("description").get_Value();
-					this.Publish = BooleanType.FromString(firstChild.get_Attributes().get_ItemOf("publish").get_Value());
-					if (Global.ValidateDate(firstChild.get_Attributes().get_ItemOf("date").get_Value()))
+					XmlNode firstChild = xmlDocument.DocumentElement.FirstChild;
+					this.Description = firstChild.Attributes.ItemOf("description").get_Value;
+					this.Publish = BooleanType.FromString(firstChild.Attributes.ItemOf("publish").get_Value);
+					if (Global.ValidateDate(firstChild.Attributes.ItemOf("date").get_Value))
 					{
-						this.DateCreated = DateTime.Parse(firstChild.get_Attributes().get_ItemOf("date").get_Value(), CultureInfo.get_CurrentCulture()).ToShortDateString();
+						this.DateCreated = DateTime.Parse(firstChild.Attributes.ItemOf("date").get_Value, CultureInfo.CurrentCulture).ToShortDateString();
 					}
 				}
 				catch (Exception expr_F1)

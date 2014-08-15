@@ -96,11 +96,11 @@ namespace FotoVision
 			{
 				try
 				{
-					PropertyItem[] propertyItems = sourceImage.get_PropertyItems();
+					PropertyItem[] propertyItems = sourceImage.PropertyItems;
 					for (int i = 0; i < propertyItems.Length; i++)
 					{
 						PropertyItem propertyItem = propertyItems[i];
-						if (propertyItem.get_Type() != 1 && propertyItem.get_Id() != 513 && propertyItem.get_Id() != 514)
+						if (propertyItem.Type != 1 && propertyItem.Id != 513 && propertyItem.Id != 514)
 						{
 							targetImage.SetPropertyItem(propertyItem);
 						}
@@ -120,66 +120,66 @@ namespace FotoVision
 			{
 				return;
 			}
-			PropertyItem[] propertyItems = image.get_PropertyItems();
+			PropertyItem[] propertyItems = image.PropertyItems;
 			checked
 			{
 				for (int i = 0; i < propertyItems.Length; i++)
 				{
 					PropertyItem propertyItem = propertyItems[i];
-					int id = propertyItem.get_Id();
+					int id = propertyItem.Id;
 					if (id == 271)
 					{
-						this._make = this.GetAscii(propertyItem.get_Value());
+						this._make = this.GetAscii(propertyItem.Value);
 					}
 					else
 					{
 						if (id == 272)
 						{
-							this._model = this.GetAscii(propertyItem.get_Value());
+							this._model = this.GetAscii(propertyItem.Value);
 						}
 						else
 						{
 							if (id == 37510)
 							{
-								this._userComment = this.GetAscii(propertyItem.get_Value());
+								this._userComment = this.GetAscii(propertyItem.Value);
 							}
 							else
 							{
 								if (id == 33434)
 								{
-									this._exposureTime = this.GetRational(propertyItem.get_Value());
+									this._exposureTime = this.GetRational(propertyItem.Value);
 								}
 								else
 								{
 									if (id == 37377)
 									{
-										float rational = this.GetRational(propertyItem.get_Value());
+										float rational = this.GetRational(propertyItem.Value);
 										this._exposureTime = (float)(1.0 / Math.Pow(2.0, (double)rational));
 									}
 									else
 									{
 										if (id == 33437)
 										{
-											this._aperture = this.GetRational(propertyItem.get_Value());
+											this._aperture = this.GetRational(propertyItem.Value);
 										}
 										else
 										{
 											if (id == 37378)
 											{
-												float rational2 = this.GetRational(propertyItem.get_Value());
+												float rational2 = this.GetRational(propertyItem.Value);
 												this._aperture = (float)Math.Pow(2.0, (double)(rational2 / 2f));
 											}
 											else
 											{
 												if (id == 34855)
 												{
-													this._iso = this.GetShort(propertyItem.get_Value());
+													this._iso = this.GetShort(propertyItem.Value);
 												}
 												else
 												{
 													if (id == 37385)
 													{
-														this._flash = this.GetBoolean(propertyItem.get_Value());
+														this._flash = this.GetBoolean(propertyItem.Value);
 													}
 												}
 											}
@@ -197,7 +197,7 @@ namespace FotoVision
 			bool result;
 			try
 			{
-				if (image.get_PropertyItems() == null)
+				if (image.PropertyItems == null)
 				{
 					result = false;
 				}
@@ -229,7 +229,7 @@ namespace FotoVision
 			string result;
 			try
 			{
-				string text = Encoding.get_ASCII().GetString(bits, 0, checked(bits.get_Length() - 1)).Trim();
+				string text = Encoding.ASCII.GetString(bits, 0, checked(bits.Length - 1)).Trim();
 				result = Regex.Replace(text, "[^\\w\\s\\p{P}]", "");
 			}
 			catch (Exception expr_2D)

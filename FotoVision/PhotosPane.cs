@@ -232,7 +232,7 @@ namespace FotoVision
 		{
 			get
 			{
-				return !this.CaptionControl.get_Visible();
+				return !this.CaptionControl.Visible;
 			}
 			set
 			{
@@ -262,7 +262,7 @@ namespace FotoVision
 		{
 			get
 			{
-				return this.listView.get_Items().get_Count();
+				return this.listView.Items.Count;
 			}
 		}
 		[Browsable(false)]
@@ -286,7 +286,7 @@ namespace FotoVision
 		{
 			get
 			{
-				return this.listView.get_SelectedItems().get_Count();
+				return this.listView.SelectedItems.Count;
 			}
 		}
 		[Browsable(false)]
@@ -294,11 +294,11 @@ namespace FotoVision
 		{
 			get
 			{
-				if (this.listView.get_SelectedItems().get_Count() != 1)
+				if (this.listView.SelectedItems.Count != 1)
 				{
 					return null;
 				}
-				return (Photo)this.listView.get_SelectedItems().get_Item(0).get_Tag();
+				return (Photo)this.listView.SelectedItems.Item(0).get_Tag;
 			}
 		}
 		[Browsable(false)]
@@ -713,7 +713,7 @@ namespace FotoVision
 			this.photoViewer.SuspendLayout();
 			this.SuspendLayout();
 			this.listView.set_AllowDrop(true);
-			this.listView.set_BackColor(Color.get_DarkGray());
+			this.listView.set_BackColor(Color.DarkGray);
 			this.listView.set_BorderStyle(0);
 			this.listView.set_ContextMenu(this.menuThumbnails);
 			this.listView.set_Dock(5);
@@ -726,7 +726,7 @@ namespace FotoVision
 			Size size = new Size(252, 256);
 			arg_171_0.set_Size(size);
 			this.listView.set_TabIndex(1);
-			this.menuThumbnails.get_MenuItems().AddRange(new MenuItem[]
+			this.menuThumbnails.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuOpen,
 				this.menuSelectAll,
@@ -740,7 +740,7 @@ namespace FotoVision
 				this.menuProperties
 			});
 			this.menuOpen.set_Index(0);
-			this.menuOpen.get_MenuItems().AddRange(new MenuItem[]
+			this.menuOpen.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuPhotoShow,
 				this.menuPhotoShowDetails,
@@ -771,9 +771,9 @@ namespace FotoVision
 			this.menuSep3.set_Text("-");
 			this.menuProperties.set_Index(9);
 			this.menuProperties.set_Text("Properties");
-			this.photoViewer.set_BackColor(Color.get_DarkGray());
+			this.photoViewer.set_BackColor(Color.DarkGray);
 			this.photoViewer.set_ContextMenu(this.menuPhoto);
-			this.photoViewer.get_Controls().Add(this.labelPos);
+			this.photoViewer.Controls.Add(this.labelPos);
 			this.photoViewer.CropMode = false;
 			this.photoViewer.set_Dock(5);
 			this.photoViewer.EditMode = false;
@@ -787,14 +787,14 @@ namespace FotoVision
 			arg_43B_0.set_Size(size);
 			this.photoViewer.set_TabIndex(2);
 			this.photoViewer.set_Visible(false);
-			this.menuPhoto.get_MenuItems().AddRange(new MenuItem[]
+			this.menuPhoto.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuPhotoProperties
 			});
 			this.menuPhotoProperties.set_Index(0);
 			this.menuPhotoProperties.set_Text("Properties");
 			this.labelPos.set_Anchor(10);
-			this.labelPos.set_BackColor(Color.get_Transparent());
+			this.labelPos.set_BackColor(Color.Transparent);
 			Control arg_4CA_0 = this.labelPos;
 			location = new Point(152, 240);
 			arg_4CA_0.set_Location(location);
@@ -805,15 +805,15 @@ namespace FotoVision
 			this.labelPos.set_TabIndex(3);
 			this.labelPos.set_Text("Photo xx of xx");
 			this.labelPos.set_TextAlign(1024);
-			this.set_BackColor(SystemColors.get_Control());
-			this.get_Controls().Add(this.photoViewer);
-			this.get_Controls().Add(this.listView);
-			this.get_DockPadding().set_All(2);
+			this.set_BackColor(SystemColors.Control);
+			this.Controls.Add(this.photoViewer);
+			this.Controls.Add(this.listView);
+			this.DockPadding.set_All(2);
 			this.set_Name("PhotosPane");
 			size = new Size(256, 280);
 			this.set_Size(size);
-			this.get_Controls().SetChildIndex(this.listView, 0);
-			this.get_Controls().SetChildIndex(this.photoViewer, 0);
+			this.Controls.SetChildIndex(this.listView, 0);
+			this.Controls.SetChildIndex(this.photoViewer, 0);
 			this.photoViewer.ResumeLayout(false);
 			this.ResumeLayout(false);
 		}
@@ -821,10 +821,10 @@ namespace FotoVision
 		{
 			try
 			{
-				IEnumerator enumerator = this.listView.get_Items().GetEnumerator();
+				IEnumerator enumerator = this.listView.Items.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
-					ListViewItem listViewItem = (ListViewItem)enumerator.get_Current();
+					ListViewItem listViewItem = (ListViewItem)enumerator.Current;
 					listViewItem.set_Selected(true);
 				}
 			}
@@ -842,10 +842,10 @@ namespace FotoVision
 		{
 			try
 			{
-				IEnumerator enumerator = this.listView.get_Items().GetEnumerator();
+				IEnumerator enumerator = this.listView.Items.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
-					ListViewItem listViewItem = (ListViewItem)enumerator.get_Current();
+					ListViewItem listViewItem = (ListViewItem)enumerator.Current;
 					listViewItem.set_Selected(false);
 				}
 			}
@@ -861,22 +861,22 @@ namespace FotoVision
 		}
 		public Photo GetPhoto(int index)
 		{
-			return (Photo)this.listView.get_Items().get_Item(index).get_Tag();
+			return (Photo)this.listView.Items.Item(index).get_Tag;
 		}
 		public Photo[] GetSelectedPhotos()
 		{
-			if (this.listView.get_SelectedItems() == null || this.listView.get_SelectedItems().get_Count() == 0)
+			if (this.listView.SelectedItems == null || this.listView.SelectedItems.Count == 0)
 			{
 				return null;
 			}
 			checked
 			{
-				Photo[] array = new Photo[this.listView.get_SelectedItems().get_Count() - 1 + 1];
+				Photo[] array = new Photo[this.listView.SelectedItems.Count - 1 + 1];
 				int arg_47_0 = 0;
-				int num = array.get_Length() - 1;
+				int num = array.Length - 1;
 				for (int i = arg_47_0; i <= num; i++)
 				{
-					Photo photo = (Photo)this.listView.get_SelectedItems().get_Item(i).get_Tag();
+					Photo photo = (Photo)this.listView.SelectedItems.Item(i).get_Tag;
 					array[i] = photo;
 				}
 				return array;
@@ -888,13 +888,13 @@ namespace FotoVision
 			{
 				return null;
 			}
-			int[] array = new int[checked(this.listView.get_SelectedIndices().get_Count() - 1 + 1)];
-			this.listView.get_SelectedIndices().CopyTo(array, 0);
+			int[] array = new int[checked(this.listView.SelectedIndices.Count - 1 + 1)];
+			this.listView.SelectedIndices.CopyTo(array, 0);
 			return array;
 		}
 		public void SelectPhoto(int index)
 		{
-			this.listView.get_Items().get_Item(index).set_Selected(true);
+			this.listView.Items.get_Item(index).set_Selected(true);
 		}
 		public void ClearThumbnails()
 		{
@@ -908,14 +908,14 @@ namespace FotoVision
 		}
 		public void UpdateThumbnails(string albumName)
 		{
-			int count = this.listView.get_Items().get_Count();
+			int count = this.listView.Items.Count;
 			bool flag = BooleanType.FromObject(Interaction.IIf(StringType.StrCmp(this._curAlbum, albumName, false) == 0, true, false));
 			int lParam = 0;
 			checked
 			{
-				if (flag && this.listView.get_Items().get_Count() > 0)
+				if (flag && this.listView.Items.Count > 0)
 				{
-					lParam = 0 - this.listView.get_Items().get_Item(0).get_Bounds().get_Top();
+					lParam = 0 - this.listView.Items.Item(0).get_Bounds.Top;
 				}
 				this._curAlbum = albumName;
 				this.listView.SetThumbnails(albumName, FileManager.GetPhotos(albumName, true));
@@ -923,13 +923,13 @@ namespace FotoVision
 				{
 					this.photoViewer.UpdateLocation(albumName);
 				}
-				if (this._selectedList != null && flag && this.listView.get_Items().get_Count() == count)
+				if (this._selectedList != null && flag && this.listView.Items.Count == count)
 				{
 					int[] selectedList = this._selectedList;
 					for (int i = 0; i < selectedList.Length; i++)
 					{
 						int num = selectedList[i];
-						this.listView.get_Items().get_Item(num).set_Selected(true);
+						this.listView.Items.get_Item(num).set_Selected(true);
 					}
 				}
 				else
@@ -938,7 +938,7 @@ namespace FotoVision
 				}
 				if (flag)
 				{
-					PhotosPane.Win32.SendMessage(this.listView.get_Handle(), 4116, 0, lParam);
+					PhotosPane.Win32.SendMessage(this.listView.Handle, 4116, 0, lParam);
 				}
 				this.listView.Invalidate();
 				if (this.SelectionChangedEvent != null)
@@ -951,15 +951,15 @@ namespace FotoVision
 		{
 			try
 			{
-				IEnumerator enumerator = this.listView.get_Items().GetEnumerator();
+				IEnumerator enumerator = this.listView.Items.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
-					ListViewItem listViewItem = (ListViewItem)enumerator.get_Current();
-					Photo photo2 = (Photo)listViewItem.get_Tag();
+					ListViewItem listViewItem = (ListViewItem)enumerator.Current;
+					Photo photo2 = (Photo)listViewItem.Tag;
 					if (StringType.StrCmp(photo2.PhotoName, photo.PhotoName, false) == 0)
 					{
 						listViewItem.set_Tag(photo);
-						if (StringType.StrCmp(listViewItem.get_Text(), photo.Title, false) != 0)
+						if (StringType.StrCmp(listViewItem.Text, photo.Title, false) != 0)
 						{
 							listViewItem.set_Text(photo.Title);
 							this.listView.Invalidate();
@@ -979,7 +979,7 @@ namespace FotoVision
 		}
 		public void OpenPhotoAtIndex(int index)
 		{
-			this.ShowPhoto((Photo)this.listView.get_Items().get_Item(index).get_Tag());
+			this.ShowPhoto((Photo)this.listView.Items.Item(index).get_Tag);
 			this.photoViewer.Invalidate();
 			if (this.FullScreen)
 			{
@@ -988,9 +988,9 @@ namespace FotoVision
 		}
 		public void OpenSelectedPhoto()
 		{
-			if (this.listView.get_SelectedItems().get_Count() == 1)
+			if (this.listView.SelectedItems.Count == 1)
 			{
-				this.ShowPhoto((Photo)this.listView.get_SelectedItems().get_Item(0).get_Tag());
+				this.ShowPhoto((Photo)this.listView.SelectedItems.Item(0).get_Tag);
 			}
 		}
 		public bool ApplyPhotoAction(ActionItem actionItem)
@@ -998,13 +998,13 @@ namespace FotoVision
 			bool result = false;
 			if (this.Mode == PhotosMode.Thumbnails)
 			{
-				if (this.listView.get_SelectedItems().get_Count() > 0)
+				if (this.listView.SelectedItems.Count > 0)
 				{
-					Cursor.set_Current(Cursors.get_WaitCursor());
+					Cursor.set_Current(Cursors.WaitCursor);
 					this.RotateThumbnails(actionItem);
 					Global.Progress.Complete(this);
 					result = true;
-					Cursor.set_Current(Cursors.get_Default());
+					Cursor.set_Current(Cursors.Default);
 				}
 			}
 			else
@@ -1035,9 +1035,9 @@ namespace FotoVision
 			{
 				return;
 			}
-			if (this.listView.get_SelectedItems().get_Count() == 1)
+			if (this.listView.SelectedItems.Count == 1)
 			{
-				this.listView.get_SelectedItems().get_Item(0).BeginEdit();
+				this.listView.SelectedItems.Item(0).BeginEdit;
 			}
 		}
 		public void Delete()
@@ -1064,7 +1064,7 @@ namespace FotoVision
 						Photo photo = array[i];
 						FileManager.DeletePhoto(photo.PhotoPath);
 					}
-					if (selectedPhotos.get_Length() > 0)
+					if (selectedPhotos.Length > 0)
 					{
 						if (this.PhotosDeletedEvent != null)
 						{
@@ -1109,8 +1109,8 @@ namespace FotoVision
 				}
 				else
 				{
-					this._selectedList = new int[checked(selectedIndices.get_Length() - 1 + 1)];
-					Array.Copy(selectedIndices, this._selectedList, selectedIndices.get_Length());
+					this._selectedList = new int[checked(selectedIndices.Length - 1 + 1)];
+					Array.Copy(selectedIndices, this._selectedList, selectedIndices.Length);
 				}
 				if (this.SelectionChangedEvent != null)
 				{
@@ -1132,14 +1132,14 @@ namespace FotoVision
 			{
 				return false;
 			}
-			if (oldList.get_Length() != newList.get_Length())
+			if (oldList.Length != newList.Length)
 			{
 				return false;
 			}
 			int arg_47_0 = 0;
 			checked
 			{
-				int num = oldList.get_Length() - 1;
+				int num = oldList.Length - 1;
 				for (int i = arg_47_0; i <= num; i++)
 				{
 					if (oldList[i] != newList[i])
@@ -1152,7 +1152,7 @@ namespace FotoVision
 		}
 		private void ShowThumbnails()
 		{
-			if (!this.listView.get_Visible())
+			if (!this.listView.Visible)
 			{
 				this.listView.set_Visible(true);
 				this.listView.Invalidate();
@@ -1173,14 +1173,14 @@ namespace FotoVision
 				try
 				{
 					int num = 1;
-					string message = string.Format("Processing photo{0}", RuntimeHelpers.GetObjectValue(Interaction.IIf(this.listView.get_SelectedItems().get_Count() == 1, "", "s")));
+					string message = string.Format("Processing photo{0}", RuntimeHelpers.GetObjectValue(Interaction.IIf(this.listView.SelectedItems.Count == 1, "", "s")));
 					try
 					{
-						IEnumerator enumerator = this.listView.get_SelectedItems().GetEnumerator();
+						IEnumerator enumerator = this.listView.SelectedItems.GetEnumerator();
 						while (enumerator.MoveNext())
 						{
-							ListViewItem listViewItem = (ListViewItem)enumerator.get_Current();
-							Global.Progress.Update(this, message, num, this.listView.get_SelectedItems().get_Count());
+							ListViewItem listViewItem = (ListViewItem)enumerator.Current;
+							Global.Progress.Update(this, message, num, this.listView.SelectedItems.Count);
 							num++;
 							RotateFlipType rotateFlipType = 0;
 							switch (actionItem.Action)
@@ -1198,14 +1198,14 @@ namespace FotoVision
 								rotateFlipType = 6;
 								break;
 							}
-							Photo photo = (Photo)listViewItem.get_Tag();
+							Photo photo = (Photo)listViewItem.Tag;
 							if (FileManager.IsFileReadOnly(photo.PhotoPath))
 							{
 								throw new ApplicationException(string.Format("The photo '{0}' is read-only.", photo.PhotoPath));
 							}
 							Bitmap bitmap = new Bitmap(photo.PhotoPath);
 							Bitmap bitmap2 = new Bitmap(bitmap);
-							ImageFormat rawFormat = bitmap.get_RawFormat();
+							ImageFormat rawFormat = bitmap.RawFormat;
 							bitmap2.RotateFlip(rotateFlipType);
 							if (Global.Settings.GetBool(SettingKey.MaintainExifInfo))
 							{
@@ -1274,7 +1274,7 @@ namespace FotoVision
 		}
 		private void listView_DoubleClick(object sender, EventArgs e)
 		{
-			if (this.listView.get_SelectedItems().get_Count() == 1 && this.OpenPhotoEvent != null)
+			if (this.listView.SelectedItems.Count == 1 && this.OpenPhotoEvent != null)
 			{
 				this.OpenPhotoEvent(this, EventArgs.Empty);
 			}
@@ -1291,11 +1291,11 @@ namespace FotoVision
 		{
 			if (this.FullScreen)
 			{
-				if (e.get_Button() == 1048576 && this.PhotosMenuClickedEvent != null)
+				if (e.Button == 1048576 && this.PhotosMenuClickedEvent != null)
 				{
 					this.PhotosMenuClickedEvent(this, new PhotosMenuClickedEventArgs(PhotosContextAction.NextPhoto));
 				}
-				if (e.get_Button() == 2097152 && this.PhotosMenuClickedEvent != null)
+				if (e.Button == 2097152 && this.PhotosMenuClickedEvent != null)
 				{
 					this.PhotosMenuClickedEvent(this, new PhotosMenuClickedEventArgs(PhotosContextAction.PreviousPhoto));
 				}

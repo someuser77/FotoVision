@@ -36,7 +36,7 @@ namespace FotoVision
 		{
 			get
 			{
-				return base.get_Text();
+				return base.Text;
 			}
 			set
 			{
@@ -94,7 +94,7 @@ namespace FotoVision
 			{
 				if (value.Equals(Color.Empty))
 				{
-					value = Color.get_Black();
+					value = Color.Black;
 				}
 				this._colorActiveText = value;
 				this._brushActiveText = new SolidBrush(this._colorActiveText);
@@ -112,7 +112,7 @@ namespace FotoVision
 			{
 				if (value.Equals(Color.Empty))
 				{
-					value = Color.get_White();
+					value = Color.White;
 				}
 				this._colorInactiveText = value;
 				this._brushInactiveText = new SolidBrush(this._colorInactiveText);
@@ -210,8 +210,8 @@ namespace FotoVision
 			this._active = false;
 			this._antiAlias = true;
 			this._allowActive = true;
-			this._colorActiveText = Color.get_Black();
-			this._colorInactiveText = Color.get_White();
+			this._colorActiveText = Color.Black;
+			this._colorInactiveText = Color.White;
 			this._colorActiveLow = Color.FromArgb(255, 165, 78);
 			this._colorActiveHigh = Color.FromArgb(255, 225, 155);
 			this._colorInactiveLow = Color.FromArgb(3, 55, 145);
@@ -230,19 +230,19 @@ namespace FotoVision
 		}
 		protected override void OnPaint(PaintEventArgs e)
 		{
-			this.DrawCaption(e.get_Graphics());
+			this.DrawCaption(e.Graphics);
 			base.OnPaint(e);
 		}
 		private void DrawCaption(Graphics g)
 		{
-			g.FillRectangle(this.BackBrush, this.get_DisplayRectangle());
+			g.FillRectangle(this.BackBrush, this.DisplayRectangle);
 			if (this._antiAlias)
 			{
 				g.set_TextRenderingHint(4);
 			}
-			RectangleF rectangleF = new RectangleF(4f, 0f, (float)checked(this.get_DisplayRectangle().get_Width() - 4), (float)this.get_DisplayRectangle().get_Height());
+			RectangleF rectangleF = new RectangleF(4f, 0f, (float)checked(this.DisplayRectangle.Width - 4), (float)this.DisplayRectangle.Height);
 			RectangleF rectangleF2 = rectangleF;
-			g.DrawString(this.Text, this.get_Font(), this.TextBrush, rectangleF2, this._format);
+			g.DrawString(this.Text, this.Font, this.TextBrush, rectangleF2, this._format);
 		}
 		protected override void OnMouseDown(MouseEventArgs e)
 		{
@@ -259,18 +259,18 @@ namespace FotoVision
 		}
 		private void CreateGradientBrushes()
 		{
-			if (this.get_Width() > 0 && this.get_Height() > 0)
+			if (this.Width > 0 && this.Height > 0)
 			{
 				if (this._brushActive != null)
 				{
 					this._brushActive.Dispose();
 				}
-				this._brushActive = new LinearGradientBrush(this.get_DisplayRectangle(), this._colorActiveHigh, this._colorActiveLow, 1);
+				this._brushActive = new LinearGradientBrush(this.DisplayRectangle, this._colorActiveHigh, this._colorActiveLow, 1);
 				if (this._brushInactive != null)
 				{
 					this._brushInactive.Dispose();
 				}
-				this._brushInactive = new LinearGradientBrush(this.get_DisplayRectangle(), this._colorInactiveHigh, this._colorInactiveLow, 1);
+				this._brushInactive = new LinearGradientBrush(this.DisplayRectangle, this._colorInactiveHigh, this._colorInactiveLow, 1);
 			}
 		}
 		protected override void Dispose(bool disposing)

@@ -583,8 +583,8 @@ namespace FotoVision
 			this.buttonCancel.set_TabIndex(2);
 			this.buttonCancel.set_Text("Cancel");
 			this.tabControl.set_Anchor(15);
-			this.tabControl.get_Controls().Add(this.pageWebHosting);
-			this.tabControl.get_Controls().Add(this.pageApplication);
+			this.tabControl.Controls.Add(this.pageWebHosting);
+			this.tabControl.Controls.Add(this.pageApplication);
 			Control arg_2AB_0 = this.tabControl;
 			location = new Point(8, 8);
 			arg_2AB_0.set_Location(location);
@@ -594,18 +594,18 @@ namespace FotoVision
 			size = new Size(320, 280);
 			arg_2E4_0.set_Size(size);
 			this.tabControl.set_TabIndex(0);
-			this.pageWebHosting.get_Controls().Add(this.radioLow);
-			this.pageWebHosting.get_Controls().Add(this.labelWebsite);
-			this.pageWebHosting.get_Controls().Add(this.labelPixels);
-			this.pageWebHosting.get_Controls().Add(this.spinPixels);
-			this.pageWebHosting.get_Controls().Add(this.labelPassword);
-			this.pageWebHosting.get_Controls().Add(this.textPassword);
-			this.pageWebHosting.get_Controls().Add(this.textLocation);
-			this.pageWebHosting.get_Controls().Add(this.labelLocation);
-			this.pageWebHosting.get_Controls().Add(this.labelPublish);
-			this.pageWebHosting.get_Controls().Add(this.labelQuality);
-			this.pageWebHosting.get_Controls().Add(this.radioMed);
-			this.pageWebHosting.get_Controls().Add(this.radioHigh);
+			this.pageWebHosting.Controls.Add(this.radioLow);
+			this.pageWebHosting.Controls.Add(this.labelWebsite);
+			this.pageWebHosting.Controls.Add(this.labelPixels);
+			this.pageWebHosting.Controls.Add(this.spinPixels);
+			this.pageWebHosting.Controls.Add(this.labelPassword);
+			this.pageWebHosting.Controls.Add(this.textPassword);
+			this.pageWebHosting.Controls.Add(this.textLocation);
+			this.pageWebHosting.Controls.Add(this.labelLocation);
+			this.pageWebHosting.Controls.Add(this.labelPublish);
+			this.pageWebHosting.Controls.Add(this.labelQuality);
+			this.pageWebHosting.Controls.Add(this.radioMed);
+			this.pageWebHosting.Controls.Add(this.radioHigh);
 			Control arg_40F_0 = this.pageWebHosting;
 			location = new Point(4, 22);
 			arg_40F_0.set_Location(location);
@@ -772,14 +772,14 @@ namespace FotoVision
 			arg_A12_0.set_Size(size);
 			this.radioHigh.set_TabIndex(11);
 			this.radioHigh.set_Text("&High");
-			this.pageApplication.get_Controls().Add(this.checkConfirm);
-			this.pageApplication.get_Controls().Add(this.textEmailSubject);
-			this.pageApplication.get_Controls().Add(this.labelEmailSubject);
-			this.pageApplication.get_Controls().Add(this.checkUpload);
-			this.pageApplication.get_Controls().Add(this.labelApplication);
-			this.pageApplication.get_Controls().Add(this.labelAppDesc);
-			this.pageApplication.get_Controls().Add(this.labelSettings);
-			this.pageApplication.get_Controls().Add(this.checkExif);
+			this.pageApplication.Controls.Add(this.checkConfirm);
+			this.pageApplication.Controls.Add(this.textEmailSubject);
+			this.pageApplication.Controls.Add(this.labelEmailSubject);
+			this.pageApplication.Controls.Add(this.checkUpload);
+			this.pageApplication.Controls.Add(this.labelApplication);
+			this.pageApplication.Controls.Add(this.labelAppDesc);
+			this.pageApplication.Controls.Add(this.labelSettings);
+			this.pageApplication.Controls.Add(this.checkExif);
 			Control arg_AF6_0 = this.pageApplication;
 			location = new Point(4, 22);
 			arg_AF6_0.set_Location(location);
@@ -877,9 +877,9 @@ namespace FotoVision
 			this.set_CancelButton(this.buttonCancel);
 			size = new Size(338, 328);
 			this.set_ClientSize(size);
-			this.get_Controls().Add(this.tabControl);
-			this.get_Controls().Add(this.buttonOK);
-			this.get_Controls().Add(this.buttonCancel);
+			this.Controls.Add(this.tabControl);
+			this.Controls.Add(this.buttonOK);
+			this.Controls.Add(this.buttonCancel);
 			this.set_Icon((Icon)resourceManager.GetObject("$this.Icon"));
 			this.set_MaximizeBox(false);
 			this.set_MinimizeBox(false);
@@ -915,12 +915,12 @@ namespace FotoVision
 		protected override void OnClosing(CancelEventArgs e)
 		{
 			base.OnClosing(e);
-			if (this.get_DialogResult() == 1)
+			if (this.DialogResult == 1)
 			{
 				this.SaveSettings();
 			}
-			Global.Settings.SetValue(SettingKey.OptionsDialogWidth, this.get_Width());
-			Global.Settings.SetValue(SettingKey.OptionsDialogHeight, this.get_Height());
+			Global.Settings.SetValue(SettingKey.OptionsDialogWidth, this.Width);
+			Global.Settings.SetValue(SettingKey.OptionsDialogHeight, this.Height);
 		}
 		private void RestoreSettings()
 		{
@@ -960,19 +960,19 @@ namespace FotoVision
 		private void SaveSettings()
 		{
 			Global.Settings.AutoWrite = false;
-			Global.Settings.SetValue(SettingKey.ServiceLocation, this.textLocation.get_Text());
-			Global.Settings.SetValue(SettingKey.ServicePassword, DataProtection.Encrypt(this.textPassword.get_Text(), DataProtection.Store.User));
-			Global.Settings.SetValue(SettingKey.PublishPhotoSize, this.spinPixels.get_Value());
-			Global.Settings.SetValue(SettingKey.EmailSubject, this.textEmailSubject.get_Text());
-			Global.Settings.SetValue(SettingKey.PromptFileDelete, this.checkConfirm.get_Checked());
-			Global.Settings.SetValue(SettingKey.CloseAfterUpload, this.checkUpload.get_Checked());
-			Global.Settings.SetValue(SettingKey.MaintainExifInfo, this.checkExif.get_Checked());
+			Global.Settings.SetValue(SettingKey.ServiceLocation, this.textLocation.Text);
+			Global.Settings.SetValue(SettingKey.ServicePassword, DataProtection.Encrypt(this.textPassword.Text, DataProtection.Store.User));
+			Global.Settings.SetValue(SettingKey.PublishPhotoSize, this.spinPixels.Value);
+			Global.Settings.SetValue(SettingKey.EmailSubject, this.textEmailSubject.Text);
+			Global.Settings.SetValue(SettingKey.PromptFileDelete, this.checkConfirm.Checked);
+			Global.Settings.SetValue(SettingKey.CloseAfterUpload, this.checkUpload.Checked);
+			Global.Settings.SetValue(SettingKey.MaintainExifInfo, this.checkExif.Checked);
 			int num = 85;
-			if (this.radioLow.get_Checked())
+			if (this.radioLow.Checked)
 			{
 				num = 45;
 			}
-			if (this.radioMed.get_Checked())
+			if (this.radioMed.Checked)
 			{
 				num = 70;
 			}

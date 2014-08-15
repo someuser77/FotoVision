@@ -51,7 +51,7 @@ namespace FotoVision
 		public static string ComputeHash(string s)
 		{
 			SHA1CryptoServiceProvider sHA1CryptoServiceProvider = new SHA1CryptoServiceProvider();
-			string result = Convert.ToBase64String(sHA1CryptoServiceProvider.ComputeHash(Encoding.get_ASCII().GetBytes(s)));
+			string result = Convert.ToBase64String(sHA1CryptoServiceProvider.ComputeHash(Encoding.ASCII.GetBytes(s)));
 			sHA1CryptoServiceProvider.Clear();
 			return result;
 		}

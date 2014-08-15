@@ -67,7 +67,7 @@ namespace FotoVision
 		}
 		public string GetString(SettingKey key)
 		{
-			object objectValue = RuntimeHelpers.GetObjectValue(this._list.get_Item(key.ToString()));
+			object objectValue = RuntimeHelpers.GetObjectValue(this._list.Item(key.ToString));
 			if (objectValue == null)
 			{
 				return "";
@@ -104,7 +104,7 @@ namespace FotoVision
 					XmlTextReader xmlTextReader = new XmlTextReader(this.FilePath);
 					while (xmlTextReader.Read())
 					{
-						if (xmlTextReader.get_NodeType() == 1 & StringType.StrCmp(xmlTextReader.get_Name(), "add", false) == 0)
+						if (xmlTextReader.NodeType == 1 & StringType.StrCmp(xmlTextReader.Name, "add", false) == 0)
 						{
 							this._list.set_Item(xmlTextReader.GetAttribute("key"), xmlTextReader.GetAttribute("value"));
 						}
@@ -124,10 +124,10 @@ namespace FotoVision
 			{
 				xmlTextWriter.WriteStartElement("add");
 				xmlTextWriter.WriteStartAttribute("key", null);
-				xmlTextWriter.WriteString(enumerator.get_Key().ToString());
+				xmlTextWriter.WriteString(enumerator.Key.ToString());
 				xmlTextWriter.WriteEndAttribute();
 				xmlTextWriter.WriteStartAttribute("value", null);
-				xmlTextWriter.WriteString(enumerator.get_Value().ToString());
+				xmlTextWriter.WriteString(enumerator.Value.ToString());
 				xmlTextWriter.WriteEndAttribute();
 				xmlTextWriter.WriteEndElement();
 			}
@@ -151,17 +151,17 @@ namespace FotoVision
 		}
 		private void InitFilePath()
 		{
-			string[] array = Application.get_ProductVersion().Split(new char[]
+			string[] array = Application.ProductVersion.Split(new char[]
 			{
 				'.'
 			});
-			string text = string.Format("{0}\\{1}.{2}", Application.get_ProductName(), array[0], array[1]);
+			string text = string.Format("{0}\\{1}.{2}", Application.ProductName, array[0], array[1]);
 			string text2 = Path.Combine(Environment.GetFolderPath(26), text);
 			if (!Directory.Exists(text2))
 			{
 				Directory.CreateDirectory(text2);
 			}
-			this.FilePath = Path.Combine(text2, Path.GetFileName(Application.get_ExecutablePath()) + ".config");
+			this.FilePath = Path.Combine(text2, Path.GetFileName(Application.ExecutablePath) + ".config");
 		}
 	}
 }

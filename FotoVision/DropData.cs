@@ -54,14 +54,14 @@ namespace FotoVision
 		public void Enter(DragEventArgs e)
 		{
 			this.IsInDragDrop = true;
-			if (!e.get_Data().GetDataPresent(DataFormats.FileDrop))
+			if (!e.Data.GetDataPresent(DataFormats.FileDrop))
 			{
 				e.set_Effect(0);
 				return;
 			}
-			string[] files = (string[])e.get_Data().GetData(DataFormats.FileDrop);
+			string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
 			this._containsPhotos = this.PhotosInList(files);
-			this.FindTargetItem(e.get_X(), e.get_Y());
+			this.FindTargetItem(e.X, e.Y);
 			e.set_Effect(this.GetDropEffect(e));
 		}
 		public void Leave()
@@ -70,17 +70,17 @@ namespace FotoVision
 		}
 		public void Over(DragEventArgs e)
 		{
-			this._lastMouseButtons = Control.get_MouseButtons();
-			this.FindTargetItem(e.get_X(), e.get_Y());
+			this._lastMouseButtons = Control.MouseButtons;
+			this.FindTargetItem(e.X, e.Y);
 			e.set_Effect(this.GetDropEffect(e));
 		}
 		public string[] Drop(DragEventArgs e)
 		{
-			this.FindTargetItem(e.get_X(), e.get_Y());
+			this.FindTargetItem(e.X, e.Y);
 			this.IsInDragDrop = false;
-			if (e.get_Data().GetDataPresent(DataFormats.FileDrop))
+			if (e.Data.GetDataPresent(DataFormats.FileDrop))
 			{
-				return (string[])e.get_Data().GetData(DataFormats.FileDrop);
+				return (string[])e.Data.GetData(DataFormats.FileDrop);
 			}
 			return null;
 		}
@@ -99,7 +99,7 @@ namespace FotoVision
 				Control arg_28_0 = this._listView;
 				Point point = new Point(X, Y);
 				Point point2 = arg_28_0.PointToClient(point);
-				ListViewItem itemAt = this._listView.GetItemAt(point2.get_X(), point2.get_Y());
+				ListViewItem itemAt = this._listView.GetItemAt(point2.X, point2.Y);
 				if (itemAt == this._curItem)
 				{
 					return;
@@ -121,7 +121,7 @@ namespace FotoVision
 			{
 				return 0;
 			}
-			if (!e.get_Data().GetDataPresent(DataFormats.FileDrop))
+			if (!e.Data.GetDataPresent(DataFormats.FileDrop))
 			{
 				return 0;
 			}
@@ -133,7 +133,7 @@ namespace FotoVision
 			{
 				return 1;
 			}
-			return IntegerType.FromObject(Interaction.IIf((e.get_KeyState() & 8) == 8, 1, 2));
+			return IntegerType.FromObject(Interaction.IIf((e.KeyState & 8) == 8, 1, 2));
 		}
 		private bool PhotosInList(string[] files)
 		{

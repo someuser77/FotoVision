@@ -219,7 +219,7 @@ namespace FotoVision
 			this.buttonOK.set_TabIndex(0);
 			this.buttonOK.set_Text("OK");
 			this.textDetails.set_Anchor(15);
-			this.textDetails.set_BackColor(SystemColors.get_Info());
+			this.textDetails.set_BackColor(SystemColors.Info);
 			Control arg_178_0 = this.textDetails;
 			location = new Point(8, 144);
 			arg_178_0.set_Location(location);
@@ -253,7 +253,7 @@ namespace FotoVision
 			this.labelType.set_TabIndex(4);
 			this.labelType.set_Text("&Type of error:");
 			this.textType.set_Anchor(13);
-			this.textType.set_BackColor(SystemColors.get_Info());
+			this.textType.set_BackColor(SystemColors.Info);
 			Control arg_2E2_0 = this.textType;
 			location = new Point(8, 96);
 			arg_2E2_0.set_Location(location);
@@ -293,14 +293,14 @@ namespace FotoVision
 			this.set_CancelButton(this.buttonOK);
 			size = new Size(336, 246);
 			this.set_ClientSize(size);
-			this.get_Controls().Add(this.labelDetails);
-			this.get_Controls().Add(this.textDetails);
-			this.get_Controls().Add(this.textType);
-			this.get_Controls().Add(this.pictIcon);
-			this.get_Controls().Add(this.buttonOK);
-			this.get_Controls().Add(this.labelType);
-			this.get_Controls().Add(this.labelHeader);
-			this.get_Controls().Add(this.labelInfo);
+			this.Controls.Add(this.labelDetails);
+			this.Controls.Add(this.textDetails);
+			this.Controls.Add(this.textType);
+			this.Controls.Add(this.pictIcon);
+			this.Controls.Add(this.buttonOK);
+			this.Controls.Add(this.labelType);
+			this.Controls.Add(this.labelHeader);
+			this.Controls.Add(this.labelInfo);
 			this.set_Icon((Icon)resourceManager.GetObject("$this.Icon"));
 			this.set_MaximizeBox(false);
 			this.set_MinimizeBox(false);
@@ -329,15 +329,15 @@ namespace FotoVision
 			this._message = message;
 			if (ex != null)
 			{
-				this.textType.set_Text(ex.GetType().get_FullName());
-				this.textDetails.set_Text(ex.get_Message());
+				this.textType.set_Text(ex.GetType().FullName);
+				this.textDetails.set_Text(ex.Message);
 			}
 		}
 		protected override void OnClosing(CancelEventArgs e)
 		{
 			base.OnClosing(e);
-			Global.Settings.SetValue(SettingKey.ErrorDialogWidth, this.get_Width());
-			Global.Settings.SetValue(SettingKey.ErrorDialogHeight, this.get_Height());
+			Global.Settings.SetValue(SettingKey.ErrorDialogWidth, this.Width);
+			Global.Settings.SetValue(SettingKey.ErrorDialogHeight, this.Height);
 		}
 		private void buttonOK_Click(object sender, EventArgs e)
 		{
@@ -345,13 +345,13 @@ namespace FotoVision
 		}
 		private void pictIcon_Paint(object sender, PaintEventArgs e)
 		{
-			e.get_Graphics().DrawIcon(SystemIcons.get_Exclamation(), 0, 0);
+			e.Graphics.DrawIcon(SystemIcons.Exclamation, 0, 0);
 		}
 		protected override void OnPaint(PaintEventArgs e)
 		{
 			base.OnPaint(e);
-			RectangleF rectangleF = new RectangleF((float)checked(this.labelHeader.get_Bounds().get_Left() - 2), (float)this.labelHeader.get_Bottom(), (float)this.labelHeader.get_Width(), (float)this.labelHeader.get_Height());
-			e.get_Graphics().DrawString(this._message, this.get_Font(), SystemBrushes.get_ControlText(), rectangleF, this._format);
+			RectangleF rectangleF = new RectangleF((float)checked(this.labelHeader.Bounds.Left - 2), (float)this.labelHeader.Bottom, (float)this.labelHeader.Width, (float)this.labelHeader.Height);
+			e.Graphics.DrawString(this._message, this.Font, SystemBrushes.ControlText, rectangleF, this._format);
 		}
 	}
 }

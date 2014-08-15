@@ -82,8 +82,8 @@ namespace FotoVision
 			this._albumList = null;
 			if (list != null)
 			{
-				this._albumList = new string[checked(list.get_Length() - 1 + 1)];
-				Array.Copy(list, this._albumList, list.get_Length());
+				this._albumList = new string[checked(list.Length - 1 + 1)];
+				Array.Copy(list, this._albumList, list.Length);
 			}
 		}
 		public void CreatePublishFiles()
@@ -135,7 +135,7 @@ namespace FotoVision
 					Exception ex2 = expr_E9;
 					if (this.UpdateMessageEvent != null)
 					{
-						this.UpdateMessageEvent(this, new UploadMessageEventArgs("Publish error - " + ex2.get_Message(), false, true));
+						this.UpdateMessageEvent(this, new UploadMessageEventArgs("Publish error - " + ex2.Message, false, true));
 					}
 					errorOccurred = true;
 					ProjectData.ClearProjectError();
@@ -157,7 +157,7 @@ namespace FotoVision
 			int arg_23_0 = 0;
 			checked
 			{
-				int num = directories.get_Length() - 1;
+				int num = directories.Length - 1;
 				for (int i = arg_23_0; i <= num; i++)
 				{
 					directories[i] = Path.GetFileName(directories[i]);
@@ -176,7 +176,7 @@ namespace FotoVision
 			int arg_2D_0 = 0;
 			checked
 			{
-				int num = files.get_Length() - 1;
+				int num = files.Length - 1;
 				for (int i = arg_2D_0; i <= num; i++)
 				{
 					files[i] = Path.GetFileName(files[i]);
@@ -360,9 +360,9 @@ namespace FotoVision
 					}
 					return;
 				}
-				string[] array2 = new string[photos.get_Length() - 1 + 1];
+				string[] array2 = new string[photos.Length - 1 + 1];
 				int arg_9A_0 = 0;
-				int num = photos.get_Length() - 1;
+				int num = photos.Length - 1;
 				for (int j = arg_9A_0; j <= num; j++)
 				{
 					array2[j] = this.GetPhotoFileName(photos[j]);
@@ -383,11 +383,11 @@ namespace FotoVision
 		private string GetPhotoFileName(Photo photo)
 		{
 			string fileName = Path.GetFileName(photo.PhotoPath);
-			if (string.Compare(Path.GetExtension(fileName), ".jpg", true, CultureInfo.get_InvariantCulture()) == 0)
+			if (string.Compare(Path.GetExtension(fileName), ".jpg", true, CultureInfo.InvariantCulture) == 0)
 			{
 				return fileName;
 			}
-			return string.Format("{0}-{1}.jpg", photo.PhotoName, Path.GetExtension(fileName).ToLower(CultureInfo.get_InvariantCulture()).Substring(1));
+			return string.Format("{0}-{1}.jpg", photo.PhotoName, Path.GetExtension(fileName).ToLower(CultureInfo.InvariantCulture).Substring(1));
 		}
 	}
 }

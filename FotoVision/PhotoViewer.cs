@@ -105,7 +105,7 @@ namespace FotoVision
 		{
 			get
 			{
-				return this.get_Visible() && BooleanType.FromObject(Interaction.IIf(Global.ActionList.Count > 0, true, false));
+				return this.Visible && BooleanType.FromObject(Interaction.IIf(Global.ActionList.Count > 0, true, false));
 			}
 		}
 		[Browsable(false)]
@@ -116,18 +116,18 @@ namespace FotoVision
 				Bitmap result;
 				try
 				{
-					Cursor.set_Current(Cursors.get_WaitCursor());
+					Cursor.set_Current(Cursors.WaitCursor);
 					Global.Progress.Update(this, "Processing photo", 1, 2);
 					Bitmap bitmap = new Bitmap(this._photo.PhotoPath);
 					Global.Progress.Complete(this);
-					Cursor.set_Current(Cursors.get_Default());
+					Cursor.set_Current(Cursors.Default);
 					OptimizeActions optimizeActions = new OptimizeActions();
 					optimizeActions.Apply(ref bitmap, 0f);
 					result = new Bitmap(bitmap);
 					bitmap.Dispose();
 					bitmap = null;
 					Global.Progress.Complete(this);
-					Cursor.set_Current(Cursors.get_Default());
+					Cursor.set_Current(Cursors.Default);
 				}
 				catch (Exception expr_7B)
 				{
@@ -165,7 +165,7 @@ namespace FotoVision
 		{
 			try
 			{
-				Cursor.set_Current(Cursors.get_WaitCursor());
+				Cursor.set_Current(Cursors.WaitCursor);
 				Global.Progress.Update(this, "Processing photo", 1, 2);
 				if (FileManager.IsFileReadOnly(this.Photo.PhotoPath))
 				{
@@ -173,9 +173,9 @@ namespace FotoVision
 				}
 				Bitmap bitmap = new Bitmap(this._photo.PhotoPath);
 				Bitmap bitmap2 = new Bitmap(bitmap);
-				ImageFormat rawFormat = bitmap.get_RawFormat();
+				ImageFormat rawFormat = bitmap.RawFormat;
 				Global.Progress.Complete(this);
-				Cursor.set_Current(Cursors.get_Default());
+				Cursor.set_Current(Cursors.Default);
 				OptimizeActions optimizeActions = new OptimizeActions();
 				optimizeActions.Apply(ref bitmap2, 0f);
 				if (Global.Settings.GetBool(SettingKey.MaintainExifInfo))
@@ -209,7 +209,7 @@ namespace FotoVision
 				}
 			}
 			Global.Progress.Complete(this);
-			Cursor.set_Current(Cursors.get_Default());
+			Cursor.set_Current(Cursors.Default);
 		}
 		public void ClearCrop()
 		{
@@ -239,34 +239,34 @@ namespace FotoVision
 		protected override void OnPaint(PaintEventArgs e)
 		{
 			base.OnPaint(e);
-			if (this.get_DesignMode() || this._workingImage == null)
+			if (this.DesignMode || this._workingImage == null)
 			{
-				e.get_Graphics().Clear(this.get_BackColor());
+				e.Graphics.Clear(this.BackColor);
 				return;
 			}
-			this.DrawPhoto(e.get_Graphics());
-			this.DrawCrop(e.get_Graphics());
+			this.DrawPhoto(e.Graphics);
+			this.DrawCrop(e.Graphics);
 		}
 		protected override void OnPaintBackground(PaintEventArgs pevent)
 		{
 		}
 		private void DrawPhoto(Graphics g)
 		{
-			g.Clear(this.get_BackColor());
-			Rectangle displayRectangle = this.get_DisplayRectangle();
+			g.Clear(this.BackColor);
+			Rectangle displayRectangle = this.DisplayRectangle;
 			displayRectangle.Inflate(-10, -10);
-			int num = Math.Max(displayRectangle.get_Width(), 0);
-			int num2 = Math.Max(displayRectangle.get_Height(), 0);
-			float num3 = Math.Max((float)((double)this._workingImage.get_Width() / (double)num), (float)((double)this._workingImage.get_Height() / (double)num2));
+			int num = Math.Max(displayRectangle.Width, 0);
+			int num2 = Math.Max(displayRectangle.Height, 0);
+			float num3 = Math.Max((float)((double)this._workingImage.Width / (double)num), (float)((double)this._workingImage.Height / (double)num2));
 			checked
 			{
-				int num4 = (int)Math.Round((double)((float)this._workingImage.get_Width() / num3));
-				int num5 = (int)Math.Round((double)((float)this._workingImage.get_Height() / num3));
-				int num6 = (this.get_Width() - num4) / 2;
-				int num7 = (this.get_Height() - num5) / 2;
+				int num4 = (int)Math.Round((double)((float)this._workingImage.Width / num3));
+				int num5 = (int)Math.Round((double)((float)this._workingImage.Height / num3));
+				int num6 = (this.Width - num4) / 2;
+				int num7 = (this.Height - num5) / 2;
 				g.set_InterpolationMode(3);
 				Rectangle rectangle = new Rectangle(num6, num7, num4, num5);
-				g.DrawImage(this._workingImage, rectangle, 0, 0, this._workingImage.get_Width(), this._workingImage.get_Height(), 2);
+				g.DrawImage(this._workingImage, rectangle, 0, 0, this._workingImage.Width, this._workingImage.Height, 2);
 				g.DrawRectangle(this._penFrame, rectangle);
 				if (!this._photoBounds.Equals(rectangle))
 				{
@@ -280,11 +280,11 @@ namespace FotoVision
 		{
 			try
 			{
-				Cursor.set_Current(Cursors.get_WaitCursor());
+				Cursor.set_Current(Cursors.WaitCursor);
 				Global.Progress.Update(this, "Loading photo", 1, 2);
 				Bitmap bitmap = new Bitmap(this._photo.PhotoPath);
 				Global.Progress.Update(this, "Loading photo", 2, 2);
-				this.OnNewPhoto(this._photo.PhotoPath, bitmap, bitmap.get_RawFormat());
+				this.OnNewPhoto(this._photo.PhotoPath, bitmap, bitmap.RawFormat);
 			}
 			catch (Exception expr_59)
 			{
@@ -302,14 +302,14 @@ namespace FotoVision
 				}
 			}
 			Global.Progress.Complete(this);
-			Cursor.set_Current(Cursors.get_Default());
+			Cursor.set_Current(Cursors.Default);
 		}
 		private void OnNewPhoto(string path, Bitmap srcImage, ImageFormat format)
 		{
 			this.CreateWorkingImage(srcImage);
 			this.ClearActions();
 			this._cropHelper.PhotoBounds = this._photoBounds;
-			this._orgPhotoSize = srcImage.get_Size();
+			this._orgPhotoSize = srcImage.Size;
 			this._cropHelper.OriginalPhotoSize = this._orgPhotoSize;
 			this._photoInfo.Read(path, srcImage, format);
 			this.OnCropDataChanged();
@@ -328,24 +328,24 @@ namespace FotoVision
 			}
 			checked
 			{
-				int num = (int)Math.Round((double)unchecked((float)Math.Max(Screen.get_PrimaryScreen().get_WorkingArea().get_Width(), Screen.get_PrimaryScreen().get_WorkingArea().get_Height()) * 0.65f));
-				if (srcImage.get_Width() <= num & srcImage.get_Height() <= num)
+				int num = (int)Math.Round((double)unchecked((float)Math.Max(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height) * 0.65f));
+				if (srcImage.Width <= num & srcImage.Height <= num)
 				{
 					this._scale = 0f;
 					this._startingImage = new Bitmap(srcImage);
 				}
 				else
 				{
-					this._scale = (float)Math.Max(srcImage.get_Width(), srcImage.get_Height()) / (float)num;
-					int num2 = (int)Math.Round((double)((float)srcImage.get_Width() / this._scale));
-					int num3 = (int)Math.Round((double)((float)srcImage.get_Height() / this._scale));
+					this._scale = (float)Math.Max(srcImage.Width, srcImage.Height) / (float)num;
+					int num2 = (int)Math.Round((double)((float)srcImage.Width / this._scale));
+					int num3 = (int)Math.Round((double)((float)srcImage.Height / this._scale));
 					this._startingImage = new Bitmap(num2, num3);
 					Graphics graphics = Graphics.FromImage(this._startingImage);
 					try
 					{
 						graphics.set_InterpolationMode(3);
 						Rectangle rectangle = new Rectangle(0, 0, num2, num3);
-						graphics.DrawImage(srcImage, rectangle, 0, 0, srcImage.get_Width(), srcImage.get_Height(), 2);
+						graphics.DrawImage(srcImage, rectangle, 0, 0, srcImage.Width, srcImage.Height, 2);
 					}
 					finally
 					{
@@ -382,7 +382,7 @@ namespace FotoVision
 						this._cropHelper.OriginalPhotoRotated();
 						break;
 					case PhotoAction.Crop:
-						this._cropHelper.OriginalPhotoSize = at.Bounds.get_Size();
+						this._cropHelper.OriginalPhotoSize = at.Bounds.Size;
 						break;
 					}
 				}
@@ -398,14 +398,14 @@ namespace FotoVision
 				return;
 			}
 			base.OnMouseDown(e);
-			if (Control.get_MouseButtons() != 1048576)
+			if (Control.MouseButtons != 1048576)
 			{
 				return;
 			}
 			this.set_Capture(true);
 			this.Invalidate();
 			this.Update();
-			this._cropHelper.MouseDown(e.get_X(), e.get_Y());
+			this._cropHelper.MouseDown(e.X, e.Y);
 		}
 		protected override void OnMouseMove(MouseEventArgs e)
 		{
@@ -414,14 +414,14 @@ namespace FotoVision
 			{
 				return;
 			}
-			if (this.get_Capture())
+			if (this.Capture)
 			{
-				this._cropHelper.MouseMove(e.get_X(), e.get_Y());
+				this._cropHelper.MouseMove(e.X, e.Y);
 				this.OnCropDataChanged();
 			}
 			else
 			{
-				this._cropHelper.SetCursor(e.get_X(), e.get_Y());
+				this._cropHelper.SetCursor(e.X, e.Y);
 			}
 		}
 		protected override void OnMouseUp(MouseEventArgs e)
@@ -432,7 +432,7 @@ namespace FotoVision
 				return;
 			}
 			this.set_Capture(false);
-			this._cropHelper.MouseUp(e.get_X(), e.get_Y());
+			this._cropHelper.MouseUp(e.X, e.Y);
 			this.Invalidate();
 		}
 		private void OnCropDataChanged()
@@ -440,12 +440,12 @@ namespace FotoVision
 			Rectangle originalPhotoSelectedArea = this._cropHelper.OriginalPhotoSelectedArea;
 			if (this.CropDataChangedEvent != null)
 			{
-				this.CropDataChangedEvent(this, new CropDataChangedEventArgs(this._cropHelper.OriginalPhotoSize, originalPhotoSelectedArea.get_Size(), originalPhotoSelectedArea));
+				this.CropDataChangedEvent(this, new CropDataChangedEventArgs(this._cropHelper.OriginalPhotoSize, originalPhotoSelectedArea.Size, originalPhotoSelectedArea));
 			}
 		}
 		private void DrawCrop(Graphics g)
 		{
-			if (this.get_Capture() | !this._cropMode | !this._editMode)
+			if (this.Capture | !this._cropMode | !this._editMode)
 			{
 				return;
 			}
@@ -458,7 +458,7 @@ namespace FotoVision
 			region.Exclude(selectedArea);
 			g.FillRegion(this._brushDimCrop, region);
 			region.Dispose();
-			ControlPaint.DrawFocusRectangle(g, this._cropHelper.SelectedArea, Color.get_White(), Color.get_Black());
+			ControlPaint.DrawFocusRectangle(g, this._cropHelper.SelectedArea, Color.White, Color.Black);
 		}
 	}
 }

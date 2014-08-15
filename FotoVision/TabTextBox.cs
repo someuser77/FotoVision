@@ -43,10 +43,10 @@ namespace FotoVision
 		[PermissionSet(SecurityAction.LinkDemand, XML = "<PermissionSet class=\"System.Security.PermissionSet\"\r\n               version=\"1\">\r\n   <IPermission class=\"System.Security.Permissions.SecurityPermission, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\r\n                version=\"1\"\r\n                Flags=\"UnmanagedCode\"/>\r\n</PermissionSet>\r\n")]
 		public override bool PreProcessMessage(ref Message msg)
 		{
-			if (msg.get_Msg() == 256 & msg.get_WParam().ToInt32() == 9)
+			if (msg.Msg == 256 & msg.WParam.ToInt32() == 9)
 			{
 				TabbedControlNavigateEventArgs tabbedControlNavigateEventArgs = new TabbedControlNavigateEventArgs(false);
-				if (Control.get_ModifierKeys() == 65536)
+				if (Control.ModifierKeys == 65536)
 				{
 					if (this.PreviousControlEvent != null)
 					{

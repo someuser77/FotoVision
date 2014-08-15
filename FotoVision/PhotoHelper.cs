@@ -397,11 +397,11 @@ namespace FotoVision
 		}
 		public static Bitmap Crop(Bitmap image, Rectangle cropArea)
 		{
-			Bitmap bitmap = new Bitmap(cropArea.get_Width(), cropArea.get_Height());
+			Bitmap bitmap = new Bitmap(cropArea.Width, cropArea.Height);
 			Graphics graphics = Graphics.FromImage(bitmap);
 			try
 			{
-				Rectangle rectangle = new Rectangle(0, 0, bitmap.get_Width(), bitmap.get_Height());
+				Rectangle rectangle = new Rectangle(0, 0, bitmap.Width, bitmap.Height);
 				graphics.DrawImage(image, rectangle, cropArea, 2);
 			}
 			finally
@@ -418,14 +418,14 @@ namespace FotoVision
 				try
 				{
 					Bitmap bitmap = new Bitmap(imagePath);
-					float num = SingleType.FromObject(Interaction.IIf(bitmap.get_Width() > bitmap.get_Height(), (double)longestSide / (double)bitmap.get_Width(), (double)longestSide / (double)bitmap.get_Height()));
-					int num2 = (int)Math.Round((double)unchecked((float)bitmap.get_Width() * num));
-					int num3 = (int)Math.Round((double)unchecked((float)bitmap.get_Height() * num));
+					float num = SingleType.FromObject(Interaction.IIf(bitmap.Width > bitmap.Height, (double)longestSide / (double)bitmap.Width, (double)longestSide / (double)bitmap.Height));
+					int num2 = (int)Math.Round((double)unchecked((float)bitmap.Width * num));
+					int num3 = (int)Math.Round((double)unchecked((float)bitmap.Height * num));
 					bitmap2 = new Bitmap(num2, num3);
 					Graphics graphics = Graphics.FromImage(bitmap2);
 					graphics.set_InterpolationMode(7);
 					Rectangle rectangle = new Rectangle(0, 0, num2, num3);
-					graphics.DrawImage(bitmap, rectangle, 0, 0, bitmap.get_Width(), bitmap.get_Height(), 2);
+					graphics.DrawImage(bitmap, rectangle, 0, 0, bitmap.Width, bitmap.Height, 2);
 					graphics.Dispose();
 				}
 				catch (Exception expr_AC)
@@ -474,9 +474,9 @@ namespace FotoVision
 				Image thumbnailImage;
 				try
 				{
-					float num = SingleType.FromObject(Interaction.IIf(image.get_Width() > image.get_Height(), (double)longestSide / (double)image.get_Width(), (double)longestSide / (double)image.get_Height()));
-					int num2 = (int)Math.Round((double)unchecked((float)image.get_Width() * num));
-					int num3 = (int)Math.Round((double)unchecked((float)image.get_Height() * num));
+					float num = SingleType.FromObject(Interaction.IIf(image.Width > image.Height, (double)longestSide / (double)image.Width, (double)longestSide / (double)image.Height));
+					int num2 = (int)Math.Round((double)unchecked((float)image.Width * num));
+					int num3 = (int)Math.Round((double)unchecked((float)image.Height * num));
 					thumbnailImage = image.GetThumbnailImage(num2, num3, null, IntPtr.Zero);
 				}
 				catch (Exception expr_6E)
@@ -506,8 +506,8 @@ namespace FotoVision
 			Graphics graphics = Graphics.FromImage(image);
 			try
 			{
-				Rectangle rectangle = new Rectangle(0, 0, image.get_Width(), image.get_Height());
-				graphics.DrawImage(image, rectangle, 0, 0, image.get_Width(), image.get_Height(), 2, attr);
+				Rectangle rectangle = new Rectangle(0, 0, image.Width, image.Height);
+				graphics.DrawImage(image, rectangle, 0, 0, image.Width, image.Height, 2, attr);
 			}
 			finally
 			{

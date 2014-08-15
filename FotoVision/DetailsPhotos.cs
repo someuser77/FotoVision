@@ -122,10 +122,10 @@ namespace FotoVision
 		{
 			this._processingIndexChanged = false;
 			this._curIndex = -1;
-			this.set_BackColor(SystemColors.get_Control());
+			this.set_BackColor(SystemColors.Control);
 			this.set_DrawMode(1);
-			this.set_ItemHeight(checked(this.get_Font().get_Height() * 8 + 35 + 19));
-			this._textHeight = this.get_Font().get_Height();
+			this.set_ItemHeight(checked(this.Font.Height * 8 + 35 + 19));
+			this._textHeight = this.Font.Height;
 			this.InitChildControls();
 			this._format = new StringFormat();
 			this._format.set_Trimming(3);
@@ -140,7 +140,7 @@ namespace FotoVision
 					for (int i = 0; i < photos.Length; i++)
 					{
 						Photo photo = photos[i];
-						this.get_Items().Add(photo);
+						this.Items.Add(photo);
 					}
 				}
 			}
@@ -149,7 +149,7 @@ namespace FotoVision
 		{
 			this._curIndex = -1;
 			this.HideControls();
-			this.get_Items().Clear();
+			this.Items.Clear();
 		}
 		public void Save()
 		{
@@ -158,9 +158,9 @@ namespace FotoVision
 		private void textTitle_PreviousControl(object sender, TabbedControlNavigateEventArgs e)
 		{
 			e.Processed = false;
-			if (this.get_SelectedIndex() != -1 & this.get_SelectedIndex() > 0)
+			if (this.SelectedIndex != -1 & this.SelectedIndex > 0)
 			{
-				this.set_SelectedIndex(checked(this.get_SelectedIndex() - 1));
+				this.set_SelectedIndex(checked(this.SelectedIndex - 1));
 				this._textDate.Focus();
 				this._textDate.SelectAll();
 				e.Processed = true;
@@ -171,9 +171,9 @@ namespace FotoVision
 			e.Processed = false;
 			checked
 			{
-				if (this.get_SelectedIndex() != -1 & this.get_SelectedIndex() < this.get_Items().get_Count() - 1)
+				if (this.SelectedIndex != -1 & this.SelectedIndex < this.Items.Count - 1)
 				{
-					this.set_SelectedIndex(this.get_SelectedIndex() + 1);
+					this.set_SelectedIndex(this.SelectedIndex + 1);
 					this._textTitle.Focus();
 					this._textTitle.SelectAll();
 					e.Processed = true;
@@ -186,78 +186,78 @@ namespace FotoVision
 			{
 				return;
 			}
-			if (this.get_SelectedIndex() != -1)
+			if (this.SelectedIndex != -1)
 			{
-				this.UpdateItem(this.get_SelectedIndex());
+				this.UpdateItem(this.SelectedIndex);
 			}
 		}
 		protected override void OnDrawItem(DrawItemEventArgs e)
 		{
 			base.OnDrawItem(e);
-			if (this.get_DesignMode())
+			if (this.DesignMode)
 			{
 				return;
 			}
-			if (e.get_Index() == -1)
+			if (e.Index == -1)
 			{
 				return;
 			}
-			this.CreateOffscreenGraphics(e.get_Index());
-			this._graphics.Clear(this.get_BackColor());
+			this.CreateOffscreenGraphics(e.Index);
+			this._graphics.Clear(this.BackColor);
 			this.DrawFields(this._graphics, 0);
-			this.DrawValues(this._graphics, e.get_Index(), 0);
-			this.DrawThumbnail(this._graphics, e.get_Index(), 0);
-			e.get_Graphics().DrawImage(this._bmpItem, e.get_Bounds().get_Left(), e.get_Bounds().get_Top(), this._bmpItem.get_Width(), this._bmpItem.get_Height());
+			this.DrawValues(this._graphics, e.Index, 0);
+			this.DrawThumbnail(this._graphics, e.Index, 0);
+			e.Graphics.DrawImage(this._bmpItem, e.Bounds.Left, e.Bounds.Top, this._bmpItem.Width, this._bmpItem.Height);
 		}
 		private void DrawFields(Graphics g, int top)
 		{
 			checked
 			{
 				Point point = new Point(70, top + 5);
-				g.DrawString("Photo Title & Description:", this.get_Font(), SystemBrushes.get_ControlText(), (float)point.get_X(), (float)point.get_Y());
-				point.set_Y(point.get_Y() + (this._textHeight + 2));
-				this._titleOffset = point.get_Y() - top;
-				g.FillRectangle(SystemBrushes.get_Window(), point.get_X(), point.get_Y(), 200, this._textHeight + 4);
-				g.DrawRectangle(SystemPens.get_ControlDark(), point.get_X(), point.get_Y(), 200, this._textHeight + 4);
-				point.set_Y(point.get_Y() + (this._textHeight + 4 + 5));
-				this._descOffset = point.get_Y() - top;
-				g.FillRectangle(SystemBrushes.get_Window(), point.get_X(), point.get_Y(), 200, this._textHeight * 4 + 2);
-				g.DrawRectangle(SystemPens.get_ControlDark(), point.get_X(), point.get_Y(), 200, this._textHeight * 4 + 2);
-				point.set_Y(point.get_Y() + (this._textHeight * 4 + 6 + 5));
-				g.DrawString("Date Taken", this.get_Font(), SystemBrushes.get_ControlText(), (float)point.get_X(), (float)point.get_Y());
-				int width = g.MeasureString("Date Taken", this.get_Font()).ToSize().get_Width();
-				g.DrawString("(default: date created):", this.get_Font(), SystemBrushes.get_ControlText(), (float)(point.get_X() + width + 2), (float)point.get_Y());
-				point.set_Y(point.get_Y() + (this._textHeight + 2));
-				this._dateOffset = point.get_Y() - top;
-				g.FillRectangle(SystemBrushes.get_Window(), point.get_X(), point.get_Y(), 100, this._textHeight + 4);
-				g.DrawRectangle(SystemPens.get_ControlDark(), point.get_X(), point.get_Y(), 100, this._textHeight + 4);
-				point.set_Y(point.get_Y() + (this._textHeight + 4 + 10));
-				g.DrawLine(SystemPens.get_ControlDark(), 10, point.get_Y(), point.get_X() + 200, point.get_Y());
+				g.DrawString("Photo Title & Description:", this.Font, SystemBrushes.ControlText, (float)point.X, (float)point.Y);
+				point.set_Y(point.Y + (this._textHeight + 2));
+				this._titleOffset = point.Y - top;
+				g.FillRectangle(SystemBrushes.Window, point.X, point.Y, 200, this._textHeight + 4);
+				g.DrawRectangle(SystemPens.ControlDark, point.X, point.Y, 200, this._textHeight + 4);
+				point.set_Y(point.Y + (this._textHeight + 4 + 5));
+				this._descOffset = point.Y - top;
+				g.FillRectangle(SystemBrushes.Window, point.X, point.Y, 200, this._textHeight * 4 + 2);
+				g.DrawRectangle(SystemPens.ControlDark, point.X, point.Y, 200, this._textHeight * 4 + 2);
+				point.set_Y(point.Y + (this._textHeight * 4 + 6 + 5));
+				g.DrawString("Date Taken", this.Font, SystemBrushes.ControlText, (float)point.X, (float)point.Y);
+				int width = g.MeasureString("Date Taken", this.Font).ToSize().Width;
+				g.DrawString("(default: date created):", this.Font, SystemBrushes.ControlText, (float)(point.X + width + 2), (float)point.Y);
+				point.set_Y(point.Y + (this._textHeight + 2));
+				this._dateOffset = point.Y - top;
+				g.FillRectangle(SystemBrushes.Window, point.X, point.Y, 100, this._textHeight + 4);
+				g.DrawRectangle(SystemPens.ControlDark, point.X, point.Y, 100, this._textHeight + 4);
+				point.set_Y(point.Y + (this._textHeight + 4 + 10));
+				g.DrawLine(SystemPens.ControlDark, 10, point.Y, point.X + 200, point.Y);
 			}
 		}
 		private void DrawValues(Graphics g, int index, int top)
 		{
-			if (index >= this.get_Items().get_Count())
+			if (index >= this.Items.Count)
 			{
 				return;
 			}
-			Photo photo = (Photo)this.get_Items().get_Item(index);
+			Photo photo = (Photo)this.Items.get_Item(index);
 			g.set_TextRenderingHint(1);
 			string arg_64_1 = photo.Title;
-			Font arg_64_2 = this.get_Font();
-			Brush arg_64_3 = SystemBrushes.get_WindowText();
+			Font arg_64_2 = this.Font;
+			Brush arg_64_3 = SystemBrushes.WindowText;
 			checked
 			{
 				RectangleF rectangleF = new RectangleF(72f, (float)(top + this._titleOffset + 2), 200f, (float)this._textHeight);
 				g.DrawString(arg_64_1, arg_64_2, arg_64_3, rectangleF, this._format);
 				string arg_A7_1 = photo.Description;
-				Font arg_A7_2 = this.get_Font();
-				Brush arg_A7_3 = SystemBrushes.get_WindowText();
+				Font arg_A7_2 = this.Font;
+				Brush arg_A7_3 = SystemBrushes.WindowText;
 				rectangleF = new RectangleF(72f, (float)(top + this._descOffset + 2), 200f, (float)(this._textHeight * 4));
 				g.DrawString(arg_A7_1, arg_A7_2, arg_A7_3, rectangleF, this._format);
 				string arg_EA_1 = photo.DateTaken;
-				Font arg_EA_2 = this.get_Font();
-				Brush arg_EA_3 = SystemBrushes.get_WindowText();
+				Font arg_EA_2 = this.Font;
+				Brush arg_EA_3 = SystemBrushes.WindowText;
 				rectangleF = new RectangleF(72f, (float)(top + this._dateOffset + 2), 100f, (float)(this._textHeight * 4));
 				g.DrawString(arg_EA_1, arg_EA_2, arg_EA_3, rectangleF, this._format);
 			}
@@ -268,16 +268,16 @@ namespace FotoVision
 			{
 				try
 				{
-					if (index < this.get_Items().get_Count())
+					if (index < this.Items.Count)
 					{
-						Photo photo = (Photo)this.get_Items().get_Item(index);
+						Photo photo = (Photo)this.Items.get_Item(index);
 						Image thumbnail = PhotoHelper.GetThumbnail(photo.ThumbnailPath, 50);
-						int num = (50 - thumbnail.get_Width()) / 2;
-						Rectangle rectangle = new Rectangle(5 + num + 3, 5 + top + 3, thumbnail.get_Width(), thumbnail.get_Height());
+						int num = (50 - thumbnail.Width) / 2;
+						Rectangle rectangle = new Rectangle(5 + num + 3, 5 + top + 3, thumbnail.Width, thumbnail.Height);
 						g.DrawImage(thumbnail, rectangle);
-						g.DrawRectangle(SystemPens.get_ControlDark(), rectangle);
+						g.DrawRectangle(SystemPens.ControlDark, rectangle);
 						rectangle.Inflate(-1, -1);
-						g.DrawRectangle(SystemPens.get_ControlDark(), rectangle);
+						g.DrawRectangle(SystemPens.ControlDark, rectangle);
 					}
 				}
 				catch (Exception expr_87)
@@ -304,10 +304,10 @@ namespace FotoVision
 		}
 		private void CheckCurrentItem()
 		{
-			if (this._curIndex != this.get_SelectedIndex())
+			if (this._curIndex != this.SelectedIndex)
 			{
 				this.UpdateItem(this._curIndex);
-				this._curIndex = this.get_SelectedIndex();
+				this._curIndex = this.SelectedIndex;
 			}
 		}
 		private void UpdateItem(int index)
@@ -316,12 +316,12 @@ namespace FotoVision
 			{
 				return;
 			}
-			Photo photo = (Photo)this.get_Items().get_Item(index);
-			photo.Title = this._textTitle.get_Text();
-			photo.Description = this._textDesc.get_Text();
-			if (Global.ValidateDate(this._textDate.get_Text().Trim()))
+			Photo photo = (Photo)this.Items.get_Item(index);
+			photo.Title = this._textTitle.Text;
+			photo.Description = this._textDesc.Text;
+			if (Global.ValidateDate(this._textDate.Text.Trim()))
 			{
-				photo.DateTaken = this._textDate.get_Text().Trim();
+				photo.DateTaken = this._textDate.Text.Trim();
 			}
 			photo.WriteXml();
 			if (this.PhotoMetadataChangedEvent != null)
@@ -337,35 +337,35 @@ namespace FotoVision
 		}
 		private void ShowControls()
 		{
-			if (this.get_SelectedIndex() == -1)
+			if (this.SelectedIndex == -1)
 			{
 				this._curIndex = -1;
 				this.HideControls();
 				return;
 			}
 			this.CheckCurrentItem();
-			Photo photo = (Photo)this.get_Items().get_Item(this.get_SelectedIndex());
-			Rectangle itemRectangle = this.GetItemRectangle(this.get_SelectedIndex());
+			Photo photo = (Photo)this.Items.Item(this.get_SelectedIndex);
+			Rectangle itemRectangle = this.GetItemRectangle(this.SelectedIndex);
 			this.HideControls();
 			this._textTitle.set_Left(74);
 			checked
 			{
-				this._textTitle.set_Top(itemRectangle.get_Top() + this._titleOffset + 2);
+				this._textTitle.set_Top(itemRectangle.Top + this._titleOffset + 2);
 				this._textTitle.set_Text(photo.Title);
 				this._textTitle.set_Visible(true);
 				this._textDesc.set_Left(74);
-				this._textDesc.set_Top(itemRectangle.get_Top() + this._descOffset + 2);
+				this._textDesc.set_Top(itemRectangle.Top + this._descOffset + 2);
 				this._textDesc.set_Text(photo.Description);
 				this._textDesc.set_Visible(true);
 				this._textDate.set_Left(74);
-				this._textDate.set_Top(itemRectangle.get_Top() + this._dateOffset + 2);
+				this._textDate.set_Top(itemRectangle.Top + this._dateOffset + 2);
 				this._textDate.set_Text(photo.DateTaken);
 				this._textDate.set_Visible(true);
 			}
 		}
 		protected override void OnMouseUp(MouseEventArgs e)
 		{
-			Point point = new Point(e.get_X(), e.get_Y());
+			Point point = new Point(e.X, e.Y);
 			Control childAtPoint = this.GetChildAtPoint(point);
 			if (childAtPoint != null)
 			{
@@ -392,9 +392,9 @@ namespace FotoVision
 			this._textDesc.set_Height(checked(this._textHeight * 4));
 			this._textDate.set_Width(96);
 			this._textDate.set_Height(this._textHeight);
-			this.get_Controls().Add(this._textTitle);
-			this.get_Controls().Add(this._textDesc);
-			this.get_Controls().Add(this._textDate);
+			this.Controls.Add(this._textTitle);
+			this.Controls.Add(this._textDesc);
+			this.Controls.Add(this._textDate);
 		}
 		protected override void OnResize(EventArgs e)
 		{
@@ -405,18 +405,18 @@ namespace FotoVision
 		{
 			if (index >= 0)
 			{
-				if (index >= this.get_Items().get_Count())
+				if (index >= this.Items.Count)
 				{
 					return;
 				}
 				Rectangle itemRectangle = this.GetItemRectangle(index);
-				if (this._bmpItem == null || this._bmpItem.get_Width() != itemRectangle.get_Width() || this._bmpItem.get_Height() != itemRectangle.get_Height())
+				if (this._bmpItem == null || this._bmpItem.Width != itemRectangle.Width || this._bmpItem.Height != itemRectangle.Height)
 				{
 					if (this._bmpItem != null)
 					{
 						this._bmpItem.Dispose();
 					}
-					this._bmpItem = new Bitmap(itemRectangle.get_Width(), itemRectangle.get_Height());
+					this._bmpItem = new Bitmap(itemRectangle.Width, itemRectangle.Height);
 					if (this._graphics != null)
 					{
 						this._graphics.Dispose();
@@ -430,17 +430,17 @@ namespace FotoVision
 		{
 			checked
 			{
-				if (m.get_Msg() == 20 && this.get_Items().get_Count() > 0)
+				if (m.Msg == 20 && this.Items.Count > 0)
 				{
-					Rectangle itemRectangle = this.GetItemRectangle(this.get_Items().get_Count() - 1);
-					if (itemRectangle.get_Bottom() == 0)
+					Rectangle itemRectangle = this.GetItemRectangle(this.Items.Count - 1);
+					if (itemRectangle.Bottom == 0)
 					{
 						return;
 					}
-					if (itemRectangle.get_Bottom() < this.get_DisplayRectangle().get_Bottom())
+					if (itemRectangle.Bottom < this.DisplayRectangle.Bottom)
 					{
-						Graphics graphics = Graphics.FromHwnd(this.get_Handle());
-						graphics.FillRectangle(SystemBrushes.get_Control(), this.get_DisplayRectangle().get_Left(), itemRectangle.get_Bottom(), this.get_DisplayRectangle().get_Width(), this.get_DisplayRectangle().get_Bottom() - itemRectangle.get_Bottom());
+						Graphics graphics = Graphics.FromHwnd(this.Handle);
+						graphics.FillRectangle(SystemBrushes.Control, this.DisplayRectangle.Left, itemRectangle.Bottom, this.DisplayRectangle.Width, this.DisplayRectangle.Bottom - itemRectangle.Bottom);
 						graphics.Dispose();
 						return;
 					}

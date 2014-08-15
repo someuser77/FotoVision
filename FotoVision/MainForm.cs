@@ -1504,12 +1504,12 @@ namespace FotoVision
 		public static void Main()
 		{
 			bool flag;
-			Mutex mutex = new Mutex(true, Application.get_ProductName() + "manifest", ref flag);
+			Mutex mutex = new Mutex(true, Application.ProductName + "manifest", ref flag);
 			if (flag)
 			{
 				if (ThemeManifest.Create())
 				{
-					Process process = Process.Start(Application.get_ExecutablePath());
+					Process process = Process.Start(Application.ExecutablePath);
 					process.WaitForInputIdle();
 					Application.Exit();
 				}
@@ -1527,7 +1527,7 @@ namespace FotoVision
 		public static void Run()
 		{
 			bool flag;
-			Mutex mutex = new Mutex(true, Application.get_ProductName() + "single", ref flag);
+			Mutex mutex = new Mutex(true, Application.ProductName + "single", ref flag);
 			if (flag)
 			{
 				Application.Run(new MainForm());
@@ -1635,7 +1635,7 @@ namespace FotoVision
 			this.SuspendLayout();
 			this.paneAlbums.CaptionText = "My Albums";
 			this.paneAlbums.set_Dock(3);
-			this.paneAlbums.get_DockPadding().set_All(2);
+			this.paneAlbums.DockPadding.set_All(2);
 			Control arg_413_0 = this.paneAlbums;
 			Point location = new Point(0, 39);
 			arg_413_0.set_Location(location);
@@ -1655,9 +1655,9 @@ namespace FotoVision
 			arg_4AE_0.set_Size(size);
 			this.splitterLeft.set_TabIndex(1);
 			this.splitterLeft.set_TabStop(false);
-			this.panelPhotos.get_Controls().Add(this.panePhotos);
-			this.panelPhotos.get_Controls().Add(this.splitterRight);
-			this.panelPhotos.get_Controls().Add(this.paneDetails);
+			this.panelPhotos.Controls.Add(this.panePhotos);
+			this.panelPhotos.Controls.Add(this.splitterRight);
+			this.panelPhotos.Controls.Add(this.paneDetails);
 			this.panelPhotos.set_Dock(5);
 			Control arg_52F_0 = this.panelPhotos;
 			location = new Point(187, 39);
@@ -1667,11 +1667,11 @@ namespace FotoVision
 			size = new Size(555, 434);
 			arg_55D_0.set_Size(size);
 			this.panelPhotos.set_TabIndex(2);
-			this.panePhotos.set_BackColor(SystemColors.get_Control());
+			this.panePhotos.set_BackColor(SystemColors.Control);
 			this.panePhotos.CaptionText = "Manage Photos";
 			this.panePhotos.CropMode = false;
 			this.panePhotos.set_Dock(5);
-			this.panePhotos.get_DockPadding().set_All(2);
+			this.panePhotos.DockPadding.set_All(2);
 			this.panePhotos.FullScreen = false;
 			Control arg_5D4_0 = this.panePhotos;
 			location = new Point(0, 0);
@@ -1696,7 +1696,7 @@ namespace FotoVision
 			this.paneDetails.AlbumName = null;
 			this.paneDetails.CaptionText = "Album Description";
 			this.paneDetails.set_Dock(4);
-			this.paneDetails.get_DockPadding().set_All(2);
+			this.paneDetails.DockPadding.set_All(2);
 			Control arg_6E1_0 = this.paneDetails;
 			location = new Point(243, 0);
 			arg_6E1_0.set_Location(location);
@@ -1710,7 +1710,7 @@ namespace FotoVision
 			location = new Point(0, 473);
 			arg_741_0.set_Location(location);
 			this.statusBar.set_Name("statusBar");
-			this.statusBar.get_Panels().AddRange(new StatusBarPanel[]
+			this.statusBar.Panels.AddRange(new StatusBarPanel[]
 			{
 				this.statusPaneLeft,
 				this.statusPaneRight
@@ -1726,7 +1726,7 @@ namespace FotoVision
 			this.statusPaneRight.set_Style(2);
 			this.statusPaneRight.set_Width(576);
 			this.toolBar.set_Appearance(1);
-			this.toolBar.get_Buttons().AddRange(new ToolBarButton[]
+			this.toolBar.Buttons.AddRange(new ToolBarButton[]
 			{
 				this.tbNewAlbum,
 				this.tbImportPhotos,
@@ -1810,8 +1810,8 @@ namespace FotoVision
 			size = new Size(27, 27);
 			arg_BD6_0.set_ImageSize(size);
 			this.imageListToolbar.set_ImageStream((ImageListStreamer)resourceManager.GetObject("imageListToolbar.ImageStream"));
-			this.imageListToolbar.set_TransparentColor(Color.get_Lime());
-			this.mainMenu.get_MenuItems().AddRange(new MenuItem[]
+			this.imageListToolbar.set_TransparentColor(Color.Lime);
+			this.mainMenu.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuFile,
 				this.menuEdit,
@@ -1820,7 +1820,7 @@ namespace FotoVision
 				this.menuHelp
 			});
 			this.menuFile.set_Index(0);
-			this.menuFile.get_MenuItems().AddRange(new MenuItem[]
+			this.menuFile.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuNewAlbum,
 				this.menuSep1,
@@ -1891,7 +1891,7 @@ namespace FotoVision
 			this.menuExit.set_Index(18);
 			this.menuExit.set_Text("E&xit");
 			this.menuEdit.set_Index(1);
-			this.menuEdit.get_MenuItems().AddRange(new MenuItem[]
+			this.menuEdit.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuUndo,
 				this.menuRedo,
@@ -1920,7 +1920,7 @@ namespace FotoVision
 			this.menuSep8.set_Text("-");
 			this.menuRotate.set_Enabled(false);
 			this.menuRotate.set_Index(4);
-			this.menuRotate.get_MenuItems().AddRange(new MenuItem[]
+			this.menuRotate.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuRotateLeft,
 				this.menuRotateRight,
@@ -1956,7 +1956,7 @@ namespace FotoVision
 			this.menuSelectAll.set_Shortcut(131137);
 			this.menuSelectAll.set_Text("&Select All");
 			this.menuView.set_Index(2);
-			this.menuView.get_MenuItems().AddRange(new MenuItem[]
+			this.menuView.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuNextPhoto,
 				this.menuPrevPhoto,
@@ -1974,7 +1974,7 @@ namespace FotoVision
 			this.menuFullScreen.set_Shortcut(131142);
 			this.menuFullScreen.set_Text("&Full Screen");
 			this.menuTools.set_Index(3);
-			this.menuTools.get_MenuItems().AddRange(new MenuItem[]
+			this.menuTools.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuOptions
 			});
@@ -1982,7 +1982,7 @@ namespace FotoVision
 			this.menuOptions.set_Index(0);
 			this.menuOptions.set_Text("&Options...");
 			this.menuHelp.set_Index(4);
-			this.menuHelp.get_MenuItems().AddRange(new MenuItem[]
+			this.menuHelp.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuAbout
 			});
@@ -2003,17 +2003,17 @@ namespace FotoVision
 			size = new Size(9, 14);
 			arg_14F4_0.set_ImageSize(size);
 			this.imageListStatusbar.set_ImageStream((ImageListStreamer)resourceManager.GetObject("imageListStatusbar.ImageStream"));
-			this.imageListStatusbar.set_TransparentColor(Color.get_Lime());
+			this.imageListStatusbar.set_TransparentColor(Color.Lime);
 			size = new Size(5, 13);
 			this.set_AutoScaleBaseSize(size);
 			size = new Size(742, 495);
 			this.set_ClientSize(size);
-			this.get_Controls().Add(this.progressBar);
-			this.get_Controls().Add(this.panelPhotos);
-			this.get_Controls().Add(this.splitterLeft);
-			this.get_Controls().Add(this.paneAlbums);
-			this.get_Controls().Add(this.toolBar);
-			this.get_Controls().Add(this.statusBar);
+			this.Controls.Add(this.progressBar);
+			this.Controls.Add(this.panelPhotos);
+			this.Controls.Add(this.splitterLeft);
+			this.Controls.Add(this.paneAlbums);
+			this.Controls.Add(this.toolBar);
+			this.Controls.Add(this.statusBar);
 			this.set_Icon((Icon)resourceManager.GetObject("$this.Icon"));
 			this.set_Menu(this.mainMenu);
 			size = new Size(320, 320);
@@ -2070,13 +2070,13 @@ namespace FotoVision
 			int arg_14_0 = 0;
 			checked
 			{
-				int num = this.toolBar.get_Buttons().get_Count() - 1;
+				int num = this.toolBar.Buttons.Count - 1;
 				for (int i = arg_14_0; i <= num; i++)
 				{
-					if (this.toolBar.get_Buttons().get_Item(i).get_Style() != 3)
+					if (this.toolBar.Buttons.Item(i).get_Style != 3)
 					{
 						int num2;
-						this.toolBar.get_Buttons().get_Item(i).set_Tag(num2);
+						this.toolBar.Buttons.get_Item(i).set_Tag(num2);
 						num2++;
 					}
 				}
@@ -2084,7 +2084,7 @@ namespace FotoVision
 		}
 		private void toolBar_ButtonClick(object sender, ToolBarButtonClickEventArgs e)
 		{
-			switch ((MainForm.ToolbarButtons)e.get_Button().get_Tag())
+			switch ((MainForm.ToolbarButtons)e.Button.Tag)
 			{
 			case MainForm.ToolbarButtons.NewAlbum:
 				this.menuNewAlbum_Click(this, EventArgs.Empty);
@@ -2105,31 +2105,31 @@ namespace FotoVision
 				this.menuPrint_Click(this, EventArgs.Empty);
 				break;
 			case MainForm.ToolbarButtons.ManagePhotos:
-				if (!this.tbThumbnails.get_Pushed())
+				if (!this.tbThumbnails.Pushed)
 				{
 					this.ChangeMode(MainForm.ChangeModeAction.Thumbnails);
 				}
 				break;
 			case MainForm.ToolbarButtons.ManagePhotosDetails:
-				if (!this.tbThumbnailsDetails.get_Pushed())
+				if (!this.tbThumbnailsDetails.Pushed)
 				{
 					this.ChangeMode(MainForm.ChangeModeAction.ThumbnailsDetails);
 				}
 				break;
 			case MainForm.ToolbarButtons.PhotoShow:
-				if (!this.tbPhotoShow.get_Pushed())
+				if (!this.tbPhotoShow.Pushed)
 				{
 					this.ChangeMode(MainForm.ChangeModeAction.Photo);
 				}
 				break;
 			case MainForm.ToolbarButtons.PhotoShowDetails:
-				if (!this.tbPhotoShowDetails.get_Pushed())
+				if (!this.tbPhotoShowDetails.Pushed)
 				{
 					this.ChangeMode(MainForm.ChangeModeAction.PhotoDetails);
 				}
 				break;
 			case MainForm.ToolbarButtons.PhotoActions:
-				if (!this.tbPhotoActions.get_Pushed())
+				if (!this.tbPhotoActions.Pushed)
 				{
 					this.ChangeMode(MainForm.ChangeModeAction.PhotoActions);
 				}
@@ -2157,20 +2157,20 @@ namespace FotoVision
 		}
 		private void ProgressUpdate(object sender, ProgressUpdateEventArgs e)
 		{
-			this.set_Cursor(Cursors.get_WaitCursor());
+			this.set_Cursor(Cursors.WaitCursor);
 			if (this.FullScreen)
 			{
 				return;
 			}
 			string text = e.Message + "...";
-			if (!this.progressBar.get_Visible())
+			if (!this.progressBar.Visible)
 			{
-				this._orgStatusText[0] = this.statusBar.get_Panels().get_Item(0).get_Text();
-				this._orgStatusText[1] = this.statusBar.get_Panels().get_Item(1).get_Text();
-				this.statusBar.get_Panels().get_Item(1).set_Text("");
-				this.statusBar.get_Panels().get_Item(1).set_BorderStyle(1);
+				this._orgStatusText[0] = this.statusBar.Panels.Item(0).get_Text;
+				this._orgStatusText[1] = this.statusBar.Panels.Item(1).get_Text;
+				this.statusBar.Panels.get_Item(1).set_Text("");
+				this.statusBar.Panels.get_Item(1).set_BorderStyle(1);
 			}
-			this.statusBar.get_Panels().get_Item(0).set_Text(text);
+			this.statusBar.Panels.get_Item(0).set_Text(text);
 			this.progressBar.set_Maximum(e.Total);
 			this.progressBar.set_Value(e.Position);
 			this.progressBar.Show();
@@ -2184,13 +2184,13 @@ namespace FotoVision
 		}
 		private void ProgressComplete(object sender, EventArgs e)
 		{
-			this.set_Cursor(Cursors.get_Default());
-			if (this.progressBar.get_Visible())
+			this.set_Cursor(Cursors.Default);
+			if (this.progressBar.Visible)
 			{
 				this.progressBar.Hide();
-				this.statusBar.get_Panels().get_Item(0).set_Text(this._orgStatusText[0]);
-				this.statusBar.get_Panels().get_Item(1).set_Text(this._orgStatusText[1]);
-				this.statusBar.get_Panels().get_Item(1).set_BorderStyle(3);
+				this.statusBar.Panels.get_Item(0).set_Text(this._orgStatusText[0]);
+				this.statusBar.Panels.get_Item(1).set_Text(this._orgStatusText[1]);
+				this.statusBar.Panels.get_Item(1).set_BorderStyle(3);
 			}
 		}
 		private void UpdateDetailsMode()
@@ -2305,33 +2305,33 @@ namespace FotoVision
 				this._orgStatusText[0] = photoInfo.FileName;
 				this._orgStatusText[1] = string.Format("Dimensions: {0} x {1}   Type: {2}   Size: {3}", new object[]
 				{
-					photoInfo.ImageSize.get_Width(),
-					photoInfo.ImageSize.get_Height(),
+					photoInfo.ImageSize.Width,
+					photoInfo.ImageSize.Height,
 					photoInfo.ImageType,
 					photoInfo.FileLengthString
 				});
 			}
-			if (!this.progressBar.get_Visible())
+			if (!this.progressBar.Visible)
 			{
-				this.statusBar.get_Panels().get_Item(0).set_Text(this._orgStatusText[0]);
-				this.statusBar.get_Panels().get_Item(1).set_Text(this._orgStatusText[1]);
+				this.statusBar.Panels.get_Item(0).set_Text(this._orgStatusText[0]);
+				this.statusBar.Panels.get_Item(1).set_Text(this._orgStatusText[1]);
 			}
 		}
 		private void statusBar_DrawItem(object sender, StatusBarDrawItemEventArgs sbdevent)
 		{
-			Graphics graphics = sbdevent.get_Graphics();
-			RectangleF rectangleF = new RectangleF((float)sbdevent.get_Bounds().get_Left(), (float)sbdevent.get_Bounds().get_Top(), (float)sbdevent.get_Bounds().get_Width(), (float)sbdevent.get_Bounds().get_Height());
+			Graphics graphics = sbdevent.Graphics;
+			RectangleF rectangleF = new RectangleF((float)sbdevent.Bounds.Left, (float)sbdevent.Bounds.Top, (float)sbdevent.Bounds.Width, (float)sbdevent.Bounds.Height);
 			RectangleF rectangleF2 = rectangleF;
-			if (sbdevent.get_Index() == 0 && this.progressBar.get_Visible())
+			if (sbdevent.Index == 0 && this.progressBar.Visible)
 			{
 				checked
 				{
-					this.imageListStatusbar.Draw(graphics, (int)Math.Round((double)rectangleF2.get_Left()) + 2, (int)Math.Round((double)rectangleF2.get_Top()) + ((int)Math.Round((double)rectangleF2.get_Height()) - this.imageListStatusbar.get_ImageSize().get_Height()) / 2, 0);
+					this.imageListStatusbar.Draw(graphics, (int)Math.Round((double)rectangleF2.Left) + 2, (int)Math.Round((double)rectangleF2.Top) + ((int)Math.Round((double)rectangleF2.Height) - this.imageListStatusbar.ImageSize.Height) / 2, 0);
 				}
-				rectangleF2.set_X(rectangleF2.get_X() + (float)checked(this.imageListStatusbar.get_ImageSize().get_Width() + 5));
-				rectangleF2.set_Width(rectangleF2.get_Width() - (float)checked(this.imageListStatusbar.get_ImageSize().get_Width() + 5));
+				rectangleF2.set_X(rectangleF2.X + (float)checked(this.imageListStatusbar.ImageSize.Width + 5));
+				rectangleF2.set_Width(rectangleF2.Width - (float)checked(this.imageListStatusbar.ImageSize.Width + 5));
 			}
-			graphics.DrawString(sbdevent.get_Panel().get_Text(), this.statusBar.get_Font(), SystemBrushes.get_ControlText(), rectangleF2, this._format);
+			graphics.DrawString(sbdevent.Panel.Text, this.statusBar.Font, SystemBrushes.ControlText, rectangleF2, this._format);
 		}
 		private bool IsCommandEnabled(MainForm.Command command)
 		{
@@ -2531,13 +2531,13 @@ namespace FotoVision
 		{
 			Global.Settings.SetValue(SettingKey.WindowPlacement, string.Format("{0},{1},{2},{3}", new object[]
 			{
-				this.get_Bounds().get_X(),
-				this.get_Bounds().get_Y(),
-				this.get_Bounds().get_Width(),
-				this.get_Bounds().get_Height()
+				this.Bounds.X,
+				this.Bounds.Y,
+				this.Bounds.Width,
+				this.Bounds.Height
 			}));
-			Global.Settings.SetValue(SettingKey.AlbumPaneWidth, this.paneAlbums.get_Width());
-			Global.Settings.SetValue(SettingKey.DetailsPaneWidth, this.paneDetails.get_Width());
+			Global.Settings.SetValue(SettingKey.AlbumPaneWidth, this.paneAlbums.Width);
+			Global.Settings.SetValue(SettingKey.DetailsPaneWidth, this.paneDetails.Width);
 		}
 		private void RestoreWindowSettings()
 		{
@@ -2547,15 +2547,15 @@ namespace FotoVision
 				{
 					','
 				});
-				if (array.get_Length() == 4)
+				if (array.Length == 4)
 				{
 					Rectangle rectangle = new Rectangle(IntegerType.FromString(array[0]), IntegerType.FromString(array[1]), IntegerType.FromString(array[2]), IntegerType.FromString(array[3]));
 					Rectangle rectangle2 = rectangle;
-					rectangle2 = Rectangle.Intersect(Screen.get_PrimaryScreen().get_WorkingArea(), rectangle2);
-					if (rectangle2.get_Width() > 0 & rectangle2.get_Height() > 0)
+					rectangle2 = Rectangle.Intersect(Screen.PrimaryScreen.WorkingArea, rectangle2);
+					if (rectangle2.Width > 0 & rectangle2.Height > 0)
 					{
 						this.set_StartPosition(0);
-						this.SetBounds(rectangle2.get_Left(), rectangle2.get_Top(), rectangle2.get_Width(), rectangle2.get_Height());
+						this.SetBounds(rectangle2.Left, rectangle2.Top, rectangle2.Width, rectangle2.Height);
 						this.paneAlbums.set_Width(Global.Settings.GetInt(SettingKey.AlbumPaneWidth));
 						this.paneDetails.set_Width(Global.Settings.GetInt(SettingKey.DetailsPaneWidth));
 					}
@@ -2627,9 +2627,9 @@ namespace FotoVision
 		{
 			checked
 			{
-				if (e.get_SplitX() < this.panelPhotos.get_Width() - 312)
+				if (e.SplitX < this.panelPhotos.Width - 312)
 				{
-					e.set_SplitX(this.panelPhotos.get_Width() - 312);
+					e.set_SplitX(this.panelPhotos.Width - 312);
 				}
 			}
 		}
@@ -2640,7 +2640,7 @@ namespace FotoVision
 			{
 				return true;
 			}
-			if (msg.get_Msg() != 256)
+			if (msg.Msg != 256)
 			{
 				return base.ProcessCmdKey(ref msg, keyData);
 			}
@@ -2703,13 +2703,13 @@ namespace FotoVision
 		{
 			if (Global.Busy)
 			{
-				if (m.get_Msg() == 15 || m.get_Msg() == 133)
+				if (m.Msg == 15 || m.Msg == 133)
 				{
 					base.WndProc(ref m);
 				}
 				return;
 			}
-			if (m.get_Msg() == 6 && m.get_WParam().ToInt32() != 0 && Global.PublishingFiles)
+			if (m.Msg == 6 && m.WParam.ToInt32() != 0 && Global.PublishingFiles)
 			{
 				this._uploadForm.Activate();
 				return;
@@ -2770,7 +2770,7 @@ namespace FotoVision
 			try
 			{
 				string text = Global.Settings.GetString(SettingKey.EmailSubject);
-				if (text.get_Length() == 0)
+				if (text.Length == 0)
 				{
 					text = " ";
 				}
@@ -2836,14 +2836,14 @@ namespace FotoVision
 					}
 					else
 					{
-						Cursor.set_Current(Cursors.get_WaitCursor());
+						Cursor.set_Current(Cursors.WaitCursor);
 						Bitmap imageWithActions = this.panePhotos.ImageWithActions;
 						if (imageWithActions != null)
 						{
-							Cursor.set_Current(Cursors.get_WaitCursor());
+							Cursor.set_Current(Cursors.WaitCursor);
 							string tempFileName = Path.GetTempFileName();
 							imageWithActions.Save(tempFileName);
-							Cursor.set_Current(Cursors.get_Default());
+							Cursor.set_Current(Cursors.Default);
 							Print.PrintFile(tempFileName);
 						}
 					}
@@ -2868,7 +2868,7 @@ namespace FotoVision
 				{
 					FileManager.DeleteFile(tempFileName);
 				}
-				Cursor.set_Current(Cursors.get_Default());
+				Cursor.set_Current(Cursors.Default);
 			}
 		}
 		private void menuExit_Click(object sender, EventArgs e)
@@ -2933,10 +2933,10 @@ namespace FotoVision
 		}
 		private void menuCopy_Click(object sender, EventArgs e)
 		{
-			Cursor.set_Current(Cursors.get_WaitCursor());
+			Cursor.set_Current(Cursors.WaitCursor);
 			try
 			{
-				Cursor.set_Current(Cursors.get_WaitCursor());
+				Cursor.set_Current(Cursors.WaitCursor);
 				Global.Progress.Update(this, "Copying to clipboard", 1, 2);
 				bool flag = BooleanType.FromObject(Interaction.IIf(this.panePhotos.Mode == PhotosMode.Thumbnails, true, false));
 				Bitmap bitmap2;
@@ -2980,14 +2980,14 @@ namespace FotoVision
 				}
 			}
 			Global.Progress.Complete(this);
-			Cursor.set_Current(Cursors.get_Default());
+			Cursor.set_Current(Cursors.Default);
 		}
 		private void menuPaste_Click(object sender, EventArgs e)
 		{
 			IDataObject dataObject = Clipboard.GetDataObject();
 			if (dataObject.GetDataPresent(DataFormats.Bitmap))
 			{
-				Cursor.set_Current(Cursors.get_WaitCursor());
+				Cursor.set_Current(Cursors.WaitCursor);
 				Bitmap bitmap = (Bitmap)dataObject.GetData(DataFormats.Bitmap);
 				if (bitmap != null)
 				{
@@ -2995,7 +2995,7 @@ namespace FotoVision
 					this.paneAlbums.UpdateAlbumCount(this.paneAlbums.SelectedAlbum);
 					this.UpdateStatusbar();
 				}
-				Cursor.set_Current(Cursors.get_Default());
+				Cursor.set_Current(Cursors.Default);
 			}
 		}
 		private void menuSelectAll_Click(object sender, EventArgs e)
@@ -3136,19 +3136,19 @@ namespace FotoVision
 			switch (e.Action)
 			{
 			case PhotosContextAction.PhotoShow:
-				if (!this.tbPhotoShow.get_Pushed())
+				if (!this.tbPhotoShow.Pushed)
 				{
 					this.ChangeMode(MainForm.ChangeModeAction.Photo);
 				}
 				break;
 			case PhotosContextAction.PhotoShowDetails:
-				if (!this.tbPhotoShowDetails.get_Pushed())
+				if (!this.tbPhotoShowDetails.Pushed)
 				{
 					this.ChangeMode(MainForm.ChangeModeAction.PhotoDetails);
 				}
 				break;
 			case PhotosContextAction.PhotoActions:
-				if (!this.tbPhotoActions.get_Pushed())
+				if (!this.tbPhotoActions.Pushed)
 				{
 					this.ChangeMode(MainForm.ChangeModeAction.PhotoActions);
 				}
@@ -3228,9 +3228,9 @@ namespace FotoVision
 		}
 		private void paneDetails_Action(object sender, ActionEventArgs e)
 		{
-			Cursor.set_Current(Cursors.get_WaitCursor());
+			Cursor.set_Current(Cursors.WaitCursor);
 			bool flag = this.panePhotos.ApplyPhotoAction(e.ActionItem);
-			Cursor.set_Current(Cursors.get_Default());
+			Cursor.set_Current(Cursors.Default);
 			this.UpdateToolbar();
 			if (flag)
 			{
@@ -3289,12 +3289,12 @@ namespace FotoVision
 			{
 				this._uploadForm = new UploadForm();
 				UploadForm arg_82_0 = this._uploadForm;
-				Point initialLocation = checked(new Point(this.get_Left() + (this.get_Width() - this._uploadForm.get_Width()) / 2, this.get_Top() + (this.get_Height() - this._uploadForm.get_Height()) / 2));
+				Point initialLocation = checked(new Point(this.Left + (this.Width - this._uploadForm.Width) / 2, this.Top + (this.Height - this._uploadForm.Height) / 2));
 				arg_82_0.InitialLocation = initialLocation;
 			}
 			this._uploadForm.Publish(this.paneAlbums.GetPublishList());
 			this._uploadForm.set_Owner(this);
-			this.set_Cursor(Cursors.get_WaitCursor());
+			this.set_Cursor(Cursors.WaitCursor);
 			this.toolBar.set_Enabled(false);
 			Global.PublishingFiles = true;
 			this._allowUpload = false;
@@ -3304,7 +3304,7 @@ namespace FotoVision
 		{
 			this.toolBar.set_Enabled(true);
 			this._uploadForm.set_Owner(null);
-			this.set_Cursor(Cursors.get_Default());
+			this.set_Cursor(Cursors.Default);
 			Global.PublishingFiles = false;
 			if (e.ErrorOccurred)
 			{

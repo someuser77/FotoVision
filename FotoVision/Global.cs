@@ -18,7 +18,7 @@ namespace FotoVision
 		{
 			get
 			{
-				return Path.Combine(Environment.GetFolderPath(5), Application.get_ProductName());
+				return Path.Combine(Environment.GetFolderPath(5), Application.ProductName);
 			}
 		}
 		public static Settings Settings
@@ -97,7 +97,7 @@ namespace FotoVision
 			bool result;
 			try
 			{
-				DateTime.Parse(value, CultureInfo.get_CurrentCulture());
+				DateTime.Parse(value, CultureInfo.CurrentCulture);
 				result = true;
 			}
 			catch (Exception expr_10)
@@ -110,7 +110,7 @@ namespace FotoVision
 		}
 		public static string CombineUrl(string baseUrl, string relativeUrl)
 		{
-			if (baseUrl == null || baseUrl.get_Length() == 0)
+			if (baseUrl == null || baseUrl.Length == 0)
 			{
 				return "";
 			}
@@ -120,11 +120,11 @@ namespace FotoVision
 			}
 			Uri uri = new Uri(baseUrl);
 			Uri uri2 = new Uri(uri, relativeUrl);
-			return uri2.get_AbsoluteUri();
+			return uri2.AbsoluteUri;
 		}
 		public static void DisplayError(string message, Exception ex)
 		{
-			Cursor.set_Current(Cursors.get_Default());
+			Cursor.set_Current(Cursors.Default);
 			ErrorForm errorForm = new ErrorForm(message, ex);
 			errorForm.ShowDialog();
 		}

@@ -223,7 +223,7 @@ namespace FotoVision
 			this.photoActions = new DetailsActions();
 			this.albumDetails = new DetailsAlbum();
 			this.SuspendLayout();
-			this.photoDetails.set_BackColor(SystemColors.get_Control());
+			this.photoDetails.set_BackColor(SystemColors.Control);
 			this.photoDetails.set_BorderStyle(0);
 			this.photoDetails.set_Dock(5);
 			this.photoDetails.set_DrawMode(1);
@@ -239,7 +239,7 @@ namespace FotoVision
 			this.photoDetails.set_TabIndex(1);
 			this.photoDetails.set_TabStop(false);
 			this.photoActions.set_Dock(5);
-			this.photoActions.get_DockPadding().set_All(2);
+			this.photoActions.DockPadding.set_All(2);
 			Control arg_100_0 = this.photoActions;
 			location = new Point(1, 21);
 			arg_100_0.set_Location(location);
@@ -259,16 +259,16 @@ namespace FotoVision
 			size = new Size(310, 346);
 			arg_1A0_0.set_Size(size);
 			this.albumDetails.set_TabIndex(2);
-			this.get_Controls().Add(this.albumDetails);
-			this.get_Controls().Add(this.photoActions);
-			this.get_Controls().Add(this.photoDetails);
-			this.get_DockPadding().set_All(1);
+			this.Controls.Add(this.albumDetails);
+			this.Controls.Add(this.photoActions);
+			this.Controls.Add(this.photoDetails);
+			this.DockPadding.set_All(1);
 			this.set_Name("DetailsPane");
 			size = new Size(312, 368);
 			this.set_Size(size);
-			this.get_Controls().SetChildIndex(this.photoDetails, 0);
-			this.get_Controls().SetChildIndex(this.photoActions, 0);
-			this.get_Controls().SetChildIndex(this.albumDetails, 0);
+			this.Controls.SetChildIndex(this.photoDetails, 0);
+			this.Controls.SetChildIndex(this.photoActions, 0);
+			this.Controls.SetChildIndex(this.albumDetails, 0);
 			this.ResumeLayout(false);
 		}
 		public void SetActionValues(int contrast, int brightness, int gamma, int saturation)
