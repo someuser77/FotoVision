@@ -864,7 +864,7 @@ namespace FotoVision
 				{
 					num -= SystemInformation.VerticalScrollBarWidth;
 				}
-				this.listTasks.Columns.get_Item(0).Width = num;
+				this.listTasks.Columns[0].Width = num;
 			}
 		}
 		private void listErrors_Resize(object sender, EventArgs e)
@@ -876,14 +876,14 @@ namespace FotoVision
 				{
 					num -= SystemInformation.VerticalScrollBarWidth;
 				}
-				this.listErrors.Columns.get_Item(0).Width = num;
+				this.listErrors.Columns[0].Width = num;
 			}
 		}
 		private void listErrors_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (this.listErrors.SelectedItems != null && this.listErrors.SelectedItems.Count > 0)
 			{
-				this.textError.Text = this.listErrors.SelectedItems.Item(0).get_Text;
+				this.textError.Text = this.listErrors.SelectedItems[0].get_Text;
 			}
 			else
 			{

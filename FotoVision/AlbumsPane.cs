@@ -185,7 +185,7 @@ namespace FotoVision
 			{
 				if (this.listView.SelectedItems.Count == 1)
 				{
-					return this.listView.SelectedItems.Item(0).get_Text;
+					return this.listView.SelectedItems[0].get_Text;
 				}
 				return "";
 			}
@@ -221,7 +221,7 @@ namespace FotoVision
 			{
 				if (this.listView.SelectedItems.Count == 1)
 				{
-					return this.listView.SelectedItems.get_Item(0);
+					return this.listView.SelectedItems[0];
 				}
 				return null;
 			}
@@ -627,7 +627,7 @@ namespace FotoVision
 			}
 			if (this.listView.SelectedItems.Count == 1)
 			{
-				this.listView.SelectedItems.Item(0).BeginEdit;
+				this.listView.SelectedItems[0].BeginEdit;
 			}
 		}
 		public void Delete()
@@ -658,13 +658,13 @@ namespace FotoVision
 				selectedItem.Remove();
 				if (index < this.Count)
 				{
-					this.listView.Items.get_Item(index).Selected = true;
+					this.listView.Items[index].Selected = true;
 				}
 				else
 				{
 					if (this.Count > 0)
 					{
-						this.listView.Items.get_Item(checked(index - 1)).Selected = true;
+						this.listView.Items[checked(index - 1]).Selected = true;
 					}
 					else
 					{
@@ -756,7 +756,7 @@ namespace FotoVision
 			{
 				return;
 			}
-			this.listView.Items.get_Item(0).Selected = true;
+			this.listView.Items[0].Selected = true;
 		}
 		public void AddBitmap(Bitmap image)
 		{
@@ -801,7 +801,7 @@ namespace FotoVision
 		public bool UpdateAlbum(string albumName, Album album)
 		{
 			ListViewItem listViewItem = this.FindItem(albumName);
-			listViewItem.SubItems.get_Item(1).Text = this.GetPhotoCount(album.Name);
+			listViewItem.SubItems[1].Text = this.GetPhotoCount(album.Name);
 			listViewItem.ImageIndex = IntegerType.FromObject(Interaction.IIf(album.Publish, AlbumsPane.PublishImage.Yes, AlbumsPane.PublishImage.No));
 			if (StringType.StrCmp(albumName, album.Name, false) != 0)
 			{
@@ -820,7 +820,7 @@ namespace FotoVision
 			{
 				return;
 			}
-			listViewItem.SubItems.get_Item(1).Text = this.GetPhotoCount(albumName);
+			listViewItem.SubItems[1].Text = this.GetPhotoCount(albumName);
 		}
 		protected override void OnLoad(EventArgs e)
 		{
@@ -829,14 +829,14 @@ namespace FotoVision
 		}
 		private void AlbumsPane_Resize(object sender, EventArgs e)
 		{
-			int num = this.listView.Columns.Item(1).get_Width;
+			int num = this.listView.Columns[1].get_Width;
 			checked
 			{
 				if (this.listView.Width > this.listView.DisplayRectangle.Width + SystemInformation.Border3DSize.Width * 2)
 				{
 					num += SystemInformation.VerticalScrollBarWidth;
 				}
-				this.listView.Columns.Item(0).Width = this.listView.get_Width - num;
+				this.listView.Columns[0].Width = this.listView.Width - num;
 			}
 		}
 		private void listView_BeforeLabelEdit(object sender, LabelEditEventArgs e)
@@ -851,7 +851,7 @@ namespace FotoVision
 				e.CancelEdit = true;
 				return;
 			}
-			string text = this.listView.Items.Item(e.get_Item).Text;
+			string text = this.listView.Items[e.get_Item].Text;
 			string text2 = e.Label;
 			if (!FileManager.IsValidAlbumName(text2))
 			{

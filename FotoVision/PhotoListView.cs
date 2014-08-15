@@ -200,7 +200,7 @@ namespace FotoVision
 		protected override void OnAfterLabelEdit(LabelEditEventArgs e)
 		{
 			this._backgroundDirty = true;
-			Photo photo = (Photo)this.Items.Item(e.get_Item).Tag;
+			Photo photo = (Photo)this.Items[e.get_Item].Tag;
 			if (e.Label == null || e.Label.Trim().Length == 0)
 			{
 				e.CancelEdit = true;
@@ -218,7 +218,7 @@ namespace FotoVision
 		}
 		private void DrawItem(Graphics g, int index)
 		{
-			ListViewItem listViewItem = this.Items.get_Item(index);
+			ListViewItem listViewItem = this.Items[index];
 			int height = this.Font.Height;
 			checked
 			{
@@ -399,7 +399,7 @@ namespace FotoVision
 					int num = array.Length - 1;
 					for (int i = arg_37_0; i <= num; i++)
 					{
-						Photo photo = (Photo)this.SelectedItems.Item(i).get_Tag;
+						Photo photo = (Photo)this.SelectedItems[i].get_Tag;
 						array[i] = photo.PhotoPath;
 					}
 					DataObject dataObject = new DataObject();

@@ -2073,10 +2073,10 @@ namespace FotoVision
 				int num = this.toolBar.Buttons.Count - 1;
 				for (int i = arg_14_0; i <= num; i++)
 				{
-					if (this.toolBar.Buttons.Item(i).get_Style != 3)
+					if (this.toolBar.Buttons[i].get_Style != 3)
 					{
 						int num2;
-						this.toolBar.Buttons.get_Item(i).Tag = num2;
+						this.toolBar.Buttons[i].Tag = num2;
 						num2++;
 					}
 				}
@@ -2165,12 +2165,12 @@ namespace FotoVision
 			string text = e.Message + "...";
 			if (!this.progressBar.Visible)
 			{
-				this._orgStatusText[0] = this.statusBar.Panels.Item(0).get_Text;
-				this._orgStatusText[1] = this.statusBar.Panels.Item(1).get_Text;
-				this.statusBar.Panels.get_Item(1).Text = "";
-				this.statusBar.Panels.get_Item(1).BorderStyle = 1;
+				this._orgStatusText[0] = this.statusBar.Panels[0].get_Text;
+				this._orgStatusText[1] = this.statusBar.Panels[1].get_Text;
+				this.statusBar.Panels[1].Text = "";
+				this.statusBar.Panels[1].BorderStyle = 1;
 			}
-			this.statusBar.Panels.get_Item(0).Text = text;
+			this.statusBar.Panels[0].Text = text;
 			this.progressBar.Maximum = e.Total;
 			this.progressBar.Value = e.Position;
 			this.progressBar.Show();
@@ -2188,9 +2188,9 @@ namespace FotoVision
 			if (this.progressBar.Visible)
 			{
 				this.progressBar.Hide();
-				this.statusBar.Panels.get_Item(0).Text = this._orgStatusText[0];
-				this.statusBar.Panels.get_Item(1).Text = this._orgStatusText[1];
-				this.statusBar.Panels.get_Item(1).BorderStyle = 3;
+				this.statusBar.Panels[0].Text = this._orgStatusText[0];
+				this.statusBar.Panels[1].Text = this._orgStatusText[1];
+				this.statusBar.Panels[1].BorderStyle = 3;
 			}
 		}
 		private void UpdateDetailsMode()
@@ -2313,8 +2313,8 @@ namespace FotoVision
 			}
 			if (!this.progressBar.Visible)
 			{
-				this.statusBar.Panels.get_Item(0).Text = this._orgStatusText[0];
-				this.statusBar.Panels.get_Item(1).Text = this._orgStatusText[1];
+				this.statusBar.Panels[0].Text = this._orgStatusText[0];
+				this.statusBar.Panels[1].Text = this._orgStatusText[1];
 			}
 		}
 		private void statusBar_DrawItem(object sender, StatusBarDrawItemEventArgs sbdevent)

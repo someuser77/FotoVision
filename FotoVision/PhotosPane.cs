@@ -298,7 +298,7 @@ namespace FotoVision
 				{
 					return null;
 				}
-				return (Photo)this.listView.SelectedItems.Item(0).get_Tag;
+				return (Photo)this.listView.SelectedItems[0].get_Tag;
 			}
 		}
 		[Browsable(false)]
@@ -861,7 +861,7 @@ namespace FotoVision
 		}
 		public Photo GetPhoto(int index)
 		{
-			return (Photo)this.listView.Items.Item(index).get_Tag;
+			return (Photo)this.listView.Items[index].get_Tag;
 		}
 		public Photo[] GetSelectedPhotos()
 		{
@@ -876,7 +876,7 @@ namespace FotoVision
 				int num = array.Length - 1;
 				for (int i = arg_47_0; i <= num; i++)
 				{
-					Photo photo = (Photo)this.listView.SelectedItems.Item(i).get_Tag;
+					Photo photo = (Photo)this.listView.SelectedItems[i].get_Tag;
 					array[i] = photo;
 				}
 				return array;
@@ -894,7 +894,7 @@ namespace FotoVision
 		}
 		public void SelectPhoto(int index)
 		{
-			this.listView.Items.get_Item(index).Selected = true;
+			this.listView.Items[index].Selected = true;
 		}
 		public void ClearThumbnails()
 		{
@@ -915,7 +915,7 @@ namespace FotoVision
 			{
 				if (flag && this.listView.Items.Count > 0)
 				{
-					lParam = 0 - this.listView.Items.Item(0).get_Bounds.Top;
+					lParam = 0 - this.listView.Items[0].get_Bounds.Top;
 				}
 				this._curAlbum = albumName;
 				this.listView.SetThumbnails(albumName, FileManager.GetPhotos(albumName, true));
@@ -929,7 +929,7 @@ namespace FotoVision
 					for (int i = 0; i < selectedList.Length; i++)
 					{
 						int num = selectedList[i];
-						this.listView.Items.get_Item(num).Selected = true;
+						this.listView.Items[num].Selected = true;
 					}
 				}
 				else
@@ -979,7 +979,7 @@ namespace FotoVision
 		}
 		public void OpenPhotoAtIndex(int index)
 		{
-			this.ShowPhoto((Photo)this.listView.Items.Item(index).get_Tag);
+			this.ShowPhoto((Photo)this.listView.Items[index].get_Tag);
 			this.photoViewer.Invalidate();
 			if (this.FullScreen)
 			{
@@ -990,7 +990,7 @@ namespace FotoVision
 		{
 			if (this.listView.SelectedItems.Count == 1)
 			{
-				this.ShowPhoto((Photo)this.listView.SelectedItems.Item(0).get_Tag);
+				this.ShowPhoto((Photo)this.listView.SelectedItems[0].get_Tag);
 			}
 		}
 		public bool ApplyPhotoAction(ActionItem actionItem)
@@ -1037,7 +1037,7 @@ namespace FotoVision
 			}
 			if (this.listView.SelectedItems.Count == 1)
 			{
-				this.listView.SelectedItems.Item(0).BeginEdit;
+				this.listView.SelectedItems[0].BeginEdit;
 			}
 		}
 		public void Delete()

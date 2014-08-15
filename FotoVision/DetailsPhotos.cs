@@ -241,7 +241,7 @@ namespace FotoVision
 			{
 				return;
 			}
-			Photo photo = (Photo)this.Items.get_Item(index);
+			Photo photo = (Photo)this.Items[index];
 			g.TextRenderingHint = 1;
 			string arg_64_1 = photo.Title;
 			Font arg_64_2 = this.Font;
@@ -270,7 +270,7 @@ namespace FotoVision
 				{
 					if (index < this.Items.Count)
 					{
-						Photo photo = (Photo)this.Items.get_Item(index);
+						Photo photo = (Photo)this.Items[index];
 						Image thumbnail = PhotoHelper.GetThumbnail(photo.ThumbnailPath, 50);
 						int num = (50 - thumbnail.Width) / 2;
 						Rectangle rectangle = new Rectangle(5 + num + 3, 5 + top + 3, thumbnail.Width, thumbnail.Height);
@@ -316,7 +316,7 @@ namespace FotoVision
 			{
 				return;
 			}
-			Photo photo = (Photo)this.Items.get_Item(index);
+			Photo photo = (Photo)this.Items[index];
 			photo.Title = this._textTitle.Text;
 			photo.Description = this._textDesc.Text;
 			if (Global.ValidateDate(this._textDate.Text.Trim()))
@@ -344,7 +344,7 @@ namespace FotoVision
 				return;
 			}
 			this.CheckCurrentItem();
-			Photo photo = (Photo)this.Items.Item(this.get_SelectedIndex);
+			Photo photo = (Photo)this.Items[this.get_SelectedIndex];
 			Rectangle itemRectangle = this.GetItemRectangle(this.SelectedIndex);
 			this.HideControls();
 			this._textTitle.Left = 74;
