@@ -20,7 +20,7 @@ namespace FotoVision
 		private Upload.UpdateMessageEventHandler UpdateMessageEvent;
 		private Upload.UpdateProgressEventHandler UpdateProgressEvent;
 		private Upload.CompleteEventHandler CompleteEvent;
-		private PhotoAdmin _photoAdmin;
+        private FotoVision.PhotoAdmin.PhotoAdmin _photoAdmin;
 		private AdminHeader _adminHeader;
 		private int _progressCount;
 		private int _progressPos;
@@ -75,13 +75,13 @@ namespace FotoVision
 				this._parent = value;
 			}
 		}
-		private PhotoAdmin PhotoAdmin
+        private FotoVision.PhotoAdmin.PhotoAdmin PhotoAdmin
 		{
 			get
 			{
 				if (this._photoAdmin == null)
 				{
-					this._photoAdmin = new PhotoAdmin();
+                    this._photoAdmin = new FotoVision.PhotoAdmin.PhotoAdmin();
 					this._photoAdmin.set_Url(Global.CombineUrl(Global.Settings.GetString(SettingKey.ServiceLocation), "PhotoAdmin.asmx"));
 					this._photoAdmin.set_Timeout(checked(Global.Settings.GetInt(SettingKey.ServiceTimeout) * 1000));
 					this.AttachCredentials();
