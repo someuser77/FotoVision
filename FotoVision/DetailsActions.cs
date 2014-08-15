@@ -165,12 +165,12 @@ namespace FotoVision
 			{
 				if (this._tabControl != null)
 				{
-					this._tabControl.remove_SelectedIndexChanged(new EventHandler(this.tabControl_SelectedIndexChanged));
+					this._tabControl.SelectedIndexChanged -= new EventHandler(this.tabControl_SelectedIndexChanged);
 				}
 				this._tabControl = value;
 				if (this._tabControl != null)
 				{
-					this._tabControl.add_SelectedIndexChanged(new EventHandler(this.tabControl_SelectedIndexChanged));
+					this._tabControl.SelectedIndexChanged += new EventHandler(this.tabControl_SelectedIndexChanged);
 				}
 			}
 		}
@@ -185,18 +185,18 @@ namespace FotoVision
 			{
 				if (this._numContrast != null)
 				{
-					this._numContrast.remove_MouseUp(new MouseEventHandler(this.spinner_MouseUp));
-					this._numContrast.remove_KeyUp(new KeyEventHandler(this.spinner_KeyUp));
-					this._numContrast.remove_ValueChanged(new EventHandler(this.spinner_ValueChanged));
-					this._numContrast.remove_Enter(new EventHandler(this.spinner_Enter));
+					this._numContrast.MouseUp -= new MouseEventHandler(this.spinner_MouseUp);
+					this._numContrast.KeyUp -= new KeyEventHandler(this.spinner_KeyUp);
+					this._numContrast.ValueChanged -= new EventHandler(this.spinner_ValueChanged);
+					this._numContrast.Enter -= new EventHandler(this.spinner_Enter);
 				}
 				this._numContrast = value;
 				if (this._numContrast != null)
 				{
-					this._numContrast.add_MouseUp(new MouseEventHandler(this.spinner_MouseUp));
-					this._numContrast.add_KeyUp(new KeyEventHandler(this.spinner_KeyUp));
-					this._numContrast.add_ValueChanged(new EventHandler(this.spinner_ValueChanged));
-					this._numContrast.add_Enter(new EventHandler(this.spinner_Enter));
+					this._numContrast.MouseUp += new MouseEventHandler(this.spinner_MouseUp);
+					this._numContrast.KeyUp += new KeyEventHandler(this.spinner_KeyUp);
+					this._numContrast.ValueChanged += new EventHandler(this.spinner_ValueChanged);
+					this._numContrast.Enter += new EventHandler(this.spinner_Enter);
 				}
 			}
 		}
@@ -211,16 +211,16 @@ namespace FotoVision
 			{
 				if (this._sliderBright != null)
 				{
-					this._sliderBright.remove_MouseUp(new MouseEventHandler(this.slider_MouseUp));
-					this._sliderBright.remove_KeyUp(new KeyEventHandler(this.slider_KeyUp));
-					this._sliderBright.remove_ValueChanged(new EventHandler(this.slider_ValueChanged));
+					this._sliderBright.MouseUp -= new MouseEventHandler(this.slider_MouseUp);
+					this._sliderBright.KeyUp -= new KeyEventHandler(this.slider_KeyUp);
+					this._sliderBright.ValueChanged -= new EventHandler(this.slider_ValueChanged);
 				}
 				this._sliderBright = value;
 				if (this._sliderBright != null)
 				{
-					this._sliderBright.add_MouseUp(new MouseEventHandler(this.slider_MouseUp));
-					this._sliderBright.add_KeyUp(new KeyEventHandler(this.slider_KeyUp));
-					this._sliderBright.add_ValueChanged(new EventHandler(this.slider_ValueChanged));
+					this._sliderBright.MouseUp += new MouseEventHandler(this.slider_MouseUp);
+					this._sliderBright.KeyUp += new KeyEventHandler(this.slider_KeyUp);
+					this._sliderBright.ValueChanged += new EventHandler(this.slider_ValueChanged);
 				}
 			}
 		}
@@ -235,16 +235,16 @@ namespace FotoVision
 			{
 				if (this._sliderContrast != null)
 				{
-					this._sliderContrast.remove_MouseUp(new MouseEventHandler(this.slider_MouseUp));
-					this._sliderContrast.remove_KeyUp(new KeyEventHandler(this.slider_KeyUp));
-					this._sliderContrast.remove_ValueChanged(new EventHandler(this.slider_ValueChanged));
+					this._sliderContrast.MouseUp -= new MouseEventHandler(this.slider_MouseUp);
+					this._sliderContrast.KeyUp -= new KeyEventHandler(this.slider_KeyUp);
+					this._sliderContrast.ValueChanged -= new EventHandler(this.slider_ValueChanged);
 				}
 				this._sliderContrast = value;
 				if (this._sliderContrast != null)
 				{
-					this._sliderContrast.add_MouseUp(new MouseEventHandler(this.slider_MouseUp));
-					this._sliderContrast.add_KeyUp(new KeyEventHandler(this.slider_KeyUp));
-					this._sliderContrast.add_ValueChanged(new EventHandler(this.slider_ValueChanged));
+					this._sliderContrast.MouseUp += new MouseEventHandler(this.slider_MouseUp);
+					this._sliderContrast.KeyUp += new KeyEventHandler(this.slider_KeyUp);
+					this._sliderContrast.ValueChanged += new EventHandler(this.slider_ValueChanged);
 				}
 			}
 		}
@@ -259,16 +259,16 @@ namespace FotoVision
 			{
 				if (this._sliderSat != null)
 				{
-					this._sliderSat.remove_MouseUp(new MouseEventHandler(this.slider_MouseUp));
-					this._sliderSat.remove_KeyUp(new KeyEventHandler(this.slider_KeyUp));
-					this._sliderSat.remove_ValueChanged(new EventHandler(this.slider_ValueChanged));
+					this._sliderSat.MouseUp -= new MouseEventHandler(this.slider_MouseUp);
+					this._sliderSat.KeyUp -= new KeyEventHandler(this.slider_KeyUp);
+					this._sliderSat.ValueChanged -= new EventHandler(this.slider_ValueChanged);
 				}
 				this._sliderSat = value;
 				if (this._sliderSat != null)
 				{
-					this._sliderSat.add_MouseUp(new MouseEventHandler(this.slider_MouseUp));
-					this._sliderSat.add_KeyUp(new KeyEventHandler(this.slider_KeyUp));
-					this._sliderSat.add_ValueChanged(new EventHandler(this.slider_ValueChanged));
+					this._sliderSat.MouseUp += new MouseEventHandler(this.slider_MouseUp);
+					this._sliderSat.KeyUp += new KeyEventHandler(this.slider_KeyUp);
+					this._sliderSat.ValueChanged += new EventHandler(this.slider_ValueChanged);
 				}
 			}
 		}
@@ -283,16 +283,16 @@ namespace FotoVision
 			{
 				if (this._sliderGamma != null)
 				{
-					this._sliderGamma.remove_MouseUp(new MouseEventHandler(this.slider_MouseUp));
-					this._sliderGamma.remove_KeyUp(new KeyEventHandler(this.slider_KeyUp));
-					this._sliderGamma.remove_ValueChanged(new EventHandler(this.slider_ValueChanged));
+					this._sliderGamma.MouseUp -= new MouseEventHandler(this.slider_MouseUp);
+					this._sliderGamma.KeyUp -= new KeyEventHandler(this.slider_KeyUp);
+					this._sliderGamma.ValueChanged -= new EventHandler(this.slider_ValueChanged);
 				}
 				this._sliderGamma = value;
 				if (this._sliderGamma != null)
 				{
-					this._sliderGamma.add_MouseUp(new MouseEventHandler(this.slider_MouseUp));
-					this._sliderGamma.add_KeyUp(new KeyEventHandler(this.slider_KeyUp));
-					this._sliderGamma.add_ValueChanged(new EventHandler(this.slider_ValueChanged));
+					this._sliderGamma.MouseUp += new MouseEventHandler(this.slider_MouseUp);
+					this._sliderGamma.KeyUp += new KeyEventHandler(this.slider_KeyUp);
+					this._sliderGamma.ValueChanged += new EventHandler(this.slider_ValueChanged);
 				}
 			}
 		}
@@ -307,12 +307,12 @@ namespace FotoVision
 			{
 				if (this._panelAdjust != null)
 				{
-					this._panelAdjust.remove_Paint(new PaintEventHandler(this.panelAdjust_Paint));
+					this._panelAdjust.Paint -= new PaintEventHandler(this.panelAdjust_Paint);
 				}
 				this._panelAdjust = value;
 				if (this._panelAdjust != null)
 				{
-					this._panelAdjust.add_Paint(new PaintEventHandler(this.panelAdjust_Paint));
+					this._panelAdjust.Paint += new PaintEventHandler(this.panelAdjust_Paint);
 				}
 			}
 		}
@@ -327,18 +327,18 @@ namespace FotoVision
 			{
 				if (this._numBright != null)
 				{
-					this._numBright.remove_MouseUp(new MouseEventHandler(this.spinner_MouseUp));
-					this._numBright.remove_KeyUp(new KeyEventHandler(this.spinner_KeyUp));
-					this._numBright.remove_ValueChanged(new EventHandler(this.spinner_ValueChanged));
-					this._numBright.remove_Enter(new EventHandler(this.spinner_Enter));
+					this._numBright.MouseUp -= new MouseEventHandler(this.spinner_MouseUp);
+					this._numBright.KeyUp -= new KeyEventHandler(this.spinner_KeyUp);
+					this._numBright.ValueChanged -= new EventHandler(this.spinner_ValueChanged);
+					this._numBright.Enter -= new EventHandler(this.spinner_Enter);
 				}
 				this._numBright = value;
 				if (this._numBright != null)
 				{
-					this._numBright.add_MouseUp(new MouseEventHandler(this.spinner_MouseUp));
-					this._numBright.add_KeyUp(new KeyEventHandler(this.spinner_KeyUp));
-					this._numBright.add_ValueChanged(new EventHandler(this.spinner_ValueChanged));
-					this._numBright.add_Enter(new EventHandler(this.spinner_Enter));
+					this._numBright.MouseUp += new MouseEventHandler(this.spinner_MouseUp);
+					this._numBright.KeyUp += new KeyEventHandler(this.spinner_KeyUp);
+					this._numBright.ValueChanged += new EventHandler(this.spinner_ValueChanged);
+					this._numBright.Enter += new EventHandler(this.spinner_Enter);
 				}
 			}
 		}
@@ -353,18 +353,18 @@ namespace FotoVision
 			{
 				if (this._numGamma != null)
 				{
-					this._numGamma.remove_MouseUp(new MouseEventHandler(this.spinner_MouseUp));
-					this._numGamma.remove_KeyUp(new KeyEventHandler(this.spinner_KeyUp));
-					this._numGamma.remove_ValueChanged(new EventHandler(this.spinner_ValueChanged));
-					this._numGamma.remove_Enter(new EventHandler(this.spinner_Enter));
+					this._numGamma.MouseUp -= new MouseEventHandler(this.spinner_MouseUp);
+					this._numGamma.KeyUp -= new KeyEventHandler(this.spinner_KeyUp);
+					this._numGamma.ValueChanged -= new EventHandler(this.spinner_ValueChanged);
+					this._numGamma.Enter -= new EventHandler(this.spinner_Enter);
 				}
 				this._numGamma = value;
 				if (this._numGamma != null)
 				{
-					this._numGamma.add_MouseUp(new MouseEventHandler(this.spinner_MouseUp));
-					this._numGamma.add_KeyUp(new KeyEventHandler(this.spinner_KeyUp));
-					this._numGamma.add_ValueChanged(new EventHandler(this.spinner_ValueChanged));
-					this._numGamma.add_Enter(new EventHandler(this.spinner_Enter));
+					this._numGamma.MouseUp += new MouseEventHandler(this.spinner_MouseUp);
+					this._numGamma.KeyUp += new KeyEventHandler(this.spinner_KeyUp);
+					this._numGamma.ValueChanged += new EventHandler(this.spinner_ValueChanged);
+					this._numGamma.Enter += new EventHandler(this.spinner_Enter);
 				}
 			}
 		}
@@ -379,18 +379,18 @@ namespace FotoVision
 			{
 				if (this._numSat != null)
 				{
-					this._numSat.remove_MouseUp(new MouseEventHandler(this.spinner_MouseUp));
-					this._numSat.remove_KeyUp(new KeyEventHandler(this.spinner_KeyUp));
-					this._numSat.remove_ValueChanged(new EventHandler(this.spinner_ValueChanged));
-					this._numSat.remove_Enter(new EventHandler(this.spinner_Enter));
+					this._numSat.MouseUp -= new MouseEventHandler(this.spinner_MouseUp);
+					this._numSat.KeyUp -= new KeyEventHandler(this.spinner_KeyUp);
+					this._numSat.ValueChanged -= new EventHandler(this.spinner_ValueChanged);
+					this._numSat.Enter -= new EventHandler(this.spinner_Enter);
 				}
 				this._numSat = value;
 				if (this._numSat != null)
 				{
-					this._numSat.add_MouseUp(new MouseEventHandler(this.spinner_MouseUp));
-					this._numSat.add_KeyUp(new KeyEventHandler(this.spinner_KeyUp));
-					this._numSat.add_ValueChanged(new EventHandler(this.spinner_ValueChanged));
-					this._numSat.add_Enter(new EventHandler(this.spinner_Enter));
+					this._numSat.MouseUp += new MouseEventHandler(this.spinner_MouseUp);
+					this._numSat.KeyUp += new KeyEventHandler(this.spinner_KeyUp);
+					this._numSat.ValueChanged += new EventHandler(this.spinner_ValueChanged);
+					this._numSat.Enter += new EventHandler(this.spinner_Enter);
 				}
 			}
 		}
@@ -441,12 +441,12 @@ namespace FotoVision
 			{
 				if (this._buttonGrayscale != null)
 				{
-					this._buttonGrayscale.remove_Click(new EventHandler(this.buttonGrayscale_Click));
+					this._buttonGrayscale.Click -= new EventHandler(this.buttonGrayscale_Click);
 				}
 				this._buttonGrayscale = value;
 				if (this._buttonGrayscale != null)
 				{
-					this._buttonGrayscale.add_Click(new EventHandler(this.buttonGrayscale_Click));
+					this._buttonGrayscale.Click += new EventHandler(this.buttonGrayscale_Click);
 				}
 			}
 		}
@@ -461,12 +461,12 @@ namespace FotoVision
 			{
 				if (this._buttonSepia != null)
 				{
-					this._buttonSepia.remove_Click(new EventHandler(this.buttonSepia_Click));
+					this._buttonSepia.Click -= new EventHandler(this.buttonSepia_Click);
 				}
 				this._buttonSepia = value;
 				if (this._buttonSepia != null)
 				{
-					this._buttonSepia.add_Click(new EventHandler(this.buttonSepia_Click));
+					this._buttonSepia.Click += new EventHandler(this.buttonSepia_Click);
 				}
 			}
 		}
@@ -535,12 +535,12 @@ namespace FotoVision
 			{
 				if (this._buttonCrop != null)
 				{
-					this._buttonCrop.remove_Click(new EventHandler(this.buttonCrop_Click));
+					this._buttonCrop.Click -= new EventHandler(this.buttonCrop_Click);
 				}
 				this._buttonCrop = value;
 				if (this._buttonCrop != null)
 				{
-					this._buttonCrop.add_Click(new EventHandler(this.buttonCrop_Click));
+					this._buttonCrop.Click += new EventHandler(this.buttonCrop_Click);
 				}
 			}
 		}
@@ -627,12 +627,12 @@ namespace FotoVision
 			{
 				if (this._buttonClearCrop != null)
 				{
-					this._buttonClearCrop.remove_Click(new EventHandler(this.buttonClearCrop_Click));
+					this._buttonClearCrop.Click -= new EventHandler(this.buttonClearCrop_Click);
 				}
 				this._buttonClearCrop = value;
 				if (this._buttonClearCrop != null)
 				{
-					this._buttonClearCrop.add_Click(new EventHandler(this.buttonClearCrop_Click));
+					this._buttonClearCrop.Click += new EventHandler(this.buttonClearCrop_Click);
 				}
 			}
 		}
@@ -647,12 +647,12 @@ namespace FotoVision
 			{
 				if (this._buttonSave != null)
 				{
-					this._buttonSave.remove_Click(new EventHandler(this.commandButton_Clicked));
+					this._buttonSave.Click -= new EventHandler(this.commandButton_Clicked);
 				}
 				this._buttonSave = value;
 				if (this._buttonSave != null)
 				{
-					this._buttonSave.add_Click(new EventHandler(this.commandButton_Clicked));
+					this._buttonSave.Click += new EventHandler(this.commandButton_Clicked);
 				}
 			}
 		}
@@ -667,12 +667,12 @@ namespace FotoVision
 			{
 				if (this._buttonReset != null)
 				{
-					this._buttonReset.remove_Click(new EventHandler(this.commandButton_Clicked));
+					this._buttonReset.Click -= new EventHandler(this.commandButton_Clicked);
 				}
 				this._buttonReset = value;
 				if (this._buttonReset != null)
 				{
-					this._buttonReset.add_Click(new EventHandler(this.commandButton_Clicked));
+					this._buttonReset.Click += new EventHandler(this.commandButton_Clicked);
 				}
 			}
 		}
@@ -687,12 +687,12 @@ namespace FotoVision
 			{
 				if (this._buttonUndo != null)
 				{
-					this._buttonUndo.remove_Click(new EventHandler(this.commandButton_Clicked));
+					this._buttonUndo.Click -= new EventHandler(this.commandButton_Clicked);
 				}
 				this._buttonUndo = value;
 				if (this._buttonUndo != null)
 				{
-					this._buttonUndo.add_Click(new EventHandler(this.commandButton_Clicked));
+					this._buttonUndo.Click += new EventHandler(this.commandButton_Clicked);
 				}
 			}
 		}
@@ -707,12 +707,12 @@ namespace FotoVision
 			{
 				if (this._buttonRedo != null)
 				{
-					this._buttonRedo.remove_Click(new EventHandler(this.commandButton_Clicked));
+					this._buttonRedo.Click -= new EventHandler(this.commandButton_Clicked);
 				}
 				this._buttonRedo = value;
 				if (this._buttonRedo != null)
 				{
-					this._buttonRedo.add_Click(new EventHandler(this.commandButton_Clicked));
+					this._buttonRedo.Click += new EventHandler(this.commandButton_Clicked);
 				}
 			}
 		}

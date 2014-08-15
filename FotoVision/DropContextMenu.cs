@@ -25,12 +25,12 @@ namespace FotoVision
 			{
 				if (this._menuCopy != null)
 				{
-					this._menuCopy.remove_Click(new EventHandler(this.menuCopy_Click));
+					this._menuCopy.Click -= new EventHandler(this.menuCopy_Click);
 				}
 				this._menuCopy = value;
 				if (this._menuCopy != null)
 				{
-					this._menuCopy.add_Click(new EventHandler(this.menuCopy_Click));
+					this._menuCopy.Click += new EventHandler(this.menuCopy_Click);
 				}
 			}
 		}
@@ -45,12 +45,12 @@ namespace FotoVision
 			{
 				if (this._menuMove != null)
 				{
-					this._menuMove.remove_Click(new EventHandler(this.menuMove_Click));
+					this._menuMove.Click -= new EventHandler(this.menuMove_Click);
 				}
 				this._menuMove = value;
 				if (this._menuMove != null)
 				{
-					this._menuMove.add_Click(new EventHandler(this.menuMove_Click));
+					this._menuMove.Click += new EventHandler(this.menuMove_Click);
 				}
 			}
 		}
@@ -65,12 +65,12 @@ namespace FotoVision
 			{
 				if (this._menuCancel != null)
 				{
-					this._menuCancel.remove_Click(new EventHandler(this.menuCancel_Click));
+					this._menuCancel.Click -= new EventHandler(this.menuCancel_Click);
 				}
 				this._menuCancel = value;
 				if (this._menuCancel != null)
 				{
-					this._menuCancel.add_Click(new EventHandler(this.menuCancel_Click));
+					this._menuCancel.Click += new EventHandler(this.menuCancel_Click);
 				}
 			}
 		}

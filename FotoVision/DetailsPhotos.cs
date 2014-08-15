@@ -65,13 +65,13 @@ namespace FotoVision
 			{
 				if (this.__textTitle != null)
 				{
-					this.__textTitle.remove_Leave(new EventHandler(this.textControl_Leave));
+					this.__textTitle.Leave -= new EventHandler(this.textControl_Leave);
 					this.__textTitle.PreviousControl -= new TabTextBox.PreviousControlEventHandler(this.textTitle_PreviousControl);
 				}
 				this.__textTitle = value;
 				if (this.__textTitle != null)
 				{
-					this.__textTitle.add_Leave(new EventHandler(this.textControl_Leave));
+					this.__textTitle.Leave += new EventHandler(this.textControl_Leave);
 					this.__textTitle.PreviousControl += new TabTextBox.PreviousControlEventHandler(this.textTitle_PreviousControl);
 				}
 			}
@@ -87,12 +87,12 @@ namespace FotoVision
 			{
 				if (this.__textDesc != null)
 				{
-					this.__textDesc.remove_Leave(new EventHandler(this.textControl_Leave));
+					this.__textDesc.Leave -= new EventHandler(this.textControl_Leave);
 				}
 				this.__textDesc = value;
 				if (this.__textDesc != null)
 				{
-					this.__textDesc.add_Leave(new EventHandler(this.textControl_Leave));
+					this.__textDesc.Leave += new EventHandler(this.textControl_Leave);
 				}
 			}
 		}
@@ -107,13 +107,13 @@ namespace FotoVision
 			{
 				if (this.__textDate != null)
 				{
-					this.__textDate.remove_Leave(new EventHandler(this.textControl_Leave));
+					this.__textDate.Leave -= new EventHandler(this.textControl_Leave);
 					this.__textDate.NextControl -= new TabTextBox.NextControlEventHandler(this.textDate_NextControl);
 				}
 				this.__textDate = value;
 				if (this.__textDate != null)
 				{
-					this.__textDate.add_Leave(new EventHandler(this.textControl_Leave));
+					this.__textDate.Leave += new EventHandler(this.textControl_Leave);
 					this.__textDate.NextControl += new TabTextBox.NextControlEventHandler(this.textDate_NextControl);
 				}
 			}

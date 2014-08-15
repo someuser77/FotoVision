@@ -89,14 +89,14 @@ namespace FotoVision
 			{
 				if (this._textTitle != null)
 				{
-					this._textTitle.remove_TextChanged(new EventHandler(this.textControl_TextChanged));
-					this._textTitle.remove_Leave(new EventHandler(this.textControl_Leave));
+					this._textTitle.TextChanged -= new EventHandler(this.textControl_TextChanged);
+					this._textTitle.Leave -= new EventHandler(this.textControl_Leave);
 				}
 				this._textTitle = value;
 				if (this._textTitle != null)
 				{
-					this._textTitle.add_TextChanged(new EventHandler(this.textControl_TextChanged));
-					this._textTitle.add_Leave(new EventHandler(this.textControl_Leave));
+					this._textTitle.TextChanged += new EventHandler(this.textControl_TextChanged);
+					this._textTitle.Leave += new EventHandler(this.textControl_Leave);
 				}
 			}
 		}
@@ -111,14 +111,14 @@ namespace FotoVision
 			{
 				if (this._textDesc != null)
 				{
-					this._textDesc.remove_TextChanged(new EventHandler(this.textControl_TextChanged));
-					this._textDesc.remove_Leave(new EventHandler(this.textControl_Leave));
+					this._textDesc.TextChanged -= new EventHandler(this.textControl_TextChanged);
+					this._textDesc.Leave -= new EventHandler(this.textControl_Leave);
 				}
 				this._textDesc = value;
 				if (this._textDesc != null)
 				{
-					this._textDesc.add_TextChanged(new EventHandler(this.textControl_TextChanged));
-					this._textDesc.add_Leave(new EventHandler(this.textControl_Leave));
+					this._textDesc.TextChanged += new EventHandler(this.textControl_TextChanged);
+					this._textDesc.Leave += new EventHandler(this.textControl_Leave);
 				}
 			}
 		}
@@ -133,14 +133,14 @@ namespace FotoVision
 			{
 				if (this._textDate != null)
 				{
-					this._textDate.remove_TextChanged(new EventHandler(this.textControl_TextChanged));
-					this._textDate.remove_Leave(new EventHandler(this.textControl_Leave));
+					this._textDate.TextChanged -= new EventHandler(this.textControl_TextChanged);
+					this._textDate.Leave -= new EventHandler(this.textControl_Leave);
 				}
 				this._textDate = value;
 				if (this._textDate != null)
 				{
-					this._textDate.add_TextChanged(new EventHandler(this.textControl_TextChanged));
-					this._textDate.add_Leave(new EventHandler(this.textControl_Leave));
+					this._textDate.TextChanged += new EventHandler(this.textControl_TextChanged);
+					this._textDate.Leave += new EventHandler(this.textControl_Leave);
 				}
 			}
 		}
@@ -155,12 +155,12 @@ namespace FotoVision
 			{
 				if (this._radioPublish != null)
 				{
-					this._radioPublish.remove_Click(new EventHandler(this.radioControl_Click));
+					this._radioPublish.Click -= new EventHandler(this.radioControl_Click);
 				}
 				this._radioPublish = value;
 				if (this._radioPublish != null)
 				{
-					this._radioPublish.add_Click(new EventHandler(this.radioControl_Click));
+					this._radioPublish.Click += new EventHandler(this.radioControl_Click);
 				}
 			}
 		}
@@ -175,12 +175,12 @@ namespace FotoVision
 			{
 				if (this._radioDontPublish != null)
 				{
-					this._radioDontPublish.remove_Click(new EventHandler(this.radioControl_Click));
+					this._radioDontPublish.Click -= new EventHandler(this.radioControl_Click);
 				}
 				this._radioDontPublish = value;
 				if (this._radioDontPublish != null)
 				{
-					this._radioDontPublish.add_Click(new EventHandler(this.radioControl_Click));
+					this._radioDontPublish.Click += new EventHandler(this.radioControl_Click);
 				}
 			}
 		}
@@ -473,7 +473,7 @@ namespace FotoVision
 		}
 		public DetailsAlbum()
 		{
-			base.add_Paint(new PaintEventHandler(this.DetailsAlbum_Paint));
+			base.Paint += new PaintEventHandler(this.DetailsAlbum_Paint);
 			this._album = new Album();
 			this.InitializeComponent();
 			this.Enabled = false;

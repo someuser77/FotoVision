@@ -93,12 +93,12 @@ namespace FotoVision
 			{
 				if (this._pictIcon != null)
 				{
-					this._pictIcon.remove_Paint(new PaintEventHandler(this.pictIcon_Paint));
+					this._pictIcon.Paint -= new PaintEventHandler(this.pictIcon_Paint);
 				}
 				this._pictIcon = value;
 				if (this._pictIcon != null)
 				{
-					this._pictIcon.add_Paint(new PaintEventHandler(this.pictIcon_Paint));
+					this._pictIcon.Paint += new PaintEventHandler(this.pictIcon_Paint);
 				}
 			}
 		}
@@ -113,12 +113,12 @@ namespace FotoVision
 			{
 				if (this._buttonOK != null)
 				{
-					this._buttonOK.remove_Click(new EventHandler(this.buttonOK_Click));
+					this._buttonOK.Click -= new EventHandler(this.buttonOK_Click);
 				}
 				this._buttonOK = value;
 				if (this._buttonOK != null)
 				{
-					this._buttonOK.add_Click(new EventHandler(this.buttonOK_Click));
+					this._buttonOK.Click += new EventHandler(this.buttonOK_Click);
 				}
 			}
 		}

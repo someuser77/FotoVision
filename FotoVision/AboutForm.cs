@@ -78,12 +78,12 @@ namespace FotoVision
 			{
 				if (this._linkCompany != null)
 				{
-					this._linkCompany.remove_LinkClicked(new LinkLabelLinkClickedEventHandler(this.linkCompany_LinkClicked));
+					this._linkCompany.LinkClicked -= new LinkLabelLinkClickedEventHandler(this.linkCompany_LinkClicked);
 				}
 				this._linkCompany = value;
 				if (this._linkCompany != null)
 				{
-					this._linkCompany.add_LinkClicked(new LinkLabelLinkClickedEventHandler(this.linkCompany_LinkClicked));
+					this._linkCompany.LinkClicked += new LinkLabelLinkClickedEventHandler(this.linkCompany_LinkClicked);
 				}
 			}
 		}
@@ -116,12 +116,12 @@ namespace FotoVision
 			{
 				if (this._buttonOk != null)
 				{
-					this._buttonOk.remove_Click(new EventHandler(this.buttonOk_Click));
+					this._buttonOk.Click -= new EventHandler(this.buttonOk_Click);
 				}
 				this._buttonOk = value;
 				if (this._buttonOk != null)
 				{
-					this._buttonOk.add_Click(new EventHandler(this.buttonOk_Click));
+					this._buttonOk.Click += new EventHandler(this.buttonOk_Click);
 				}
 			}
 		}

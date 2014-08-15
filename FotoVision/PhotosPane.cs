@@ -182,26 +182,26 @@ namespace FotoVision
 			{
 				if (this._listView != null)
 				{
-					this._listView.remove_MouseUp(new MouseEventHandler(this.listView_MouseUp));
-					this._listView.remove_KeyUp(new KeyEventHandler(this.listView_KeyUp));
-					this._listView.remove_DoubleClick(new EventHandler(this.listView_DoubleClick));
+					this._listView.MouseUp -= new MouseEventHandler(this.listView_MouseUp);
+					this._listView.KeyUp -= new KeyEventHandler(this.listView_KeyUp);
+					this._listView.DoubleClick -= new EventHandler(this.listView_DoubleClick);
 					this._listView.PhotoMetadataChanged -= new PhotoListView.PhotoMetadataChangedEventHandler(this.listView_PhotoMetadataChanged);
 					this._listView.FilesDragged -= new PhotoListView.FilesDraggedEventHandler(this.listView_FilesDragged);
 					this._listView.FilesDropped -= new PhotoListView.FilesDroppedEventHandler(this.listView_FilesDropped);
-					this._listView.remove_AfterLabelEdit(new LabelEditEventHandler(this.listView_AfterLabelEdit));
-					this._listView.remove_BeforeLabelEdit(new LabelEditEventHandler(this.listView_BeforeLabelEdit));
+					this._listView.AfterLabelEdit -= new LabelEditEventHandler(this.listView_AfterLabelEdit);
+					this._listView.BeforeLabelEdit -= new LabelEditEventHandler(this.listView_BeforeLabelEdit);
 				}
 				this._listView = value;
 				if (this._listView != null)
 				{
-					this._listView.add_MouseUp(new MouseEventHandler(this.listView_MouseUp));
-					this._listView.add_KeyUp(new KeyEventHandler(this.listView_KeyUp));
-					this._listView.add_DoubleClick(new EventHandler(this.listView_DoubleClick));
+					this._listView.MouseUp += new MouseEventHandler(this.listView_MouseUp);
+					this._listView.KeyUp += new KeyEventHandler(this.listView_KeyUp);
+					this._listView.DoubleClick += new EventHandler(this.listView_DoubleClick);
 					this._listView.PhotoMetadataChanged += new PhotoListView.PhotoMetadataChangedEventHandler(this.listView_PhotoMetadataChanged);
 					this._listView.FilesDragged += new PhotoListView.FilesDraggedEventHandler(this.listView_FilesDragged);
 					this._listView.FilesDropped += new PhotoListView.FilesDroppedEventHandler(this.listView_FilesDropped);
-					this._listView.add_AfterLabelEdit(new LabelEditEventHandler(this.listView_AfterLabelEdit));
-					this._listView.add_BeforeLabelEdit(new LabelEditEventHandler(this.listView_BeforeLabelEdit));
+					this._listView.AfterLabelEdit += new LabelEditEventHandler(this.listView_AfterLabelEdit);
+					this._listView.BeforeLabelEdit += new LabelEditEventHandler(this.listView_BeforeLabelEdit);
 				}
 			}
 		}
@@ -217,13 +217,13 @@ namespace FotoVision
 				if (this._photoViewer != null)
 				{
 					this._photoViewer.CropDataChanged -= new PhotoViewer.CropDataChangedEventHandler(this.photoViewer_CropDataChanged);
-					this._photoViewer.remove_MouseDown(new MouseEventHandler(this.photoViewer_MouseDown));
+					this._photoViewer.MouseDown -= new MouseEventHandler(this.photoViewer_MouseDown);
 				}
 				this._photoViewer = value;
 				if (this._photoViewer != null)
 				{
 					this._photoViewer.CropDataChanged += new PhotoViewer.CropDataChangedEventHandler(this.photoViewer_CropDataChanged);
-					this._photoViewer.add_MouseDown(new MouseEventHandler(this.photoViewer_MouseDown));
+					this._photoViewer.MouseDown += new MouseEventHandler(this.photoViewer_MouseDown);
 				}
 			}
 		}
@@ -383,12 +383,12 @@ namespace FotoVision
 			{
 				if (this._menuRotateLeft != null)
 				{
-					this._menuRotateLeft.remove_Click(new EventHandler(this.menu_Click));
+					this._menuRotateLeft.Click -= new EventHandler(this.menu_Click);
 				}
 				this._menuRotateLeft = value;
 				if (this._menuRotateLeft != null)
 				{
-					this._menuRotateLeft.add_Click(new EventHandler(this.menu_Click));
+					this._menuRotateLeft.Click += new EventHandler(this.menu_Click);
 				}
 			}
 		}
@@ -403,12 +403,12 @@ namespace FotoVision
 			{
 				if (this._menuRotateRight != null)
 				{
-					this._menuRotateRight.remove_Click(new EventHandler(this.menu_Click));
+					this._menuRotateRight.Click -= new EventHandler(this.menu_Click);
 				}
 				this._menuRotateRight = value;
 				if (this._menuRotateRight != null)
 				{
-					this._menuRotateRight.add_Click(new EventHandler(this.menu_Click));
+					this._menuRotateRight.Click += new EventHandler(this.menu_Click);
 				}
 			}
 		}
@@ -423,12 +423,12 @@ namespace FotoVision
 			{
 				if (this._menuRename != null)
 				{
-					this._menuRename.remove_Click(new EventHandler(this.menu_Click));
+					this._menuRename.Click -= new EventHandler(this.menu_Click);
 				}
 				this._menuRename = value;
 				if (this._menuRename != null)
 				{
-					this._menuRename.add_Click(new EventHandler(this.menu_Click));
+					this._menuRename.Click += new EventHandler(this.menu_Click);
 				}
 			}
 		}
@@ -443,12 +443,12 @@ namespace FotoVision
 			{
 				if (this._menuDelete != null)
 				{
-					this._menuDelete.remove_Click(new EventHandler(this.menu_Click));
+					this._menuDelete.Click -= new EventHandler(this.menu_Click);
 				}
 				this._menuDelete = value;
 				if (this._menuDelete != null)
 				{
-					this._menuDelete.add_Click(new EventHandler(this.menu_Click));
+					this._menuDelete.Click += new EventHandler(this.menu_Click);
 				}
 			}
 		}
@@ -463,12 +463,12 @@ namespace FotoVision
 			{
 				if (this._menuPhotoShow != null)
 				{
-					this._menuPhotoShow.remove_Click(new EventHandler(this.menu_Click));
+					this._menuPhotoShow.Click -= new EventHandler(this.menu_Click);
 				}
 				this._menuPhotoShow = value;
 				if (this._menuPhotoShow != null)
 				{
-					this._menuPhotoShow.add_Click(new EventHandler(this.menu_Click));
+					this._menuPhotoShow.Click += new EventHandler(this.menu_Click);
 				}
 			}
 		}
@@ -483,12 +483,12 @@ namespace FotoVision
 			{
 				if (this._menuPhotoShowDetails != null)
 				{
-					this._menuPhotoShowDetails.remove_Click(new EventHandler(this.menu_Click));
+					this._menuPhotoShowDetails.Click -= new EventHandler(this.menu_Click);
 				}
 				this._menuPhotoShowDetails = value;
 				if (this._menuPhotoShowDetails != null)
 				{
-					this._menuPhotoShowDetails.add_Click(new EventHandler(this.menu_Click));
+					this._menuPhotoShowDetails.Click += new EventHandler(this.menu_Click);
 				}
 			}
 		}
@@ -503,12 +503,12 @@ namespace FotoVision
 			{
 				if (this._menuPhotoActions != null)
 				{
-					this._menuPhotoActions.remove_Click(new EventHandler(this.menu_Click));
+					this._menuPhotoActions.Click -= new EventHandler(this.menu_Click);
 				}
 				this._menuPhotoActions = value;
 				if (this._menuPhotoActions != null)
 				{
-					this._menuPhotoActions.add_Click(new EventHandler(this.menu_Click));
+					this._menuPhotoActions.Click += new EventHandler(this.menu_Click);
 				}
 			}
 		}
@@ -523,12 +523,12 @@ namespace FotoVision
 			{
 				if (this._menuSelectAll != null)
 				{
-					this._menuSelectAll.remove_Click(new EventHandler(this.menu_Click));
+					this._menuSelectAll.Click -= new EventHandler(this.menu_Click);
 				}
 				this._menuSelectAll = value;
 				if (this._menuSelectAll != null)
 				{
-					this._menuSelectAll.add_Click(new EventHandler(this.menu_Click));
+					this._menuSelectAll.Click += new EventHandler(this.menu_Click);
 				}
 			}
 		}
@@ -561,12 +561,12 @@ namespace FotoVision
 			{
 				if (this._menuProperties != null)
 				{
-					this._menuProperties.remove_Click(new EventHandler(this.menuProperties_Click));
+					this._menuProperties.Click -= new EventHandler(this.menuProperties_Click);
 				}
 				this._menuProperties = value;
 				if (this._menuProperties != null)
 				{
-					this._menuProperties.add_Click(new EventHandler(this.menuProperties_Click));
+					this._menuProperties.Click += new EventHandler(this.menuProperties_Click);
 				}
 			}
 		}
@@ -581,12 +581,12 @@ namespace FotoVision
 			{
 				if (this._menuThumbnails != null)
 				{
-					this._menuThumbnails.remove_Popup(new EventHandler(this.menuThumbnails_Popup));
+					this._menuThumbnails.Popup -= new EventHandler(this.menuThumbnails_Popup);
 				}
 				this._menuThumbnails = value;
 				if (this._menuThumbnails != null)
 				{
-					this._menuThumbnails.add_Popup(new EventHandler(this.menuThumbnails_Popup));
+					this._menuThumbnails.Popup += new EventHandler(this.menuThumbnails_Popup);
 				}
 			}
 		}
@@ -619,12 +619,12 @@ namespace FotoVision
 			{
 				if (this._menuPhotoProperties != null)
 				{
-					this._menuPhotoProperties.remove_Click(new EventHandler(this.menuProperties_Click));
+					this._menuPhotoProperties.Click -= new EventHandler(this.menuProperties_Click);
 				}
 				this._menuPhotoProperties = value;
 				if (this._menuPhotoProperties != null)
 				{
-					this._menuPhotoProperties.add_Click(new EventHandler(this.menuProperties_Click));
+					this._menuPhotoProperties.Click += new EventHandler(this.menuProperties_Click);
 				}
 			}
 		}
