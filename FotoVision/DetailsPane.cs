@@ -225,7 +225,7 @@ namespace FotoVision
 			this.SuspendLayout();
 			this.photoDetails.BackColor = SystemColors.Control;
 			this.photoDetails.BorderStyle = 0;
-			this.photoDetails.Dock = 5;
+			this.photoDetails.Dock = DockStyle.Fill;
 			this.photoDetails.DrawMode = 1;
 			this.photoDetails.IntegralHeight = false;
 			this.photoDetails.ItemHeight = 158;
@@ -238,7 +238,7 @@ namespace FotoVision
 			arg_B5_0.Size = size;
 			this.photoDetails.TabIndex = 1;
 			this.photoDetails.TabStop = false;
-			this.photoActions.Dock = 5;
+			this.photoActions.Dock = DockStyle.Fill;
 			this.photoActions.DockPadding.All = 2;
 			Control arg_100_0 = this.photoActions;
 			location = new Point(1, 21);
@@ -249,7 +249,7 @@ namespace FotoVision
 			arg_12D_0.Size = size;
 			this.photoActions.TabIndex = 1;
 			this.albumDetails.AlbumName = null;
-			this.albumDetails.Dock = 5;
+			this.albumDetails.Dock = DockStyle.Fill;
 			this.albumDetails.Enabled = false;
 			Control arg_173_0 = this.albumDetails;
 			location = new Point(1, 21);

@@ -526,7 +526,7 @@ namespace FotoVision
 				this.colPhotos
 			});
 			this.listView.ContextMenu = this.menuAlbum;
-			this.listView.Dock = 5;
+			this.listView.Dock = DockStyle.Fill;
 			this.listView.HeaderStyle = 1;
 			this.listView.HideSelection = false;
 			this.listView.LabelEdit = true;

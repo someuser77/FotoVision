@@ -771,7 +771,7 @@ namespace FotoVision
 			this.SuspendLayout();
 			this.tabControl.Controls.Add(this.pageAdjust);
 			this.tabControl.Controls.Add(this.pageCrop);
-			this.tabControl.Dock = 5;
+			this.tabControl.Dock = DockStyle.Fill;
 			Control arg_280_0 = this.tabControl;
 			Point location = new Point(2, 2);
 			arg_280_0.Location = location;
@@ -806,7 +806,7 @@ namespace FotoVision
 			this.panelAdjust.Controls.Add(this.numBright);
 			this.panelAdjust.Controls.Add(this.numGamma);
 			this.panelAdjust.Controls.Add(this.numSat);
-			this.panelAdjust.Dock = 5;
+			this.panelAdjust.Dock = DockStyle.Fill;
 			Control arg_4A7_0 = this.panelAdjust;
 			location = new Point(0, 0);
 			arg_4A7_0.Location = location;
@@ -1017,7 +1017,7 @@ namespace FotoVision
 			this.panelCrop.Controls.Add(this.panelPictureSep);
 			this.panelCrop.Controls.Add(this.pictCropDim);
 			this.panelCrop.Controls.Add(this.buttonClearCrop);
-			this.panelCrop.Dock = 5;
+			this.panelCrop.Dock = DockStyle.Fill;
 			Control arg_D17_0 = this.panelCrop;
 			location = new Point(0, 0);
 			arg_D17_0.Location = location;
@@ -1102,7 +1102,7 @@ namespace FotoVision
 			this.panelSave.Controls.Add(this.buttonReset);
 			this.panelSave.Controls.Add(this.buttonUndo);
 			this.panelSave.Controls.Add(this.buttonRedo);
-			this.panelSave.Dock = 2;
+			this.panelSave.Dock = DockStyle.Bottom;
 			Control arg_10D0_0 = this.panelSave;
 			location = new Point(2, 390);
 			arg_10D0_0.Location = location;

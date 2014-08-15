@@ -68,7 +68,7 @@ namespace FotoVision
 		{
 			this.caption = new PaneCaption();
 			this.SuspendLayout();
-			this.caption.Dock = 1;
+			this.caption.Dock = DockStyle.Top;
             this.caption.Font = new Font("Arial", 9f, GraphicsUnit.Display);
 			Control arg_48_0 = this.caption;
 			Point location = new Point(1, 1);

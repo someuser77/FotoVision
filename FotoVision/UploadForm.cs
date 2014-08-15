@@ -631,7 +631,7 @@ namespace FotoVision
 			{
 				this.colMessage
 			});
-			this.listTasks.Dock = 5;
+			this.listTasks.Dock = DockStyle.Fill;
 			this.listTasks.HeaderStyle = 0;
 			Control arg_4BF_0 = this.listTasks;
 			location = new Point(0, 0);
@@ -658,7 +658,7 @@ namespace FotoVision
 			this.pageErrors.Visible = false;
 			this.textError.AcceptsReturn = true;
 			this.textError.BackColor = SystemColors.Info;
-			this.textError.Dock = 2;
+			this.textError.Dock = DockStyle.Bottom;
 			Control arg_5FC_0 = this.textError;
 			location = new Point(0, 110);
 			arg_5FC_0.Location = location;
@@ -675,7 +675,7 @@ namespace FotoVision
 			{
 				this.colErrors
 			});
-			this.listErrors.Dock = 5;
+			this.listErrors.Dock = DockStyle.Fill;
 			this.listErrors.HeaderStyle = 0;
 			Control arg_6B5_0 = this.listErrors;
 			location = new Point(0, 0);

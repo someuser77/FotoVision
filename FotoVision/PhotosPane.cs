@@ -716,7 +716,7 @@ namespace FotoVision
 			this.listView.BackColor = Color.DarkGray;
 			this.listView.BorderStyle = 0;
 			this.listView.ContextMenu = this.menuThumbnails;
-			this.listView.Dock = 5;
+			this.listView.Dock = DockStyle.Fill;
 			this.listView.LabelEdit = true;
 			Control arg_144_0 = this.listView;
 			Point location = new Point(2, 22);
@@ -775,7 +775,7 @@ namespace FotoVision
 			this.photoViewer.ContextMenu = this.menuPhoto;
 			this.photoViewer.Controls.Add(this.labelPos);
 			this.photoViewer.CropMode = false;
-			this.photoViewer.Dock = 5;
+			this.photoViewer.Dock = DockStyle.Fill;
 			this.photoViewer.EditMode = false;
 			Control arg_402_0 = this.photoViewer;
 			location = new Point(2, 22);

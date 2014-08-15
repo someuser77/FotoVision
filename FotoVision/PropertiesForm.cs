@@ -388,7 +388,7 @@ namespace FotoVision
 			this.pageActions.Text = "Actions";
 			this.textActions.BackColor = SystemColors.Info;
 			this.textActions.BorderStyle = 0;
-			this.textActions.Dock = 5;
+			this.textActions.Dock = DockStyle.Fill;
 			Control arg_3CC_0 = this.textActions;
 			location = new Point(0, 0);
 			arg_3CC_0.Location = location;

@@ -1634,7 +1634,7 @@ namespace FotoVision
 			this.statusPaneRight.BeginInit();
 			this.SuspendLayout();
 			this.paneAlbums.CaptionText = "My Albums";
-			this.paneAlbums.Dock = 3;
+			this.paneAlbums.Dock = DockStyle.Left;
 			this.paneAlbums.DockPadding.All = 2;
 			Control arg_413_0 = this.paneAlbums;
 			Point location = new Point(0, 39);
@@ -1658,7 +1658,7 @@ namespace FotoVision
 			this.panelPhotos.Controls.Add(this.panePhotos);
 			this.panelPhotos.Controls.Add(this.splitterRight);
 			this.panelPhotos.Controls.Add(this.paneDetails);
-			this.panelPhotos.Dock = 5;
+			this.panelPhotos.Dock = DockStyle.Fill;
 			Control arg_52F_0 = this.panelPhotos;
 			location = new Point(187, 39);
 			arg_52F_0.Location = location;
@@ -1670,7 +1670,7 @@ namespace FotoVision
 			this.panePhotos.BackColor = SystemColors.Control;
 			this.panePhotos.CaptionText = "Manage Photos";
 			this.panePhotos.CropMode = false;
-			this.panePhotos.Dock = 5;
+			this.panePhotos.Dock = DockStyle.Fill;
 			this.panePhotos.DockPadding.All = 2;
 			this.panePhotos.FullScreen = false;
 			Control arg_5D4_0 = this.panePhotos;
@@ -1683,7 +1683,7 @@ namespace FotoVision
 			arg_60E_0.Size = size;
 			this.panePhotos.TabIndex = 0;
 			this.splitterRight.BorderStyle = 2;
-			this.splitterRight.Dock = 4;
+			this.splitterRight.Dock = DockStyle.Right;
 			Control arg_64C_0 = this.splitterRight;
 			location = new Point(240, 0);
 			arg_64C_0.Location = location;
@@ -1695,7 +1695,7 @@ namespace FotoVision
 			this.splitterRight.TabStop = false;
 			this.paneDetails.AlbumName = null;
 			this.paneDetails.CaptionText = "Album Description";
-			this.paneDetails.Dock = 4;
+			this.paneDetails.Dock = DockStyle.Right;
 			this.paneDetails.DockPadding.All = 2;
 			Control arg_6E1_0 = this.paneDetails;
 			location = new Point(243, 0);
