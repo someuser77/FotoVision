@@ -281,7 +281,7 @@ namespace FotoVision
 				CreateParams createParams = base.CreateParams;
 				if (this.RunningOnXP())
 				{
-					createParams.set_ClassStyle(createParams.ClassStyle | 131072);
+					createParams.ClassStyle = createParams.ClassStyle | 131072;
 				}
 				return createParams;
 			}
@@ -292,7 +292,7 @@ namespace FotoVision
 			this._path = path;
 			this._fontHeader = this.labelFileName.Font;
 			this._format = new StringFormat();
-			this._format.set_Trimming(5);
+			this._format.Trimming = 5;
 		}
 		protected override void Dispose(bool disposing)
 		{
@@ -322,151 +322,151 @@ namespace FotoVision
 			this.pageActions.SuspendLayout();
 			this.panelProgress.SuspendLayout();
 			this.SuspendLayout();
-			this.buttonClose.set_DialogResult(1);
-			this.buttonClose.set_FlatStyle(3);
+			this.buttonClose.DialogResult = 1;
+			this.buttonClose.FlatStyle = 3;
 			Control arg_EC_0 = this.buttonClose;
 			Point location = new Point(232, 258);
-			arg_EC_0.set_Location(location);
-			this.buttonClose.set_Name("buttonClose");
+			arg_EC_0.Location = location;
+			this.buttonClose.Name = "buttonClose";
 			Control arg_113_0 = this.buttonClose;
 			Size size = new Size(56, 23);
-			arg_113_0.set_Size(size);
-			this.buttonClose.set_TabIndex(0);
-			this.buttonClose.set_Text("Close");
+			arg_113_0.Size = size;
+			this.buttonClose.TabIndex = 0;
+			this.buttonClose.Text = "Close";
 			Control arg_144_0 = this.pictThumbnail;
 			location = new Point(8, 8);
-			arg_144_0.set_Location(location);
-			this.pictThumbnail.set_Name("pictThumbnail");
+			arg_144_0.Location = location;
+			this.pictThumbnail.Name = "pictThumbnail";
 			Control arg_16B_0 = this.pictThumbnail;
 			size = new Size(48, 48);
-			arg_16B_0.set_Size(size);
-			this.pictThumbnail.set_SizeMode(3);
-			this.pictThumbnail.set_TabIndex(2);
-			this.pictThumbnail.set_TabStop(false);
+			arg_16B_0.Size = size;
+			this.pictThumbnail.SizeMode = 3;
+			this.pictThumbnail.TabIndex = 2;
+			this.pictThumbnail.TabStop = false;
 			this.tabControl.Controls.Add(this.pageFile);
 			this.tabControl.Controls.Add(this.pageExif);
 			this.tabControl.Controls.Add(this.pageActions);
 			Control arg_1E7_0 = this.tabControl;
 			location = new Point(8, 64);
-			arg_1E7_0.set_Location(location);
-			this.tabControl.set_Name("tabControl");
-			this.tabControl.set_SelectedIndex(0);
+			arg_1E7_0.Location = location;
+			this.tabControl.Name = "tabControl";
+			this.tabControl.SelectedIndex = 0;
 			Control arg_220_0 = this.tabControl;
 			size = new Size(280, 186);
-			arg_220_0.set_Size(size);
-			this.tabControl.set_TabIndex(3);
-			this.pageFile.set_BackColor(SystemColors.Info);
+			arg_220_0.Size = size;
+			this.tabControl.TabIndex = 3;
+			this.pageFile.BackColor = SystemColors.Info;
 			Control arg_252_0 = this.pageFile;
 			location = new Point(4, 22);
-			arg_252_0.set_Location(location);
-			this.pageFile.set_Name("pageFile");
+			arg_252_0.Location = location;
+			this.pageFile.Name = "pageFile";
 			Control arg_27F_0 = this.pageFile;
 			size = new Size(272, 160);
-			arg_27F_0.set_Size(size);
-			this.pageFile.set_TabIndex(0);
-			this.pageFile.set_Text("File");
-			this.pageExif.set_BackColor(SystemColors.Info);
+			arg_27F_0.Size = size;
+			this.pageFile.TabIndex = 0;
+			this.pageFile.Text = "File";
+			this.pageExif.BackColor = SystemColors.Info;
 			Control arg_2C1_0 = this.pageExif;
 			location = new Point(4, 22);
-			arg_2C1_0.set_Location(location);
-			this.pageExif.set_Name("pageExif");
+			arg_2C1_0.Location = location;
+			this.pageExif.Name = "pageExif";
 			Control arg_2EE_0 = this.pageExif;
 			size = new Size(272, 160);
-			arg_2EE_0.set_Size(size);
-			this.pageExif.set_TabIndex(1);
-			this.pageExif.set_Text("Exif");
-			this.pageActions.set_BackColor(SystemColors.Info);
+			arg_2EE_0.Size = size;
+			this.pageExif.TabIndex = 1;
+			this.pageExif.Text = "Exif";
+			this.pageActions.BackColor = SystemColors.Info;
 			this.pageActions.Controls.Add(this.textActions);
 			Control arg_346_0 = this.pageActions;
 			location = new Point(4, 22);
-			arg_346_0.set_Location(location);
-			this.pageActions.set_Name("pageActions");
+			arg_346_0.Location = location;
+			this.pageActions.Name = "pageActions";
 			Control arg_373_0 = this.pageActions;
 			size = new Size(272, 160);
-			arg_373_0.set_Size(size);
-			this.pageActions.set_TabIndex(2);
-			this.pageActions.set_Text("Actions");
-			this.textActions.set_BackColor(SystemColors.Info);
-			this.textActions.set_BorderStyle(0);
-			this.textActions.set_Dock(5);
+			arg_373_0.Size = size;
+			this.pageActions.TabIndex = 2;
+			this.pageActions.Text = "Actions";
+			this.textActions.BackColor = SystemColors.Info;
+			this.textActions.BorderStyle = 0;
+			this.textActions.Dock = 5;
 			Control arg_3CC_0 = this.textActions;
 			location = new Point(0, 0);
-			arg_3CC_0.set_Location(location);
-			this.textActions.set_Multiline(true);
-			this.textActions.set_Name("textActions");
-			this.textActions.set_ReadOnly(true);
-			this.textActions.set_ScrollBars(2);
+			arg_3CC_0.Location = location;
+			this.textActions.Multiline = true;
+			this.textActions.Name = "textActions";
+			this.textActions.ReadOnly = true;
+			this.textActions.ScrollBars = 2;
 			Control arg_41D_0 = this.textActions;
 			size = new Size(272, 160);
-			arg_41D_0.set_Size(size);
-			this.textActions.set_TabIndex(2);
-			this.textActions.set_Text("");
-			this.textActions.set_WordWrap(false);
-			this.labelFileName.set_FlatStyle(3);
-            this.labelFileName.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
+			arg_41D_0.Size = size;
+			this.textActions.TabIndex = 2;
+			this.textActions.Text = "";
+			this.textActions.WordWrap = false;
+			this.labelFileName.FlatStyle = 3;
+            this.labelFileName.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_485_0 = this.labelFileName;
 			location = new Point(64, 16);
-			arg_485_0.set_Location(location);
-			this.labelFileName.set_Name("labelFileName");
+			arg_485_0.Location = location;
+			this.labelFileName.Name = "labelFileName";
 			Control arg_4AF_0 = this.labelFileName;
 			size = new Size(224, 16);
-			arg_4AF_0.set_Size(size);
-			this.labelFileName.set_TabIndex(4);
-			this.labelFileName.set_Visible(false);
-			this.labelSize.set_FlatStyle(3);
+			arg_4AF_0.Size = size;
+			this.labelFileName.TabIndex = 4;
+			this.labelFileName.Visible = false;
+			this.labelSize.FlatStyle = 3;
 			Control arg_4EA_0 = this.labelSize;
 			location = new Point(64, 32);
-			arg_4EA_0.set_Location(location);
-			this.labelSize.set_Name("labelSize");
+			arg_4EA_0.Location = location;
+			this.labelSize.Name = "labelSize";
 			Control arg_514_0 = this.labelSize;
 			size = new Size(224, 16);
-			arg_514_0.set_Size(size);
-			this.labelSize.set_TabIndex(4);
-			this.timer.set_Interval(1);
-			this.panelProgress.set_BackColor(SystemColors.Info);
+			arg_514_0.Size = size;
+			this.labelSize.TabIndex = 4;
+			this.timer.Interval = 1;
+			this.panelProgress.BackColor = SystemColors.Info;
 			this.panelProgress.Controls.Add(this.labelProgress);
 			Control arg_56C_0 = this.panelProgress;
 			location = new Point(28, 140);
-			arg_56C_0.set_Location(location);
-			this.panelProgress.set_Name("panelProgress");
+			arg_56C_0.Location = location;
+			this.panelProgress.Name = "panelProgress";
 			Control arg_596_0 = this.panelProgress;
 			size = new Size(240, 32);
-			arg_596_0.set_Size(size);
-			this.panelProgress.set_TabIndex(14);
-			this.labelProgress.set_FlatStyle(3);
-            this.labelProgress.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0));
-			this.labelProgress.set_ForeColor(SystemColors.ControlText);
+			arg_596_0.Size = size;
+			this.panelProgress.TabIndex = 14;
+			this.labelProgress.FlatStyle = 3;
+            this.labelProgress.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
+			this.labelProgress.ForeColor = SystemColors.ControlText;
 			Control arg_5F2_0 = this.labelProgress;
 			location = new Point(48, 8);
-			arg_5F2_0.set_Location(location);
-			this.labelProgress.set_Name("labelProgress");
+			arg_5F2_0.Location = location;
+			this.labelProgress.Name = "labelProgress";
 			Control arg_61C_0 = this.labelProgress;
 			size = new Size(152, 16);
-			arg_61C_0.set_Size(size);
-			this.labelProgress.set_TabIndex(0);
-			this.labelProgress.set_Text("Collecting information…");
-			this.set_AcceptButton(this.buttonClose);
+			arg_61C_0.Size = size;
+			this.labelProgress.TabIndex = 0;
+			this.labelProgress.Text = "Collecting information…";
+			this.AcceptButton = this.buttonClose;
 			size = new Size(5, 13);
-			this.set_AutoScaleBaseSize(size);
-			this.set_BackColor(SystemColors.Info);
-			this.set_CancelButton(this.buttonClose);
+			this.AutoScaleBaseSize = size;
+			this.BackColor = SystemColors.Info;
+			this.CancelButton = this.buttonClose;
 			size = new Size(296, 288);
-			this.set_ClientSize(size);
-			this.set_ControlBox(false);
+			this.ClientSize = size;
+			this.ControlBox = false;
 			this.Controls.Add(this.panelProgress);
 			this.Controls.Add(this.labelFileName);
 			this.Controls.Add(this.tabControl);
 			this.Controls.Add(this.pictThumbnail);
 			this.Controls.Add(this.buttonClose);
 			this.Controls.Add(this.labelSize);
-			this.set_FormBorderStyle(0);
-			this.set_MaximizeBox(false);
-			this.set_MinimizeBox(false);
-			this.set_Name("PropertiesForm");
-			this.set_ShowInTaskbar(false);
-			this.set_SizeGripStyle(1);
-			this.set_StartPosition(4);
-			this.set_Text("PropertiesForm");
+			this.FormBorderStyle = 0;
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
+			this.Name = "PropertiesForm";
+			this.ShowInTaskbar = false;
+			this.SizeGripStyle = 1;
+			this.StartPosition = 4;
+			this.Text = "PropertiesForm";
 			this.tabControl.ResumeLayout(false);
 			this.pageActions.ResumeLayout(false);
 			this.panelProgress.ResumeLayout(false);
@@ -476,7 +476,7 @@ namespace FotoVision
 		{
 			base.OnLoad(e);
 			this.Update();
-			this._timer.set_Enabled(true);
+			this._timer.Enabled = true;
 		}
 		protected override void OnClosed(EventArgs e)
 		{
@@ -489,11 +489,11 @@ namespace FotoVision
 		}
 		private void timer_Tick(object sender, EventArgs e)
 		{
-			this._timer.set_Enabled(false);
-			Cursor.set_Current(Cursors.WaitCursor);
+			this._timer.Enabled = false;
+			Cursor.Current = Cursors.WaitCursor;
 			this.GetInfo();
-			this.panelProgress.set_Visible(false);
-			Cursor.set_Current(Cursors.Default);
+			this.panelProgress.Visible = false;
+			Cursor.Current = Cursors.Default;
 		}
 		private void GetInfo()
 		{
@@ -504,9 +504,9 @@ namespace FotoVision
 				this._photoInfo.Read(this._path, bitmap, bitmap.RawFormat);
 				this._exif = new Exif();
 				this._exif.Read(bitmap);
-				this.labelSize.set_Text(string.Format("{0} x {1} pixels", this._photoInfo.ImageSize.Width, this._photoInfo.ImageSize.Height));
-				this.pictThumbnail.set_Image(PhotoHelper.GetThumbnail(bitmap, this.pictThumbnail.Width));
-				this.textActions.set_Text(this.GetActionList());
+				this.labelSize.Text = string.Format("{0} x {1} pixels", this._photoInfo.ImageSize.Width, this._photoInfo.ImageSize.Height);
+				this.pictThumbnail.Image = PhotoHelper.GetThumbnail(bitmap, this.pictThumbnail.Width);
+				this.textActions.Text = this.GetActionList();
 				this.pageFile.Invalidate();
 			}
 			catch (Exception expr_CA)
@@ -595,23 +595,23 @@ namespace FotoVision
 				num = this.Font.Height + 2;
 				g.DrawString("Size", this._fontHeader, SystemBrushes.ControlText, rectangleF);
 			}
-			rectangleF.set_Y(rectangleF.Y + (float)num);
+			rectangleF.Y = rectangleF.Y + (float)num;
 			g.DrawString(this._photoInfo.FileLengthString, this.Font, SystemBrushes.ControlText, rectangleF, this._format);
-			rectangleF.set_Y(rectangleF.Y + (float)num);
-			rectangleF.set_Y(rectangleF.Y + (float)(num / 2));
+			rectangleF.Y = rectangleF.Y + (float)num;
+			rectangleF.Y = rectangleF.Y + (float)(num / 2);
 			g.DrawString("Created", this._fontHeader, SystemBrushes.ControlText, rectangleF);
-			rectangleF.set_Y(rectangleF.Y + (float)num);
+			rectangleF.Y = rectangleF.Y + (float)num;
 			g.DrawString(this._photoInfo.DateCreated.ToLongDateString() + " " + this._photoInfo.DateCreated.ToLongTimeString(), this.Font, SystemBrushes.ControlText, rectangleF, this._format);
-			rectangleF.set_Y(rectangleF.Y + (float)num);
-			rectangleF.set_Y(rectangleF.Y + (float)(num / 2));
+			rectangleF.Y = rectangleF.Y + (float)num;
+			rectangleF.Y = rectangleF.Y + (float)(num / 2);
 			g.DrawString("Modified", this._fontHeader, SystemBrushes.ControlText, rectangleF);
-			rectangleF.set_Y(rectangleF.Y + (float)num);
+			rectangleF.Y = rectangleF.Y + (float)num;
 			g.DrawString(this._photoInfo.DateModified.ToLongDateString() + " " + this._photoInfo.DateModified.ToLongTimeString(), this.Font, SystemBrushes.ControlText, rectangleF, this._format);
-			rectangleF.set_Y(rectangleF.Y + (float)num);
-			rectangleF.set_Y(rectangleF.Y + (float)(num / 2));
+			rectangleF.Y = rectangleF.Y + (float)num;
+			rectangleF.Y = rectangleF.Y + (float)(num / 2);
 			g.DrawString("Location", this._fontHeader, SystemBrushes.ControlText, rectangleF);
-			rectangleF.set_Y(rectangleF.Y + (float)num);
-			rectangleF.set_Height((float)checked(this.Font.Height * 2));
+			rectangleF.Y = rectangleF.Y + (float)num;
+			rectangleF.Height = (float)checked(this.Font.Height * 2);
 			g.DrawString(Path.GetDirectoryName(this._path), this.Font, SystemBrushes.ControlText, rectangleF, this._format);
 		}
 		private void DrawExifInfo(Graphics g)
@@ -628,32 +628,32 @@ namespace FotoVision
 				num = this.Font.Height + 2;
 				g.DrawString("Camera", this._fontHeader, SystemBrushes.ControlText, rectangleF);
 			}
-			rectangleF.set_Y(rectangleF.Y + (float)num);
+			rectangleF.Y = rectangleF.Y + (float)num;
 			if (this._exif.Make.Length == 0 && this._exif.Model.Length == 0)
 			{
 				g.DrawString("(none)", this.Font, SystemBrushes.ControlText, rectangleF, this._format);
-				rectangleF.set_Y(rectangleF.Y + (float)num);
+				rectangleF.Y = rectangleF.Y + (float)num;
 			}
 			else
 			{
 				if (this._exif.Make.Length > 0)
 				{
 					g.DrawString(this._exif.Make, this.Font, SystemBrushes.ControlText, rectangleF, this._format);
-					rectangleF.set_Y(rectangleF.Y + (float)num);
+					rectangleF.Y = rectangleF.Y + (float)num;
 				}
 				if (this._exif.Model.Length > 0)
 				{
 					g.DrawString(this._exif.Model, this.Font, SystemBrushes.ControlText, rectangleF, this._format);
-					rectangleF.set_Y(rectangleF.Y + (float)num);
+					rectangleF.Y = rectangleF.Y + (float)num;
 				}
 			}
-			rectangleF.set_Y(rectangleF.Y + (float)(num / 2));
+			rectangleF.Y = rectangleF.Y + (float)(num / 2);
 			g.DrawString("Settings", this._fontHeader, SystemBrushes.ControlText, rectangleF);
-			rectangleF.set_Y(rectangleF.Y + (float)num);
+			rectangleF.Y = rectangleF.Y + (float)num;
 			if (this._exif.ExposureTime == 0f && this._exif.Aperture == 0f && this._exif.Iso == 0)
 			{
 				g.DrawString("(none)", this.Font, SystemBrushes.ControlText, rectangleF, this._format);
-				rectangleF.set_Y(rectangleF.Y + (float)num);
+				rectangleF.Y = rectangleF.Y + (float)num;
 			}
 			else
 			{
@@ -667,7 +667,7 @@ namespace FotoVision
 					text = this._exif.ExposureTime.ToString("f1", CultureInfo.CurrentCulture);
 				}
 				g.DrawString(string.Format("{0} sec, F {1}", text, this._exif.Aperture.ToString("f1", CultureInfo.CurrentCulture)), this.Font, SystemBrushes.ControlText, rectangleF, this._format);
-				rectangleF.set_Y(rectangleF.Y + (float)num);
+				rectangleF.Y = rectangleF.Y + (float)num;
 				if (this._exif.Iso == 0)
 				{
 					g.DrawString(StringType.FromObject(Interaction.IIf(this._exif.Flash, "Flash", "No flash")), this.Font, SystemBrushes.ControlText, rectangleF, this._format);
@@ -676,18 +676,18 @@ namespace FotoVision
 				{
 					g.DrawString(string.Format("ISO {0}, {1}", this._exif.Iso, StringType.FromObject(Interaction.IIf(this._exif.Flash, "Flash", "No flash"))), this.Font, SystemBrushes.ControlText, rectangleF, this._format);
 				}
-				rectangleF.set_Y(rectangleF.Y + (float)num);
+				rectangleF.Y = rectangleF.Y + (float)num;
 			}
-			rectangleF.set_Y(rectangleF.Y + (float)(num / 2));
+			rectangleF.Y = rectangleF.Y + (float)(num / 2);
 			g.DrawString("Comments", this._fontHeader, SystemBrushes.ControlText, rectangleF);
-			rectangleF.set_Y(rectangleF.Y + (float)num);
+			rectangleF.Y = rectangleF.Y + (float)num;
 			if (this._exif.UserComment.Length == 0)
 			{
 				g.DrawString("(none)", this.Font, SystemBrushes.ControlText, rectangleF, this._format);
 			}
 			else
 			{
-				rectangleF.set_Height((float)checked(this.Font.Height * 2));
+				rectangleF.Height = (float)checked(this.Font.Height * 2);
 				g.DrawString(this._exif.UserComment, this.Font, SystemBrushes.ControlText, rectangleF, this._format);
 			}
 		}

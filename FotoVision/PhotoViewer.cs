@@ -116,18 +116,18 @@ namespace FotoVision
 				Bitmap result;
 				try
 				{
-					Cursor.set_Current(Cursors.WaitCursor);
+					Cursor.Current = Cursors.WaitCursor;
 					Global.Progress.Update(this, "Processing photo", 1, 2);
 					Bitmap bitmap = new Bitmap(this._photo.PhotoPath);
 					Global.Progress.Complete(this);
-					Cursor.set_Current(Cursors.Default);
+					Cursor.Current = Cursors.Default;
 					OptimizeActions optimizeActions = new OptimizeActions();
 					optimizeActions.Apply(ref bitmap, 0f);
 					result = new Bitmap(bitmap);
 					bitmap.Dispose();
 					bitmap = null;
 					Global.Progress.Complete(this);
-					Cursor.set_Current(Cursors.Default);
+					Cursor.Current = Cursors.Default;
 				}
 				catch (Exception expr_7B)
 				{
@@ -165,7 +165,7 @@ namespace FotoVision
 		{
 			try
 			{
-				Cursor.set_Current(Cursors.WaitCursor);
+				Cursor.Current = Cursors.WaitCursor;
 				Global.Progress.Update(this, "Processing photo", 1, 2);
 				if (FileManager.IsFileReadOnly(this.Photo.PhotoPath))
 				{
@@ -175,7 +175,7 @@ namespace FotoVision
 				Bitmap bitmap2 = new Bitmap(bitmap);
 				ImageFormat rawFormat = bitmap.RawFormat;
 				Global.Progress.Complete(this);
-				Cursor.set_Current(Cursors.Default);
+				Cursor.Current = Cursors.Default;
 				OptimizeActions optimizeActions = new OptimizeActions();
 				optimizeActions.Apply(ref bitmap2, 0f);
 				if (Global.Settings.GetBool(SettingKey.MaintainExifInfo))
@@ -209,7 +209,7 @@ namespace FotoVision
 				}
 			}
 			Global.Progress.Complete(this);
-			Cursor.set_Current(Cursors.Default);
+			Cursor.Current = Cursors.Default;
 		}
 		public void ClearCrop()
 		{
@@ -264,7 +264,7 @@ namespace FotoVision
 				int num5 = (int)Math.Round((double)((float)this._workingImage.Height / num3));
 				int num6 = (this.Width - num4) / 2;
 				int num7 = (this.Height - num5) / 2;
-				g.set_InterpolationMode(3);
+				g.InterpolationMode = 3;
 				Rectangle rectangle = new Rectangle(num6, num7, num4, num5);
 				g.DrawImage(this._workingImage, rectangle, 0, 0, this._workingImage.Width, this._workingImage.Height, 2);
 				g.DrawRectangle(this._penFrame, rectangle);
@@ -280,7 +280,7 @@ namespace FotoVision
 		{
 			try
 			{
-				Cursor.set_Current(Cursors.WaitCursor);
+				Cursor.Current = Cursors.WaitCursor;
 				Global.Progress.Update(this, "Loading photo", 1, 2);
 				Bitmap bitmap = new Bitmap(this._photo.PhotoPath);
 				Global.Progress.Update(this, "Loading photo", 2, 2);
@@ -302,7 +302,7 @@ namespace FotoVision
 				}
 			}
 			Global.Progress.Complete(this);
-			Cursor.set_Current(Cursors.Default);
+			Cursor.Current = Cursors.Default;
 		}
 		private void OnNewPhoto(string path, Bitmap srcImage, ImageFormat format)
 		{
@@ -343,7 +343,7 @@ namespace FotoVision
 					Graphics graphics = Graphics.FromImage(this._startingImage);
 					try
 					{
-						graphics.set_InterpolationMode(3);
+						graphics.InterpolationMode = 3;
 						Rectangle rectangle = new Rectangle(0, 0, num2, num3);
 						graphics.DrawImage(srcImage, rectangle, 0, 0, srcImage.Width, srcImage.Height, 2);
 					}
@@ -402,7 +402,7 @@ namespace FotoVision
 			{
 				return;
 			}
-			this.set_Capture(true);
+			this.Capture = true;
 			this.Invalidate();
 			this.Update();
 			this._cropHelper.MouseDown(e.X, e.Y);
@@ -431,7 +431,7 @@ namespace FotoVision
 			{
 				return;
 			}
-			this.set_Capture(false);
+			this.Capture = false;
 			this._cropHelper.MouseUp(e.X, e.Y);
 			this.Invalidate();
 		}

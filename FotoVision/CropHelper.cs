@@ -74,10 +74,10 @@ namespace FotoVision
 			set
 			{
 				this._photoBounds = value;
-				this._selArea.set_X(this._photoBounds.Left);
-				this._selArea.set_Y(this._photoBounds.Top);
-				this._selArea.set_Width(0);
-				this._selArea.set_Height(0);
+				this._selArea.X = this._photoBounds.Left;
+				this._selArea.Y = this._photoBounds.Top;
+				this._selArea.Width = 0;
+				this._selArea.Height = 0;
 				this.Empty = true;
 			}
 		}
@@ -131,17 +131,17 @@ namespace FotoVision
 				return;
 			}
 			this._mouseCaptured = true;
-			Cursor.set_Current(CropHelper.CursorLookup[(int)this._dragMode]);
+			Cursor.Current = CropHelper.CursorLookup[(int)this._dragMode];
 			if (this._dragMode == CropHelper.DragMode.None)
 			{
-				this._originalPoint.set_X(x);
-				this._originalPoint.set_Y(y);
+				this._originalPoint.X = x;
+				this._originalPoint.Y = y;
 				this._drewFrame = false;
 			}
 			else
 			{
-				this._lastPoint.set_X(x);
-				this._lastPoint.set_Y(y);
+				this._lastPoint.X = x;
+				this._lastPoint.Y = y;
 				this.DrawReversibleRectangle();
 				this._drewFrame = true;
 			}
@@ -176,7 +176,7 @@ namespace FotoVision
 			{
 				return;
 			}
-			Cursor.set_Current(CropHelper.CursorLookup[(int)this._dragMode]);
+			Cursor.Current = CropHelper.CursorLookup[(int)this._dragMode];
 			if (this._dragMode == CropHelper.DragMode.None)
 			{
 				if (this._drewFrame)
@@ -185,11 +185,11 @@ namespace FotoVision
 				}
 				if (x >= this._photoBounds.Left & x <= this._photoBounds.Right)
 				{
-					this._lastPoint.set_X(x);
+					this._lastPoint.X = x;
 				}
 				if (y >= this._photoBounds.Top & y <= this._photoBounds.Bottom)
 				{
-					this._lastPoint.set_Y(y);
+					this._lastPoint.Y = y;
 				}
 				this.DrawReversibleRectangle(this._originalPoint, this._lastPoint);
 				this._drewFrame = true;
@@ -207,58 +207,58 @@ namespace FotoVision
 					selArea.Offset(num, num2);
 					break;
 				case CropHelper.DragMode.TopLeft:
-					selArea.set_Y(selArea.Y + num2);
-					selArea.set_Height(selArea.Height - num2);
-					selArea.set_X(selArea.X + num);
-					selArea.set_Width(selArea.Width - num);
+					selArea.Y = selArea.Y + num2;
+					selArea.Height = selArea.Height - num2;
+					selArea.X = selArea.X + num;
+					selArea.Width = selArea.Width - num;
 					break;
 				case CropHelper.DragMode.Top:
-					selArea.set_Y(selArea.Y + num2);
-					selArea.set_Height(selArea.Height - num2);
+					selArea.Y = selArea.Y + num2;
+					selArea.Height = selArea.Height - num2;
 					break;
 				case CropHelper.DragMode.TopRight:
-					selArea.set_Y(selArea.Y + num2);
-					selArea.set_Height(selArea.Height - num2);
-					selArea.set_Width(selArea.Width + num);
+					selArea.Y = selArea.Y + num2;
+					selArea.Height = selArea.Height - num2;
+					selArea.Width = selArea.Width + num;
 					break;
 				case CropHelper.DragMode.Right:
-					selArea.set_Width(selArea.Width + num);
+					selArea.Width = selArea.Width + num;
 					break;
 				case CropHelper.DragMode.BottomRight:
-					selArea.set_Width(selArea.Width + num);
-					selArea.set_Height(selArea.Height + num2);
+					selArea.Width = selArea.Width + num;
+					selArea.Height = selArea.Height + num2;
 					break;
 				case CropHelper.DragMode.Bottom:
-					selArea.set_Height(selArea.Height + num2);
+					selArea.Height = selArea.Height + num2;
 					break;
 				case CropHelper.DragMode.BottomLeft:
-					selArea.set_X(selArea.X + num);
-					selArea.set_Width(selArea.Width - num);
-					selArea.set_Height(selArea.Height + num2);
+					selArea.X = selArea.X + num;
+					selArea.Width = selArea.Width - num;
+					selArea.Height = selArea.Height + num2;
 					break;
 				case CropHelper.DragMode.Left:
-					selArea.set_X(selArea.X + num);
-					selArea.set_Width(selArea.Width - num);
+					selArea.X = selArea.X + num;
+					selArea.Width = selArea.Width - num;
 					break;
 				}
 				Rectangle rectangle = this.NormalizeArea(selArea);
 				if (rectangle.Left >= this._photoBounds.Left & rectangle.Right <= this._photoBounds.Right)
 				{
-					this._selArea.set_X(selArea.X);
-					this._selArea.set_Width(selArea.Width);
+					this._selArea.X = selArea.X;
+					this._selArea.Width = selArea.Width;
 				}
 				if (rectangle.Top >= this._photoBounds.Top & rectangle.Bottom <= this._photoBounds.Bottom)
 				{
-					this._selArea.set_Y(selArea.Y);
-					this._selArea.set_Height(selArea.Height);
+					this._selArea.Y = selArea.Y;
+					this._selArea.Height = selArea.Height;
 				}
 				if (x >= this._photoBounds.Left & x <= this._photoBounds.Right)
 				{
-					this._lastPoint.set_X(x);
+					this._lastPoint.X = x;
 				}
 				if (y >= this._photoBounds.Top & y <= this._photoBounds.Bottom)
 				{
-					this._lastPoint.set_Y(y);
+					this._lastPoint.Y = y;
 				}
 				this.DrawReversibleRectangle();
 			}
@@ -266,13 +266,13 @@ namespace FotoVision
 		public void SetCursor(int x, int y)
 		{
 			this._dragMode = this.DragModeHitTest(this.SelectedArea, x, y);
-			Cursor.set_Current(CropHelper.CursorLookup[(int)this._dragMode]);
+			Cursor.Current = CropHelper.CursorLookup[(int)this._dragMode];
 		}
 		public void OriginalPhotoRotated()
 		{
 			int width = this._originalPhotoSize.Width;
-			this._originalPhotoSize.set_Width(this._originalPhotoSize.Height);
-			this._originalPhotoSize.set_Height(width);
+			this._originalPhotoSize.Width = this._originalPhotoSize.Height;
+			this._originalPhotoSize.Height = width;
 		}
 		private CropHelper.DragMode DragModeHitTest(Rectangle area, int x, int y)
 		{
@@ -319,12 +319,12 @@ namespace FotoVision
 		}
 		private void DrawReversibleRectangle(Point p1, Point p2)
 		{
-			this._selArea.set_X(p1.X);
-			this._selArea.set_Y(p1.Y);
+			this._selArea.X = p1.X;
+			this._selArea.Y = p1.Y;
 			checked
 			{
-				this._selArea.set_Width(p2.X - p1.X);
-				this._selArea.set_Height(p2.Y - p1.Y);
+				this._selArea.Width = p2.X - p1.X;
+				this._selArea.Height = p2.Y - p1.Y;
 				this.DrawReversibleRectangle();
 			}
 		}
@@ -339,13 +339,13 @@ namespace FotoVision
 			{
 				if (area.Width < 0)
 				{
-					result.set_X(area.Right);
-					result.set_Width(0 - area.Width);
+					result.X = area.Right;
+					result.Width = 0 - area.Width;
 				}
 				if (area.Height < 0)
 				{
-					result.set_Y(area.Bottom);
-					result.set_Height(0 - area.Height);
+					result.Y = area.Bottom;
+					result.Height = 0 - area.Height;
 				}
 				return result;
 			}

@@ -236,16 +236,16 @@ namespace FotoVision
 			}
 			set
 			{
-				this.CaptionControl.set_Visible(!value);
-				this.labelPos.set_Visible(value);
+				this.CaptionControl.Visible = !value;
+				this.labelPos.Visible = value;
 				if (value)
 				{
-					this.labelPos.set_Text(string.Format("Photo {0} of {1}", checked(this.CurrentPhotoIndex + 1), this.Count));
-					this.photoViewer.set_ContextMenu(null);
+					this.labelPos.Text = string.Format("Photo {0} of {1}", checked(this.CurrentPhotoIndex + 1), this.Count);
+					this.photoViewer.ContextMenu = null;
 				}
 				else
 				{
-					this.photoViewer.set_ContextMenu(this.menuPhoto);
+					this.photoViewer.ContextMenu = this.menuPhoto;
 				}
 			}
 		}
@@ -712,20 +712,20 @@ namespace FotoVision
 			this.labelPos = new Label();
 			this.photoViewer.SuspendLayout();
 			this.SuspendLayout();
-			this.listView.set_AllowDrop(true);
-			this.listView.set_BackColor(Color.DarkGray);
-			this.listView.set_BorderStyle(0);
-			this.listView.set_ContextMenu(this.menuThumbnails);
-			this.listView.set_Dock(5);
-			this.listView.set_LabelEdit(true);
+			this.listView.AllowDrop = true;
+			this.listView.BackColor = Color.DarkGray;
+			this.listView.BorderStyle = 0;
+			this.listView.ContextMenu = this.menuThumbnails;
+			this.listView.Dock = 5;
+			this.listView.LabelEdit = true;
 			Control arg_144_0 = this.listView;
 			Point location = new Point(2, 22);
-			arg_144_0.set_Location(location);
-			this.listView.set_Name("listView");
+			arg_144_0.Location = location;
+			this.listView.Name = "listView";
 			Control arg_171_0 = this.listView;
 			Size size = new Size(252, 256);
-			arg_171_0.set_Size(size);
-			this.listView.set_TabIndex(1);
+			arg_171_0.Size = size;
+			this.listView.TabIndex = 1;
 			this.menuThumbnails.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuOpen,
@@ -739,79 +739,79 @@ namespace FotoVision
 				this.menuSep3,
 				this.menuProperties
 			});
-			this.menuOpen.set_Index(0);
+			this.menuOpen.Index = 0;
 			this.menuOpen.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuPhotoShow,
 				this.menuPhotoShowDetails,
 				this.menuPhotoActions
 			});
-			this.menuOpen.set_Text("Open");
-			this.menuPhotoShow.set_Index(0);
-			this.menuPhotoShow.set_Text("Photo Show");
-			this.menuPhotoShowDetails.set_Index(1);
-			this.menuPhotoShowDetails.set_Text("Photo Show with Descriptions");
-			this.menuPhotoActions.set_Index(2);
-			this.menuPhotoActions.set_Text("Photo Actions");
-			this.menuSelectAll.set_Index(1);
-			this.menuSelectAll.set_Text("Select All");
-			this.menuSep1.set_Index(2);
-			this.menuSep1.set_Text("-");
-			this.menuRotateLeft.set_Index(3);
-			this.menuRotateLeft.set_Text("Rotate Left");
-			this.menuRotateRight.set_Index(4);
-			this.menuRotateRight.set_Text("Rotate Right");
-			this.menuSep2.set_Index(5);
-			this.menuSep2.set_Text("-");
-			this.menuDelete.set_Index(6);
-			this.menuDelete.set_Text("Delete");
-			this.menuRename.set_Index(7);
-			this.menuRename.set_Text("Rename");
-			this.menuSep3.set_Index(8);
-			this.menuSep3.set_Text("-");
-			this.menuProperties.set_Index(9);
-			this.menuProperties.set_Text("Properties");
-			this.photoViewer.set_BackColor(Color.DarkGray);
-			this.photoViewer.set_ContextMenu(this.menuPhoto);
+			this.menuOpen.Text = "Open";
+			this.menuPhotoShow.Index = 0;
+			this.menuPhotoShow.Text = "Photo Show";
+			this.menuPhotoShowDetails.Index = 1;
+			this.menuPhotoShowDetails.Text = "Photo Show with Descriptions";
+			this.menuPhotoActions.Index = 2;
+			this.menuPhotoActions.Text = "Photo Actions";
+			this.menuSelectAll.Index = 1;
+			this.menuSelectAll.Text = "Select All";
+			this.menuSep1.Index = 2;
+			this.menuSep1.Text = "-";
+			this.menuRotateLeft.Index = 3;
+			this.menuRotateLeft.Text = "Rotate Left";
+			this.menuRotateRight.Index = 4;
+			this.menuRotateRight.Text = "Rotate Right";
+			this.menuSep2.Index = 5;
+			this.menuSep2.Text = "-";
+			this.menuDelete.Index = 6;
+			this.menuDelete.Text = "Delete";
+			this.menuRename.Index = 7;
+			this.menuRename.Text = "Rename";
+			this.menuSep3.Index = 8;
+			this.menuSep3.Text = "-";
+			this.menuProperties.Index = 9;
+			this.menuProperties.Text = "Properties";
+			this.photoViewer.BackColor = Color.DarkGray;
+			this.photoViewer.ContextMenu = this.menuPhoto;
 			this.photoViewer.Controls.Add(this.labelPos);
 			this.photoViewer.CropMode = false;
-			this.photoViewer.set_Dock(5);
+			this.photoViewer.Dock = 5;
 			this.photoViewer.EditMode = false;
 			Control arg_402_0 = this.photoViewer;
 			location = new Point(2, 22);
-			arg_402_0.set_Location(location);
-			this.photoViewer.set_Name("photoViewer");
+			arg_402_0.Location = location;
+			this.photoViewer.Name = "photoViewer";
 			this.photoViewer.Photo = null;
 			Control arg_43B_0 = this.photoViewer;
 			size = new Size(252, 256);
-			arg_43B_0.set_Size(size);
-			this.photoViewer.set_TabIndex(2);
-			this.photoViewer.set_Visible(false);
+			arg_43B_0.Size = size;
+			this.photoViewer.TabIndex = 2;
+			this.photoViewer.Visible = false;
 			this.menuPhoto.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuPhotoProperties
 			});
-			this.menuPhotoProperties.set_Index(0);
-			this.menuPhotoProperties.set_Text("Properties");
-			this.labelPos.set_Anchor(10);
-			this.labelPos.set_BackColor(Color.Transparent);
+			this.menuPhotoProperties.Index = 0;
+			this.menuPhotoProperties.Text = "Properties";
+			this.labelPos.Anchor = 10;
+			this.labelPos.BackColor = Color.Transparent;
 			Control arg_4CA_0 = this.labelPos;
 			location = new Point(152, 240);
-			arg_4CA_0.set_Location(location);
-			this.labelPos.set_Name("labelPos");
+			arg_4CA_0.Location = location;
+			this.labelPos.Name = "labelPos";
 			Control arg_4F1_0 = this.labelPos;
 			size = new Size(96, 16);
-			arg_4F1_0.set_Size(size);
-			this.labelPos.set_TabIndex(3);
-			this.labelPos.set_Text("Photo xx of xx");
-			this.labelPos.set_TextAlign(1024);
-			this.set_BackColor(SystemColors.Control);
+			arg_4F1_0.Size = size;
+			this.labelPos.TabIndex = 3;
+			this.labelPos.Text = "Photo xx of xx";
+			this.labelPos.TextAlign = 1024;
+			this.BackColor = SystemColors.Control;
 			this.Controls.Add(this.photoViewer);
 			this.Controls.Add(this.listView);
-			this.DockPadding.set_All(2);
-			this.set_Name("PhotosPane");
+			this.DockPadding.All = 2;
+			this.Name = "PhotosPane";
 			size = new Size(256, 280);
-			this.set_Size(size);
+			this.Size = size;
 			this.Controls.SetChildIndex(this.listView, 0);
 			this.Controls.SetChildIndex(this.photoViewer, 0);
 			this.photoViewer.ResumeLayout(false);
@@ -825,7 +825,7 @@ namespace FotoVision
 				while (enumerator.MoveNext())
 				{
 					ListViewItem listViewItem = (ListViewItem)enumerator.Current;
-					listViewItem.set_Selected(true);
+					listViewItem.Selected = true;
 				}
 			}
 			finally
@@ -846,7 +846,7 @@ namespace FotoVision
 				while (enumerator.MoveNext())
 				{
 					ListViewItem listViewItem = (ListViewItem)enumerator.Current;
-					listViewItem.set_Selected(false);
+					listViewItem.Selected = false;
 				}
 			}
 			finally
@@ -894,7 +894,7 @@ namespace FotoVision
 		}
 		public void SelectPhoto(int index)
 		{
-			this.listView.Items.get_Item(index).set_Selected(true);
+			this.listView.Items.get_Item(index).Selected = true;
 		}
 		public void ClearThumbnails()
 		{
@@ -929,7 +929,7 @@ namespace FotoVision
 					for (int i = 0; i < selectedList.Length; i++)
 					{
 						int num = selectedList[i];
-						this.listView.Items.get_Item(num).set_Selected(true);
+						this.listView.Items.get_Item(num).Selected = true;
 					}
 				}
 				else
@@ -958,10 +958,10 @@ namespace FotoVision
 					Photo photo2 = (Photo)listViewItem.Tag;
 					if (StringType.StrCmp(photo2.PhotoName, photo.PhotoName, false) == 0)
 					{
-						listViewItem.set_Tag(photo);
+						listViewItem.Tag = photo;
 						if (StringType.StrCmp(listViewItem.Text, photo.Title, false) != 0)
 						{
-							listViewItem.set_Text(photo.Title);
+							listViewItem.Text = photo.Title;
 							this.listView.Invalidate();
 						}
 						break;
@@ -983,7 +983,7 @@ namespace FotoVision
 			this.photoViewer.Invalidate();
 			if (this.FullScreen)
 			{
-				this.labelPos.set_Text(string.Format("Photo {0} of {1}", checked(index + 1), this.Count));
+				this.labelPos.Text = string.Format("Photo {0} of {1}", checked(index + 1), this.Count);
 			}
 		}
 		public void OpenSelectedPhoto()
@@ -1000,11 +1000,11 @@ namespace FotoVision
 			{
 				if (this.listView.SelectedItems.Count > 0)
 				{
-					Cursor.set_Current(Cursors.WaitCursor);
+					Cursor.Current = Cursors.WaitCursor;
 					this.RotateThumbnails(actionItem);
 					Global.Progress.Complete(this);
 					result = true;
-					Cursor.set_Current(Cursors.Default);
+					Cursor.Current = Cursors.Default;
 				}
 			}
 			else
@@ -1154,17 +1154,17 @@ namespace FotoVision
 		{
 			if (!this.listView.Visible)
 			{
-				this.listView.set_Visible(true);
+				this.listView.Visible = true;
 				this.listView.Invalidate();
 				this.listView.Update();
-				this.photoViewer.set_Visible(false);
+				this.photoViewer.Visible = false;
 			}
 		}
 		private void ShowPhoto(Photo photo)
 		{
 			this.photoViewer.Photo = photo;
-			this.photoViewer.set_Visible(true);
-			this.listView.set_Visible(false);
+			this.photoViewer.Visible = true;
+			this.listView.Visible = false;
 		}
 		private void RotateThumbnails(ActionItem actionItem)
 		{
@@ -1313,16 +1313,16 @@ namespace FotoVision
 			bool enabled = BooleanType.FromObject(Interaction.IIf(this.Count > 0 & this.SelectedCount == 1, true, false));
 			bool enabled2 = BooleanType.FromObject(Interaction.IIf(this.Count > 0 & this.SelectedCount > 0, true, false));
 			bool enabled3 = BooleanType.FromObject(Interaction.IIf(this.Count > 0, true, false));
-			this.menuOpen.set_Enabled(enabled3);
-			this.menuPhotoShow.set_Enabled(enabled3);
-			this.menuPhotoShowDetails.set_Enabled(enabled3);
-			this.menuPhotoActions.set_Enabled(enabled);
-			this.menuSelectAll.set_Enabled(enabled3);
-			this.menuRotateLeft.set_Enabled(enabled2);
-			this.menuRotateRight.set_Enabled(enabled2);
-			this.menuRename.set_Enabled(enabled);
-			this.menuDelete.set_Enabled(enabled2);
-			this.menuProperties.set_Enabled(enabled);
+			this.menuOpen.Enabled = enabled3;
+			this.menuPhotoShow.Enabled = enabled3;
+			this.menuPhotoShowDetails.Enabled = enabled3;
+			this.menuPhotoActions.Enabled = enabled;
+			this.menuSelectAll.Enabled = enabled3;
+			this.menuRotateLeft.Enabled = enabled2;
+			this.menuRotateRight.Enabled = enabled2;
+			this.menuRename.Enabled = enabled;
+			this.menuDelete.Enabled = enabled2;
+			this.menuProperties.Enabled = enabled;
 		}
 		private void menu_Click(object sender, EventArgs e)
 		{

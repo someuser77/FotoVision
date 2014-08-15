@@ -122,13 +122,13 @@ namespace FotoVision
 		{
 			this._processingIndexChanged = false;
 			this._curIndex = -1;
-			this.set_BackColor(SystemColors.Control);
-			this.set_DrawMode(1);
-			this.set_ItemHeight(checked(this.Font.Height * 8 + 35 + 19));
+			this.BackColor = SystemColors.Control;
+			this.DrawMode = 1;
+			this.ItemHeight = checked(this.Font.Height * 8 + 35 + 19);
 			this._textHeight = this.Font.Height;
 			this.InitChildControls();
 			this._format = new StringFormat();
-			this._format.set_Trimming(3);
+			this._format.Trimming = 3;
 		}
 		public void SetPhotos(Photo[] photos)
 		{
@@ -160,7 +160,7 @@ namespace FotoVision
 			e.Processed = false;
 			if (this.SelectedIndex != -1 & this.SelectedIndex > 0)
 			{
-				this.set_SelectedIndex(checked(this.SelectedIndex - 1));
+				this.SelectedIndex = checked(this.SelectedIndex - 1);
 				this._textDate.Focus();
 				this._textDate.SelectAll();
 				e.Processed = true;
@@ -173,7 +173,7 @@ namespace FotoVision
 			{
 				if (this.SelectedIndex != -1 & this.SelectedIndex < this.Items.Count - 1)
 				{
-					this.set_SelectedIndex(this.SelectedIndex + 1);
+					this.SelectedIndex = this.SelectedIndex + 1;
 					this._textTitle.Focus();
 					this._textTitle.SelectAll();
 					e.Processed = true;
@@ -215,23 +215,23 @@ namespace FotoVision
 			{
 				Point point = new Point(70, top + 5);
 				g.DrawString("Photo Title & Description:", this.Font, SystemBrushes.ControlText, (float)point.X, (float)point.Y);
-				point.set_Y(point.Y + (this._textHeight + 2));
+				point.Y = point.Y + (this._textHeight + 2);
 				this._titleOffset = point.Y - top;
 				g.FillRectangle(SystemBrushes.Window, point.X, point.Y, 200, this._textHeight + 4);
 				g.DrawRectangle(SystemPens.ControlDark, point.X, point.Y, 200, this._textHeight + 4);
-				point.set_Y(point.Y + (this._textHeight + 4 + 5));
+				point.Y = point.Y + (this._textHeight + 4 + 5);
 				this._descOffset = point.Y - top;
 				g.FillRectangle(SystemBrushes.Window, point.X, point.Y, 200, this._textHeight * 4 + 2);
 				g.DrawRectangle(SystemPens.ControlDark, point.X, point.Y, 200, this._textHeight * 4 + 2);
-				point.set_Y(point.Y + (this._textHeight * 4 + 6 + 5));
+				point.Y = point.Y + (this._textHeight * 4 + 6 + 5);
 				g.DrawString("Date Taken", this.Font, SystemBrushes.ControlText, (float)point.X, (float)point.Y);
 				int width = g.MeasureString("Date Taken", this.Font).ToSize().Width;
 				g.DrawString("(default: date created):", this.Font, SystemBrushes.ControlText, (float)(point.X + width + 2), (float)point.Y);
-				point.set_Y(point.Y + (this._textHeight + 2));
+				point.Y = point.Y + (this._textHeight + 2);
 				this._dateOffset = point.Y - top;
 				g.FillRectangle(SystemBrushes.Window, point.X, point.Y, 100, this._textHeight + 4);
 				g.DrawRectangle(SystemPens.ControlDark, point.X, point.Y, 100, this._textHeight + 4);
-				point.set_Y(point.Y + (this._textHeight + 4 + 10));
+				point.Y = point.Y + (this._textHeight + 4 + 10);
 				g.DrawLine(SystemPens.ControlDark, 10, point.Y, point.X + 200, point.Y);
 			}
 		}
@@ -242,7 +242,7 @@ namespace FotoVision
 				return;
 			}
 			Photo photo = (Photo)this.Items.get_Item(index);
-			g.set_TextRenderingHint(1);
+			g.TextRenderingHint = 1;
 			string arg_64_1 = photo.Title;
 			Font arg_64_2 = this.Font;
 			Brush arg_64_3 = SystemBrushes.WindowText;
@@ -331,9 +331,9 @@ namespace FotoVision
 		}
 		private void HideControls()
 		{
-			this._textTitle.set_Visible(false);
-			this._textDesc.set_Visible(false);
-			this._textDate.set_Visible(false);
+			this._textTitle.Visible = false;
+			this._textDesc.Visible = false;
+			this._textDate.Visible = false;
 		}
 		private void ShowControls()
 		{
@@ -347,20 +347,20 @@ namespace FotoVision
 			Photo photo = (Photo)this.Items.Item(this.get_SelectedIndex);
 			Rectangle itemRectangle = this.GetItemRectangle(this.SelectedIndex);
 			this.HideControls();
-			this._textTitle.set_Left(74);
+			this._textTitle.Left = 74;
 			checked
 			{
-				this._textTitle.set_Top(itemRectangle.Top + this._titleOffset + 2);
-				this._textTitle.set_Text(photo.Title);
-				this._textTitle.set_Visible(true);
-				this._textDesc.set_Left(74);
-				this._textDesc.set_Top(itemRectangle.Top + this._descOffset + 2);
-				this._textDesc.set_Text(photo.Description);
-				this._textDesc.set_Visible(true);
-				this._textDate.set_Left(74);
-				this._textDate.set_Top(itemRectangle.Top + this._dateOffset + 2);
-				this._textDate.set_Text(photo.DateTaken);
-				this._textDate.set_Visible(true);
+				this._textTitle.Top = itemRectangle.Top + this._titleOffset + 2;
+				this._textTitle.Text = photo.Title;
+				this._textTitle.Visible = true;
+				this._textDesc.Left = 74;
+				this._textDesc.Top = itemRectangle.Top + this._descOffset + 2;
+				this._textDesc.Text = photo.Description;
+				this._textDesc.Visible = true;
+				this._textDate.Left = 74;
+				this._textDate.Top = itemRectangle.Top + this._dateOffset + 2;
+				this._textDate.Text = photo.DateTaken;
+				this._textDate.Visible = true;
 			}
 		}
 		protected override void OnMouseUp(MouseEventArgs e)
@@ -377,21 +377,21 @@ namespace FotoVision
 			this._textTitle = new TabTextBox();
 			this._textDesc = new TextBox();
 			this._textDate = new TabTextBox();
-			this._textTitle.set_Visible(false);
-			this._textDesc.set_Visible(false);
-			this._textDate.set_Visible(false);
-			this._textTitle.set_BorderStyle(0);
-			this._textDesc.set_BorderStyle(0);
-			this._textDate.set_BorderStyle(0);
-			this._textDesc.set_Multiline(true);
-			this._textDesc.set_WordWrap(true);
-			this._textDesc.set_ScrollBars(2);
-			this._textTitle.set_Width(196);
-			this._textTitle.set_Height(this._textHeight);
-			this._textDesc.set_Width(196);
-			this._textDesc.set_Height(checked(this._textHeight * 4));
-			this._textDate.set_Width(96);
-			this._textDate.set_Height(this._textHeight);
+			this._textTitle.Visible = false;
+			this._textDesc.Visible = false;
+			this._textDate.Visible = false;
+			this._textTitle.BorderStyle = 0;
+			this._textDesc.BorderStyle = 0;
+			this._textDate.BorderStyle = 0;
+			this._textDesc.Multiline = true;
+			this._textDesc.WordWrap = true;
+			this._textDesc.ScrollBars = 2;
+			this._textTitle.Width = 196;
+			this._textTitle.Height = this._textHeight;
+			this._textDesc.Width = 196;
+			this._textDesc.Height = checked(this._textHeight * 4);
+			this._textDate.Width = 96;
+			this._textDate.Height = this._textHeight;
 			this.Controls.Add(this._textTitle);
 			this.Controls.Add(this._textDesc);
 			this.Controls.Add(this._textDate);

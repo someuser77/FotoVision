@@ -1634,98 +1634,98 @@ namespace FotoVision
 			this.statusPaneRight.BeginInit();
 			this.SuspendLayout();
 			this.paneAlbums.CaptionText = "My Albums";
-			this.paneAlbums.set_Dock(3);
-			this.paneAlbums.DockPadding.set_All(2);
+			this.paneAlbums.Dock = 3;
+			this.paneAlbums.DockPadding.All = 2;
 			Control arg_413_0 = this.paneAlbums;
 			Point location = new Point(0, 39);
-			arg_413_0.set_Location(location);
-			this.paneAlbums.set_Name("paneAlbums");
+			arg_413_0.Location = location;
+			this.paneAlbums.Name = "paneAlbums";
 			this.paneAlbums.SelectedAlbum = "";
 			Control arg_451_0 = this.paneAlbums;
 			Size size = new Size(184, 434);
-			arg_451_0.set_Size(size);
-			this.paneAlbums.set_TabIndex(0);
-			this.splitterLeft.set_BorderStyle(2);
+			arg_451_0.Size = size;
+			this.paneAlbums.TabIndex = 0;
+			this.splitterLeft.BorderStyle = 2;
 			Control arg_484_0 = this.splitterLeft;
 			location = new Point(184, 39);
-			arg_484_0.set_Location(location);
-			this.splitterLeft.set_Name("splitterLeft");
+			arg_484_0.Location = location;
+			this.splitterLeft.Name = "splitterLeft";
 			Control arg_4AE_0 = this.splitterLeft;
 			size = new Size(3, 434);
-			arg_4AE_0.set_Size(size);
-			this.splitterLeft.set_TabIndex(1);
-			this.splitterLeft.set_TabStop(false);
+			arg_4AE_0.Size = size;
+			this.splitterLeft.TabIndex = 1;
+			this.splitterLeft.TabStop = false;
 			this.panelPhotos.Controls.Add(this.panePhotos);
 			this.panelPhotos.Controls.Add(this.splitterRight);
 			this.panelPhotos.Controls.Add(this.paneDetails);
-			this.panelPhotos.set_Dock(5);
+			this.panelPhotos.Dock = 5;
 			Control arg_52F_0 = this.panelPhotos;
 			location = new Point(187, 39);
-			arg_52F_0.set_Location(location);
-			this.panelPhotos.set_Name("panelPhotos");
+			arg_52F_0.Location = location;
+			this.panelPhotos.Name = "panelPhotos";
 			Control arg_55D_0 = this.panelPhotos;
 			size = new Size(555, 434);
-			arg_55D_0.set_Size(size);
-			this.panelPhotos.set_TabIndex(2);
-			this.panePhotos.set_BackColor(SystemColors.Control);
+			arg_55D_0.Size = size;
+			this.panelPhotos.TabIndex = 2;
+			this.panePhotos.BackColor = SystemColors.Control;
 			this.panePhotos.CaptionText = "Manage Photos";
 			this.panePhotos.CropMode = false;
-			this.panePhotos.set_Dock(5);
-			this.panePhotos.DockPadding.set_All(2);
+			this.panePhotos.Dock = 5;
+			this.panePhotos.DockPadding.All = 2;
 			this.panePhotos.FullScreen = false;
 			Control arg_5D4_0 = this.panePhotos;
 			location = new Point(0, 0);
-			arg_5D4_0.set_Location(location);
+			arg_5D4_0.Location = location;
 			this.panePhotos.Mode = PhotosMode.Thumbnails;
-			this.panePhotos.set_Name("panePhotos");
+			this.panePhotos.Name = "panePhotos";
 			Control arg_60E_0 = this.panePhotos;
 			size = new Size(240, 434);
-			arg_60E_0.set_Size(size);
-			this.panePhotos.set_TabIndex(0);
-			this.splitterRight.set_BorderStyle(2);
-			this.splitterRight.set_Dock(4);
+			arg_60E_0.Size = size;
+			this.panePhotos.TabIndex = 0;
+			this.splitterRight.BorderStyle = 2;
+			this.splitterRight.Dock = 4;
 			Control arg_64C_0 = this.splitterRight;
 			location = new Point(240, 0);
-			arg_64C_0.set_Location(location);
-			this.splitterRight.set_Name("splitterRight");
+			arg_64C_0.Location = location;
+			this.splitterRight.Name = "splitterRight";
 			Control arg_676_0 = this.splitterRight;
 			size = new Size(3, 434);
-			arg_676_0.set_Size(size);
-			this.splitterRight.set_TabIndex(1);
-			this.splitterRight.set_TabStop(false);
+			arg_676_0.Size = size;
+			this.splitterRight.TabIndex = 1;
+			this.splitterRight.TabStop = false;
 			this.paneDetails.AlbumName = null;
 			this.paneDetails.CaptionText = "Album Description";
-			this.paneDetails.set_Dock(4);
-			this.paneDetails.DockPadding.set_All(2);
+			this.paneDetails.Dock = 4;
+			this.paneDetails.DockPadding.All = 2;
 			Control arg_6E1_0 = this.paneDetails;
 			location = new Point(243, 0);
-			arg_6E1_0.set_Location(location);
+			arg_6E1_0.Location = location;
 			this.paneDetails.Mode = DetailsMode.AlbumDetails;
-			this.paneDetails.set_Name("paneDetails");
+			this.paneDetails.Name = "paneDetails";
 			Control arg_71B_0 = this.paneDetails;
 			size = new Size(312, 434);
-			arg_71B_0.set_Size(size);
-			this.paneDetails.set_TabIndex(2);
+			arg_71B_0.Size = size;
+			this.paneDetails.TabIndex = 2;
 			Control arg_741_0 = this.statusBar;
 			location = new Point(0, 473);
-			arg_741_0.set_Location(location);
-			this.statusBar.set_Name("statusBar");
+			arg_741_0.Location = location;
+			this.statusBar.Name = "statusBar";
 			this.statusBar.Panels.AddRange(new StatusBarPanel[]
 			{
 				this.statusPaneLeft,
 				this.statusPaneRight
 			});
-			this.statusBar.set_ShowPanels(true);
+			this.statusBar.ShowPanels = true;
 			Control arg_7A2_0 = this.statusBar;
 			size = new Size(742, 22);
-			arg_7A2_0.set_Size(size);
-			this.statusBar.set_TabIndex(3);
-			this.statusPaneLeft.set_Style(2);
-			this.statusPaneLeft.set_Width(150);
-			this.statusPaneRight.set_AutoSize(2);
-			this.statusPaneRight.set_Style(2);
-			this.statusPaneRight.set_Width(576);
-			this.toolBar.set_Appearance(1);
+			arg_7A2_0.Size = size;
+			this.statusBar.TabIndex = 3;
+			this.statusPaneLeft.Style = 2;
+			this.statusPaneLeft.Width = 150;
+			this.statusPaneRight.AutoSize = 2;
+			this.statusPaneRight.Style = 2;
+			this.statusPaneRight.Width = 576;
+			this.toolBar.Appearance = 1;
 			this.toolBar.Buttons.AddRange(new ToolBarButton[]
 			{
 				this.tbNewAlbum,
@@ -1752,65 +1752,65 @@ namespace FotoVision
 				this.tbPrev,
 				this.tbNext
 			});
-			this.toolBar.set_DropDownArrows(true);
-			this.toolBar.set_ImageList(this.imageListToolbar);
+			this.toolBar.DropDownArrows = true;
+			this.toolBar.ImageList = this.imageListToolbar;
 			Control arg_927_0 = this.toolBar;
 			location = new Point(0, 0);
-			arg_927_0.set_Location(location);
-			this.toolBar.set_Name("toolBar");
-			this.toolBar.set_ShowToolTips(true);
+			arg_927_0.Location = location;
+			this.toolBar.Name = "toolBar";
+			this.toolBar.ShowToolTips = true;
 			Control arg_95E_0 = this.toolBar;
 			size = new Size(742, 39);
-			arg_95E_0.set_Size(size);
-			this.toolBar.set_TabIndex(4);
-			this.toolBar.set_TextAlign(1);
-			this.toolBar.set_Wrappable(false);
-			this.tbNewAlbum.set_ImageIndex(5);
-			this.tbNewAlbum.set_ToolTipText("New Album");
-			this.tbImportPhotos.set_ImageIndex(16);
-			this.tbImportPhotos.set_ToolTipText("Import Photos");
-			this.tbSep3.set_Style(3);
-			this.tbUpload.set_ImageIndex(3);
-			this.tbUpload.set_Text("Upload");
-			this.tbUpload.set_ToolTipText("Upload Albums");
-			this.tbWebsite.set_ImageIndex(14);
-			this.tbWebsite.set_Text("My Site");
-			this.tbWebsite.set_ToolTipText("View Website");
-			this.tbSep4.set_Style(3);
-			this.tbEmail.set_ImageIndex(13);
-			this.tbEmail.set_ToolTipText("Email");
-			this.tbPrint.set_ImageIndex(10);
-			this.tbPrint.set_ToolTipText("Print");
-			this.tbSep2.set_Style(3);
-			this.tbThumbnails.set_ImageIndex(4);
-			this.tbThumbnails.set_ToolTipText("Manage Photos");
-			this.tbThumbnailsDetails.set_ImageIndex(1);
-			this.tbThumbnailsDetails.set_ToolTipText("Manage Photos with Descriptions");
-			this.tbPhotoShow.set_ImageIndex(8);
-			this.tbPhotoShow.set_ToolTipText("Photo Show");
-			this.tbPhotoShowDetails.set_ImageIndex(15);
-			this.tbPhotoShowDetails.set_ToolTipText("Photo Show with Descriptions");
-			this.tbSep5.set_Style(3);
-			this.tbPhotoActions.set_ImageIndex(7);
-			this.tbPhotoActions.set_ToolTipText("Photo Actions");
-			this.tbSep7.set_Style(3);
-			this.tbDelete.set_ImageIndex(0);
-			this.tbDelete.set_ToolTipText("Delete");
-			this.tbSep6.set_Style(3);
-			this.tbRotateLeft.set_ImageIndex(11);
-			this.tbRotateLeft.set_ToolTipText("Rotate Left");
-			this.tbRotateRight.set_ImageIndex(12);
-			this.tbRotateRight.set_ToolTipText("Rotate Right");
-			this.tbSep1.set_Style(3);
-			this.tbPrev.set_ImageIndex(9);
-			this.tbPrev.set_ToolTipText("Previous Photo");
-			this.tbNext.set_ImageIndex(6);
-			this.tbNext.set_ToolTipText("Next Photo");
+			arg_95E_0.Size = size;
+			this.toolBar.TabIndex = 4;
+			this.toolBar.TextAlign = 1;
+			this.toolBar.Wrappable = false;
+			this.tbNewAlbum.ImageIndex = 5;
+			this.tbNewAlbum.ToolTipText = "New Album";
+			this.tbImportPhotos.ImageIndex = 16;
+			this.tbImportPhotos.ToolTipText = "Import Photos";
+			this.tbSep3.Style = 3;
+			this.tbUpload.ImageIndex = 3;
+			this.tbUpload.Text = "Upload";
+			this.tbUpload.ToolTipText = "Upload Albums";
+			this.tbWebsite.ImageIndex = 14;
+			this.tbWebsite.Text = "My Site";
+			this.tbWebsite.ToolTipText = "View Website";
+			this.tbSep4.Style = 3;
+			this.tbEmail.ImageIndex = 13;
+			this.tbEmail.ToolTipText = "Email";
+			this.tbPrint.ImageIndex = 10;
+			this.tbPrint.ToolTipText = "Print";
+			this.tbSep2.Style = 3;
+			this.tbThumbnails.ImageIndex = 4;
+			this.tbThumbnails.ToolTipText = "Manage Photos";
+			this.tbThumbnailsDetails.ImageIndex = 1;
+			this.tbThumbnailsDetails.ToolTipText = "Manage Photos with Descriptions";
+			this.tbPhotoShow.ImageIndex = 8;
+			this.tbPhotoShow.ToolTipText = "Photo Show";
+			this.tbPhotoShowDetails.ImageIndex = 15;
+			this.tbPhotoShowDetails.ToolTipText = "Photo Show with Descriptions";
+			this.tbSep5.Style = 3;
+			this.tbPhotoActions.ImageIndex = 7;
+			this.tbPhotoActions.ToolTipText = "Photo Actions";
+			this.tbSep7.Style = 3;
+			this.tbDelete.ImageIndex = 0;
+			this.tbDelete.ToolTipText = "Delete";
+			this.tbSep6.Style = 3;
+			this.tbRotateLeft.ImageIndex = 11;
+			this.tbRotateLeft.ToolTipText = "Rotate Left";
+			this.tbRotateRight.ImageIndex = 12;
+			this.tbRotateRight.ToolTipText = "Rotate Right";
+			this.tbSep1.Style = 3;
+			this.tbPrev.ImageIndex = 9;
+			this.tbPrev.ToolTipText = "Previous Photo";
+			this.tbNext.ImageIndex = 6;
+			this.tbNext.ToolTipText = "Next Photo";
 			ImageList arg_BD6_0 = this.imageListToolbar;
 			size = new Size(27, 27);
-			arg_BD6_0.set_ImageSize(size);
-			this.imageListToolbar.set_ImageStream((ImageListStreamer)resourceManager.GetObject("imageListToolbar.ImageStream"));
-			this.imageListToolbar.set_TransparentColor(Color.Lime);
+			arg_BD6_0.ImageSize = size;
+			this.imageListToolbar.ImageStream = (ImageListStreamer)resourceManager.GetObject("imageListToolbar.ImageStream");
+			this.imageListToolbar.TransparentColor = Color.Lime;
 			this.mainMenu.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuFile,
@@ -1819,7 +1819,7 @@ namespace FotoVision
 				this.menuTools,
 				this.menuHelp
 			});
-			this.menuFile.set_Index(0);
+			this.menuFile.Index = 0;
 			this.menuFile.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuNewAlbum,
@@ -1842,55 +1842,55 @@ namespace FotoVision
 				this.menuSep7,
 				this.menuExit
 			});
-			this.menuFile.set_Text("&File");
-			this.menuNewAlbum.set_Index(0);
-			this.menuNewAlbum.set_Text("&New Album");
-			this.menuSep1.set_Index(1);
-			this.menuSep1.set_Text("-");
-			this.menuImportPhotos.set_Index(2);
-			this.menuImportPhotos.set_Text("&Import Photos...");
-			this.menuImportFolder.set_Index(3);
-			this.menuImportFolder.set_Text("Import &Folder...");
-			this.menuSep2.set_Index(4);
-			this.menuSep2.set_Text("-");
-			this.menuOpen.set_Enabled(false);
-			this.menuOpen.set_Index(5);
-			this.menuOpen.set_Shortcut(131151);
-			this.menuOpen.set_Text("&Open");
-			this.menuRename.set_Enabled(false);
-			this.menuRename.set_Index(6);
-			this.menuRename.set_Text("&Rename");
-			this.menuDelete.set_Enabled(false);
-			this.menuDelete.set_Index(7);
-			this.menuDelete.set_Text("&Delete");
-			this.menuSep3.set_Index(8);
-			this.menuSep3.set_Text("-");
-			this.menuSave.set_Enabled(false);
-			this.menuSave.set_Index(9);
-			this.menuSave.set_Shortcut(131155);
-			this.menuSave.set_Text("&Save");
-			this.menuSep4.set_Index(10);
-			this.menuSep4.set_Text("-");
-			this.menuUploadAllChanges.set_Enabled(false);
-			this.menuUploadAllChanges.set_Index(11);
-			this.menuUploadAllChanges.set_Text("&Upload All Changes");
-			this.menuWebsite.set_Index(12);
-			this.menuWebsite.set_Text("Open &Website");
-			this.menuSep5.set_Index(13);
-			this.menuSep5.set_Text("-");
-			this.menuEmailChanges.set_Index(14);
-			this.menuEmailChanges.set_Text("&Email Changes to Friends");
-			this.menuSep6.set_Index(15);
-			this.menuSep6.set_Text("-");
-			this.menuPrint.set_Enabled(false);
-			this.menuPrint.set_Index(16);
-			this.menuPrint.set_Shortcut(131152);
-			this.menuPrint.set_Text("&Print...");
-			this.menuSep7.set_Index(17);
-			this.menuSep7.set_Text("-");
-			this.menuExit.set_Index(18);
-			this.menuExit.set_Text("E&xit");
-			this.menuEdit.set_Index(1);
+			this.menuFile.Text = "&File";
+			this.menuNewAlbum.Index = 0;
+			this.menuNewAlbum.Text = "&New Album";
+			this.menuSep1.Index = 1;
+			this.menuSep1.Text = "-";
+			this.menuImportPhotos.Index = 2;
+			this.menuImportPhotos.Text = "&Import Photos...";
+			this.menuImportFolder.Index = 3;
+			this.menuImportFolder.Text = "Import &Folder...";
+			this.menuSep2.Index = 4;
+			this.menuSep2.Text = "-";
+			this.menuOpen.Enabled = false;
+			this.menuOpen.Index = 5;
+			this.menuOpen.Shortcut = 131151;
+			this.menuOpen.Text = "&Open";
+			this.menuRename.Enabled = false;
+			this.menuRename.Index = 6;
+			this.menuRename.Text = "&Rename";
+			this.menuDelete.Enabled = false;
+			this.menuDelete.Index = 7;
+			this.menuDelete.Text = "&Delete";
+			this.menuSep3.Index = 8;
+			this.menuSep3.Text = "-";
+			this.menuSave.Enabled = false;
+			this.menuSave.Index = 9;
+			this.menuSave.Shortcut = 131155;
+			this.menuSave.Text = "&Save";
+			this.menuSep4.Index = 10;
+			this.menuSep4.Text = "-";
+			this.menuUploadAllChanges.Enabled = false;
+			this.menuUploadAllChanges.Index = 11;
+			this.menuUploadAllChanges.Text = "&Upload All Changes";
+			this.menuWebsite.Index = 12;
+			this.menuWebsite.Text = "Open &Website";
+			this.menuSep5.Index = 13;
+			this.menuSep5.Text = "-";
+			this.menuEmailChanges.Index = 14;
+			this.menuEmailChanges.Text = "&Email Changes to Friends";
+			this.menuSep6.Index = 15;
+			this.menuSep6.Text = "-";
+			this.menuPrint.Enabled = false;
+			this.menuPrint.Index = 16;
+			this.menuPrint.Shortcut = 131152;
+			this.menuPrint.Text = "&Print...";
+			this.menuSep7.Index = 17;
+			this.menuSep7.Text = "-";
+			this.menuExit.Index = 18;
+			this.menuExit.Text = "E&xit";
+			this.menuEdit.Index = 1;
 			this.menuEdit.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuUndo,
@@ -1904,22 +1904,22 @@ namespace FotoVision
 				this.menuSep10,
 				this.menuSelectAll
 			});
-			this.menuEdit.set_Text("&Edit");
-			this.menuUndo.set_Enabled(false);
-			this.menuUndo.set_Index(0);
-			this.menuUndo.set_Shortcut(131162);
-			this.menuUndo.set_Text("&Undo");
-			this.menuRedo.set_Enabled(false);
-			this.menuRedo.set_Index(1);
-			this.menuRedo.set_Shortcut(131161);
-			this.menuRedo.set_Text("&Redo");
-			this.menuDiscardChanges.set_Enabled(false);
-			this.menuDiscardChanges.set_Index(2);
-			this.menuDiscardChanges.set_Text("R&eset Photo");
-			this.menuSep8.set_Index(3);
-			this.menuSep8.set_Text("-");
-			this.menuRotate.set_Enabled(false);
-			this.menuRotate.set_Index(4);
+			this.menuEdit.Text = "&Edit";
+			this.menuUndo.Enabled = false;
+			this.menuUndo.Index = 0;
+			this.menuUndo.Shortcut = 131162;
+			this.menuUndo.Text = "&Undo";
+			this.menuRedo.Enabled = false;
+			this.menuRedo.Index = 1;
+			this.menuRedo.Shortcut = 131161;
+			this.menuRedo.Text = "&Redo";
+			this.menuDiscardChanges.Enabled = false;
+			this.menuDiscardChanges.Index = 2;
+			this.menuDiscardChanges.Text = "R&eset Photo";
+			this.menuSep8.Index = 3;
+			this.menuSep8.Text = "-";
+			this.menuRotate.Enabled = false;
+			this.menuRotate.Index = 4;
 			this.menuRotate.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuRotateLeft,
@@ -1928,34 +1928,34 @@ namespace FotoVision
 				this.menuFlipHorz,
 				this.menuFlipVert
 			});
-			this.menuRotate.set_Text("R&otate Photo");
-			this.menuRotateLeft.set_Index(0);
-			this.menuRotateLeft.set_Text("Rotate &Left");
-			this.menuRotateRight.set_Index(1);
-			this.menuRotateRight.set_Text("Rotate &Right");
-			this.menuItem7.set_Index(2);
-			this.menuItem7.set_Text("-");
-			this.menuFlipHorz.set_Index(3);
-			this.menuFlipHorz.set_Text("Flip &Horizontal");
-			this.menuFlipVert.set_Index(4);
-			this.menuFlipVert.set_Text("Flip &Vertical");
-			this.menuSep9.set_Index(5);
-			this.menuSep9.set_Text("-");
-			this.menuCopy.set_Enabled(false);
-			this.menuCopy.set_Index(6);
-			this.menuCopy.set_Shortcut(131139);
-			this.menuCopy.set_Text("&Copy");
-			this.menuPaste.set_Enabled(false);
-			this.menuPaste.set_Index(7);
-			this.menuPaste.set_Shortcut(131158);
-			this.menuPaste.set_Text("&Paste");
-			this.menuSep10.set_Index(8);
-			this.menuSep10.set_Text("-");
-			this.menuSelectAll.set_Enabled(false);
-			this.menuSelectAll.set_Index(9);
-			this.menuSelectAll.set_Shortcut(131137);
-			this.menuSelectAll.set_Text("&Select All");
-			this.menuView.set_Index(2);
+			this.menuRotate.Text = "R&otate Photo";
+			this.menuRotateLeft.Index = 0;
+			this.menuRotateLeft.Text = "Rotate &Left";
+			this.menuRotateRight.Index = 1;
+			this.menuRotateRight.Text = "Rotate &Right";
+			this.menuItem7.Index = 2;
+			this.menuItem7.Text = "-";
+			this.menuFlipHorz.Index = 3;
+			this.menuFlipHorz.Text = "Flip &Horizontal";
+			this.menuFlipVert.Index = 4;
+			this.menuFlipVert.Text = "Flip &Vertical";
+			this.menuSep9.Index = 5;
+			this.menuSep9.Text = "-";
+			this.menuCopy.Enabled = false;
+			this.menuCopy.Index = 6;
+			this.menuCopy.Shortcut = 131139;
+			this.menuCopy.Text = "&Copy";
+			this.menuPaste.Enabled = false;
+			this.menuPaste.Index = 7;
+			this.menuPaste.Shortcut = 131158;
+			this.menuPaste.Text = "&Paste";
+			this.menuSep10.Index = 8;
+			this.menuSep10.Text = "-";
+			this.menuSelectAll.Enabled = false;
+			this.menuSelectAll.Index = 9;
+			this.menuSelectAll.Shortcut = 131137;
+			this.menuSelectAll.Text = "&Select All";
+			this.menuView.Index = 2;
 			this.menuView.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuNextPhoto,
@@ -1963,63 +1963,63 @@ namespace FotoVision
 				this.menuSep11,
 				this.menuFullScreen
 			});
-			this.menuView.set_Text("&View");
-			this.menuNextPhoto.set_Index(0);
-			this.menuNextPhoto.set_Text("&Next Photo");
-			this.menuPrevPhoto.set_Index(1);
-			this.menuPrevPhoto.set_Text("&Previous Photo");
-			this.menuSep11.set_Index(2);
-			this.menuSep11.set_Text("-");
-			this.menuFullScreen.set_Index(3);
-			this.menuFullScreen.set_Shortcut(131142);
-			this.menuFullScreen.set_Text("&Full Screen");
-			this.menuTools.set_Index(3);
+			this.menuView.Text = "&View";
+			this.menuNextPhoto.Index = 0;
+			this.menuNextPhoto.Text = "&Next Photo";
+			this.menuPrevPhoto.Index = 1;
+			this.menuPrevPhoto.Text = "&Previous Photo";
+			this.menuSep11.Index = 2;
+			this.menuSep11.Text = "-";
+			this.menuFullScreen.Index = 3;
+			this.menuFullScreen.Shortcut = 131142;
+			this.menuFullScreen.Text = "&Full Screen";
+			this.menuTools.Index = 3;
 			this.menuTools.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuOptions
 			});
-			this.menuTools.set_Text("&Tools");
-			this.menuOptions.set_Index(0);
-			this.menuOptions.set_Text("&Options...");
-			this.menuHelp.set_Index(4);
+			this.menuTools.Text = "&Tools";
+			this.menuOptions.Index = 0;
+			this.menuOptions.Text = "&Options...";
+			this.menuHelp.Index = 4;
 			this.menuHelp.MenuItems.AddRange(new MenuItem[]
 			{
 				this.menuAbout
 			});
-			this.menuHelp.set_Text("&Help");
-			this.menuAbout.set_Index(0);
-			this.menuAbout.set_Text("&About FotoVision...");
-			this.progressBar.set_Anchor(14);
+			this.menuHelp.Text = "&Help";
+			this.menuAbout.Index = 0;
+			this.menuAbout.Text = "&About FotoVision...";
+			this.progressBar.Anchor = 14;
 			Control arg_1499_0 = this.progressBar;
 			location = new Point(156, 478);
-			arg_1499_0.set_Location(location);
-			this.progressBar.set_Name("progressBar");
+			arg_1499_0.Location = location;
+			this.progressBar.Name = "progressBar";
 			Control arg_14C4_0 = this.progressBar;
 			size = new Size(566, 14);
-			arg_14C4_0.set_Size(size);
-			this.progressBar.set_TabIndex(5);
-			this.progressBar.set_Visible(false);
+			arg_14C4_0.Size = size;
+			this.progressBar.TabIndex = 5;
+			this.progressBar.Visible = false;
 			ImageList arg_14F4_0 = this.imageListStatusbar;
 			size = new Size(9, 14);
-			arg_14F4_0.set_ImageSize(size);
-			this.imageListStatusbar.set_ImageStream((ImageListStreamer)resourceManager.GetObject("imageListStatusbar.ImageStream"));
-			this.imageListStatusbar.set_TransparentColor(Color.Lime);
+			arg_14F4_0.ImageSize = size;
+			this.imageListStatusbar.ImageStream = (ImageListStreamer)resourceManager.GetObject("imageListStatusbar.ImageStream");
+			this.imageListStatusbar.TransparentColor = Color.Lime;
 			size = new Size(5, 13);
-			this.set_AutoScaleBaseSize(size);
+			this.AutoScaleBaseSize = size;
 			size = new Size(742, 495);
-			this.set_ClientSize(size);
+			this.ClientSize = size;
 			this.Controls.Add(this.progressBar);
 			this.Controls.Add(this.panelPhotos);
 			this.Controls.Add(this.splitterLeft);
 			this.Controls.Add(this.paneAlbums);
 			this.Controls.Add(this.toolBar);
 			this.Controls.Add(this.statusBar);
-			this.set_Icon((Icon)resourceManager.GetObject("$this.Icon"));
-			this.set_Menu(this.mainMenu);
+			this.Icon = (Icon)resourceManager.GetObject("$this.Icon");
+			this.Menu = this.mainMenu;
 			size = new Size(320, 320);
-			this.set_MinimumSize(size);
-			this.set_Name("MainForm");
-			this.set_Text("FotoVision");
+			this.MinimumSize = size;
+			this.Name = "MainForm";
+			this.Text = "FotoVision";
 			this.panelPhotos.ResumeLayout(false);
 			this.statusPaneLeft.EndInit();
 			this.statusPaneRight.EndInit();
@@ -2034,9 +2034,9 @@ namespace FotoVision
 			Global.Progress.ProgressComplete += new Progress.ProgressCompleteEventHandler(this.ProgressComplete);
 			Global.Progress.ProgressUpdate += new Progress.ProgressUpdateEventHandler(this.ProgressUpdate);
 			this._format = new StringFormat();
-			this._format.set_FormatFlags(4096);
-			this._format.set_LineAlignment(1);
-			this._format.set_Trimming(3);
+			this._format.FormatFlags = 4096;
+			this._format.LineAlignment = 1;
+			this._format.Trimming = 3;
 			this.InitToolbarButtons();
 		}
 		protected override void OnLoad(EventArgs e)
@@ -2076,7 +2076,7 @@ namespace FotoVision
 					if (this.toolBar.Buttons.Item(i).get_Style != 3)
 					{
 						int num2;
-						this.toolBar.Buttons.get_Item(i).set_Tag(num2);
+						this.toolBar.Buttons.get_Item(i).Tag = num2;
 						num2++;
 					}
 				}
@@ -2157,7 +2157,7 @@ namespace FotoVision
 		}
 		private void ProgressUpdate(object sender, ProgressUpdateEventArgs e)
 		{
-			this.set_Cursor(Cursors.WaitCursor);
+			this.Cursor = Cursors.WaitCursor;
 			if (this.FullScreen)
 			{
 				return;
@@ -2167,30 +2167,30 @@ namespace FotoVision
 			{
 				this._orgStatusText[0] = this.statusBar.Panels.Item(0).get_Text;
 				this._orgStatusText[1] = this.statusBar.Panels.Item(1).get_Text;
-				this.statusBar.Panels.get_Item(1).set_Text("");
-				this.statusBar.Panels.get_Item(1).set_BorderStyle(1);
+				this.statusBar.Panels.get_Item(1).Text = "";
+				this.statusBar.Panels.get_Item(1).BorderStyle = 1;
 			}
-			this.statusBar.Panels.get_Item(0).set_Text(text);
-			this.progressBar.set_Maximum(e.Total);
-			this.progressBar.set_Value(e.Position);
+			this.statusBar.Panels.get_Item(0).Text = text;
+			this.progressBar.Maximum = e.Total;
+			this.progressBar.Value = e.Position;
 			this.progressBar.Show();
 			this.progressBar.Refresh();
 			this.statusBar.Refresh();
 			Global.Busy = true;
-			this.set_Capture(true);
+			this.Capture = true;
 			Application.DoEvents();
-			this.set_Capture(false);
+			this.Capture = false;
 			Global.Busy = false;
 		}
 		private void ProgressComplete(object sender, EventArgs e)
 		{
-			this.set_Cursor(Cursors.Default);
+			this.Cursor = Cursors.Default;
 			if (this.progressBar.Visible)
 			{
 				this.progressBar.Hide();
-				this.statusBar.Panels.get_Item(0).set_Text(this._orgStatusText[0]);
-				this.statusBar.Panels.get_Item(1).set_Text(this._orgStatusText[1]);
-				this.statusBar.Panels.get_Item(1).set_BorderStyle(3);
+				this.statusBar.Panels.get_Item(0).Text = this._orgStatusText[0];
+				this.statusBar.Panels.get_Item(1).Text = this._orgStatusText[1];
+				this.statusBar.Panels.get_Item(1).BorderStyle = 3;
 			}
 		}
 		private void UpdateDetailsMode()
@@ -2268,26 +2268,26 @@ namespace FotoVision
 		}
 		private void UpdateToolbar()
 		{
-			this.tbNewAlbum.set_Enabled(true);
-			this.tbDelete.set_Enabled(this.IsCommandEnabled(MainForm.Command.Delete));
-			this.tbUpload.set_Enabled(this.IsCommandEnabled(MainForm.Command.Upload));
-			this.tbWebsite.set_Enabled(true);
-			this.tbEmail.set_Enabled(true);
-			this.tbPrint.set_Enabled(this.IsCommandEnabled(MainForm.Command.PrintPhoto));
-			this.tbThumbnails.set_Pushed(BooleanType.FromObject(Interaction.IIf(this.panePhotos.Mode == PhotosMode.Thumbnails & this.paneDetails.Mode == DetailsMode.None, true, false)));
-			this.tbThumbnailsDetails.set_Pushed(BooleanType.FromObject(Interaction.IIf(this.panePhotos.Mode == PhotosMode.Thumbnails & (this.paneDetails.Mode == DetailsMode.PhotoDetails | this.paneDetails.Mode == DetailsMode.AlbumDetails), true, false)));
-			this.tbPhotoShow.set_Enabled(this.IsCommandEnabled(MainForm.Command.PhotoShow));
-			this.tbPhotoShow.set_Pushed(BooleanType.FromObject(Interaction.IIf(this.panePhotos.Mode == PhotosMode.PhotoShow & this.paneDetails.Mode == DetailsMode.None, true, false)));
-			this.tbPhotoShowDetails.set_Enabled(this.IsCommandEnabled(MainForm.Command.PhotoShow));
-			this.tbPhotoShowDetails.set_Pushed(BooleanType.FromObject(Interaction.IIf(this.panePhotos.Mode == PhotosMode.PhotoShow & this.paneDetails.Mode == DetailsMode.PhotoDetails, true, false)));
-			this.tbPhotoActions.set_Enabled(this.IsCommandEnabled(MainForm.Command.PhotoActions));
-			this.tbPhotoActions.set_Pushed(BooleanType.FromObject(Interaction.IIf(this.panePhotos.Mode == PhotosMode.PhotoAction, true, false)));
-			this.tbPrev.set_Enabled(this.IsCommandEnabled(MainForm.Command.PreviousPhoto));
-			this.tbNext.set_Enabled(this.IsCommandEnabled(MainForm.Command.NextPhoto));
+			this.tbNewAlbum.Enabled = true;
+			this.tbDelete.Enabled = this.IsCommandEnabled(MainForm.Command.Delete);
+			this.tbUpload.Enabled = this.IsCommandEnabled(MainForm.Command.Upload);
+			this.tbWebsite.Enabled = true;
+			this.tbEmail.Enabled = true;
+			this.tbPrint.Enabled = this.IsCommandEnabled(MainForm.Command.PrintPhoto);
+			this.tbThumbnails.Pushed = BooleanType.FromObject(Interaction.IIf(this.panePhotos.Mode == PhotosMode.Thumbnails & this.paneDetails.Mode == DetailsMode.None, true, false));
+			this.tbThumbnailsDetails.Pushed = BooleanType.FromObject(Interaction.IIf(this.panePhotos.Mode == PhotosMode.Thumbnails & (this.paneDetails.Mode == DetailsMode.PhotoDetails | this.paneDetails.Mode == DetailsMode.AlbumDetails), true, false));
+			this.tbPhotoShow.Enabled = this.IsCommandEnabled(MainForm.Command.PhotoShow);
+			this.tbPhotoShow.Pushed = BooleanType.FromObject(Interaction.IIf(this.panePhotos.Mode == PhotosMode.PhotoShow & this.paneDetails.Mode == DetailsMode.None, true, false));
+			this.tbPhotoShowDetails.Enabled = this.IsCommandEnabled(MainForm.Command.PhotoShow);
+			this.tbPhotoShowDetails.Pushed = BooleanType.FromObject(Interaction.IIf(this.panePhotos.Mode == PhotosMode.PhotoShow & this.paneDetails.Mode == DetailsMode.PhotoDetails, true, false));
+			this.tbPhotoActions.Enabled = this.IsCommandEnabled(MainForm.Command.PhotoActions);
+			this.tbPhotoActions.Pushed = BooleanType.FromObject(Interaction.IIf(this.panePhotos.Mode == PhotosMode.PhotoAction, true, false));
+			this.tbPrev.Enabled = this.IsCommandEnabled(MainForm.Command.PreviousPhoto);
+			this.tbNext.Enabled = this.IsCommandEnabled(MainForm.Command.NextPhoto);
 			bool enabled = this.IsCommandEnabled(MainForm.Command.Rotate);
-			this.tbRotateLeft.set_Enabled(enabled);
-			this.tbRotateRight.set_Enabled(enabled);
-			this.tbUpload.set_Enabled(this.IsCommandEnabled(MainForm.Command.Upload));
+			this.tbRotateLeft.Enabled = enabled;
+			this.tbRotateRight.Enabled = enabled;
+			this.tbUpload.Enabled = this.IsCommandEnabled(MainForm.Command.Upload);
 		}
 		private void UpdateStatusbar()
 		{
@@ -2313,8 +2313,8 @@ namespace FotoVision
 			}
 			if (!this.progressBar.Visible)
 			{
-				this.statusBar.Panels.get_Item(0).set_Text(this._orgStatusText[0]);
-				this.statusBar.Panels.get_Item(1).set_Text(this._orgStatusText[1]);
+				this.statusBar.Panels.get_Item(0).Text = this._orgStatusText[0];
+				this.statusBar.Panels.get_Item(1).Text = this._orgStatusText[1];
 			}
 		}
 		private void statusBar_DrawItem(object sender, StatusBarDrawItemEventArgs sbdevent)
@@ -2328,8 +2328,8 @@ namespace FotoVision
 				{
 					this.imageListStatusbar.Draw(graphics, (int)Math.Round((double)rectangleF2.Left) + 2, (int)Math.Round((double)rectangleF2.Top) + ((int)Math.Round((double)rectangleF2.Height) - this.imageListStatusbar.ImageSize.Height) / 2, 0);
 				}
-				rectangleF2.set_X(rectangleF2.X + (float)checked(this.imageListStatusbar.ImageSize.Width + 5));
-				rectangleF2.set_Width(rectangleF2.Width - (float)checked(this.imageListStatusbar.ImageSize.Width + 5));
+				rectangleF2.X = rectangleF2.X + (float)checked(this.imageListStatusbar.ImageSize.Width + 5);
+				rectangleF2.Width = rectangleF2.Width - (float)checked(this.imageListStatusbar.ImageSize.Width + 5);
 			}
 			graphics.DrawString(sbdevent.Panel.Text, this.statusBar.Font, SystemBrushes.ControlText, rectangleF2, this._format);
 		}
@@ -2554,17 +2554,17 @@ namespace FotoVision
 					rectangle2 = Rectangle.Intersect(Screen.PrimaryScreen.WorkingArea, rectangle2);
 					if (rectangle2.Width > 0 & rectangle2.Height > 0)
 					{
-						this.set_StartPosition(0);
+						this.StartPosition = 0;
 						this.SetBounds(rectangle2.Left, rectangle2.Top, rectangle2.Width, rectangle2.Height);
-						this.paneAlbums.set_Width(Global.Settings.GetInt(SettingKey.AlbumPaneWidth));
-						this.paneDetails.set_Width(Global.Settings.GetInt(SettingKey.DetailsPaneWidth));
+						this.paneAlbums.Width = Global.Settings.GetInt(SettingKey.AlbumPaneWidth);
+						this.paneDetails.Width = Global.Settings.GetInt(SettingKey.DetailsPaneWidth);
 					}
 				}
 			}
 			catch (Exception expr_D5)
 			{
 				ProjectData.SetProjectError(expr_D5);
-				this.set_StartPosition(2);
+				this.StartPosition = 2;
 				ProjectData.ClearProjectError();
 			}
 		}
@@ -2603,23 +2603,23 @@ namespace FotoVision
 			if (fullScreen)
 			{
 				this.SaveWindowSettings();
-				this.set_FormBorderStyle(0);
-				this.set_WindowState(2);
-				this.set_Menu(null);
-				this.paneAlbums.set_Visible(false);
-				this.statusBar.set_Visible(false);
-				this.toolBar.set_Visible(false);
+				this.FormBorderStyle = 0;
+				this.WindowState = 2;
+				this.Menu = null;
+				this.paneAlbums.Visible = false;
+				this.statusBar.Visible = false;
+				this.toolBar.Visible = false;
 				this.panePhotos.FullScreen = true;
 			}
 			else
 			{
-				this.set_FormBorderStyle(4);
-				this.set_WindowState(0);
-				this.paneAlbums.set_Visible(true);
-				this.statusBar.set_Visible(true);
-				this.toolBar.set_Visible(true);
+				this.FormBorderStyle = 4;
+				this.WindowState = 0;
+				this.paneAlbums.Visible = true;
+				this.statusBar.Visible = true;
+				this.toolBar.Visible = true;
 				this.panePhotos.FullScreen = false;
-				this.set_Menu(this.mainMenu);
+				this.Menu = this.mainMenu;
 				this.RestoreWindowSettings();
 			}
 		}
@@ -2629,7 +2629,7 @@ namespace FotoVision
 			{
 				if (e.SplitX < this.panelPhotos.Width - 312)
 				{
-					e.set_SplitX(this.panelPhotos.Width - 312);
+					e.SplitX = this.panelPhotos.Width - 312;
 				}
 			}
 		}
@@ -2718,21 +2718,21 @@ namespace FotoVision
 		}
 		private void menuFile_Popup(object sender, EventArgs e)
 		{
-			this.menuSave.set_Enabled(this.IsCommandEnabled(MainForm.Command.Save));
-			this.menuOpen.set_Enabled(this.IsCommandEnabled(MainForm.Command.Open));
-			this.menuRename.set_Enabled(this.IsCommandEnabled(MainForm.Command.Rename));
-			this.menuDelete.set_Enabled(this.IsCommandEnabled(MainForm.Command.Delete));
-			this.menuPrint.set_Enabled(this.IsCommandEnabled(MainForm.Command.PrintPhoto));
-			this.menuUploadAllChanges.set_Enabled(this.IsCommandEnabled(MainForm.Command.Upload));
+			this.menuSave.Enabled = this.IsCommandEnabled(MainForm.Command.Save);
+			this.menuOpen.Enabled = this.IsCommandEnabled(MainForm.Command.Open);
+			this.menuRename.Enabled = this.IsCommandEnabled(MainForm.Command.Rename);
+			this.menuDelete.Enabled = this.IsCommandEnabled(MainForm.Command.Delete);
+			this.menuPrint.Enabled = this.IsCommandEnabled(MainForm.Command.PrintPhoto);
+			this.menuUploadAllChanges.Enabled = this.IsCommandEnabled(MainForm.Command.Upload);
 			if (this.paneAlbums.Active)
 			{
-				this.menuRename.set_Text("&Rename Album");
-				this.menuDelete.set_Text("&Delete Album");
+				this.menuRename.Text = "&Rename Album";
+				this.menuDelete.Text = "&Delete Album";
 			}
 			else
 			{
-				this.menuRename.set_Text("&Rename Photo");
-				this.menuDelete.set_Text(string.Format("&Delete Photo{0}", RuntimeHelpers.GetObjectValue(Interaction.IIf(this.panePhotos.SelectedCount > 1, "s", ""))));
+				this.menuRename.Text = "&Rename Photo";
+				this.menuDelete.Text = string.Format("&Delete Photo{0}", RuntimeHelpers.GetObjectValue(Interaction.IIf(this.panePhotos.SelectedCount > 1, "s", "")));
 			}
 		}
 		private void menuSave_Click(object sender, EventArgs e)
@@ -2836,14 +2836,14 @@ namespace FotoVision
 					}
 					else
 					{
-						Cursor.set_Current(Cursors.WaitCursor);
+						Cursor.Current = Cursors.WaitCursor;
 						Bitmap imageWithActions = this.panePhotos.ImageWithActions;
 						if (imageWithActions != null)
 						{
-							Cursor.set_Current(Cursors.WaitCursor);
+							Cursor.Current = Cursors.WaitCursor;
 							string tempFileName = Path.GetTempFileName();
 							imageWithActions.Save(tempFileName);
-							Cursor.set_Current(Cursors.Default);
+							Cursor.Current = Cursors.Default;
 							Print.PrintFile(tempFileName);
 						}
 					}
@@ -2868,7 +2868,7 @@ namespace FotoVision
 				{
 					FileManager.DeleteFile(tempFileName);
 				}
-				Cursor.set_Current(Cursors.Default);
+				Cursor.Current = Cursors.Default;
 			}
 		}
 		private void menuExit_Click(object sender, EventArgs e)
@@ -2878,29 +2878,29 @@ namespace FotoVision
 		private void menuEdit_Popup(object sender, EventArgs e)
 		{
 			bool photoDirty = this.panePhotos.PhotoDirty;
-			this.menuCopy.set_Enabled(this.IsCommandEnabled(MainForm.Command.ClipboardCopy));
-			this.menuPaste.set_Enabled(this.IsCommandEnabled(MainForm.Command.ClipboardPaste));
-			this.menuUndo.set_Enabled(photoDirty);
+			this.menuCopy.Enabled = this.IsCommandEnabled(MainForm.Command.ClipboardCopy);
+			this.menuPaste.Enabled = this.IsCommandEnabled(MainForm.Command.ClipboardPaste);
+			this.menuUndo.Enabled = photoDirty;
 			if (photoDirty)
 			{
-				this.menuUndo.set_Text(string.Format("&Undo - {0}", Global.ActionList.LastItem.ToString()));
+				this.menuUndo.Text = string.Format("&Undo - {0}", Global.ActionList.LastItem.ToString());
 			}
 			else
 			{
-				this.menuUndo.set_Text("&Undo");
+				this.menuUndo.Text = "&Undo";
 			}
-			this.menuRedo.set_Enabled(Global.ActionList.ContainsRedo);
+			this.menuRedo.Enabled = Global.ActionList.ContainsRedo;
 			if (Global.ActionList.ContainsRedo)
 			{
-				this.menuRedo.set_Text(string.Format("&Redo - {0}", Global.ActionList.RedoItem.ToString()));
+				this.menuRedo.Text = string.Format("&Redo - {0}", Global.ActionList.RedoItem.ToString());
 			}
 			else
 			{
-				this.menuRedo.set_Text("&Redo");
+				this.menuRedo.Text = "&Redo";
 			}
-			this.menuDiscardChanges.set_Enabled(photoDirty);
-			this.menuRotate.set_Enabled(this.IsCommandEnabled(MainForm.Command.Rotate));
-			this.menuSelectAll.set_Enabled(this.IsCommandEnabled(MainForm.Command.SelectAll));
+			this.menuDiscardChanges.Enabled = photoDirty;
+			this.menuRotate.Enabled = this.IsCommandEnabled(MainForm.Command.Rotate);
+			this.menuSelectAll.Enabled = this.IsCommandEnabled(MainForm.Command.SelectAll);
 		}
 		private void menuDiscardChanges_Click(object sender, EventArgs e)
 		{
@@ -2933,10 +2933,10 @@ namespace FotoVision
 		}
 		private void menuCopy_Click(object sender, EventArgs e)
 		{
-			Cursor.set_Current(Cursors.WaitCursor);
+			Cursor.Current = Cursors.WaitCursor;
 			try
 			{
-				Cursor.set_Current(Cursors.WaitCursor);
+				Cursor.Current = Cursors.WaitCursor;
 				Global.Progress.Update(this, "Copying to clipboard", 1, 2);
 				bool flag = BooleanType.FromObject(Interaction.IIf(this.panePhotos.Mode == PhotosMode.Thumbnails, true, false));
 				Bitmap bitmap2;
@@ -2980,14 +2980,14 @@ namespace FotoVision
 				}
 			}
 			Global.Progress.Complete(this);
-			Cursor.set_Current(Cursors.Default);
+			Cursor.Current = Cursors.Default;
 		}
 		private void menuPaste_Click(object sender, EventArgs e)
 		{
 			IDataObject dataObject = Clipboard.GetDataObject();
 			if (dataObject.GetDataPresent(DataFormats.Bitmap))
 			{
-				Cursor.set_Current(Cursors.WaitCursor);
+				Cursor.Current = Cursors.WaitCursor;
 				Bitmap bitmap = (Bitmap)dataObject.GetData(DataFormats.Bitmap);
 				if (bitmap != null)
 				{
@@ -2995,7 +2995,7 @@ namespace FotoVision
 					this.paneAlbums.UpdateAlbumCount(this.paneAlbums.SelectedAlbum);
 					this.UpdateStatusbar();
 				}
-				Cursor.set_Current(Cursors.Default);
+				Cursor.Current = Cursors.Default;
 			}
 		}
 		private void menuSelectAll_Click(object sender, EventArgs e)
@@ -3020,9 +3020,9 @@ namespace FotoVision
 		}
 		private void menuView_Popup(object sender, EventArgs e)
 		{
-			this.menuPrevPhoto.set_Enabled(this.IsCommandEnabled(MainForm.Command.PreviousPhoto));
-			this.menuNextPhoto.set_Enabled(this.IsCommandEnabled(MainForm.Command.NextPhoto));
-			this.menuFullScreen.set_Enabled(this.IsCommandEnabled(MainForm.Command.FullScreen));
+			this.menuPrevPhoto.Enabled = this.IsCommandEnabled(MainForm.Command.PreviousPhoto);
+			this.menuNextPhoto.Enabled = this.IsCommandEnabled(MainForm.Command.NextPhoto);
+			this.menuFullScreen.Enabled = this.IsCommandEnabled(MainForm.Command.FullScreen);
 		}
 		private void menuFullScreen_Click(object sender, EventArgs e)
 		{
@@ -3228,9 +3228,9 @@ namespace FotoVision
 		}
 		private void paneDetails_Action(object sender, ActionEventArgs e)
 		{
-			Cursor.set_Current(Cursors.WaitCursor);
+			Cursor.Current = Cursors.WaitCursor;
 			bool flag = this.panePhotos.ApplyPhotoAction(e.ActionItem);
-			Cursor.set_Current(Cursors.Default);
+			Cursor.Current = Cursors.Default;
 			this.UpdateToolbar();
 			if (flag)
 			{
@@ -3293,18 +3293,18 @@ namespace FotoVision
 				arg_82_0.InitialLocation = initialLocation;
 			}
 			this._uploadForm.Publish(this.paneAlbums.GetPublishList());
-			this._uploadForm.set_Owner(this);
-			this.set_Cursor(Cursors.WaitCursor);
-			this.toolBar.set_Enabled(false);
+			this._uploadForm.Owner = this;
+			this.Cursor = Cursors.WaitCursor;
+			this.toolBar.Enabled = false;
 			Global.PublishingFiles = true;
 			this._allowUpload = false;
 			this.UpdateToolbar();
 		}
 		private void uploadForm_PublishComplete(object sender, UploadCompleteEventArgs e)
 		{
-			this.toolBar.set_Enabled(true);
-			this._uploadForm.set_Owner(null);
-			this.set_Cursor(Cursors.Default);
+			this.toolBar.Enabled = true;
+			this._uploadForm.Owner = null;
+			this.Cursor = Cursors.Default;
 			Global.PublishingFiles = false;
 			if (e.ErrorOccurred)
 			{

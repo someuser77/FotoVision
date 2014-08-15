@@ -82,8 +82,8 @@ namespace FotoVision
 				if (this._photoAdmin == null)
 				{
                     this._photoAdmin = new FotoVision.PhotoAdmin.PhotoAdmin();
-					this._photoAdmin.set_Url(Global.CombineUrl(Global.Settings.GetString(SettingKey.ServiceLocation), "PhotoAdmin.asmx"));
-					this._photoAdmin.set_Timeout(checked(Global.Settings.GetInt(SettingKey.ServiceTimeout) * 1000));
+					this._photoAdmin.Url = Global.CombineUrl(Global.Settings.GetString(SettingKey.ServiceLocation), "PhotoAdmin.asmx");
+					this._photoAdmin.Timeout = checked(Global.Settings.GetInt(SettingKey.ServiceTimeout) * 1000);
 					this.AttachCredentials();
 				}
 				return this._photoAdmin;

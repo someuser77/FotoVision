@@ -123,12 +123,12 @@ namespace FotoVision
 			this._topItemPos = new Point(0, 0);
 			this._format = new StringFormat();
 			this._dropData = new DropData(null);
-			this.set_AllowDrop(true);
+			this.AllowDrop = true;
 			this._imageList = new ImageList();
 			ImageList arg_5C_0 = this._imageList;
 			Size imageSize = new Size(120, 120);
-			arg_5C_0.set_ImageSize(imageSize);
-			this.set_LargeImageList(this._imageList);
+			arg_5C_0.ImageSize = imageSize;
+			this.LargeImageList = this._imageList;
 			this.CreateGdiObjects();
 		}
 		public void ClearThumbnails()
@@ -151,7 +151,7 @@ namespace FotoVision
 					{
 						Photo photo = list[i];
 						ListViewItem listViewItem = this.Items.Add(photo.Title);
-						listViewItem.set_Tag(photo);
+						listViewItem.Tag = photo;
 					}
 					this._backgroundDirty = true;
 				}
@@ -194,8 +194,8 @@ namespace FotoVision
 			this._brushSelected = new SolidBrush(PhotoListView.Consts.SelectedColor);
 			this._brushBack = new SolidBrush(PhotoListView.Consts.BackColor);
 			this._format = new StringFormat();
-			this._format.set_Alignment(1);
-			this._format.set_Trimming(3);
+			this._format.Alignment = 1;
+			this._format.Trimming = 3;
 		}
 		protected override void OnAfterLabelEdit(LabelEditEventArgs e)
 		{
@@ -203,7 +203,7 @@ namespace FotoVision
 			Photo photo = (Photo)this.Items.Item(e.get_Item).Tag;
 			if (e.Label == null || e.Label.Trim().Length == 0)
 			{
-				e.set_CancelEdit(true);
+				e.CancelEdit = true;
 			}
 			else
 			{
@@ -289,14 +289,14 @@ namespace FotoVision
 			if (dwDrawStage == 1)
 			{
 				IntPtr result2 = new IntPtr(32);
-				m.set_Result(result2);
+				m.Result = result2;
 			}
 			else
 			{
 				if (dwDrawStage == 65537)
 				{
 					IntPtr result2 = new IntPtr(4);
-					m.set_Result(result2);
+					m.Result = result2;
 					if (this.IsItemVisible(nMCUSTOMDRAW.dwItemSpec))
 					{
 						Graphics graphics = Graphics.FromHdc(nMCUSTOMDRAW.hdc);
@@ -316,7 +316,7 @@ namespace FotoVision
 				else
 				{
 					IntPtr result2 = new IntPtr(0);
-					m.set_Result(result2);
+					m.Result = result2;
 				}
 			}
 			return result;
@@ -355,7 +355,7 @@ namespace FotoVision
 			this._dropData.Over(drgevent);
 			if (Global.PerformingDrag)
 			{
-				drgevent.set_Effect(0);
+				drgevent.Effect = 0;
 			}
 			base.OnDragOver(drgevent);
 		}

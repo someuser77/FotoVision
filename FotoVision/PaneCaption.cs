@@ -40,7 +40,7 @@ namespace FotoVision
 			}
 			set
 			{
-				base.set_Text(value);
+				base.Text = value;
 				this.Invalidate();
 			}
 		}
@@ -218,12 +218,12 @@ namespace FotoVision
 			this._colorInactiveHigh = Color.FromArgb(90, 135, 215);
 			this.InitializeComponent();
 			this.SetStyle(73746, true);
-			this.set_Height(20);
+			this.Height = 20;
 			this._format = new StringFormat();
-			this._format.set_FormatFlags(4096);
-			this._format.set_LineAlignment(1);
-			this._format.set_Trimming(3);
-			this.set_Font(new Font("arial", 9f, 1));
+			this._format.FormatFlags = 4096;
+			this._format.LineAlignment = 1;
+			this._format.Trimming = 3;
+			this.Font = new Font("arial", 9f, 1);
 			this.ActiveTextColor = this._colorActiveText;
 			this.InactiveTextColor = this._colorInactiveText;
 			this.CreateGradientBrushes();
@@ -238,7 +238,7 @@ namespace FotoVision
 			g.FillRectangle(this.BackBrush, this.DisplayRectangle);
 			if (this._antiAlias)
 			{
-				g.set_TextRenderingHint(4);
+				g.TextRenderingHint = 4;
 			}
 			RectangleF rectangleF = new RectangleF(4f, 0f, (float)checked(this.DisplayRectangle.Width - 4), (float)this.DisplayRectangle.Height);
 			RectangleF rectangleF2 = rectangleF;
@@ -284,9 +284,9 @@ namespace FotoVision
 		[DebuggerStepThrough]
 		private void InitializeComponent()
 		{
-			this.set_Name("PaneCaption");
+			this.Name = "PaneCaption";
 			Size size = new Size(150, 30);
-			this.set_Size(size);
+			this.Size = size;
 		}
 	}
 }

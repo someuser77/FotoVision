@@ -67,12 +67,12 @@ namespace FotoVision
 				this._albumName = value;
 				if (StringType.StrCmp(this._albumName, "", false) == 0)
 				{
-					this.set_Enabled(false);
+					this.Enabled = false;
 					this._album.Clear();
 				}
 				else
 				{
-					this.set_Enabled(true);
+					this.Enabled = true;
 					this._album.ReadXml(this._albumName);
 				}
 				this.UpdateFields();
@@ -336,125 +336,125 @@ namespace FotoVision
 			this.labelLocationHeader = new Label();
 			this.textLocation = new TextBox();
 			this.SuspendLayout();
-			this.labelWebsiteHeader.set_FlatStyle(3);
-            this.labelWebsiteHeader.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
+			this.labelWebsiteHeader.FlatStyle = 3;
+            this.labelWebsiteHeader.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_E4_0 = this.labelWebsiteHeader;
 			Point location = new Point(8, 8);
-			arg_E4_0.set_Location(location);
-			this.labelWebsiteHeader.set_Name("labelWebsiteHeader");
+			arg_E4_0.Location = location;
+			this.labelWebsiteHeader.Name = "labelWebsiteHeader";
 			Control arg_10E_0 = this.labelWebsiteHeader;
 			Size size = new Size(232, 16);
-			arg_10E_0.set_Size(size);
-			this.labelWebsiteHeader.set_TabIndex(0);
-			this.labelWebsiteHeader.set_Text("Text appearing on website (optional)");
-			this.labelAlbumTitle.set_FlatStyle(3);
+			arg_10E_0.Size = size;
+			this.labelWebsiteHeader.TabIndex = 0;
+			this.labelWebsiteHeader.Text = "Text appearing on website (optional)";
+			this.labelAlbumTitle.FlatStyle = 3;
 			Control arg_14C_0 = this.labelAlbumTitle;
 			location = new Point(8, 32);
-			arg_14C_0.set_Location(location);
-			this.labelAlbumTitle.set_Name("labelAlbumTitle");
+			arg_14C_0.Location = location;
+			this.labelAlbumTitle.Name = "labelAlbumTitle";
 			Control arg_176_0 = this.labelAlbumTitle;
 			size = new Size(136, 16);
-			arg_176_0.set_Size(size);
-			this.labelAlbumTitle.set_TabIndex(1);
-			this.labelAlbumTitle.set_Text("Album Title && Description:");
+			arg_176_0.Size = size;
+			this.labelAlbumTitle.TabIndex = 1;
+			this.labelAlbumTitle.Text = "Album Title && Description:";
 			Control arg_1A8_0 = this.textTitle;
 			location = new Point(8, 48);
-			arg_1A8_0.set_Location(location);
-			this.textTitle.set_MaxLength(100);
-			this.textTitle.set_Name("textTitle");
+			arg_1A8_0.Location = location;
+			this.textTitle.MaxLength = 100;
+			this.textTitle.Name = "textTitle";
 			Control arg_1DF_0 = this.textTitle;
 			size = new Size(288, 20);
-			arg_1DF_0.set_Size(size);
-			this.textTitle.set_TabIndex(2);
-			this.textTitle.set_Text("");
+			arg_1DF_0.Size = size;
+			this.textTitle.TabIndex = 2;
+			this.textTitle.Text = "";
 			Control arg_211_0 = this.textDesc;
 			location = new Point(8, 80);
-			arg_211_0.set_Location(location);
-			this.textDesc.set_Multiline(true);
-			this.textDesc.set_Name("textDesc");
+			arg_211_0.Location = location;
+			this.textDesc.Multiline = true;
+			this.textDesc.Name = "textDesc";
 			Control arg_247_0 = this.textDesc;
 			size = new Size(288, 56);
-			arg_247_0.set_Size(size);
-			this.textDesc.set_TabIndex(3);
-			this.textDesc.set_Text("");
-			this.labelDate.set_FlatStyle(3);
+			arg_247_0.Size = size;
+			this.textDesc.TabIndex = 3;
+			this.textDesc.Text = "";
+			this.labelDate.FlatStyle = 3;
 			Control arg_288_0 = this.labelDate;
 			location = new Point(8, 152);
-			arg_288_0.set_Location(location);
-			this.labelDate.set_Name("labelDate");
+			arg_288_0.Location = location;
+			this.labelDate.Name = "labelDate";
 			Control arg_2B2_0 = this.labelDate;
 			size = new Size(152, 16);
-			arg_2B2_0.set_Size(size);
-			this.labelDate.set_TabIndex(4);
-			this.labelDate.set_Text("Date  (default: date created):");
+			arg_2B2_0.Size = size;
+			this.labelDate.TabIndex = 4;
+			this.labelDate.Text = "Date  (default: date created):";
 			Control arg_2E7_0 = this.textDate;
 			location = new Point(8, 168);
-			arg_2E7_0.set_Location(location);
-			this.textDate.set_Name("textDate");
+			arg_2E7_0.Location = location;
+			this.textDate.Name = "textDate";
 			Control arg_311_0 = this.textDate;
 			size = new Size(288, 20);
-			arg_311_0.set_Size(size);
-			this.textDate.set_TabIndex(5);
-			this.textDate.set_Text("");
-			this.radioPublish.set_FlatStyle(3);
+			arg_311_0.Size = size;
+			this.textDate.TabIndex = 5;
+			this.textDate.Text = "";
+			this.radioPublish.FlatStyle = 3;
 			Control arg_353_0 = this.radioPublish;
 			location = new Point(16, 232);
-			arg_353_0.set_Location(location);
-			this.radioPublish.set_Name("radioPublish");
+			arg_353_0.Location = location;
+			this.radioPublish.Name = "radioPublish";
 			Control arg_37D_0 = this.radioPublish;
 			size = new Size(168, 24);
-			arg_37D_0.set_Size(size);
-			this.radioPublish.set_TabIndex(7);
-			this.radioPublish.set_Text("         Upload album to my site");
+			arg_37D_0.Size = size;
+			this.radioPublish.TabIndex = 7;
+			this.radioPublish.Text = "         Upload album to my site";
 			ImageList arg_3B0_0 = this.imageList;
 			size = new Size(16, 16);
-			arg_3B0_0.set_ImageSize(size);
-			this.imageList.set_ImageStream((ImageListStreamer)resourceManager.GetObject("imageList.ImageStream"));
-			this.imageList.set_TransparentColor(Color.Lime);
-			this.radioDontPublish.set_FlatStyle(3);
+			arg_3B0_0.ImageSize = size;
+			this.imageList.ImageStream = (ImageListStreamer)resourceManager.GetObject("imageList.ImageStream");
+			this.imageList.TransparentColor = Color.Lime;
+			this.radioDontPublish.FlatStyle = 3;
 			Control arg_401_0 = this.radioDontPublish;
 			location = new Point(16, 256);
-			arg_401_0.set_Location(location);
-			this.radioDontPublish.set_Name("radioDontPublish");
+			arg_401_0.Location = location;
+			this.radioDontPublish.Name = "radioDontPublish";
 			Control arg_42B_0 = this.radioDontPublish;
 			size = new Size(192, 24);
-			arg_42B_0.set_Size(size);
-			this.radioDontPublish.set_TabIndex(8);
-			this.radioDontPublish.set_Text("         View album in FotoVision only");
-			this.labelPublishHeader.set_FlatStyle(3);
-            this.labelPublishHeader.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
+			arg_42B_0.Size = size;
+			this.radioDontPublish.TabIndex = 8;
+			this.radioDontPublish.Text = "         View album in FotoVision only";
+			this.labelPublishHeader.FlatStyle = 3;
+            this.labelPublishHeader.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_489_0 = this.labelPublishHeader;
 			location = new Point(8, 216);
-			arg_489_0.set_Location(location);
-			this.labelPublishHeader.set_Name("labelPublishHeader");
+			arg_489_0.Location = location;
+			this.labelPublishHeader.Name = "labelPublishHeader";
 			Control arg_4B0_0 = this.labelPublishHeader;
 			size = new Size(112, 16);
-			arg_4B0_0.set_Size(size);
-			this.labelPublishHeader.set_TabIndex(6);
-			this.labelPublishHeader.set_Text("Publishing settings");
-			this.labelLocationHeader.set_FlatStyle(3);
-            this.labelLocationHeader.set_Font(new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0));
+			arg_4B0_0.Size = size;
+			this.labelPublishHeader.TabIndex = 6;
+			this.labelPublishHeader.Text = "Publishing settings";
+			this.labelLocationHeader.FlatStyle = 3;
+            this.labelLocationHeader.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_50E_0 = this.labelLocationHeader;
 			location = new Point(8, 304);
-			arg_50E_0.set_Location(location);
-			this.labelLocationHeader.set_Name("labelLocationHeader");
+			arg_50E_0.Location = location;
+			this.labelLocationHeader.Name = "labelLocationHeader";
 			Control arg_538_0 = this.labelLocationHeader;
 			size = new Size(200, 16);
-			arg_538_0.set_Size(size);
-			this.labelLocationHeader.set_TabIndex(9);
-			this.labelLocationHeader.set_Text("Album location");
-			this.textLocation.set_BorderStyle(0);
+			arg_538_0.Size = size;
+			this.labelLocationHeader.TabIndex = 9;
+			this.labelLocationHeader.Text = "Album location";
+			this.textLocation.BorderStyle = 0;
 			Control arg_57A_0 = this.textLocation;
 			location = new Point(8, 320);
-			arg_57A_0.set_Location(location);
-			this.textLocation.set_Multiline(true);
-			this.textLocation.set_Name("textLocation");
-			this.textLocation.set_ReadOnly(true);
+			arg_57A_0.Location = location;
+			this.textLocation.Multiline = true;
+			this.textLocation.Name = "textLocation";
+			this.textLocation.ReadOnly = true;
 			Control arg_5BC_0 = this.textLocation;
 			size = new Size(288, 40);
-			arg_5BC_0.set_Size(size);
-			this.textLocation.set_TabIndex(10);
-			this.textLocation.set_Text("");
+			arg_5BC_0.Size = size;
+			this.textLocation.TabIndex = 10;
+			this.textLocation.Text = "";
 			this.Controls.Add(this.radioPublish);
 			this.Controls.Add(this.textTitle);
 			this.Controls.Add(this.labelAlbumTitle);
@@ -466,9 +466,9 @@ namespace FotoVision
 			this.Controls.Add(this.labelPublishHeader);
 			this.Controls.Add(this.labelLocationHeader);
 			this.Controls.Add(this.textLocation);
-			this.set_Name("DetailsAlbum");
+			this.Name = "DetailsAlbum";
 			size = new Size(304, 368);
-			this.set_Size(size);
+			this.Size = size;
 			this.ResumeLayout(false);
 		}
 		public DetailsAlbum()
@@ -476,12 +476,12 @@ namespace FotoVision
 			base.add_Paint(new PaintEventHandler(this.DetailsAlbum_Paint));
 			this._album = new Album();
 			this.InitializeComponent();
-			this.set_Enabled(false);
+			this.Enabled = false;
 		}
 		public void PublishAlbum(string albumName, bool publish)
 		{
-			this.radioPublish.set_Checked(publish);
-			this.radioDontPublish.set_Checked(!publish);
+			this.radioPublish.Checked = publish;
+			this.radioDontPublish.Checked = !publish;
 			this.radioControl_Click(this, EventArgs.Empty);
 		}
 		public void Save()
@@ -515,12 +515,12 @@ namespace FotoVision
 		}
 		private void UpdateFields()
 		{
-			this.textTitle.set_Text(this._album.Name);
-			this.textDesc.set_Text(this._album.Description);
-			this.textDate.set_Text(this._album.DateCreated);
-			this.radioPublish.set_Checked(this._album.Publish);
-			this.radioDontPublish.set_Checked(!this._album.Publish);
-			this.textLocation.set_Text(this._album.Path);
+			this.textTitle.Text = this._album.Name;
+			this.textDesc.Text = this._album.Description;
+			this.textDate.Text = this._album.DateCreated;
+			this.radioPublish.Checked = this._album.Publish;
+			this.radioDontPublish.Checked = !this._album.Publish;
+			this.textLocation.Text = this._album.Path;
 			this._dirty = false;
 		}
 		private void UpdateXmlFile()
@@ -549,17 +549,17 @@ namespace FotoVision
 		{
 			if (!Global.ValidateDate(this.textDate.Text.Trim()))
 			{
-				this.textDate.set_Text(this._album.DateCreated);
+				this.textDate.Text = this._album.DateCreated;
 			}
 			if (!FileManager.IsValidAlbumName(this.textTitle.Text))
 			{
-				this.textTitle.set_Text(this._album.Name);
+				this.textTitle.Text = this._album.Name;
 			}
 			string text = this.textTitle.Text.Trim();
 			if (StringType.StrCmp(text, this._album.Name, false) != 0 && FileManager.AlbumExists(this.textTitle.Text.Trim()))
 			{
 				MessageBox.Show(this.TopLevelControl, string.Format("The album '{0}' already exist. Please use a different album name.", text), "Cannot Rename Album", 0, 48);
-				this.textTitle.set_Text(this._album.Name);
+				this.textTitle.Text = this._album.Name;
 			}
 		}
 	}

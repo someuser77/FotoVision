@@ -82,7 +82,7 @@ namespace FotoVision
 			}
 			set
 			{
-				this.menuCopy.set_Enabled(value);
+				this.menuCopy.Enabled = value;
 			}
 		}
 		public bool EnableMove
@@ -93,7 +93,7 @@ namespace FotoVision
 			}
 			set
 			{
-				this.menuMove.set_Enabled(value);
+				this.menuMove.Enabled = value;
 			}
 		}
 		public DropContextMenu()

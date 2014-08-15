@@ -423,7 +423,7 @@ namespace FotoVision
 					int num3 = (int)Math.Round((double)unchecked((float)bitmap.Height * num));
 					bitmap2 = new Bitmap(num2, num3);
 					Graphics graphics = Graphics.FromImage(bitmap2);
-					graphics.set_InterpolationMode(7);
+					graphics.InterpolationMode = 7;
 					Rectangle rectangle = new Rectangle(0, 0, num2, num3);
 					graphics.DrawImage(bitmap, rectangle, 0, 0, bitmap.Width, bitmap.Height, 2);
 					graphics.Dispose();

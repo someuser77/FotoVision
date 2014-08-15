@@ -59,7 +59,7 @@ namespace FotoVision
 		}
 		public void SetValue(SettingKey key, object value)
 		{
-			this._list.set_Item(key.ToString(), RuntimeHelpers.GetObjectValue(value));
+			this._list.Item = key.ToString(), RuntimeHelpers.GetObjectValue(value);
 			if (this._autoWrite)
 			{
 				this.Write();
@@ -97,7 +97,7 @@ namespace FotoVision
 				int num = this._defaultValues.GetLength(0) - 1;
 				for (int i = arg_1B_0; i <= num; i++)
 				{
-					this._list.set_Item(this._defaultValues[i][0], this._defaultValues[i][1]);
+					this._list.Item = this._defaultValues[i][0], this._defaultValues[i][1];
 				}
 				if (File.Exists(this.FilePath))
 				{
@@ -106,7 +106,7 @@ namespace FotoVision
 					{
 						if (xmlTextReader.NodeType == 1 & StringType.StrCmp(xmlTextReader.Name, "add", false) == 0)
 						{
-							this._list.set_Item(xmlTextReader.GetAttribute("key"), xmlTextReader.GetAttribute("value"));
+							this._list.Item = xmlTextReader.GetAttribute("key"), xmlTextReader.GetAttribute("value");
 						}
 					}
 					xmlTextReader.Close();
@@ -116,7 +116,7 @@ namespace FotoVision
 		public void Write()
 		{
 			XmlTextWriter xmlTextWriter = new XmlTextWriter(this.FilePath, null);
-			xmlTextWriter.set_Formatting(1);
+			xmlTextWriter.Formatting = 1;
 			xmlTextWriter.WriteStartElement("configuration");
 			xmlTextWriter.WriteStartElement("appSettings");
 			IDictionaryEnumerator enumerator = this._list.GetEnumerator();

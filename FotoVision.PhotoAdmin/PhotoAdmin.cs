@@ -14,7 +14,7 @@ namespace FotoVision.PhotoAdmin
 		public AdminHeader AdminHeaderValue;
 		public PhotoAdmin()
 		{
-			this.set_Url("http://localhost/FotoVisionVB/PhotoAdmin.asmx");
+			this.Url = "http://localhost/FotoVisionVB/PhotoAdmin.asmx";
 		}
 		[SoapDocumentMethod, SoapHeader("AdminHeaderValue")]
 		public bool Login()

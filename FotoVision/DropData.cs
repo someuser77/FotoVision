@@ -56,13 +56,13 @@ namespace FotoVision
 			this.IsInDragDrop = true;
 			if (!e.Data.GetDataPresent(DataFormats.FileDrop))
 			{
-				e.set_Effect(0);
+				e.Effect = 0;
 				return;
 			}
 			string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
 			this._containsPhotos = this.PhotosInList(files);
 			this.FindTargetItem(e.X, e.Y);
-			e.set_Effect(this.GetDropEffect(e));
+			e.Effect = this.GetDropEffect(e);
 		}
 		public void Leave()
 		{
@@ -72,7 +72,7 @@ namespace FotoVision
 		{
 			this._lastMouseButtons = Control.MouseButtons;
 			this.FindTargetItem(e.X, e.Y);
-			e.set_Effect(this.GetDropEffect(e));
+			e.Effect = this.GetDropEffect(e);
 		}
 		public string[] Drop(DragEventArgs e)
 		{
@@ -106,11 +106,11 @@ namespace FotoVision
 				}
 				if (this._curItem != null)
 				{
-					this._curItem.set_Selected(false);
+					this._curItem.Selected = false;
 				}
 				if (itemAt != null)
 				{
-					itemAt.set_Selected(true);
+					itemAt.Selected = true;
 				}
 				this._curItem = itemAt;
 			}

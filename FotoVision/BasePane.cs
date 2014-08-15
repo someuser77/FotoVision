@@ -68,21 +68,21 @@ namespace FotoVision
 		{
 			this.caption = new PaneCaption();
 			this.SuspendLayout();
-			this.caption.set_Dock(1);
-			this.caption.set_Font(new Font("Arial", 9f, 1));
+			this.caption.Dock = 1;
+			this.caption.Font = new Font("Arial", 9f, 1);
 			Control arg_48_0 = this.caption;
 			Point location = new Point(1, 1);
-			arg_48_0.set_Location(location);
-			this.caption.set_Name("caption");
+			arg_48_0.Location = location;
+			this.caption.Name = "caption";
 			Control arg_72_0 = this.caption;
 			Size size = new Size(214, 20);
-			arg_72_0.set_Size(size);
-			this.caption.set_TabIndex(0);
+			arg_72_0.Size = size;
+			this.caption.TabIndex = 0;
 			this.Controls.Add(this.caption);
-			this.DockPadding.set_All(1);
-			this.set_Name("BasePane");
+			this.DockPadding.All = 1;
+			this.Name = "BasePane";
 			size = new Size(216, 248);
-			this.set_Size(size);
+			this.Size = size;
 			this.ResumeLayout(false);
 		}
 		protected override void OnEnter(EventArgs e)
@@ -114,7 +114,7 @@ namespace FotoVision
 			base.OnResize(e);
 			if (this.DesignMode)
 			{
-				this.caption.set_Width(this.Width);
+				this.caption.Width = this.Width;
 			}
 		}
 	}

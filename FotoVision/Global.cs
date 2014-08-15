@@ -124,7 +124,7 @@ namespace FotoVision
 		}
 		public static void DisplayError(string message, Exception ex)
 		{
-			Cursor.set_Current(Cursors.Default);
+			Cursor.Current = Cursors.Default;
 			ErrorForm errorForm = new ErrorForm(message, ex);
 			errorForm.ShowDialog();
 		}
