@@ -195,7 +195,7 @@ namespace FotoVision
 			this._brushBack = new SolidBrush(PhotoListView.Consts.BackColor);
 			this._format = new StringFormat();
 			this._format.Alignment = 1;
-			this._format.Trimming = 3;
+            this._format.Trimming = System.Drawing.StringTrimming.EllipsisCharacter;
 		}
 		protected override void OnAfterLabelEdit(LabelEditEventArgs e)
 		{
@@ -404,7 +404,7 @@ namespace FotoVision
 					}
 					DataObject dataObject = new DataObject();
 					dataObject.SetData(DataFormats.FileDrop, array);
-					DragDropEffects dragDropEffects = this.DoDragDrop(dataObject, 3);
+                    DragDropEffects dragDropEffects = this.DoDragDrop(dataObject, DragDropEffects.Copy | DragDropEffects.Move);
 					if (dragDropEffects != 1 && this.FilesDraggedEvent != null)
 					{
 						this.FilesDraggedEvent(this, EventArgs.Empty);

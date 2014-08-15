@@ -21,7 +21,7 @@ namespace FotoVision
 				}
 				else
 				{
-					FileStream fileStream = new FileStream(filePath, 3);
+					FileStream fileStream = new FileStream(filePath, FileMode.Open);
 					MD5CryptoServiceProvider mD5CryptoServiceProvider = new MD5CryptoServiceProvider();
 					byte[] array = mD5CryptoServiceProvider.ComputeHash(fileStream);
 					result = Convert.ToBase64String(array);

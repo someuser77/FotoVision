@@ -230,13 +230,13 @@ namespace FotoVision
 				case OptimizeActions.ActionType.FlipHorizontal:
 					if (this._flipHorz)
 					{
-						PhotoHelper.Rotate(image, 4);
+                        PhotoHelper.Rotate(image, System.Drawing.RotateFlipType.RotateNoneFlipX);
 					}
 					break;
 				case OptimizeActions.ActionType.FlipVertical:
 					if (this._flipVert)
 					{
-						PhotoHelper.Rotate(image, 6);
+						PhotoHelper.Rotate(image, System.Drawing.RotateFlipType.RotateNoneFlipY);
 					}
 					break;
 				case OptimizeActions.ActionType.Crop:

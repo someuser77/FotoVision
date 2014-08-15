@@ -497,7 +497,7 @@ namespace FotoVision
 				{
 					FileInfo fileInfo = new FileInfo(filePath);
 					byte[] array = new byte[(int)fileInfo.Length + 1];
-					FileStream fileStream = new FileStream(filePath, 3, 1);
+					FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
 					BinaryReader binaryReader = new BinaryReader(fileStream);
 					array = binaryReader.ReadBytes((int)fileInfo.Length);
 					result = array;

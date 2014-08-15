@@ -128,7 +128,7 @@ namespace FotoVision
 			this._textHeight = this.Font.Height;
 			this.InitChildControls();
 			this._format = new StringFormat();
-			this._format.Trimming = 3;
+            this._format.Trimming = System.Drawing.StringTrimming.EllipsisCharacter;
 		}
 		public void SetPhotos(Photo[] photos)
 		{

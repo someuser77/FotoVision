@@ -1504,7 +1504,7 @@ namespace FotoVision
 		public static void Main()
 		{
 			bool flag;
-			Mutex mutex = new Mutex(true, Application.ProductName + "manifest", ref flag);
+			Mutex mutex = new Mutex(true, Application.ProductName + "manifest", out flag);
 			if (flag)
 			{
 				if (ThemeManifest.Create())
@@ -1527,7 +1527,7 @@ namespace FotoVision
 		public static void Run()
 		{
 			bool flag;
-			Mutex mutex = new Mutex(true, Application.ProductName + "single", ref flag);
+			Mutex mutex = new Mutex(true, Application.ProductName + "single", out flag);
 			if (flag)
 			{
 				Application.Run(new MainForm());
@@ -2036,7 +2036,7 @@ namespace FotoVision
 			this._format = new StringFormat();
 			this._format.FormatFlags = 4096;
 			this._format.LineAlignment = 1;
-			this._format.Trimming = 3;
+            this._format.Trimming = System.Drawing.StringTrimming.EllipsisCharacter;
 			this.InitToolbarButtons();
 		}
 		protected override void OnLoad(EventArgs e)

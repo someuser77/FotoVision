@@ -292,7 +292,7 @@ namespace FotoVision
 			this._path = path;
 			this._fontHeader = this.labelFileName.Font;
 			this._format = new StringFormat();
-			this._format.Trimming = 5;
+            this._format.Trimming = System.Drawing.StringTrimming.EllipsisCharacter;
 		}
 		protected override void Dispose(bool disposing)
 		{
