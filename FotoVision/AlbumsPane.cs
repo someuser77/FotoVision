@@ -185,7 +185,7 @@ namespace FotoVision
 			{
 				if (this.listView.SelectedItems.Count == 1)
 				{
-					return this.listView.SelectedItems[0].get_Text;
+					return this.listView.SelectedItems[0].Text;
 				}
 				return "";
 			}
@@ -829,7 +829,7 @@ namespace FotoVision
 		}
 		private void AlbumsPane_Resize(object sender, EventArgs e)
 		{
-			int num = this.listView.Columns[1].get_Width;
+			int num = this.listView.Columns[1].Width;
 			checked
 			{
 				if (this.listView.Width > this.listView.DisplayRectangle.Width + SystemInformation.Border3DSize.Width * 2)
@@ -851,7 +851,7 @@ namespace FotoVision
 				e.CancelEdit = true;
 				return;
 			}
-			string text = this.listView.Items[e.get_Item].Text;
+			string text = this.listView.Items[e.Item].Text;
 			string text2 = e.Label;
 			if (!FileManager.IsValidAlbumName(text2))
 			{

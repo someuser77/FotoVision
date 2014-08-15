@@ -123,14 +123,14 @@ namespace FotoVision
 			set
 			{
 				this._count = value;
-				this.labelMessage.set_Text(string.Concat(new string[]
+				this.labelMessage.Text = string.Concat(new string[]
 				{
 					StringType.FromObject(Interaction.IIf(this._count == 1, "Deleting this photo will only delete the copy FotoVision has made from your original photo", "Deleting these photos will only delete the copies FotoVision has made from your original photos")),
 					" during the import.",
 					"\r\n",
 					"\r\n",
 					"Do you want to continue?"
-				}));
+				});
 			}
 		}
 		public DeletePhotoForm()

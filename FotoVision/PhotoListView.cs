@@ -200,7 +200,7 @@ namespace FotoVision
 		protected override void OnAfterLabelEdit(LabelEditEventArgs e)
 		{
 			this._backgroundDirty = true;
-			Photo photo = (Photo)this.Items[e.get_Item].Tag;
+			Photo photo = (Photo)this.Items[e.Item].Tag;
 			if (e.Label == null || e.Label.Trim().Length == 0)
 			{
 				e.CancelEdit = true;
@@ -399,7 +399,7 @@ namespace FotoVision
 					int num = array.Length - 1;
 					for (int i = arg_37_0; i <= num; i++)
 					{
-						Photo photo = (Photo)this.SelectedItems[i].get_Tag;
+						Photo photo = (Photo)this.SelectedItems[i].Tag;
 						array[i] = photo.PhotoPath;
 					}
 					DataObject dataObject = new DataObject();

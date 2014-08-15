@@ -883,7 +883,7 @@ namespace FotoVision
 		{
 			if (this.listErrors.SelectedItems != null && this.listErrors.SelectedItems.Count > 0)
 			{
-				this.textError.Text = this.listErrors.SelectedItems[0].get_Text;
+				this.textError.Text = this.listErrors.SelectedItems[0].Text;
 			}
 			else
 			{

@@ -2073,7 +2073,7 @@ namespace FotoVision
 				int num = this.toolBar.Buttons.Count - 1;
 				for (int i = arg_14_0; i <= num; i++)
 				{
-					if (this.toolBar.Buttons[i].get_Style != 3)
+					if (this.toolBar.Buttons[i].Style != 3)
 					{
 						int num2;
 						this.toolBar.Buttons[i].Tag = num2;
@@ -2165,8 +2165,8 @@ namespace FotoVision
 			string text = e.Message + "...";
 			if (!this.progressBar.Visible)
 			{
-				this._orgStatusText[0] = this.statusBar.Panels[0].get_Text;
-				this._orgStatusText[1] = this.statusBar.Panels[1].get_Text;
+				this._orgStatusText[0] = this.statusBar.Panels[0].Text;
+				this._orgStatusText[1] = this.statusBar.Panels[1].Text;
 				this.statusBar.Panels[1].Text = "";
 				this.statusBar.Panels[1].BorderStyle = 1;
 			}

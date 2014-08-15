@@ -344,7 +344,7 @@ namespace FotoVision
 				return;
 			}
 			this.CheckCurrentItem();
-			Photo photo = (Photo)this.Items[this.get_SelectedIndex];
+			Photo photo = (Photo)this.Items[this.SelectedIndex];
 			Rectangle itemRectangle = this.GetItemRectangle(this.SelectedIndex);
 			this.HideControls();
 			this._textTitle.Left = 74;
