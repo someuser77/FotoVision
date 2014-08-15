@@ -305,7 +305,7 @@ namespace FotoVision
 			this.labelProgress = new Label();
 			this.panelProgress.SuspendLayout();
 			this.SuspendLayout();
-			this.labelHeader.FlatStyle = 3;
+			this.labelHeader.FlatStyle = FlatStyle.System;
 			Control arg_E4_0 = this.labelHeader;
 			Point location = new Point(56, 8);
 			arg_E4_0.Location = location;
@@ -325,7 +325,7 @@ namespace FotoVision
 			this.pictCurrent.SizeMode = 3;
 			this.pictCurrent.TabIndex = 1;
 			this.pictCurrent.TabStop = false;
-			this.labelExisting.FlatStyle = 3;
+			this.labelExisting.FlatStyle = FlatStyle.System;
 			this.labelExisting.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_1CC_0 = this.labelExisting;
 			location = new Point(56, 56);
@@ -336,7 +336,7 @@ namespace FotoVision
 			arg_1F3_0.Size = size;
 			this.labelExisting.TabIndex = 5;
 			this.labelExisting.Text = "Existing photo";
-			this.labelNew.FlatStyle = 3;
+			this.labelNew.FlatStyle = FlatStyle.System;
             this.labelNew.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_252_0 = this.labelNew;
 			location = new Point(56, 152);
@@ -358,7 +358,7 @@ namespace FotoVision
 			this.pictNew.TabIndex = 1;
 			this.pictNew.TabStop = false;
 			this.buttonOK.DialogResult = 1;
-			this.buttonOK.FlatStyle = 3;
+			this.buttonOK.FlatStyle = FlatStyle.System;
 			Control arg_32C_0 = this.buttonOK;
 			location = new Point(16, 248);
 			arg_32C_0.Location = location;
@@ -369,7 +369,7 @@ namespace FotoVision
 			this.buttonOK.TabIndex = 0;
 			this.buttonOK.Text = "Yes";
 			this.buttonYesToAll.DialogResult = 6;
-			this.buttonYesToAll.FlatStyle = 3;
+			this.buttonYesToAll.FlatStyle = FlatStyle.System;
 			Control arg_3A1_0 = this.buttonYesToAll;
 			location = new Point(104, 248);
 			arg_3A1_0.Location = location;
@@ -380,7 +380,7 @@ namespace FotoVision
 			this.buttonYesToAll.TabIndex = 1;
 			this.buttonYesToAll.Text = "Yes to All";
 			this.buttonNo.DialogResult = 7;
-			this.buttonNo.FlatStyle = 3;
+			this.buttonNo.FlatStyle = FlatStyle.System;
 			Control arg_419_0 = this.buttonNo;
 			location = new Point(192, 248);
 			arg_419_0.Location = location;
@@ -391,7 +391,7 @@ namespace FotoVision
 			this.buttonNo.TabIndex = 2;
 			this.buttonNo.Text = "No";
 			this.buttonCancel.DialogResult = 2;
-			this.buttonCancel.FlatStyle = 3;
+			this.buttonCancel.FlatStyle = FlatStyle.System;
 			Control arg_491_0 = this.buttonCancel;
 			location = new Point(280, 248);
 			arg_491_0.Location = location;
@@ -448,7 +448,7 @@ namespace FotoVision
 			size = new Size(240, 32);
 			arg_6D3_0.Size = size;
 			this.panelProgress.TabIndex = 13;
-			this.labelProgress.FlatStyle = 3;
+			this.labelProgress.FlatStyle = FlatStyle.System;
 			this.labelProgress.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
 			this.labelProgress.ForeColor = SystemColors.ControlText;
 			Control arg_72F_0 = this.labelProgress;

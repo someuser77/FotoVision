@@ -143,7 +143,7 @@ namespace FotoVision
 			this.textPassword.TabIndex = 1;
 			this.textPassword.Text = "";
 			this.buttonOK.DialogResult = 1;
-			this.buttonOK.FlatStyle = 3;
+			this.buttonOK.FlatStyle = FlatStyle.System;
 			Control arg_E7_0 = this.buttonOK;
 			location = new Point(128, 72);
 			arg_E7_0.Location = location;
@@ -154,7 +154,7 @@ namespace FotoVision
 			this.buttonOK.TabIndex = 2;
 			this.buttonOK.Text = "OK";
 			this.buttonCancel.DialogResult = 2;
-			this.buttonCancel.FlatStyle = 3;
+			this.buttonCancel.FlatStyle = FlatStyle.System;
 			Control arg_15C_0 = this.buttonCancel;
 			location = new Point(192, 72);
 			arg_15C_0.Location = location;
@@ -164,7 +164,7 @@ namespace FotoVision
 			arg_183_0.Size = size;
 			this.buttonCancel.TabIndex = 3;
 			this.buttonCancel.Text = "Cancel";
-			this.labelPassword.FlatStyle = 3;
+			this.labelPassword.FlatStyle = FlatStyle.System;
 			Control arg_1C2_0 = this.labelPassword;
 			location = new Point(56, 16);
 			arg_1C2_0.Location = location;

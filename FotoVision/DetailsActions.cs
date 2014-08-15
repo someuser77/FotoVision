@@ -832,7 +832,7 @@ namespace FotoVision
 			size = new Size(48, 20);
 			arg_552_0.Size = size;
 			this.numContrast.TabIndex = 2;
-			this.labelSat.FlatStyle = 3;
+			this.labelSat.FlatStyle = FlatStyle.System;
 			Control arg_584_0 = this.labelSat;
 			location = new Point(8, 208);
 			arg_584_0.Location = location;
@@ -842,7 +842,7 @@ namespace FotoVision
 			arg_5AB_0.Size = size;
 			this.labelSat.TabIndex = 9;
 			this.labelSat.Text = "&Saturation";
-			this.labelBright.FlatStyle = 3;
+			this.labelBright.FlatStyle = FlatStyle.System;
 			Control arg_5EB_0 = this.labelBright;
 			location = new Point(8, 80);
 			arg_5EB_0.Location = location;
@@ -865,21 +865,21 @@ namespace FotoVision
 			arg_6A3_0.Size = size;
 			this.sliderBright.TabIndex = 4;
 			this.sliderBright.TickFrequency = 25;
-			this.buttonGrayscale.FlatStyle = 3;
+			this.buttonGrayscale.FlatStyle = FlatStyle.System;
 			Control arg_6E3_0 = this.buttonGrayscale;
 			location = new Point(16, 304);
 			arg_6E3_0.Location = location;
 			this.buttonGrayscale.Name = "buttonGrayscale";
 			this.buttonGrayscale.TabIndex = 13;
 			this.buttonGrayscale.Text = "&Grayscale";
-			this.buttonSepia.FlatStyle = 3;
+			this.buttonSepia.FlatStyle = FlatStyle.System;
 			Control arg_737_0 = this.buttonSepia;
 			location = new Point(112, 304);
 			arg_737_0.Location = location;
 			this.buttonSepia.Name = "buttonSepia";
 			this.buttonSepia.TabIndex = 14;
 			this.buttonSepia.Text = "Se&pia";
-			this.labelContrast.FlatStyle = 3;
+			this.labelContrast.FlatStyle = FlatStyle.System;
 			Control arg_787_0 = this.labelContrast;
 			location = new Point(8, 16);
 			arg_787_0.Location = location;
@@ -915,7 +915,7 @@ namespace FotoVision
 			arg_8D0_0.Size = size;
 			this.sliderSat.TabIndex = 10;
 			this.sliderSat.TickFrequency = 25;
-			this.labelGamma.FlatStyle = 3;
+			this.labelGamma.FlatStyle = FlatStyle.System;
 			Control arg_910_0 = this.labelGamma;
 			location = new Point(8, 144);
 			arg_910_0.Location = location;
@@ -938,7 +938,7 @@ namespace FotoVision
 			arg_9CB_0.Size = size;
 			this.sliderGamma.TabIndex = 7;
 			this.sliderGamma.TickFrequency = 25;
-			this.labelColors.FlatStyle = 3;
+			this.labelColors.FlatStyle = FlatStyle.System;
 			Control arg_A0A_0 = this.labelColors;
 			location = new Point(8, 280);
 			arg_A0A_0.Location = location;
@@ -1027,7 +1027,7 @@ namespace FotoVision
 			arg_D44_0.Size = size;
 			this.panelCrop.TabIndex = 0;
 			this.buttonCrop.Enabled = false;
-			this.buttonCrop.FlatStyle = 3;
+			this.buttonCrop.FlatStyle = FlatStyle.System;
 			Control arg_D83_0 = this.buttonCrop;
 			location = new Point(16, 200);
 			arg_D83_0.Location = location;
@@ -1052,7 +1052,7 @@ namespace FotoVision
 			size = new Size(276, 1);
 			arg_E59_0.Size = size;
 			this.panelCropSep.TabIndex = 1;
-			this.labelCrop.FlatStyle = 3;
+			this.labelCrop.FlatStyle = FlatStyle.System;
 			Control arg_E88_0 = this.labelCrop;
 			location = new Point(8, 16);
 			arg_E88_0.Location = location;
@@ -1062,7 +1062,7 @@ namespace FotoVision
 			arg_EB2_0.Size = size;
 			this.labelCrop.TabIndex = 0;
 			this.labelCrop.Text = "Crop Coordinates";
-			this.labelPicture.FlatStyle = 3;
+			this.labelPicture.FlatStyle = FlatStyle.System;
 			Control arg_EF1_0 = this.labelPicture;
 			location = new Point(8, 120);
 			arg_EF1_0.Location = location;
@@ -1091,7 +1091,7 @@ namespace FotoVision
 			this.pictCropDim.TabIndex = 2;
 			this.pictCropDim.TabStop = false;
 			this.buttonClearCrop.Enabled = false;
-			this.buttonClearCrop.FlatStyle = 3;
+			this.buttonClearCrop.FlatStyle = FlatStyle.System;
 			Control arg_1026_0 = this.buttonClearCrop;
 			location = new Point(104, 200);
 			arg_1026_0.Location = location;
@@ -1111,7 +1111,7 @@ namespace FotoVision
 			size = new Size(308, 40);
 			arg_10FA_0.Size = size;
 			this.panelSave.TabIndex = 1;
-			this.buttonSave.FlatStyle = 3;
+			this.buttonSave.FlatStyle = FlatStyle.System;
 			Control arg_1129_0 = this.buttonSave;
 			location = new Point(16, 8);
 			arg_1129_0.Location = location;
@@ -1121,7 +1121,7 @@ namespace FotoVision
 			arg_1150_0.Size = size;
 			this.buttonSave.TabIndex = 0;
 			this.buttonSave.Text = "S&ave";
-			this.buttonReset.FlatStyle = 3;
+			this.buttonReset.FlatStyle = FlatStyle.System;
 			Control arg_118F_0 = this.buttonReset;
 			location = new Point(88, 8);
 			arg_118F_0.Location = location;
@@ -1131,7 +1131,7 @@ namespace FotoVision
 			arg_11B6_0.Size = size;
 			this.buttonReset.TabIndex = 1;
 			this.buttonReset.Text = "&Reset";
-			this.buttonUndo.FlatStyle = 3;
+			this.buttonUndo.FlatStyle = FlatStyle.System;
 			Control arg_11F8_0 = this.buttonUndo;
 			location = new Point(160, 8);
 			arg_11F8_0.Location = location;
@@ -1141,7 +1141,7 @@ namespace FotoVision
 			arg_121F_0.Size = size;
 			this.buttonUndo.TabIndex = 2;
 			this.buttonUndo.Text = "&Undo";
-			this.buttonRedo.FlatStyle = 3;
+			this.buttonRedo.FlatStyle = FlatStyle.System;
 			Control arg_1261_0 = this.buttonRedo;
 			location = new Point(232, 8);
 			arg_1261_0.Location = location;

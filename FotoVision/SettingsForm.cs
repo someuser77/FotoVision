@@ -560,7 +560,7 @@ namespace FotoVision
 			this.SuspendLayout();
 			this.buttonOK.Anchor = 10;
 			this.buttonOK.DialogResult = 1;
-			this.buttonOK.FlatStyle = 3;
+			this.buttonOK.FlatStyle = FlatStyle.System;
 			Control arg_193_0 = this.buttonOK;
 			Point location = new Point(208, 296);
 			arg_193_0.Location = location;
@@ -572,7 +572,7 @@ namespace FotoVision
 			this.buttonOK.Text = "OK";
 			this.buttonCancel.Anchor = 10;
 			this.buttonCancel.DialogResult = 2;
-			this.buttonCancel.FlatStyle = 3;
+			this.buttonCancel.FlatStyle = FlatStyle.System;
 			Control arg_219_0 = this.buttonCancel;
 			location = new Point(272, 296);
 			arg_219_0.Location = location;
@@ -615,7 +615,7 @@ namespace FotoVision
 			arg_43C_0.Size = size;
 			this.pageWebHosting.TabIndex = 2;
 			this.pageWebHosting.Text = "Website";
-			this.radioLow.FlatStyle = 3;
+			this.radioLow.FlatStyle = FlatStyle.System;
 			Control arg_47F_0 = this.radioLow;
 			location = new Point(24, 188);
 			arg_47F_0.Location = location;
@@ -625,7 +625,7 @@ namespace FotoVision
 			arg_4A6_0.Size = size;
 			this.radioLow.TabIndex = 9;
 			this.radioLow.Text = "L&ow";
-			this.labelWebsite.FlatStyle = 3;
+			this.labelWebsite.FlatStyle = FlatStyle.System;
             this.labelWebsite.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_502_0 = this.labelWebsite;
 			location = new Point(8, 8);
@@ -636,7 +636,7 @@ namespace FotoVision
 			arg_529_0.Size = size;
 			this.labelWebsite.TabIndex = 0;
 			this.labelWebsite.Text = "Website settings";
-			this.labelPixels.FlatStyle = 3;
+			this.labelPixels.FlatStyle = FlatStyle.System;
 			Control arg_56B_0 = this.labelPixels;
 			location = new Point(8, 140);
 			arg_56B_0.Location = location;
@@ -690,7 +690,7 @@ namespace FotoVision
 				0
 			});
 			arg_6B5_0.Value = num;
-			this.labelPassword.FlatStyle = 3;
+			this.labelPassword.FlatStyle = FlatStyle.System;
 			Control arg_6D8_0 = this.labelPassword;
 			location = new Point(8, 68);
 			arg_6D8_0.Location = location;
@@ -721,7 +721,7 @@ namespace FotoVision
 			arg_7E5_0.Size = size;
 			this.textLocation.TabIndex = 2;
 			this.textLocation.Text = "";
-			this.labelLocation.FlatStyle = 3;
+			this.labelLocation.FlatStyle = FlatStyle.System;
 			Control arg_824_0 = this.labelLocation;
 			location = new Point(8, 36);
 			arg_824_0.Location = location;
@@ -731,7 +731,7 @@ namespace FotoVision
 			arg_84B_0.Size = size;
 			this.labelLocation.TabIndex = 1;
 			this.labelLocation.Text = "&Location:";
-			this.labelPublish.FlatStyle = 3;
+			this.labelPublish.FlatStyle = FlatStyle.System;
             this.labelPublish.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_8A7_0 = this.labelPublish;
 			location = new Point(8, 112);
@@ -742,7 +742,7 @@ namespace FotoVision
 			arg_8CE_0.Size = size;
 			this.labelPublish.TabIndex = 5;
 			this.labelPublish.Text = "Published photos";
-			this.labelQuality.FlatStyle = 3;
+			this.labelQuality.FlatStyle = FlatStyle.System;
 			Control arg_910_0 = this.labelQuality;
 			location = new Point(8, 168);
 			arg_910_0.Location = location;
@@ -752,7 +752,7 @@ namespace FotoVision
 			arg_93A_0.Size = size;
 			this.labelQuality.TabIndex = 8;
 			this.labelQuality.Text = "Image quality (lower quality creates a smaller file):";
-			this.radioMed.FlatStyle = 3;
+			this.radioMed.FlatStyle = FlatStyle.System;
 			Control arg_97D_0 = this.radioMed;
 			location = new Point(80, 188);
 			arg_97D_0.Location = location;
@@ -762,7 +762,7 @@ namespace FotoVision
 			arg_9A4_0.Size = size;
 			this.radioMed.TabIndex = 10;
 			this.radioMed.Text = "M&edium";
-			this.radioHigh.FlatStyle = 3;
+			this.radioHigh.FlatStyle = FlatStyle.System;
 			Control arg_9EB_0 = this.radioHigh;
 			location = new Point(152, 188);
 			arg_9EB_0.Location = location;
@@ -789,7 +789,7 @@ namespace FotoVision
 			arg_B23_0.Size = size;
 			this.pageApplication.TabIndex = 1;
 			this.pageApplication.Text = "Application";
-			this.checkConfirm.FlatStyle = 3;
+			this.checkConfirm.FlatStyle = FlatStyle.System;
 			Control arg_B65_0 = this.checkConfirm;
 			location = new Point(8, 136);
 			arg_B65_0.Location = location;
@@ -809,7 +809,7 @@ namespace FotoVision
 			arg_BF6_0.Size = size;
 			this.textEmailSubject.TabIndex = 3;
 			this.textEmailSubject.Text = "";
-			this.labelEmailSubject.FlatStyle = 3;
+			this.labelEmailSubject.FlatStyle = FlatStyle.System;
 			Control arg_C35_0 = this.labelEmailSubject;
 			location = new Point(8, 56);
 			arg_C35_0.Location = location;
@@ -819,7 +819,7 @@ namespace FotoVision
 			arg_C5F_0.Size = size;
 			this.labelEmailSubject.TabIndex = 2;
 			this.labelEmailSubject.Text = "&Default text for the subject line in your email:";
-			this.checkUpload.FlatStyle = 3;
+			this.checkUpload.FlatStyle = FlatStyle.System;
 			Control arg_CA1_0 = this.checkUpload;
 			location = new Point(8, 160);
 			arg_CA1_0.Location = location;
@@ -829,7 +829,7 @@ namespace FotoVision
 			arg_CCB_0.Size = size;
 			this.checkUpload.TabIndex = 6;
 			this.checkUpload.Text = "Close &upload window after uploading is complete";
-			this.labelApplication.FlatStyle = 3;
+			this.labelApplication.FlatStyle = FlatStyle.System;
             this.labelApplication.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_D26_0 = this.labelApplication;
 			location = new Point(8, 8);
@@ -840,7 +840,7 @@ namespace FotoVision
 			arg_D50_0.Size = size;
 			this.labelApplication.TabIndex = 0;
 			this.labelApplication.Text = "Email notification settings";
-			this.labelAppDesc.FlatStyle = 3;
+			this.labelAppDesc.FlatStyle = FlatStyle.System;
 			Control arg_D8F_0 = this.labelAppDesc;
 			location = new Point(8, 32);
 			arg_D8F_0.Location = location;
@@ -850,7 +850,7 @@ namespace FotoVision
 			arg_DB9_0.Size = size;
 			this.labelAppDesc.TabIndex = 1;
 			this.labelAppDesc.Text = "You can notify your friends with your latest changes.";
-			this.labelSettings.FlatStyle = 3;
+			this.labelSettings.FlatStyle = FlatStyle.System;
             this.labelSettings.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_E15_0 = this.labelSettings;
 			location = new Point(8, 112);
@@ -861,7 +861,7 @@ namespace FotoVision
 			arg_E3C_0.Size = size;
 			this.labelSettings.TabIndex = 4;
 			this.labelSettings.Text = "General settings";
-			this.checkExif.FlatStyle = 3;
+			this.checkExif.FlatStyle = FlatStyle.System;
 			Control arg_E7E_0 = this.checkExif;
 			location = new Point(8, 184);
 			arg_E7E_0.Location = location;

@@ -208,7 +208,7 @@ namespace FotoVision
 			this.pictIcon.TabStop = false;
 			this.buttonOK.Anchor = 10;
 			this.buttonOK.DialogResult = 2;
-			this.buttonOK.FlatStyle = 3;
+			this.buttonOK.FlatStyle = FlatStyle.System;
 			Control arg_FF_0 = this.buttonOK;
 			location = new Point(270, 216);
 			arg_FF_0.Location = location;
@@ -232,7 +232,7 @@ namespace FotoVision
 			arg_1C6_0.Size = size;
 			this.textDetails.TabIndex = 7;
 			this.textDetails.Text = "";
-			this.labelDetails.FlatStyle = 3;
+			this.labelDetails.FlatStyle = FlatStyle.System;
 			Control arg_207_0 = this.labelDetails;
 			location = new Point(8, 128);
 			arg_207_0.Location = location;
@@ -242,7 +242,7 @@ namespace FotoVision
 			arg_22E_0.Size = size;
 			this.labelDetails.TabIndex = 6;
 			this.labelDetails.Text = "&Details:";
-			this.labelType.FlatStyle = 3;
+			this.labelType.FlatStyle = FlatStyle.System;
 			Control arg_26C_0 = this.labelType;
 			location = new Point(8, 80);
 			arg_26C_0.Location = location;
@@ -265,7 +265,7 @@ namespace FotoVision
 			this.textType.TabIndex = 5;
 			this.textType.Text = "";
 			this.labelHeader.Anchor = 13;
-			this.labelHeader.FlatStyle = 3;
+			this.labelHeader.FlatStyle = FlatStyle.System;
             this.labelHeader.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_380_0 = this.labelHeader;
 			location = new Point(56, 8);
@@ -276,7 +276,7 @@ namespace FotoVision
 			arg_3AA_0.Size = size;
 			this.labelHeader.TabIndex = 1;
 			this.labelHeader.Text = "An error occurred";
-			this.labelInfo.FlatStyle = 3;
+			this.labelInfo.FlatStyle = FlatStyle.System;
             this.labelInfo.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_405_0 = this.labelInfo;
 			location = new Point(8, 56);

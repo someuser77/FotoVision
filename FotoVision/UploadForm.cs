@@ -581,7 +581,7 @@ namespace FotoVision
 			this.imageList.ImageStream = (ImageListStreamer)resourceManager.GetObject("imageList.ImageStream");
 			this.imageList.TransparentColor = Color.Lime;
 			this.buttonDetails.Anchor = 9;
-			this.buttonDetails.FlatStyle = 3;
+			this.buttonDetails.FlatStyle = FlatStyle.System;
 			Control arg_280_0 = this.buttonDetails;
 			location = new Point(388, 40);
 			arg_280_0.Location = location;
@@ -589,7 +589,7 @@ namespace FotoVision
 			this.buttonDetails.TabIndex = 4;
 			this.buttonDetails.Text = "<< Details";
 			this.buttonCancel.Anchor = 9;
-			this.buttonCancel.FlatStyle = 3;
+			this.buttonCancel.FlatStyle = FlatStyle.System;
 			Control arg_2DF_0 = this.buttonCancel;
 			location = new Point(388, 8);
 			arg_2DF_0.Location = location;
@@ -687,7 +687,7 @@ namespace FotoVision
 			this.listErrors.SmallImageList = this.imageList;
 			this.listErrors.TabIndex = 1;
 			this.listErrors.View = 1;
-			this.labelMessage.FlatStyle = 3;
+			this.labelMessage.FlatStyle = FlatStyle.System;
 			Control arg_72D_0 = this.labelMessage;
 			location = new Point(8, 8);
 			arg_72D_0.Location = location;
@@ -697,7 +697,7 @@ namespace FotoVision
 			arg_757_0.Size = size;
 			this.labelMessage.TabIndex = 0;
 			this.labelMessage.Text = "< header message >";
-			this.checkCloseComplete.FlatStyle = 3;
+			this.checkCloseComplete.FlatStyle = FlatStyle.System;
 			Control arg_796_0 = this.checkCloseComplete;
 			location = new Point(8, 44);
 			arg_796_0.Location = location;
@@ -708,7 +708,7 @@ namespace FotoVision
 			this.checkCloseComplete.TabIndex = 2;
 			this.checkCloseComplete.Text = "&Close window after uploading is complete";
 			this.buttonClose.Anchor = 9;
-			this.buttonClose.FlatStyle = 3;
+			this.buttonClose.FlatStyle = FlatStyle.System;
 			Control arg_80F_0 = this.buttonClose;
 			location = new Point(388, 8);
 			arg_80F_0.Location = location;

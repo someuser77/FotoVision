@@ -163,7 +163,7 @@ namespace FotoVision
 			arg_74_0.Size = size;
 			this.pictIcon.TabIndex = 0;
 			this.pictIcon.TabStop = false;
-			this.labelMessage.FlatStyle = 3;
+			this.labelMessage.FlatStyle = FlatStyle.System;
 			Control arg_AE_0 = this.labelMessage;
 			location = new Point(56, 8);
 			arg_AE_0.Location = location;
@@ -174,7 +174,7 @@ namespace FotoVision
 			this.labelMessage.TabIndex = 2;
 			this.labelMessage.Text = "< message >";
 			this.buttonYes.DialogResult = 1;
-			this.buttonYes.FlatStyle = 3;
+			this.buttonYes.FlatStyle = FlatStyle.System;
 			Control arg_126_0 = this.buttonYes;
 			location = new Point(216, 104);
 			arg_126_0.Location = location;
@@ -185,7 +185,7 @@ namespace FotoVision
 			this.buttonYes.TabIndex = 0;
 			this.buttonYes.Text = "Yes";
 			this.buttonNo.DialogResult = 2;
-			this.buttonNo.FlatStyle = 3;
+			this.buttonNo.FlatStyle = FlatStyle.System;
 			Control arg_19B_0 = this.buttonNo;
 			location = new Point(280, 104);
 			arg_19B_0.Location = location;
@@ -195,7 +195,7 @@ namespace FotoVision
 			arg_1C2_0.Size = size;
 			this.buttonNo.TabIndex = 1;
 			this.buttonNo.Text = "No";
-			this.checkDontShow.FlatStyle = 3;
+			this.checkDontShow.FlatStyle = FlatStyle.System;
 			Control arg_201_0 = this.checkDontShow;
 			location = new Point(56, 72);
 			arg_201_0.Location = location;

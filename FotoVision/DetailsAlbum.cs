@@ -336,7 +336,7 @@ namespace FotoVision
 			this.labelLocationHeader = new Label();
 			this.textLocation = new TextBox();
 			this.SuspendLayout();
-			this.labelWebsiteHeader.FlatStyle = 3;
+			this.labelWebsiteHeader.FlatStyle = FlatStyle.System;
             this.labelWebsiteHeader.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_E4_0 = this.labelWebsiteHeader;
 			Point location = new Point(8, 8);
@@ -347,7 +347,7 @@ namespace FotoVision
 			arg_10E_0.Size = size;
 			this.labelWebsiteHeader.TabIndex = 0;
 			this.labelWebsiteHeader.Text = "Text appearing on website (optional)";
-			this.labelAlbumTitle.FlatStyle = 3;
+			this.labelAlbumTitle.FlatStyle = FlatStyle.System;
 			Control arg_14C_0 = this.labelAlbumTitle;
 			location = new Point(8, 32);
 			arg_14C_0.Location = location;
@@ -377,7 +377,7 @@ namespace FotoVision
 			arg_247_0.Size = size;
 			this.textDesc.TabIndex = 3;
 			this.textDesc.Text = "";
-			this.labelDate.FlatStyle = 3;
+			this.labelDate.FlatStyle = FlatStyle.System;
 			Control arg_288_0 = this.labelDate;
 			location = new Point(8, 152);
 			arg_288_0.Location = location;
@@ -396,7 +396,7 @@ namespace FotoVision
 			arg_311_0.Size = size;
 			this.textDate.TabIndex = 5;
 			this.textDate.Text = "";
-			this.radioPublish.FlatStyle = 3;
+			this.radioPublish.FlatStyle = FlatStyle.System;
 			Control arg_353_0 = this.radioPublish;
 			location = new Point(16, 232);
 			arg_353_0.Location = location;
@@ -411,7 +411,7 @@ namespace FotoVision
 			arg_3B0_0.ImageSize = size;
 			this.imageList.ImageStream = (ImageListStreamer)resourceManager.GetObject("imageList.ImageStream");
 			this.imageList.TransparentColor = Color.Lime;
-			this.radioDontPublish.FlatStyle = 3;
+			this.radioDontPublish.FlatStyle = FlatStyle.System;
 			Control arg_401_0 = this.radioDontPublish;
 			location = new Point(16, 256);
 			arg_401_0.Location = location;
@@ -421,7 +421,7 @@ namespace FotoVision
 			arg_42B_0.Size = size;
 			this.radioDontPublish.TabIndex = 8;
 			this.radioDontPublish.Text = "         View album in FotoVision only";
-			this.labelPublishHeader.FlatStyle = 3;
+			this.labelPublishHeader.FlatStyle = FlatStyle.System;
             this.labelPublishHeader.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_489_0 = this.labelPublishHeader;
 			location = new Point(8, 216);
@@ -432,7 +432,7 @@ namespace FotoVision
 			arg_4B0_0.Size = size;
 			this.labelPublishHeader.TabIndex = 6;
 			this.labelPublishHeader.Text = "Publishing settings";
-			this.labelLocationHeader.FlatStyle = 3;
+			this.labelLocationHeader.FlatStyle = FlatStyle.System;
             this.labelLocationHeader.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_50E_0 = this.labelLocationHeader;
 			location = new Point(8, 304);

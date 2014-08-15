@@ -323,7 +323,7 @@ namespace FotoVision
 			this.panelProgress.SuspendLayout();
 			this.SuspendLayout();
 			this.buttonClose.DialogResult = 1;
-			this.buttonClose.FlatStyle = 3;
+			this.buttonClose.FlatStyle = FlatStyle.System;
 			Control arg_EC_0 = this.buttonClose;
 			Point location = new Point(232, 258);
 			arg_EC_0.Location = location;
@@ -402,7 +402,7 @@ namespace FotoVision
 			this.textActions.TabIndex = 2;
 			this.textActions.Text = "";
 			this.textActions.WordWrap = false;
-			this.labelFileName.FlatStyle = 3;
+			this.labelFileName.FlatStyle = FlatStyle.System;
             this.labelFileName.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_485_0 = this.labelFileName;
 			location = new Point(64, 16);
@@ -413,7 +413,7 @@ namespace FotoVision
 			arg_4AF_0.Size = size;
 			this.labelFileName.TabIndex = 4;
 			this.labelFileName.Visible = false;
-			this.labelSize.FlatStyle = 3;
+			this.labelSize.FlatStyle = FlatStyle.System;
 			Control arg_4EA_0 = this.labelSize;
 			location = new Point(64, 32);
 			arg_4EA_0.Location = location;
@@ -433,7 +433,7 @@ namespace FotoVision
 			size = new Size(240, 32);
 			arg_596_0.Size = size;
 			this.panelProgress.TabIndex = 14;
-			this.labelProgress.FlatStyle = 3;
+			this.labelProgress.FlatStyle = FlatStyle.System;
             this.labelProgress.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
 			this.labelProgress.ForeColor = SystemColors.ControlText;
 			Control arg_5F2_0 = this.labelProgress;

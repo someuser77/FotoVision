@@ -121,7 +121,7 @@ namespace FotoVision
 			this.pictIcon.TabIndex = 1;
 			this.pictIcon.TabStop = false;
 			this.buttonOK.DialogResult = 1;
-			this.buttonOK.FlatStyle = 3;
+			this.buttonOK.FlatStyle = FlatStyle.System;
 			Control arg_B3_0 = this.buttonOK;
 			location = new Point(280, 88);
 			arg_B3_0.Location = location;
@@ -131,7 +131,7 @@ namespace FotoVision
 			arg_DA_0.Size = size;
 			this.buttonOK.TabIndex = 2;
 			this.buttonOK.Text = "OK";
-			this.labelMessage.FlatStyle = 3;
+			this.labelMessage.FlatStyle = FlatStyle.System;
 			Control arg_118_0 = this.labelMessage;
 			location = new Point(56, 8);
 			arg_118_0.Location = location;
@@ -141,7 +141,7 @@ namespace FotoVision
 			arg_142_0.Size = size;
 			this.labelMessage.TabIndex = 3;
 			this.labelMessage.Text = "FotoVision makes a copy of your photos. The original photos are not deleted or modified when you delete albums, delete photos or modify photos in FotoVision.";
-			this.checkDontShow.FlatStyle = 3;
+			this.checkDontShow.FlatStyle = FlatStyle.System;
 			Control arg_181_0 = this.checkDontShow;
 			location = new Point(56, 56);
 			arg_181_0.Location = location;

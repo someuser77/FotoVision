@@ -186,7 +186,7 @@ namespace FotoVision
 			this.listAssemblies = new ListBox();
 			this.linkCompany = new LinkLabel();
 			this.SuspendLayout();
-			this.labelVersion.FlatStyle = 3;
+			this.labelVersion.FlatStyle = FlatStyle.System;
 			Control arg_8B_0 = this.labelVersion;
 			Point location = new Point(8, 72);
 			arg_8B_0.Location = location;
@@ -197,7 +197,7 @@ namespace FotoVision
 			this.labelVersion.TabIndex = 2;
 			this.labelVersion.Text = "< version >";
 			this.buttonOk.DialogResult = 2;
-			this.buttonOk.FlatStyle = 3;
+			this.buttonOk.FlatStyle = FlatStyle.System;
 			Control arg_106_0 = this.buttonOk;
 			location = new Point(240, 256);
 			arg_106_0.Location = location;
@@ -219,7 +219,7 @@ namespace FotoVision
 			this.pictLogo.SizeMode = 2;
 			this.pictLogo.TabIndex = 3;
 			this.pictLogo.TabStop = false;
-			this.labelAssemblies.FlatStyle = 3;
+			this.labelAssemblies.FlatStyle = FlatStyle.System;
 			Control arg_1F8_0 = this.labelAssemblies;
 			location = new Point(8, 168);
 			arg_1F8_0.Location = location;
@@ -229,7 +229,7 @@ namespace FotoVision
 			arg_21F_0.Size = size;
 			this.labelAssemblies.TabIndex = 5;
 			this.labelAssemblies.Text = "Assemblies:";
-			this.labelLocation.FlatStyle = 3;
+			this.labelLocation.FlatStyle = FlatStyle.System;
 			Control arg_25D_0 = this.labelLocation;
 			location = new Point(8, 104);
 			arg_25D_0.Location = location;
@@ -261,7 +261,7 @@ namespace FotoVision
 			arg_373_0.Size = size;
 			this.listAssemblies.TabIndex = 6;
 			this.linkCompany.ActiveLinkColor = Color.RoyalBlue;
-			this.linkCompany.FlatStyle = 3;
+			this.linkCompany.FlatStyle = FlatStyle.System;
 			this.linkCompany.LinkBehavior = 2;
 			this.linkCompany.LinkColor = SystemColors.ControlText;
 			Control arg_3CD_0 = this.linkCompany;
