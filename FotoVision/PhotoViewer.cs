@@ -17,8 +17,8 @@ namespace FotoVision
 			public const int BorderSpace = 10;
 			public static Color FrameColor = Color.FromArgb(240, 237, 219);
 			public static Color CropDimColor = Color.FromArgb(100, 128, 128, 128);
-			public const InterpolationMode WorkingInterpolationMode = 3;
-			public const InterpolationMode ViewingInterpolationMode = 3;
+            public const InterpolationMode WorkingInterpolationMode = InterpolationMode.Bilinear;
+            public const InterpolationMode ViewingInterpolationMode = InterpolationMode.Bilinear;
 			public const float WorkingScale = 0.65f;
 		}
 		public delegate void CropDataChangedEventHandler(object sender, CropDataChangedEventArgs e);

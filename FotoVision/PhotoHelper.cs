@@ -16,7 +16,7 @@ namespace FotoVision
 			public const float SepiaRed = 0.2f;
 			public const float SepiaGreen = 0.14f;
 			public const float SepiaBlue = 0.08f;
-			public const InterpolationMode ResizeQuality = 7;
+            public const InterpolationMode ResizeQuality = InterpolationMode.HighQualityBicubic;
 		}
 		private PhotoHelper()
 		{
