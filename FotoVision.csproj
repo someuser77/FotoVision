@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{48BA9711-2DC1-4E59-AC71-7455E288772C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>FotoVision</AssemblyName>
+    <TargetFrameworkVersion>v1.1</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FotoVision.PhotoAdmin\AdminHeader.cs" />
+    <Compile Include="FotoVision.PhotoAdmin\AlbumHashCode.cs" />
+    <Compile Include="FotoVision.PhotoAdmin\PhotoAdmin.cs" />
+    <Compile Include="FotoVision.PhotoAdmin\PhotoHashCode.cs" />
+    <Compile Include="FotoVision\AboutForm.cs" />
+    <Compile Include="FotoVision\ActionEventArgs.cs" />
+    <Compile Include="FotoVision\ActionItem.cs" />
+    <Compile Include="FotoVision\ActionList.cs" />
+    <Compile Include="FotoVision\Album.cs" />
+    <Compile Include="FotoVision\AlbumMetadataChangedEventArgs.cs" />
+    <Compile Include="FotoVision\AlbumNameEventArgs.cs" />
+    <Compile Include="FotoVision\AlbumRenamedEventArgs.cs" />
+    <Compile Include="FotoVision\AlbumsPane.cs" />
+    <Compile Include="FotoVision\BasePane.cs" />
+    <Compile Include="FotoVision\CommandButtonClickedEventArgs.cs" />
+    <Compile Include="FotoVision\ConfirmPhotoForm.cs" />
+    <Compile Include="FotoVision\CropDataChangedEventArgs.cs" />
+    <Compile Include="FotoVision\CropHelper.cs" />
+    <Compile Include="FotoVision\CropModeChangedEventArgs.cs" />
+    <Compile Include="FotoVision\DataProtection.cs" />
+    <Compile Include="FotoVision\DeletePhotoForm.cs" />
+    <Compile Include="FotoVision\DetailsActions.cs" />
+    <Compile Include="FotoVision\DetailsAlbum.cs" />
+    <Compile Include="FotoVision\DetailsCommandButton.cs" />
+    <Compile Include="FotoVision\DetailsMode.cs" />
+    <Compile Include="FotoVision\DetailsPane.cs" />
+    <Compile Include="FotoVision\DetailsPhotos.cs" />
+    <Compile Include="FotoVision\DropContextMenu.cs" />
+    <Compile Include="FotoVision\DropData.cs" />
+    <Compile Include="FotoVision\ErrorForm.cs" />
+    <Compile Include="FotoVision\Exif.cs" />
+    <Compile Include="FotoVision\FileManager.cs" />
+    <Compile Include="FotoVision\FilesDroppedEventArgs.cs" />
+    <Compile Include="FotoVision\Global.cs" />
+    <Compile Include="FotoVision\Hash.cs" />
+    <Compile Include="FotoVision\InitialMessageForm.cs" />
+    <Compile Include="FotoVision\JpegQuality.cs" />
+    <Compile Include="FotoVision\LoginForm.cs" />
+    <Compile Include="FotoVision\MainForm.cs" />
+    <Compile Include="FotoVision\OptimizeActions.cs" />
+    <Compile Include="FotoVision\PaneCaption.cs" />
+    <Compile Include="FotoVision\Photo.cs" />
+    <Compile Include="FotoVision\PhotoAction.cs" />
+    <Compile Include="FotoVision\PhotoHelper.cs" />
+    <Compile Include="FotoVision\PhotoInfo.cs" />
+    <Compile Include="FotoVision\PhotoListView.cs" />
+    <Compile Include="FotoVision\PhotoMetadataChangedEventArgs.cs" />
+    <Compile Include="FotoVision\PhotosContextAction.cs" />
+    <Compile Include="FotoVision\PhotosMenuClickedEventArgs.cs" />
+    <Compile Include="FotoVision\PhotosMode.cs" />
+    <Compile Include="FotoVision\PhotosPane.cs" />
+    <Compile Include="FotoVision\PhotoViewer.cs" />
+    <Compile Include="FotoVision\Print.cs" />
+    <Compile Include="FotoVision\Progress.cs" />
+    <Compile Include="FotoVision\ProgressUpdateEventArgs.cs" />
+    <Compile Include="FotoVision\PropertiesForm.cs" />
+    <Compile Include="FotoVision\Publish.cs" />
+    <Compile Include="FotoVision\PublishAlbumEventArgs.cs" />
+    <Compile Include="FotoVision\PublishData.cs" />
+    <Compile Include="FotoVision\SettingDefaults.cs" />
+    <Compile Include="FotoVision\SettingKey.cs" />
+    <Compile Include="FotoVision\Settings.cs" />
+    <Compile Include="FotoVision\SettingsForm.cs" />
+    <Compile Include="FotoVision\SliderValues.cs" />
+    <Compile Include="FotoVision\TabbedControlNavigateEventArgs.cs" />
+    <Compile Include="FotoVision\TabTextBox.cs" />
+    <Compile Include="FotoVision\ThemeManifest.cs" />
+    <Compile Include="FotoVision\ThumbnailSize.cs" />
+    <Compile Include="FotoVision\Upload.cs" />
+    <Compile Include="FotoVision\UploadCompleteEventArgs.cs" />
+    <Compile Include="FotoVision\UploadForm.cs" />
+    <Compile Include="FotoVision\UploadMessageEventArgs.cs" />
+    <Compile Include="FotoVision\UploadProgressEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FotoVision\AboutForm.resources" />
+    <EmbeddedResource Include="FotoVision\AlbumsPane.resources" />
+    <EmbeddedResource Include="FotoVision\BasePane.resources" />
+    <EmbeddedResource Include="FotoVision\ConfirmPhotoForm.resources" />
+    <EmbeddedResource Include="FotoVision\DeletePhotoForm.resources" />
+    <EmbeddedResource Include="FotoVision\DetailsActions.resources" />
+    <EmbeddedResource Include="FotoVision\DetailsAlbum.resources" />
+    <EmbeddedResource Include="FotoVision\DetailsPane.resources" />
+    <EmbeddedResource Include="FotoVision\DetailsPhotos.resources" />
+    <EmbeddedResource Include="FotoVision\ErrorForm.resources" />
+    <EmbeddedResource Include="FotoVision\InitialMessageForm.resources" />
+    <EmbeddedResource Include="FotoVision\LoginForm.resources" />
+    <EmbeddedResource Include="FotoVision\MainForm.resources" />
+    <EmbeddedResource Include="FotoVision\PaneCaption.resources" />
+    <EmbeddedResource Include="FotoVision\PhotoListView.resources" />
+    <EmbeddedResource Include="FotoVision\PhotosPane.resources" />
+    <EmbeddedResource Include="FotoVision\PhotoViewer.resources" />
+    <EmbeddedResource Include="FotoVision\PropertiesForm.resources" />
+    <EmbeddedResource Include="FotoVision\SettingsForm.resources" />
+    <EmbeddedResource Include="FotoVision\TabTextBox.resources" />
+    <EmbeddedResource Include="FotoVision\ThemeManifest.xml" />
+    <EmbeddedResource Include="FotoVision\UploadForm.resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
