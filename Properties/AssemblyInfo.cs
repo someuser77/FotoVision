@@ -13,4 +13,4 @@ using System.Security.Permissions;
 [assembly: AssemblyTrademark("")]
 [assembly: ComVisible(false)]
 [assembly: Guid("51769A40-2E86-4AAC-9DE8-90273EB04B77")]
-[assembly: PermissionSet(8, XML = "<PermissionSet class=\"System.Security.PermissionSet\"\r\n               version=\"1\"\r\n               Unrestricted=\"true\"/>\r\n")]
+[assembly: PermissionSet(SecurityAction.RequestMinimum, XML = "<PermissionSet class=\"System.Security.PermissionSet\"\r\n               version=\"1\"\r\n               Unrestricted=\"true\"/>\r\n")]
