@@ -309,7 +309,7 @@ namespace FotoVision
 			this.Name = "ErrorForm";
 			this.ShowInTaskbar = false;
 			this.SizeGripStyle = 1;
-			this.StartPosition = 4;
+			this.StartPosition = FormStartPosition.CenterParent;
 			this.Text = "Error";
 			this.ResumeLayout(false);
 		}

@@ -888,7 +888,7 @@ namespace FotoVision
 			this.Name = "SettingsForm";
 			this.ShowInTaskbar = false;
 			this.SizeGripStyle = 1;
-			this.StartPosition = 4;
+			this.StartPosition = FormStartPosition.CenterParent;
 			this.Text = "Options";
 			this.tabControl.ResumeLayout(false);
 			this.pageWebHosting.ResumeLayout(false);

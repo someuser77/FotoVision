@@ -275,15 +275,15 @@ namespace FotoVision
 				switch (num)
 				{
 				case 0:
-					return 0;
+                    return RotateFlipType.RotateNoneFlipNone;
 				case 1:
-					return 1;
+                    return RotateFlipType.Rotate90FlipNone;
 				case 2:
-					return 2;
+                    return RotateFlipType.Rotate180FlipNone;
 				case 3:
-					return 3;
+                    return RotateFlipType.Rotate270FlipNone;
 				default:
-					return 0;
+                    return RotateFlipType.RotateNoneFlipNone;
 				}
 			}
 		}

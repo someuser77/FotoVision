@@ -1769,19 +1769,19 @@ namespace FotoVision
 			this.tbNewAlbum.ToolTipText = "New Album";
 			this.tbImportPhotos.ImageIndex = 16;
 			this.tbImportPhotos.ToolTipText = "Import Photos";
-			this.tbSep3.Style = 3;
+			this.tbSep3.Style = ToolBarButtonStyle.Separator;
 			this.tbUpload.ImageIndex = 3;
 			this.tbUpload.Text = "Upload";
 			this.tbUpload.ToolTipText = "Upload Albums";
 			this.tbWebsite.ImageIndex = 14;
 			this.tbWebsite.Text = "My Site";
 			this.tbWebsite.ToolTipText = "View Website";
-			this.tbSep4.Style = 3;
+			this.tbSep4.Style = ToolBarButtonStyle.Separator;
 			this.tbEmail.ImageIndex = 13;
 			this.tbEmail.ToolTipText = "Email";
 			this.tbPrint.ImageIndex = 10;
 			this.tbPrint.ToolTipText = "Print";
-			this.tbSep2.Style = 3;
+			this.tbSep2.Style = ToolBarButtonStyle.Separator;
 			this.tbThumbnails.ImageIndex = 4;
 			this.tbThumbnails.ToolTipText = "Manage Photos";
 			this.tbThumbnailsDetails.ImageIndex = 1;
@@ -1790,18 +1790,18 @@ namespace FotoVision
 			this.tbPhotoShow.ToolTipText = "Photo Show";
 			this.tbPhotoShowDetails.ImageIndex = 15;
 			this.tbPhotoShowDetails.ToolTipText = "Photo Show with Descriptions";
-			this.tbSep5.Style = 3;
+			this.tbSep5.Style = ToolBarButtonStyle.Separator;
 			this.tbPhotoActions.ImageIndex = 7;
 			this.tbPhotoActions.ToolTipText = "Photo Actions";
-			this.tbSep7.Style = 3;
+			this.tbSep7.Style = ToolBarButtonStyle.Separator;
 			this.tbDelete.ImageIndex = 0;
 			this.tbDelete.ToolTipText = "Delete";
-			this.tbSep6.Style = 3;
+			this.tbSep6.Style = ToolBarButtonStyle.Separator;
 			this.tbRotateLeft.ImageIndex = 11;
 			this.tbRotateLeft.ToolTipText = "Rotate Left";
 			this.tbRotateRight.ImageIndex = 12;
 			this.tbRotateRight.ToolTipText = "Rotate Right";
-			this.tbSep1.Style = 3;
+			this.tbSep1.Style = ToolBarButtonStyle.Separator;
 			this.tbPrev.ImageIndex = 9;
 			this.tbPrev.ToolTipText = "Previous Photo";
 			this.tbNext.ImageIndex = 6;
@@ -2073,7 +2073,7 @@ namespace FotoVision
 				int num = this.toolBar.Buttons.Count - 1;
 				for (int i = arg_14_0; i <= num; i++)
 				{
-					if (this.toolBar.Buttons[i].Style != 3)
+                    if (this.toolBar.Buttons[i].Style != ToolBarButtonStyle.Separator)
 					{
 						int num2;
 						this.toolBar.Buttons[i].Tag = num2;
@@ -2554,7 +2554,7 @@ namespace FotoVision
 					rectangle2 = Rectangle.Intersect(Screen.PrimaryScreen.WorkingArea, rectangle2);
 					if (rectangle2.Width > 0 & rectangle2.Height > 0)
 					{
-						this.StartPosition = 0;
+                        this.StartPosition = FormStartPosition.Manual;
 						this.SetBounds(rectangle2.Left, rectangle2.Top, rectangle2.Width, rectangle2.Height);
 						this.paneAlbums.Width = Global.Settings.GetInt(SettingKey.AlbumPaneWidth);
 						this.paneDetails.Width = Global.Settings.GetInt(SettingKey.DetailsPaneWidth);
@@ -2564,7 +2564,7 @@ namespace FotoVision
 			catch (Exception expr_D5)
 			{
 				ProjectData.SetProjectError(expr_D5);
-				this.StartPosition = 2;
+                this.StartPosition = FormStartPosition.WindowsDefaultLocation;
 				ProjectData.ClearProjectError();
 			}
 		}

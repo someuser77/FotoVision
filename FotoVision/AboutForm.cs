@@ -294,7 +294,7 @@ namespace FotoVision
 			this.MinimizeBox = false;
 			this.Name = "AboutForm";
 			this.ShowInTaskbar = false;
-			this.StartPosition = 4;
+			this.StartPosition = FormStartPosition.CenterParent;
 			this.Text = "About FotoVision";
 			this.ResumeLayout(false);
 		}

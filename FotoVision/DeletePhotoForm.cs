@@ -221,7 +221,7 @@ namespace FotoVision
 			this.MinimizeBox = false;
 			this.Name = "DeletePhotoForm";
 			this.ShowInTaskbar = false;
-			this.StartPosition = 4;
+			this.StartPosition = FormStartPosition.CenterParent;
 			this.Text = "Confirm Photo Delete";
 			this.ResumeLayout(false);
 		}

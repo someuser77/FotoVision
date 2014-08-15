@@ -484,7 +484,7 @@ namespace FotoVision
 			this.MinimizeBox = false;
 			this.Name = "ConfirmPhotoForm";
 			this.ShowInTaskbar = false;
-			this.StartPosition = 4;
+			this.StartPosition = FormStartPosition.CenterParent;
 			this.Text = "Confirm Photo Replace";
 			this.panelProgress.ResumeLayout(false);
 			this.ResumeLayout(false);
