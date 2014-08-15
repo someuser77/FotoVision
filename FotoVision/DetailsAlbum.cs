@@ -78,7 +78,7 @@ namespace FotoVision
 				this.UpdateFields();
 			}
 		}
-		private virtual TextBox textTitle
+		private TextBox textTitle
 		{
 			get
 			{
@@ -100,7 +100,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TextBox textDesc
+		private TextBox textDesc
 		{
 			get
 			{
@@ -122,7 +122,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TextBox textDate
+		private TextBox textDate
 		{
 			get
 			{
@@ -144,7 +144,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual RadioButton radioPublish
+		private RadioButton radioPublish
 		{
 			get
 			{
@@ -164,7 +164,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual RadioButton radioDontPublish
+		private RadioButton radioDontPublish
 		{
 			get
 			{
@@ -184,7 +184,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ImageList imageList
+		private ImageList imageList
 		{
 			get
 			{
@@ -202,7 +202,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TextBox textLocation
+		private TextBox textLocation
 		{
 			get
 			{
@@ -220,7 +220,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelWebsiteHeader
+		private Label labelWebsiteHeader
 		{
 			get
 			{
@@ -238,7 +238,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelPublishHeader
+		private Label labelPublishHeader
 		{
 			get
 			{
@@ -256,7 +256,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelLocationHeader
+		private Label labelLocationHeader
 		{
 			get
 			{
@@ -274,7 +274,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelAlbumTitle
+		private Label labelAlbumTitle
 		{
 			get
 			{
@@ -292,7 +292,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelDate
+		private Label labelDate
 		{
 			get
 			{

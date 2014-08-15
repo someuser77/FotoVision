@@ -96,7 +96,7 @@ namespace FotoVision
 				this.CommandButtonClickedEvent = (DetailsPane.CommandButtonClickedEventHandler)Delegate.Remove(this.CommandButtonClickedEvent, value);
 			}
 		}
-		private virtual DetailsPhotos photoDetails
+		private DetailsPhotos photoDetails
 		{
 			get
 			{
@@ -116,7 +116,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual DetailsAlbum albumDetails
+		private DetailsAlbum albumDetails
 		{
 			get
 			{
@@ -189,7 +189,7 @@ namespace FotoVision
 				this.albumDetails.AlbumName = value;
 			}
 		}
-		private virtual DetailsActions photoActions
+		private DetailsActions photoActions
 		{
 			get
 			{

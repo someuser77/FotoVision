@@ -20,7 +20,7 @@ namespace FotoVision
 		[AccessedThroughProperty("textPassword")]
 		private TextBox _textPassword;
 		private IContainer components;
-		private virtual TextBox textPassword
+		private TextBox textPassword
 		{
 			get
 			{
@@ -38,7 +38,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual PictureBox image
+		private PictureBox image
 		{
 			get
 			{
@@ -56,7 +56,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonOK
+		private Button buttonOK
 		{
 			get
 			{
@@ -74,7 +74,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonCancel
+		private Button buttonCancel
 		{
 			get
 			{
@@ -92,7 +92,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelPassword
+		private Label labelPassword
 		{
 			get
 			{

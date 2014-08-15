@@ -226,7 +226,7 @@ namespace FotoVision
 				return null;
 			}
 		}
-		private virtual ListView listView
+		private ListView listView
 		{
 			get
 			{
@@ -260,7 +260,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuImportPhotos
+		private MenuItem menuImportPhotos
 		{
 			get
 			{
@@ -280,7 +280,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuImportFolder
+		private MenuItem menuImportFolder
 		{
 			get
 			{
@@ -300,7 +300,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuNewAlbum
+		private MenuItem menuNewAlbum
 		{
 			get
 			{
@@ -320,7 +320,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuRename
+		private MenuItem menuRename
 		{
 			get
 			{
@@ -340,7 +340,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuDelete
+		private MenuItem menuDelete
 		{
 			get
 			{
@@ -360,7 +360,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ContextMenu menuAlbum
+		private ContextMenu menuAlbum
 		{
 			get
 			{
@@ -380,7 +380,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuPublish
+		private MenuItem menuPublish
 		{
 			get
 			{
@@ -400,7 +400,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ColumnHeader colName
+		private ColumnHeader colName
 		{
 			get
 			{
@@ -418,7 +418,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ColumnHeader colPhotos
+		private ColumnHeader colPhotos
 		{
 			get
 			{
@@ -436,7 +436,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ImageList imageList
+		private ImageList imageList
 		{
 			get
 			{
@@ -454,7 +454,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep1
+		private MenuItem menuSep1
 		{
 			get
 			{
@@ -472,7 +472,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep2
+		private MenuItem menuSep2
 		{
 			get
 			{

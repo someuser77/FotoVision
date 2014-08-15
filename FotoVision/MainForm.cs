@@ -222,7 +222,7 @@ namespace FotoVision
 		private ToolBarButton tbPhotoActions;
 		private ToolBarButton tbPrint;
 		private ToolBarButton tbPhotoShow;
-		private virtual UploadForm _uploadForm
+		private UploadForm _uploadForm
 		{
 			get
 			{
@@ -256,7 +256,7 @@ namespace FotoVision
 				this.DisplayFullScreen(this._fullScreen);
 			}
 		}
-		private virtual AlbumsPane paneAlbums
+		private AlbumsPane paneAlbums
 		{
 			get
 			{
@@ -290,7 +290,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual PhotosPane panePhotos
+		private PhotosPane panePhotos
 		{
 			get
 			{
@@ -324,7 +324,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual DetailsPane paneDetails
+		private DetailsPane paneDetails
 		{
 			get
 			{
@@ -354,7 +354,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Panel panelPhotos
+		private Panel panelPhotos
 		{
 			get
 			{
@@ -372,7 +372,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ToolBar toolBar
+		private ToolBar toolBar
 		{
 			get
 			{
@@ -392,7 +392,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Splitter splitterRight
+		private Splitter splitterRight
 		{
 			get
 			{
@@ -412,7 +412,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual StatusBar statusBar
+		private StatusBar statusBar
 		{
 			get
 			{
@@ -432,7 +432,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuFile
+		private MenuItem menuFile
 		{
 			get
 			{
@@ -452,7 +452,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuEdit
+		private MenuItem menuEdit
 		{
 			get
 			{
@@ -472,7 +472,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuNewAlbum
+		private MenuItem menuNewAlbum
 		{
 			get
 			{
@@ -492,7 +492,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuImportPhotos
+		private MenuItem menuImportPhotos
 		{
 			get
 			{
@@ -512,7 +512,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuImportFolder
+		private MenuItem menuImportFolder
 		{
 			get
 			{
@@ -532,7 +532,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSave
+		private MenuItem menuSave
 		{
 			get
 			{
@@ -552,7 +552,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuDiscardChanges
+		private MenuItem menuDiscardChanges
 		{
 			get
 			{
@@ -572,7 +572,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuUploadAllChanges
+		private MenuItem menuUploadAllChanges
 		{
 			get
 			{
@@ -592,7 +592,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuWebsite
+		private MenuItem menuWebsite
 		{
 			get
 			{
@@ -612,7 +612,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuEmailChanges
+		private MenuItem menuEmailChanges
 		{
 			get
 			{
@@ -632,7 +632,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuPrint
+		private MenuItem menuPrint
 		{
 			get
 			{
@@ -652,7 +652,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuExit
+		private MenuItem menuExit
 		{
 			get
 			{
@@ -672,7 +672,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuCopy
+		private MenuItem menuCopy
 		{
 			get
 			{
@@ -692,7 +692,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuPaste
+		private MenuItem menuPaste
 		{
 			get
 			{
@@ -712,7 +712,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuDelete
+		private MenuItem menuDelete
 		{
 			get
 			{
@@ -732,7 +732,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuRename
+		private MenuItem menuRename
 		{
 			get
 			{
@@ -752,7 +752,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSelectAll
+		private MenuItem menuSelectAll
 		{
 			get
 			{
@@ -772,7 +772,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuRotate
+		private MenuItem menuRotate
 		{
 			get
 			{
@@ -790,7 +790,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuRotateLeft
+		private MenuItem menuRotateLeft
 		{
 			get
 			{
@@ -810,7 +810,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuRotateRight
+		private MenuItem menuRotateRight
 		{
 			get
 			{
@@ -830,7 +830,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuUndo
+		private MenuItem menuUndo
 		{
 			get
 			{
@@ -850,7 +850,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuRedo
+		private MenuItem menuRedo
 		{
 			get
 			{
@@ -870,7 +870,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuOpen
+		private MenuItem menuOpen
 		{
 			get
 			{
@@ -890,7 +890,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuView
+		private MenuItem menuView
 		{
 			get
 			{
@@ -910,7 +910,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuAbout
+		private MenuItem menuAbout
 		{
 			get
 			{
@@ -930,7 +930,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuHelp
+		private MenuItem menuHelp
 		{
 			get
 			{
@@ -948,7 +948,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuFlipHorz
+		private MenuItem menuFlipHorz
 		{
 			get
 			{
@@ -968,7 +968,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuFlipVert
+		private MenuItem menuFlipVert
 		{
 			get
 			{
@@ -988,7 +988,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuItem7
+		private MenuItem menuItem7
 		{
 			get
 			{
@@ -1006,7 +1006,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ToolBarButton tbThumbnailsDetails
+		private ToolBarButton tbThumbnailsDetails
 		{
 			get
 			{
@@ -1024,7 +1024,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ToolBarButton tbPhotoShowDetails
+		private ToolBarButton tbPhotoShowDetails
 		{
 			get
 			{
@@ -1042,7 +1042,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ToolBarButton tbImportPhotos
+		private ToolBarButton tbImportPhotos
 		{
 			get
 			{
@@ -1060,7 +1060,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuTools
+		private MenuItem menuTools
 		{
 			get
 			{
@@ -1078,7 +1078,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuOptions
+		private MenuItem menuOptions
 		{
 			get
 			{
@@ -1098,7 +1098,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuNextPhoto
+		private MenuItem menuNextPhoto
 		{
 			get
 			{
@@ -1118,7 +1118,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuPrevPhoto
+		private MenuItem menuPrevPhoto
 		{
 			get
 			{
@@ -1138,7 +1138,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuFullScreen
+		private MenuItem menuFullScreen
 		{
 			get
 			{
@@ -1158,7 +1158,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ImageList imageListStatusbar
+		private ImageList imageListStatusbar
 		{
 			get
 			{
@@ -1176,7 +1176,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ToolBarButton tbSep3
+		private ToolBarButton tbSep3
 		{
 			get
 			{
@@ -1194,7 +1194,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ToolBarButton tbSep4
+		private ToolBarButton tbSep4
 		{
 			get
 			{
@@ -1212,7 +1212,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ToolBarButton tbSep5
+		private ToolBarButton tbSep5
 		{
 			get
 			{
@@ -1230,7 +1230,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ToolBarButton tbSep7
+		private ToolBarButton tbSep7
 		{
 			get
 			{
@@ -1248,7 +1248,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ToolBarButton tbSep6
+		private ToolBarButton tbSep6
 		{
 			get
 			{
@@ -1266,7 +1266,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ToolBarButton tbSep1
+		private ToolBarButton tbSep1
 		{
 			get
 			{
@@ -1284,7 +1284,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep1
+		private MenuItem menuSep1
 		{
 			get
 			{
@@ -1302,7 +1302,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep2
+		private MenuItem menuSep2
 		{
 			get
 			{
@@ -1320,7 +1320,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep3
+		private MenuItem menuSep3
 		{
 			get
 			{
@@ -1338,7 +1338,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep4
+		private MenuItem menuSep4
 		{
 			get
 			{
@@ -1356,7 +1356,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep5
+		private MenuItem menuSep5
 		{
 			get
 			{
@@ -1374,7 +1374,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep6
+		private MenuItem menuSep6
 		{
 			get
 			{
@@ -1392,7 +1392,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep7
+		private MenuItem menuSep7
 		{
 			get
 			{
@@ -1410,7 +1410,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep8
+		private MenuItem menuSep8
 		{
 			get
 			{
@@ -1428,7 +1428,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep9
+		private MenuItem menuSep9
 		{
 			get
 			{
@@ -1446,7 +1446,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep10
+		private MenuItem menuSep10
 		{
 			get
 			{
@@ -1464,7 +1464,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep11
+		private MenuItem menuSep11
 		{
 			get
 			{
@@ -1482,7 +1482,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ToolBarButton tbSep2
+		private ToolBarButton tbSep2
 		{
 			get
 			{

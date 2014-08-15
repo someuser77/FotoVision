@@ -49,7 +49,7 @@ namespace FotoVision
 		private Font _fontHeader;
 		private StringFormat _format;
 		private IContainer components;
-		private virtual PictureBox pictThumbnail
+		private PictureBox pictThumbnail
 		{
 			get
 			{
@@ -67,7 +67,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TabControl tabControl
+		private TabControl tabControl
 		{
 			get
 			{
@@ -85,7 +85,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TabPage pageFile
+		private TabPage pageFile
 		{
 			get
 			{
@@ -105,7 +105,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TabPage pageExif
+		private TabPage pageExif
 		{
 			get
 			{
@@ -125,7 +125,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelSize
+		private Label labelSize
 		{
 			get
 			{
@@ -143,7 +143,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TabPage pageActions
+		private TabPage pageActions
 		{
 			get
 			{
@@ -161,7 +161,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TextBox textActions
+		private TextBox textActions
 		{
 			get
 			{
@@ -179,7 +179,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Timer timer
+		private Timer timer
 		{
 			get
 			{
@@ -199,7 +199,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Panel panelProgress
+		private Panel panelProgress
 		{
 			get
 			{
@@ -217,7 +217,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelFileName
+		private Label labelFileName
 		{
 			get
 			{
@@ -235,7 +235,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonClose
+		private Button buttonClose
 		{
 			get
 			{
@@ -255,7 +255,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelProgress
+		private Label labelProgress
 		{
 			get
 			{

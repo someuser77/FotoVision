@@ -22,7 +22,7 @@ namespace FotoVision
 		private Button _buttonYes;
 		private int _count;
 		private IContainer components;
-		private virtual CheckBox checkDontShow
+		private CheckBox checkDontShow
 		{
 			get
 			{
@@ -40,7 +40,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual PictureBox pictIcon
+		private PictureBox pictIcon
 		{
 			get
 			{
@@ -60,7 +60,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelMessage
+		private Label labelMessage
 		{
 			get
 			{
@@ -78,7 +78,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonYes
+		private Button buttonYes
 		{
 			get
 			{
@@ -96,7 +96,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonNo
+		private Button buttonNo
 		{
 			get
 			{

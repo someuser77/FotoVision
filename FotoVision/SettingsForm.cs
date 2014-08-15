@@ -66,7 +66,7 @@ namespace FotoVision
 		[AccessedThroughProperty("checkExif")]
 		private CheckBox _checkExif;
 		private IContainer components;
-		private virtual TabControl tabControl
+		private TabControl tabControl
 		{
 			get
 			{
@@ -84,7 +84,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TextBox textPassword
+		private TextBox textPassword
 		{
 			get
 			{
@@ -102,7 +102,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TabPage pageWebHosting
+		private TabPage pageWebHosting
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual NumericUpDown spinPixels
+		private NumericUpDown spinPixels
 		{
 			get
 			{
@@ -138,7 +138,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TextBox textLocation
+		private TextBox textLocation
 		{
 			get
 			{
@@ -156,7 +156,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TextBox textEmailSubject
+		private TextBox textEmailSubject
 		{
 			get
 			{
@@ -174,7 +174,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TabPage pageApplication
+		private TabPage pageApplication
 		{
 			get
 			{
@@ -192,7 +192,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual CheckBox checkConfirm
+		private CheckBox checkConfirm
 		{
 			get
 			{
@@ -210,7 +210,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual CheckBox checkUpload
+		private CheckBox checkUpload
 		{
 			get
 			{
@@ -228,7 +228,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual CheckBox checkExif
+		private CheckBox checkExif
 		{
 			get
 			{
@@ -246,7 +246,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual RadioButton radioLow
+		private RadioButton radioLow
 		{
 			get
 			{
@@ -264,7 +264,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual RadioButton radioMed
+		private RadioButton radioMed
 		{
 			get
 			{
@@ -282,7 +282,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual RadioButton radioHigh
+		private RadioButton radioHigh
 		{
 			get
 			{
@@ -300,7 +300,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonOK
+		private Button buttonOK
 		{
 			get
 			{
@@ -318,7 +318,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonCancel
+		private Button buttonCancel
 		{
 			get
 			{
@@ -336,7 +336,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelWebsite
+		private Label labelWebsite
 		{
 			get
 			{
@@ -354,7 +354,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelPixels
+		private Label labelPixels
 		{
 			get
 			{
@@ -372,7 +372,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelPassword
+		private Label labelPassword
 		{
 			get
 			{
@@ -390,7 +390,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelLocation
+		private Label labelLocation
 		{
 			get
 			{
@@ -408,7 +408,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelPublish
+		private Label labelPublish
 		{
 			get
 			{
@@ -426,7 +426,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelQuality
+		private Label labelQuality
 		{
 			get
 			{
@@ -444,7 +444,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelEmailSubject
+		private Label labelEmailSubject
 		{
 			get
 			{
@@ -462,7 +462,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelApplication
+		private Label labelApplication
 		{
 			get
 			{
@@ -480,7 +480,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelAppDesc
+		private Label labelAppDesc
 		{
 			get
 			{
@@ -498,7 +498,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelSettings
+		private Label labelSettings
 		{
 			get
 			{

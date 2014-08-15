@@ -31,7 +31,7 @@ namespace FotoVision
 		private LinkLabel _linkCompany;
 		private Container components;
 		private Label labelVersion;
-		private virtual PictureBox pictLogo
+		private PictureBox pictLogo
 		{
 			get
 			{
@@ -49,7 +49,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ListBox listAssemblies
+		private ListBox listAssemblies
 		{
 			get
 			{
@@ -67,7 +67,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual LinkLabel linkCompany
+		private LinkLabel linkCompany
 		{
 			get
 			{
@@ -87,7 +87,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TextBox textPhotoLocation
+		private TextBox textPhotoLocation
 		{
 			get
 			{
@@ -105,7 +105,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonOk
+		private Button buttonOk
 		{
 			get
 			{
@@ -125,7 +125,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelAssemblies
+		private Label labelAssemblies
 		{
 			get
 			{
@@ -143,7 +143,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelLocation
+		private Label labelLocation
 		{
 			get
 			{

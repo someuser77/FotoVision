@@ -171,7 +171,7 @@ namespace FotoVision
 				this.PhotosMenuClickedEvent = (PhotosPane.PhotosMenuClickedEventHandler)Delegate.Remove(this.PhotosMenuClickedEvent, value);
 			}
 		}
-		private virtual PhotoListView listView
+		private PhotoListView listView
 		{
 			get
 			{
@@ -205,7 +205,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual PhotoViewer photoViewer
+		private PhotoViewer photoViewer
 		{
 			get
 			{
@@ -354,7 +354,7 @@ namespace FotoVision
 				return this._inLabelEdit;
 			}
 		}
-		private virtual MenuItem menuOpen
+		private MenuItem menuOpen
 		{
 			get
 			{
@@ -372,7 +372,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuRotateLeft
+		private MenuItem menuRotateLeft
 		{
 			get
 			{
@@ -392,7 +392,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuRotateRight
+		private MenuItem menuRotateRight
 		{
 			get
 			{
@@ -412,7 +412,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuRename
+		private MenuItem menuRename
 		{
 			get
 			{
@@ -432,7 +432,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuDelete
+		private MenuItem menuDelete
 		{
 			get
 			{
@@ -452,7 +452,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuPhotoShow
+		private MenuItem menuPhotoShow
 		{
 			get
 			{
@@ -472,7 +472,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuPhotoShowDetails
+		private MenuItem menuPhotoShowDetails
 		{
 			get
 			{
@@ -492,7 +492,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuPhotoActions
+		private MenuItem menuPhotoActions
 		{
 			get
 			{
@@ -512,7 +512,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSelectAll
+		private MenuItem menuSelectAll
 		{
 			get
 			{
@@ -532,7 +532,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelPos
+		private Label labelPos
 		{
 			get
 			{
@@ -550,7 +550,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuProperties
+		private MenuItem menuProperties
 		{
 			get
 			{
@@ -570,7 +570,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ContextMenu menuThumbnails
+		private ContextMenu menuThumbnails
 		{
 			get
 			{
@@ -590,7 +590,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ContextMenu menuPhoto
+		private ContextMenu menuPhoto
 		{
 			get
 			{
@@ -608,7 +608,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuPhotoProperties
+		private MenuItem menuPhotoProperties
 		{
 			get
 			{
@@ -628,7 +628,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep1
+		private MenuItem menuSep1
 		{
 			get
 			{
@@ -646,7 +646,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep2
+		private MenuItem menuSep2
 		{
 			get
 			{
@@ -664,7 +664,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuSep3
+		private MenuItem menuSep3
 		{
 			get
 			{

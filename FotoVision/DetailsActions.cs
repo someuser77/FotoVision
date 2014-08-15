@@ -136,7 +136,7 @@ namespace FotoVision
 				this.CommandButtonClickedEvent = (DetailsActions.CommandButtonClickedEventHandler)Delegate.Remove(this.CommandButtonClickedEvent, value);
 			}
 		}
-		private virtual ImageList imageList
+		private ImageList imageList
 		{
 			get
 			{
@@ -154,7 +154,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TabControl tabControl
+		private TabControl tabControl
 		{
 			get
 			{
@@ -174,7 +174,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual NumericUpDown numContrast
+		private NumericUpDown numContrast
 		{
 			get
 			{
@@ -200,7 +200,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TrackBar sliderBright
+		private TrackBar sliderBright
 		{
 			get
 			{
@@ -224,7 +224,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TrackBar sliderContrast
+		private TrackBar sliderContrast
 		{
 			get
 			{
@@ -248,7 +248,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TrackBar sliderSat
+		private TrackBar sliderSat
 		{
 			get
 			{
@@ -272,7 +272,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TrackBar sliderGamma
+		private TrackBar sliderGamma
 		{
 			get
 			{
@@ -296,7 +296,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Panel panelAdjust
+		private Panel panelAdjust
 		{
 			get
 			{
@@ -316,7 +316,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual NumericUpDown numBright
+		private NumericUpDown numBright
 		{
 			get
 			{
@@ -342,7 +342,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual NumericUpDown numGamma
+		private NumericUpDown numGamma
 		{
 			get
 			{
@@ -368,7 +368,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual NumericUpDown numSat
+		private NumericUpDown numSat
 		{
 			get
 			{
@@ -394,7 +394,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelSat
+		private Label labelSat
 		{
 			get
 			{
@@ -412,7 +412,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelBright
+		private Label labelBright
 		{
 			get
 			{
@@ -430,7 +430,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonGrayscale
+		private Button buttonGrayscale
 		{
 			get
 			{
@@ -450,7 +450,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonSepia
+		private Button buttonSepia
 		{
 			get
 			{
@@ -470,7 +470,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelContrast
+		private Label labelContrast
 		{
 			get
 			{
@@ -488,7 +488,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelGamma
+		private Label labelGamma
 		{
 			get
 			{
@@ -506,7 +506,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelColors
+		private Label labelColors
 		{
 			get
 			{
@@ -524,7 +524,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonCrop
+		private Button buttonCrop
 		{
 			get
 			{
@@ -544,7 +544,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Panel panelCropSep
+		private Panel panelCropSep
 		{
 			get
 			{
@@ -562,7 +562,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelCrop
+		private Label labelCrop
 		{
 			get
 			{
@@ -580,7 +580,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelPicture
+		private Label labelPicture
 		{
 			get
 			{
@@ -598,7 +598,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Panel panelPictureSep
+		private Panel panelPictureSep
 		{
 			get
 			{
@@ -616,7 +616,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonClearCrop
+		private Button buttonClearCrop
 		{
 			get
 			{
@@ -636,7 +636,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonSave
+		private Button buttonSave
 		{
 			get
 			{
@@ -656,7 +656,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonReset
+		private Button buttonReset
 		{
 			get
 			{
@@ -676,7 +676,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonUndo
+		private Button buttonUndo
 		{
 			get
 			{
@@ -696,7 +696,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonRedo
+		private Button buttonRedo
 		{
 			get
 			{

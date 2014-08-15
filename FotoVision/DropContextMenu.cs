@@ -14,7 +14,7 @@ namespace FotoVision
 		private DragDropEffects _effect;
 		private ContextMenu contextMenu;
 		private MenuItem menuSep;
-		private virtual MenuItem menuCopy
+		private MenuItem menuCopy
 		{
 			get
 			{
@@ -34,7 +34,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuMove
+		private MenuItem menuMove
 		{
 			get
 			{
@@ -54,7 +54,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual MenuItem menuCancel
+		private MenuItem menuCancel
 		{
 			get
 			{

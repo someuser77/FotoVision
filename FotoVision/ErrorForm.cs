@@ -28,7 +28,7 @@ namespace FotoVision
 		private string _message;
 		private StringFormat _format;
 		private IContainer components;
-		private virtual TextBox textDetails
+		private TextBox textDetails
 		{
 			get
 			{
@@ -46,7 +46,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TextBox textType
+		private TextBox textType
 		{
 			get
 			{
@@ -64,7 +64,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelHeader
+		private Label labelHeader
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual PictureBox pictIcon
+		private PictureBox pictIcon
 		{
 			get
 			{
@@ -102,7 +102,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonOK
+		private Button buttonOK
 		{
 			get
 			{
@@ -122,7 +122,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelDetails
+		private Label labelDetails
 		{
 			get
 			{
@@ -140,7 +140,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelType
+		private Label labelType
 		{
 			get
 			{
@@ -158,7 +158,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelInfo
+		private Label labelInfo
 		{
 			get
 			{

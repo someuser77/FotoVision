@@ -94,7 +94,7 @@ namespace FotoVision
 				this.UploadCompleteEvent = (UploadForm.UploadCompleteEventHandler)Delegate.Remove(this.UploadCompleteEvent, value);
 			}
 		}
-		private virtual Publish _publish
+		private Publish _publish
 		{
 			get
 			{
@@ -118,7 +118,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Upload _upload
+		private Upload _upload
 		{
 			get
 			{
@@ -153,7 +153,7 @@ namespace FotoVision
 				this._initialLocation = value;
 			}
 		}
-		private virtual StatusBar statusBar
+		private StatusBar statusBar
 		{
 			get
 			{
@@ -171,7 +171,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual StatusBarPanel statusTasks
+		private StatusBarPanel statusTasks
 		{
 			get
 			{
@@ -189,7 +189,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual StatusBarPanel statusErrors
+		private StatusBarPanel statusErrors
 		{
 			get
 			{
@@ -207,7 +207,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual StatusBarPanel statusMessage
+		private StatusBarPanel statusMessage
 		{
 			get
 			{
@@ -225,7 +225,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ImageList imageList
+		private ImageList imageList
 		{
 			get
 			{
@@ -243,7 +243,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ProgressBar progressBar
+		private ProgressBar progressBar
 		{
 			get
 			{
@@ -261,7 +261,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TabControl tabControl
+		private TabControl tabControl
 		{
 			get
 			{
@@ -279,7 +279,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TabPage pageTasks
+		private TabPage pageTasks
 		{
 			get
 			{
@@ -297,7 +297,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ListView listTasks
+		private ListView listTasks
 		{
 			get
 			{
@@ -317,7 +317,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TabPage pageErrors
+		private TabPage pageErrors
 		{
 			get
 			{
@@ -335,7 +335,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ListView listErrors
+		private ListView listErrors
 		{
 			get
 			{
@@ -357,7 +357,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ColumnHeader colMessage
+		private ColumnHeader colMessage
 		{
 			get
 			{
@@ -375,7 +375,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelMessage
+		private Label labelMessage
 		{
 			get
 			{
@@ -393,7 +393,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TextBox textError
+		private TextBox textError
 		{
 			get
 			{
@@ -411,7 +411,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual CheckBox checkCloseComplete
+		private CheckBox checkCloseComplete
 		{
 			get
 			{
@@ -431,7 +431,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual ColumnHeader colErrors
+		private ColumnHeader colErrors
 		{
 			get
 			{
@@ -449,7 +449,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonDetails
+		private Button buttonDetails
 		{
 			get
 			{
@@ -469,7 +469,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonCancel
+		private Button buttonCancel
 		{
 			get
 			{
@@ -489,7 +489,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonClose
+		private Button buttonClose
 		{
 			get
 			{

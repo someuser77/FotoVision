@@ -39,7 +39,7 @@ namespace FotoVision
 		private IContainer components;
 		private PictureBox pictCurrent;
 		private PictureBox pictNew;
-		private virtual PictureBox pictIcon
+		private PictureBox pictIcon
 		{
 			get
 			{
@@ -59,7 +59,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TextBox textCurrent
+		private TextBox textCurrent
 		{
 			get
 			{
@@ -77,7 +77,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TextBox textNew
+		private TextBox textNew
 		{
 			get
 			{
@@ -95,7 +95,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Timer timer
+		private Timer timer
 		{
 			get
 			{
@@ -115,7 +115,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Panel panelProgress
+		private Panel panelProgress
 		{
 			get
 			{
@@ -133,7 +133,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelHeader
+		private Label labelHeader
 		{
 			get
 			{
@@ -151,7 +151,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelExisting
+		private Label labelExisting
 		{
 			get
 			{
@@ -169,7 +169,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelNew
+		private Label labelNew
 		{
 			get
 			{
@@ -187,7 +187,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonOK
+		private Button buttonOK
 		{
 			get
 			{
@@ -205,7 +205,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonYesToAll
+		private Button buttonYesToAll
 		{
 			get
 			{
@@ -223,7 +223,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonNo
+		private Button buttonNo
 		{
 			get
 			{
@@ -241,7 +241,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Button buttonCancel
+		private Button buttonCancel
 		{
 			get
 			{
@@ -259,7 +259,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual Label labelProgress
+		private Label labelProgress
 		{
 			get
 			{

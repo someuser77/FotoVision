@@ -54,7 +54,7 @@ namespace FotoVision
 				this.PhotoMetadataChangedEvent = (DetailsPhotos.PhotoMetadataChangedEventHandler)Delegate.Remove(this.PhotoMetadataChangedEvent, value);
 			}
 		}
-		private virtual TabTextBox _textTitle
+		private TabTextBox _textTitle
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TextBox _textDesc
+		private TextBox _textDesc
 		{
 			get
 			{
@@ -96,7 +96,7 @@ namespace FotoVision
 				}
 			}
 		}
-		private virtual TabTextBox _textDate
+		private TabTextBox _textDate
 		{
 			get
 			{
