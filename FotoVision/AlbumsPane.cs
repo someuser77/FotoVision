@@ -664,7 +664,7 @@ namespace FotoVision
 				{
 					if (this.Count > 0)
 					{
-						this.listView.Items[checked(index - 1]).Selected = true;
+						this.listView.Items[checked(index - 1)].Selected = true;
 					}
 					else
 					{
