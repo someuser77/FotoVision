@@ -250,11 +250,11 @@ namespace FotoVision
 					XmlDocument xmlDocument = new XmlDocument();
 					xmlDocument.Load(text);
 					XmlNode firstChild = xmlDocument.DocumentElement.FirstChild;
-					photo.Title = firstChild.Attributes.ItemOf("title").Value;
-					photo.Description = firstChild.Attributes.ItemOf("description").Value;
-					if (Global.ValidateDate(firstChild.Attributes.ItemOf("date").Value))
+					photo.Title = firstChild.Attributes["title"].Value;
+					photo.Description = firstChild.Attributes["description"].Value;
+					if (Global.ValidateDate(firstChild.Attributes["date"].Value))
 					{
-						photo.DateTaken = DateTime.Parse(firstChild.Attributes.ItemOf("date").Value, CultureInfo.CurrentCulture).ToShortDateString();
+						photo.DateTaken = DateTime.Parse(firstChild.Attributes["date"].Value, CultureInfo.CurrentCulture).ToShortDateString();
 						return photo;
 					}
 					photo.DateTaken = File.GetLastWriteTime(photoPath).ToShortDateString();

@@ -111,7 +111,7 @@ namespace FotoVision
 					XmlDocument xmlDocument = new XmlDocument();
 					xmlDocument.Load(text);
 					XmlNode firstChild = xmlDocument.DocumentElement.FirstChild;
-					return firstChild.Attributes.ItemOf("hashcode").Value;
+					return firstChild.Attributes["hashcode"].Value;
 				}
 				catch (Exception expr_45)
 				{

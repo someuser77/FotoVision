@@ -133,11 +133,11 @@ namespace FotoVision
 					XmlDocument xmlDocument = new XmlDocument();
 					xmlDocument.Load(text);
 					XmlNode firstChild = xmlDocument.DocumentElement.FirstChild;
-					this.Description = firstChild.Attributes.ItemOf("description").Value;
-					this.Publish = BooleanType.FromString(firstChild.Attributes.ItemOf("publish").Value);
-					if (Global.ValidateDate(firstChild.Attributes.ItemOf("date").Value))
+					this.Description = firstChild.Attributes["description"].Value;
+					this.Publish = BooleanType.FromString(firstChild.Attributes["publish"].Value);
+					if (Global.ValidateDate(firstChild.Attributes["date"].Value))
 					{
-						this.DateCreated = DateTime.Parse(firstChild.Attributes.ItemOf("date").Value, CultureInfo.CurrentCulture).ToShortDateString();
+						this.DateCreated = DateTime.Parse(firstChild.Attributes["date"].Value, CultureInfo.CurrentCulture).ToShortDateString();
 					}
 				}
 				catch (Exception expr_F1)
