@@ -173,7 +173,7 @@ namespace FotoVision
 			arg_D8_0.Size = size;
 			this.labelMessage.TabIndex = 2;
 			this.labelMessage.Text = "< message >";
-			this.buttonYes.DialogResult = 1;
+			this.buttonYes.DialogResult = DialogResult.OK;
 			this.buttonYes.FlatStyle = FlatStyle.System;
 			Control arg_126_0 = this.buttonYes;
 			location = new Point(216, 104);
@@ -184,7 +184,7 @@ namespace FotoVision
 			arg_14D_0.Size = size;
 			this.buttonYes.TabIndex = 0;
 			this.buttonYes.Text = "Yes";
-			this.buttonNo.DialogResult = 2;
+			this.buttonNo.DialogResult = DialogResult.Cancel;
 			this.buttonNo.FlatStyle = FlatStyle.System;
 			Control arg_19B_0 = this.buttonNo;
 			location = new Point(280, 104);

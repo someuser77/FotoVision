@@ -207,7 +207,7 @@ namespace FotoVision
 			this.pictIcon.TabIndex = 0;
 			this.pictIcon.TabStop = false;
 			this.buttonOK.Anchor = 10;
-			this.buttonOK.DialogResult = 2;
+			this.buttonOK.DialogResult = DialogResult.Cancel;
 			this.buttonOK.FlatStyle = FlatStyle.System;
 			Control arg_FF_0 = this.buttonOK;
 			location = new Point(270, 216);

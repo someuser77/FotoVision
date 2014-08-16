@@ -196,7 +196,7 @@ namespace FotoVision
 			arg_B5_0.Size = size;
 			this.labelVersion.TabIndex = 2;
 			this.labelVersion.Text = "< version >";
-			this.buttonOk.DialogResult = 2;
+			this.buttonOk.DialogResult = DialogResult.Cancel;
 			this.buttonOk.FlatStyle = FlatStyle.System;
 			Control arg_106_0 = this.buttonOk;
 			location = new Point(240, 256);

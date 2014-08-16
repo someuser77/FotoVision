@@ -322,7 +322,7 @@ namespace FotoVision
 			this.pageActions.SuspendLayout();
 			this.panelProgress.SuspendLayout();
 			this.SuspendLayout();
-			this.buttonClose.DialogResult = 1;
+			this.buttonClose.DialogResult = DialogResult.OK;
 			this.buttonClose.FlatStyle = FlatStyle.System;
 			Control arg_EC_0 = this.buttonClose;
 			Point location = new Point(232, 258);

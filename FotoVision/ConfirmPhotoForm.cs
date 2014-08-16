@@ -357,7 +357,7 @@ namespace FotoVision
 			this.pictNew.SizeMode = 3;
 			this.pictNew.TabIndex = 1;
 			this.pictNew.TabStop = false;
-			this.buttonOK.DialogResult = 1;
+			this.buttonOK.DialogResult = DialogResult.OK;
 			this.buttonOK.FlatStyle = FlatStyle.System;
 			Control arg_32C_0 = this.buttonOK;
 			location = new Point(16, 248);
@@ -368,7 +368,7 @@ namespace FotoVision
 			arg_353_0.Size = size;
 			this.buttonOK.TabIndex = 0;
 			this.buttonOK.Text = "Yes";
-			this.buttonYesToAll.DialogResult = 6;
+			this.buttonYesToAll.DialogResult = DialogResult.Yes;
 			this.buttonYesToAll.FlatStyle = FlatStyle.System;
 			Control arg_3A1_0 = this.buttonYesToAll;
 			location = new Point(104, 248);
@@ -379,7 +379,7 @@ namespace FotoVision
 			arg_3C8_0.Size = size;
 			this.buttonYesToAll.TabIndex = 1;
 			this.buttonYesToAll.Text = "Yes to All";
-			this.buttonNo.DialogResult = 7;
+			this.buttonNo.DialogResult = DialogResult.No;
 			this.buttonNo.FlatStyle = FlatStyle.System;
 			Control arg_419_0 = this.buttonNo;
 			location = new Point(192, 248);
@@ -390,7 +390,7 @@ namespace FotoVision
 			arg_440_0.Size = size;
 			this.buttonNo.TabIndex = 2;
 			this.buttonNo.Text = "No";
-			this.buttonCancel.DialogResult = 2;
+			this.buttonCancel.DialogResult = DialogResult.Cancel;
 			this.buttonCancel.FlatStyle = FlatStyle.System;
 			Control arg_491_0 = this.buttonCancel;
 			location = new Point(280, 248);

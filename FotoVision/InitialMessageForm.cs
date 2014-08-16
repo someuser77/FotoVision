@@ -120,7 +120,7 @@ namespace FotoVision
 			arg_69_0.Size = size;
 			this.pictIcon.TabIndex = 1;
 			this.pictIcon.TabStop = false;
-			this.buttonOK.DialogResult = 1;
+			this.buttonOK.DialogResult = DialogResult.OK;
 			this.buttonOK.FlatStyle = FlatStyle.System;
 			Control arg_B3_0 = this.buttonOK;
 			location = new Point(280, 88);

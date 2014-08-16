@@ -559,7 +559,7 @@ namespace FotoVision
 			this.pageApplication.SuspendLayout();
 			this.SuspendLayout();
 			this.buttonOK.Anchor = 10;
-			this.buttonOK.DialogResult = 1;
+			this.buttonOK.DialogResult = DialogResult.OK;
 			this.buttonOK.FlatStyle = FlatStyle.System;
 			Control arg_193_0 = this.buttonOK;
 			Point location = new Point(208, 296);
@@ -571,7 +571,7 @@ namespace FotoVision
 			this.buttonOK.TabIndex = 1;
 			this.buttonOK.Text = "OK";
 			this.buttonCancel.Anchor = 10;
-			this.buttonCancel.DialogResult = 2;
+			this.buttonCancel.DialogResult = DialogResult.Cancel;
 			this.buttonCancel.FlatStyle = FlatStyle.System;
 			Control arg_219_0 = this.buttonCancel;
 			location = new Point(272, 296);
