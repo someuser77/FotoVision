@@ -217,7 +217,7 @@ namespace FotoVision
 			this._colorInactiveLow = Color.FromArgb(3, 55, 145);
 			this._colorInactiveHigh = Color.FromArgb(90, 135, 215);
 			this.InitializeComponent();
-			this.SetStyle(73746, true);
+            this.SetStyle(ControlStyles.DoubleBuffer | ControlStyles.AllPaintingInWmPaint | ControlStyles.ResizeRedraw | ControlStyles.UserPaint, true);
 			this.Height = 20;
 			this._format = new StringFormat();
 			this._format.FormatFlags = 4096;

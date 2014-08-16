@@ -150,7 +150,7 @@ namespace FotoVision
 			this._scale = 0f;
 			this._cropMode = false;
 			this._editMode = false;
-			this.SetStyle(73746, true);
+            this.SetStyle(ControlStyles.DoubleBuffer | ControlStyles.AllPaintingInWmPaint | ControlStyles.ResizeRedraw | ControlStyles.UserPaint, true);
 			this._penFrame = new Pen(PhotoViewer.Consts.FrameColor, 2f);
 			this._brushDimCrop = new SolidBrush(PhotoViewer.Consts.CropDimColor);
 			this._cropHelper = new CropHelper(this);

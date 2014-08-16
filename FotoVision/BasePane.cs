@@ -53,7 +53,7 @@ namespace FotoVision
 		public BasePane()
 		{
 			this.components = null;
-			this.SetStyle(73746, true);
+            this.SetStyle(ControlStyles.DoubleBuffer | ControlStyles.AllPaintingInWmPaint | ControlStyles.ResizeRedraw | ControlStyles.UserPaint, true);
 			this.InitializeComponent();
 		}
 		protected override void Dispose(bool disposing)
