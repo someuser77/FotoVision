@@ -2603,7 +2603,7 @@ namespace FotoVision
 			if (fullScreen)
 			{
 				this.SaveWindowSettings();
-				this.FormBorderStyle = 0;
+				this.FormBorderStyle = FormBorderStyle.None;
 				this.WindowState = 2;
 				this.Menu = null;
 				this.paneAlbums.Visible = false;
@@ -2613,7 +2613,7 @@ namespace FotoVision
 			}
 			else
 			{
-				this.FormBorderStyle = 4;
+				this.FormBorderStyle = FormBorderStyle.Sizable;
 				this.WindowState = 0;
 				this.paneAlbums.Visible = true;
 				this.statusBar.Visible = true;

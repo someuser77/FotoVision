@@ -216,7 +216,7 @@ namespace FotoVision
 			this.Controls.Add(this.labelMessage);
 			this.Controls.Add(this.pictIcon);
 			this.Controls.Add(this.buttonNo);
-			this.FormBorderStyle = 3;
+			this.FormBorderStyle = FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "DeletePhotoForm";

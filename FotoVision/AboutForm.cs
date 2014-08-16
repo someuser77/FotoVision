@@ -289,7 +289,7 @@ namespace FotoVision
 			this.Controls.Add(this.buttonOk);
 			this.Controls.Add(this.labelVersion);
 			this.Controls.Add(this.labelLocation);
-			this.FormBorderStyle = 3;
+			this.FormBorderStyle = FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "AboutForm";

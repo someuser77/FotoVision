@@ -459,7 +459,7 @@ namespace FotoVision
 			this.Controls.Add(this.pictThumbnail);
 			this.Controls.Add(this.buttonClose);
 			this.Controls.Add(this.labelSize);
-			this.FormBorderStyle = 0;
+			this.FormBorderStyle = FormBorderStyle.None;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "PropertiesForm";

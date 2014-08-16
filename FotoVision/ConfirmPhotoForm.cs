@@ -479,7 +479,7 @@ namespace FotoVision
 			this.Controls.Add(this.pictCurrent);
 			this.Controls.Add(this.pictNew);
 			this.Controls.Add(this.textNew);
-			this.FormBorderStyle = 3;
+			this.FormBorderStyle = FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "ConfirmPhotoForm";

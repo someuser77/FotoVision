@@ -727,7 +727,7 @@ namespace FotoVision
 			this.Controls.Add(this.tabControl);
 			this.Controls.Add(this.labelMessage);
 			this.Controls.Add(this.statusBar);
-			this.FormBorderStyle = 6;
+			this.FormBorderStyle = FormBorderStyle.SizableToolWindow;
 			this.Icon = (Icon)resourceManager.GetObject("$this.Icon");
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
