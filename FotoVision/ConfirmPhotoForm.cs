@@ -438,7 +438,7 @@ namespace FotoVision
 			this.textNew.Text = "";
 			this.timer.Interval = 1;
 			this.panelProgress.BackColor = SystemColors.Info;
-			this.panelProgress.BorderStyle = 1;
+            this.panelProgress.BorderStyle = BorderStyle.FixedSingle;
 			this.panelProgress.Controls.Add(this.labelProgress);
 			Control arg_6A9_0 = this.panelProgress;
 			location = new Point(72, 120);

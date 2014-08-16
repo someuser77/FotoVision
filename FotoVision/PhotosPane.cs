@@ -714,7 +714,7 @@ namespace FotoVision
 			this.SuspendLayout();
 			this.listView.AllowDrop = true;
 			this.listView.BackColor = Color.DarkGray;
-			this.listView.BorderStyle = 0;
+			this.listView.BorderStyle = BorderStyle.None;
 			this.listView.ContextMenu = this.menuThumbnails;
 			this.listView.Dock = DockStyle.Fill;
 			this.listView.LabelEdit = true;

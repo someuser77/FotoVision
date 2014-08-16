@@ -1645,7 +1645,7 @@ namespace FotoVision
 			Size size = new Size(184, 434);
 			arg_451_0.Size = size;
 			this.paneAlbums.TabIndex = 0;
-			this.splitterLeft.BorderStyle = 2;
+			this.splitterLeft.BorderStyle = BorderStyle.Fixed3D;
 			Control arg_484_0 = this.splitterLeft;
 			location = new Point(184, 39);
 			arg_484_0.Location = location;
@@ -1682,7 +1682,7 @@ namespace FotoVision
 			size = new Size(240, 434);
 			arg_60E_0.Size = size;
 			this.panePhotos.TabIndex = 0;
-			this.splitterRight.BorderStyle = 2;
+			this.splitterRight.BorderStyle = BorderStyle.Fixed3D;
 			this.splitterRight.Dock = DockStyle.Right;
 			Control arg_64C_0 = this.splitterRight;
 			location = new Point(240, 0);
@@ -2035,7 +2035,7 @@ namespace FotoVision
 			Global.Progress.ProgressUpdate += new Progress.ProgressUpdateEventHandler(this.ProgressUpdate);
 			this._format = new StringFormat();
 			this._format.FormatFlags = 4096;
-			this._format.LineAlignment = 1;
+			this._format.LineAlignment = StringAlignment.Center;
             this._format.Trimming = System.Drawing.StringTrimming.EllipsisCharacter;
 			this.InitToolbarButtons();
 		}
@@ -2168,7 +2168,7 @@ namespace FotoVision
 				this._orgStatusText[0] = this.statusBar.Panels[0].Text;
 				this._orgStatusText[1] = this.statusBar.Panels[1].Text;
 				this.statusBar.Panels[1].Text = "";
-				this.statusBar.Panels[1].BorderStyle = 1;
+                this.statusBar.Panels[1].BorderStyle = StatusBarPanelBorderStyle.None;
 			}
 			this.statusBar.Panels[0].Text = text;
 			this.progressBar.Maximum = e.Total;
@@ -2190,7 +2190,7 @@ namespace FotoVision
 				this.progressBar.Hide();
 				this.statusBar.Panels[0].Text = this._orgStatusText[0];
 				this.statusBar.Panels[1].Text = this._orgStatusText[1];
-				this.statusBar.Panels[1].BorderStyle = 3;
+                this.statusBar.Panels[1].BorderStyle = StatusBarPanelBorderStyle.Sunken;
 			}
 		}
 		private void UpdateDetailsMode()

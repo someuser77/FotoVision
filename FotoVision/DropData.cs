@@ -131,7 +131,7 @@ namespace FotoVision
 			}
 			if (!Global.PerformingDrag)
 			{
-				return 1;
+                return DragDropEffects.Copy;
 			}
 			return IntegerType.FromObject(Interaction.IIf((e.KeyState & 8) == 8, 1, 2));
 		}

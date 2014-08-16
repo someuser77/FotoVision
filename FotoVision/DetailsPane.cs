@@ -224,7 +224,7 @@ namespace FotoVision
 			this.albumDetails = new DetailsAlbum();
 			this.SuspendLayout();
 			this.photoDetails.BackColor = SystemColors.Control;
-			this.photoDetails.BorderStyle = 0;
+			this.photoDetails.BorderStyle = BorderStyle.None;
 			this.photoDetails.Dock = DockStyle.Fill;
             this.photoDetails.DrawMode = DrawMode.OwnerDrawFixed;
 			this.photoDetails.IntegralHeight = false;

@@ -242,7 +242,7 @@ namespace FotoVision
 				return;
 			}
 			Photo photo = (Photo)this.Items[index];
-			g.TextRenderingHint = 1;
+            g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
 			string arg_64_1 = photo.Title;
 			Font arg_64_2 = this.Font;
 			Brush arg_64_3 = SystemBrushes.WindowText;
@@ -380,9 +380,9 @@ namespace FotoVision
 			this._textTitle.Visible = false;
 			this._textDesc.Visible = false;
 			this._textDate.Visible = false;
-			this._textTitle.BorderStyle = 0;
-			this._textDesc.BorderStyle = 0;
-			this._textDate.BorderStyle = 0;
+			this._textTitle.BorderStyle = BorderStyle.None;
+			this._textDesc.BorderStyle = BorderStyle.None;
+			this._textDate.BorderStyle = BorderStyle.None;
 			this._textDesc.Multiline = true;
 			this._textDesc.WordWrap = true;
 			this._textDesc.ScrollBars = 2;

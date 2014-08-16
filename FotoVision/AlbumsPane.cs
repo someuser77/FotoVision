@@ -519,7 +519,7 @@ namespace FotoVision
 			this.imageList = new ImageList(this.components);
 			this.SuspendLayout();
 			this.listView.AllowDrop = true;
-			this.listView.BorderStyle = 0;
+			this.listView.BorderStyle = BorderStyle.None;
 			this.listView.Columns.AddRange(new ColumnHeader[]
 			{
 				this.colName,

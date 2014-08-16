@@ -207,7 +207,7 @@ namespace FotoVision
 			arg_12D_0.Size = size;
 			this.buttonOk.TabIndex = 0;
 			this.buttonOk.Text = "OK";
-			this.pictLogo.BorderStyle = 1;
+            this.pictLogo.BorderStyle = BorderStyle.FixedSingle;
 			this.pictLogo.Image = (Image)resourceManager.GetObject("pictLogo.Image");
 			Control arg_185_0 = this.pictLogo;
 			location = new Point(8, 8);

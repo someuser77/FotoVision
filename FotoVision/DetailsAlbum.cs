@@ -443,7 +443,7 @@ namespace FotoVision
 			arg_538_0.Size = size;
 			this.labelLocationHeader.TabIndex = 9;
 			this.labelLocationHeader.Text = "Album location";
-			this.textLocation.BorderStyle = 0;
+			this.textLocation.BorderStyle = BorderStyle.None;
 			Control arg_57A_0 = this.textLocation;
 			location = new Point(8, 320);
 			arg_57A_0.Location = location;
