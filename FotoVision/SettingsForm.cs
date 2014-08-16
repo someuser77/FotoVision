@@ -915,7 +915,7 @@ namespace FotoVision
 		protected override void OnClosing(CancelEventArgs e)
 		{
 			base.OnClosing(e);
-			if (this.DialogResult == 1)
+			if (this.DialogResult == DialogResult.OK)
 			{
 				this.SaveSettings();
 			}

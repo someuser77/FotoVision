@@ -217,7 +217,7 @@ namespace FotoVision
 			LoginForm loginForm = new LoginForm();
 			while (!this.PhotoAdmin.Login())
 			{
-				if (loginForm.ShowDialog(this._parent) != 1)
+				if (loginForm.ShowDialog(this._parent) != DialogResult.OK)
 				{
 					return false;
 				}

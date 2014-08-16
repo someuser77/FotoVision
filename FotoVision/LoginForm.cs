@@ -212,7 +212,7 @@ namespace FotoVision
 		}
 		protected override void OnClosing(CancelEventArgs e)
 		{
-			if (this.DialogResult == 1)
+			if (this.DialogResult == DialogResult.OK)
 			{
 				Global.Settings.SetValue(SettingKey.ServicePassword, DataProtection.Encrypt(this.textPassword.Text, DataProtection.Store.User));
 			}
