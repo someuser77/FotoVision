@@ -1186,16 +1186,16 @@ namespace FotoVision
 							switch (actionItem.Action)
 							{
 							case PhotoAction.RotateLeft:
-								rotateFlipType = 3;
+                                rotateFlipType = RotateFlipType.Rotate270FlipNone;
 								break;
 							case PhotoAction.RotateRight:
-								rotateFlipType = 1;
+								rotateFlipType = RotateFlipType.Rotate90FlipNone;
 								break;
 							case PhotoAction.FlipHorizontal:
-								rotateFlipType = 4;
+								rotateFlipType = RotateFlipType.RotateNoneFlipX;
 								break;
 							case PhotoAction.FlipVertical:
-								rotateFlipType = 6;
+                                rotateFlipType = RotateFlipType.RotateNoneFlipY;
 								break;
 							}
 							Photo photo = (Photo)listViewItem.Tag;
