@@ -238,7 +238,7 @@ namespace FotoVision
 			g.FillRectangle(this.BackBrush, this.DisplayRectangle);
 			if (this._antiAlias)
 			{
-				g.TextRenderingHint = 4;
+				g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
 			}
 			RectangleF rectangleF = new RectangleF(4f, 0f, (float)checked(this.DisplayRectangle.Width - 4), (float)this.DisplayRectangle.Height);
 			RectangleF rectangleF2 = rectangleF;

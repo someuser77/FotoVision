@@ -120,15 +120,15 @@ namespace FotoVision
 		}
 		private void menuCopy_Click(object sender, EventArgs e)
 		{
-			this._effect = 1;
+            this._effect = DragDropEffects.Copy;
 		}
 		private void menuMove_Click(object sender, EventArgs e)
 		{
-			this._effect = 2;
+            this._effect = DragDropEffects.Move;
 		}
 		private void menuCancel_Click(object sender, EventArgs e)
 		{
-			this._effect = 0;
+			this._effect = DragDropEffects.None;
 		}
 	}
 }

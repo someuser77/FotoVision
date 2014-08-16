@@ -123,7 +123,7 @@ namespace FotoVision
 			this._processingIndexChanged = false;
 			this._curIndex = -1;
 			this.BackColor = SystemColors.Control;
-			this.DrawMode = 1;
+            this.DrawMode = DrawMode.OwnerDrawFixed;
 			this.ItemHeight = checked(this.Font.Height * 8 + 35 + 19);
 			this._textHeight = this.Font.Height;
 			this.InitChildControls();

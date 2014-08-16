@@ -226,7 +226,7 @@ namespace FotoVision
 			this.photoDetails.BackColor = SystemColors.Control;
 			this.photoDetails.BorderStyle = 0;
 			this.photoDetails.Dock = DockStyle.Fill;
-			this.photoDetails.DrawMode = 1;
+            this.photoDetails.DrawMode = DrawMode.OwnerDrawFixed;
 			this.photoDetails.IntegralHeight = false;
 			this.photoDetails.ItemHeight = 158;
 			Control arg_88_0 = this.photoDetails;
