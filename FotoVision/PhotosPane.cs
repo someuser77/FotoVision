@@ -793,7 +793,7 @@ namespace FotoVision
 			});
 			this.menuPhotoProperties.Index = 0;
 			this.menuPhotoProperties.Text = "Properties";
-			this.labelPos.Anchor = 10;
+			this.labelPos.Anchor = AnchorStyles.Right | AnchorStyles.Bottom;
 			this.labelPos.BackColor = Color.Transparent;
 			Control arg_4CA_0 = this.labelPos;
 			location = new Point(152, 240);

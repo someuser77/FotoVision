@@ -558,7 +558,7 @@ namespace FotoVision
 			this.spinPixels.BeginInit();
 			this.pageApplication.SuspendLayout();
 			this.SuspendLayout();
-			this.buttonOK.Anchor = 10;
+			this.buttonOK.Anchor = AnchorStyles.Right | AnchorStyles.Bottom;
 			this.buttonOK.DialogResult = DialogResult.OK;
 			this.buttonOK.FlatStyle = FlatStyle.System;
 			Control arg_193_0 = this.buttonOK;
@@ -570,7 +570,7 @@ namespace FotoVision
 			arg_1BA_0.Size = size;
 			this.buttonOK.TabIndex = 1;
 			this.buttonOK.Text = "OK";
-			this.buttonCancel.Anchor = 10;
+			this.buttonCancel.Anchor = AnchorStyles.Right | AnchorStyles.Bottom;
 			this.buttonCancel.DialogResult = DialogResult.Cancel;
 			this.buttonCancel.FlatStyle = FlatStyle.System;
 			Control arg_219_0 = this.buttonCancel;
@@ -582,7 +582,7 @@ namespace FotoVision
 			arg_240_0.Size = size;
 			this.buttonCancel.TabIndex = 2;
 			this.buttonCancel.Text = "Cancel";
-			this.tabControl.Anchor = 15;
+			this.tabControl.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom | AnchorStyles.Top;
 			this.tabControl.Controls.Add(this.pageWebHosting);
 			this.tabControl.Controls.Add(this.pageApplication);
 			Control arg_2AB_0 = this.tabControl;
@@ -700,7 +700,7 @@ namespace FotoVision
 			arg_6FF_0.Size = size;
 			this.labelPassword.TabIndex = 3;
 			this.labelPassword.Text = "&Password:";
-			this.textPassword.Anchor = 13;
+			this.textPassword.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top;
 			Control arg_740_0 = this.textPassword;
 			location = new Point(72, 64);
 			arg_740_0.Location = location;
@@ -711,7 +711,7 @@ namespace FotoVision
 			arg_77A_0.Size = size;
 			this.textPassword.TabIndex = 4;
 			this.textPassword.Text = "";
-			this.textLocation.Anchor = 13;
+			this.textLocation.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top;
 			Control arg_7BB_0 = this.textLocation;
 			location = new Point(72, 32);
 			arg_7BB_0.Location = location;
@@ -799,7 +799,7 @@ namespace FotoVision
 			arg_B8C_0.Size = size;
 			this.checkConfirm.TabIndex = 5;
 			this.checkConfirm.Text = "&Confirm file deletions";
-			this.textEmailSubject.Anchor = 13;
+			this.textEmailSubject.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top;
 			Control arg_BCC_0 = this.textEmailSubject;
 			location = new Point(8, 72);
 			arg_BCC_0.Location = location;

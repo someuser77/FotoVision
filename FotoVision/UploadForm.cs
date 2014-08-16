@@ -580,7 +580,7 @@ namespace FotoVision
 			arg_221_0.ImageSize = size;
 			this.imageList.ImageStream = (ImageListStreamer)resourceManager.GetObject("imageList.ImageStream");
 			this.imageList.TransparentColor = Color.Lime;
-			this.buttonDetails.Anchor = 9;
+			this.buttonDetails.Anchor = AnchorStyles.Right | AnchorStyles.Top;
 			this.buttonDetails.FlatStyle = FlatStyle.System;
 			Control arg_280_0 = this.buttonDetails;
 			location = new Point(388, 40);
@@ -588,7 +588,7 @@ namespace FotoVision
 			this.buttonDetails.Name = "buttonDetails";
 			this.buttonDetails.TabIndex = 4;
 			this.buttonDetails.Text = "<< Details";
-			this.buttonCancel.Anchor = 9;
+			this.buttonCancel.Anchor = AnchorStyles.Right | AnchorStyles.Top;
 			this.buttonCancel.FlatStyle = FlatStyle.System;
 			Control arg_2DF_0 = this.buttonCancel;
 			location = new Point(388, 8);
@@ -596,7 +596,7 @@ namespace FotoVision
 			this.buttonCancel.Name = "buttonCancel";
 			this.buttonCancel.TabIndex = 3;
 			this.buttonCancel.Text = "Cancel";
-			this.progressBar.Anchor = 13;
+			this.progressBar.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top;
 			Control arg_32F_0 = this.progressBar;
 			location = new Point(8, 28);
 			arg_32F_0.Location = location;
@@ -605,7 +605,7 @@ namespace FotoVision
 			size = new Size(362, 14);
 			arg_359_0.Size = size;
 			this.progressBar.TabIndex = 1;
-			this.tabControl.Anchor = 15;
+			this.tabControl.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom | AnchorStyles.Top;
 			this.tabControl.Controls.Add(this.pageTasks);
 			this.tabControl.Controls.Add(this.pageErrors);
 			Control arg_3B5_0 = this.tabControl;
@@ -707,7 +707,7 @@ namespace FotoVision
 			arg_7C0_0.Size = size;
 			this.checkCloseComplete.TabIndex = 2;
 			this.checkCloseComplete.Text = "&Close window after uploading is complete";
-			this.buttonClose.Anchor = 9;
+			this.buttonClose.Anchor = AnchorStyles.Right | AnchorStyles.Top;
 			this.buttonClose.FlatStyle = FlatStyle.System;
 			Control arg_80F_0 = this.buttonClose;
 			location = new Point(388, 8);

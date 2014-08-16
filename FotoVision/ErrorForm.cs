@@ -206,7 +206,7 @@ namespace FotoVision
 			arg_A5_0.Size = size;
 			this.pictIcon.TabIndex = 0;
 			this.pictIcon.TabStop = false;
-			this.buttonOK.Anchor = 10;
+			this.buttonOK.Anchor = AnchorStyles.Right | AnchorStyles.Bottom;
 			this.buttonOK.DialogResult = DialogResult.Cancel;
 			this.buttonOK.FlatStyle = FlatStyle.System;
 			Control arg_FF_0 = this.buttonOK;
@@ -218,7 +218,7 @@ namespace FotoVision
 			arg_126_0.Size = size;
 			this.buttonOK.TabIndex = 0;
 			this.buttonOK.Text = "OK";
-			this.textDetails.Anchor = 15;
+			this.textDetails.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom | AnchorStyles.Top;
 			this.textDetails.BackColor = SystemColors.Info;
 			Control arg_178_0 = this.textDetails;
 			location = new Point(8, 144);
@@ -252,7 +252,7 @@ namespace FotoVision
 			arg_293_0.Size = size;
 			this.labelType.TabIndex = 4;
 			this.labelType.Text = "&Type of error:";
-			this.textType.Anchor = 13;
+			this.textType.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top;
 			this.textType.BackColor = SystemColors.Info;
 			Control arg_2E2_0 = this.textType;
 			location = new Point(8, 96);
@@ -264,7 +264,7 @@ namespace FotoVision
 			arg_318_0.Size = size;
 			this.textType.TabIndex = 5;
 			this.textType.Text = "";
-			this.labelHeader.Anchor = 13;
+			this.labelHeader.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top;
 			this.labelHeader.FlatStyle = FlatStyle.System;
             this.labelHeader.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Control arg_380_0 = this.labelHeader;
