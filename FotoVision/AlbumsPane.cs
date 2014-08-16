@@ -638,7 +638,7 @@ namespace FotoVision
 			}
 			int photoCount = FileManager.GetPhotoCount(this.SelectedAlbum);
 			string text = StringType.FromObject(Interaction.IIf(photoCount == 0, "The album will be deleted. Do you want to continue?", "All the photos in the album will be deleted. FotoVision only deletes the copies of the original photos it created during the import.\r\n\r\nDo you want to continue?"));
-			DialogResult dialogResult = MessageBox.Show(this.TopLevelControl, text, "Confirm Album Delete", 4, 32);
+			DialogResult dialogResult = MessageBox.Show(this.TopLevelControl, text, "Confirm Album Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult != DialogResult.Yes)
 			{
 				return;
