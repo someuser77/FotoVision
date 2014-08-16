@@ -402,7 +402,7 @@ namespace FotoVision
 			try
 			{
 				Rectangle rectangle = new Rectangle(0, 0, bitmap.Width, bitmap.Height);
-				graphics.DrawImage(image, rectangle, cropArea, 2);
+				graphics.DrawImage(image, rectangle, cropArea, GraphicsUnit.Pixel);
 			}
 			finally
 			{
@@ -425,7 +425,7 @@ namespace FotoVision
 					Graphics graphics = Graphics.FromImage(bitmap2);
 					graphics.InterpolationMode = 7;
 					Rectangle rectangle = new Rectangle(0, 0, num2, num3);
-					graphics.DrawImage(bitmap, rectangle, 0, 0, bitmap.Width, bitmap.Height, 2);
+					graphics.DrawImage(bitmap, rectangle, 0, 0, bitmap.Width, bitmap.Height, GraphicsUnit.Pixel);
 					graphics.Dispose();
 				}
 				catch (Exception expr_AC)
@@ -507,7 +507,7 @@ namespace FotoVision
 			try
 			{
 				Rectangle rectangle = new Rectangle(0, 0, image.Width, image.Height);
-				graphics.DrawImage(image, rectangle, 0, 0, image.Width, image.Height, 2, attr);
+				graphics.DrawImage(image, rectangle, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attr);
 			}
 			finally
 			{

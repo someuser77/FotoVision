@@ -266,7 +266,7 @@ namespace FotoVision
 				int num7 = (this.Height - num5) / 2;
 				g.InterpolationMode = 3;
 				Rectangle rectangle = new Rectangle(num6, num7, num4, num5);
-				g.DrawImage(this._workingImage, rectangle, 0, 0, this._workingImage.Width, this._workingImage.Height, 2);
+				g.DrawImage(this._workingImage, rectangle, 0, 0, this._workingImage.Width, this._workingImage.Height, GraphicsUnit.Pixel);
 				g.DrawRectangle(this._penFrame, rectangle);
 				if (!this._photoBounds.Equals(rectangle))
 				{
@@ -345,7 +345,7 @@ namespace FotoVision
 					{
 						graphics.InterpolationMode = 3;
 						Rectangle rectangle = new Rectangle(0, 0, num2, num3);
-						graphics.DrawImage(srcImage, rectangle, 0, 0, srcImage.Width, srcImage.Height, 2);
+						graphics.DrawImage(srcImage, rectangle, 0, 0, srcImage.Width, srcImage.Height, GraphicsUnit.Pixel);
 					}
 					finally
 					{
