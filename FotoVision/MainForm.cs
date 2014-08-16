@@ -2249,13 +2249,13 @@ namespace FotoVision
 				DialogResult dialogResult;
 				if (Global.ActionList.OnlyRotates)
 				{
-					dialogResult = 6;
+					dialogResult = DialogResult.Yes;
 				}
 				else
 				{
-					dialogResult = MessageBox.Show(this, "The photo has been modified. Do you want to save the changes?", "Save Changes", 4, 32);
+                    dialogResult = MessageBox.Show(this, "The photo has been modified. Do you want to save the changes?", "Save Changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 				}
-				if (dialogResult == 6)
+                if (dialogResult == DialogResult.Yes)
 				{
 					this.SaveCurrentPhoto();
 				}
