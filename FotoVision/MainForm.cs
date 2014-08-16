@@ -1989,7 +1989,7 @@ namespace FotoVision
 			this.menuHelp.Text = "&Help";
 			this.menuAbout.Index = 0;
 			this.menuAbout.Text = "&About FotoVision...";
-			this.progressBar.Anchor = 14;
+            this.progressBar.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom;
 			Control arg_1499_0 = this.progressBar;
 			location = new Point(156, 478);
 			arg_1499_0.Location = location;
