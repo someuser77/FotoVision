@@ -220,7 +220,7 @@ namespace FotoVision
             this.SetStyle(ControlStyles.DoubleBuffer | ControlStyles.AllPaintingInWmPaint | ControlStyles.ResizeRedraw | ControlStyles.UserPaint, true);
 			this.Height = 20;
 			this._format = new StringFormat();
-			this._format.FormatFlags = 4096;
+            this._format.FormatFlags = StringFormatFlags.NoWrap;
 			this._format.LineAlignment = StringAlignment.Center;
             this._format.Trimming = System.Drawing.StringTrimming.EllipsisCharacter;
             this.Font = new Font("arial", 9f, GraphicsUnit.Display);
