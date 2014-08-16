@@ -865,7 +865,7 @@ namespace FotoVision
 			}
 			if (FileManager.AlbumExists(text2.Trim()))
 			{
-				MessageBox.Show(this.TopLevelControl, string.Format("The album '{0}' already exist. Please use a different album name.", text2.Trim()), "Cannot Rename Album", 0, 48);
+				MessageBox.Show(this.TopLevelControl, string.Format("The album '{0}' already exist. Please use a different album name.", text2.Trim()), "Cannot Rename Album", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				e.CancelEdit = true;
 				return;
 			}
