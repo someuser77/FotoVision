@@ -804,7 +804,7 @@ namespace FotoVision
 			arg_4F1_0.Size = size;
 			this.labelPos.TabIndex = 3;
 			this.labelPos.Text = "Photo xx of xx";
-			this.labelPos.TextAlign = 1024;
+            this.labelPos.TextAlign = ContentAlignment.BottomRight;
 			this.BackColor = SystemColors.Control;
 			this.Controls.Add(this.photoViewer);
 			this.Controls.Add(this.listView);
