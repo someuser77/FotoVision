@@ -226,7 +226,7 @@ namespace FotoVision
 			this.textDetails.Multiline = true;
 			this.textDetails.Name = "textDetails";
 			this.textDetails.ReadOnly = true;
-			this.textDetails.ScrollBars = 2;
+            this.textDetails.ScrollBars = ScrollBars.Vertical;
 			Control arg_1C6_0 = this.textDetails;
 			size = new Size(318, 64);
 			arg_1C6_0.Size = size;

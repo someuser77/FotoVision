@@ -2604,7 +2604,7 @@ namespace FotoVision
 			{
 				this.SaveWindowSettings();
 				this.FormBorderStyle = FormBorderStyle.None;
-				this.WindowState = 2;
+                this.WindowState = FormWindowState.Maximized;
 				this.Menu = null;
 				this.paneAlbums.Visible = false;
 				this.statusBar.Visible = false;

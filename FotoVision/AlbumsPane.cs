@@ -498,7 +498,7 @@ namespace FotoVision
 			this.InitializeComponent();
 			this.CaptionText = "My Albums";
 			this._dropData = new DropData(this.listView);
-			this.listView.Activation = 1;
+            this.listView.Activation = ItemActivation.OneClick;
 		}
 		private void InitializeComponent()
 		{
@@ -527,7 +527,7 @@ namespace FotoVision
 			});
 			this.listView.ContextMenu = this.menuAlbum;
 			this.listView.Dock = DockStyle.Fill;
-			this.listView.HeaderStyle = 1;
+            this.listView.HeaderStyle = ColumnHeaderStyle.Nonclickable;
 			this.listView.HideSelection = false;
 			this.listView.LabelEdit = true;
 			Control arg_14E_0 = this.listView;
@@ -544,7 +544,7 @@ namespace FotoVision
 			this.colName.Text = "Album Name";
 			this.colName.Width = 162;
 			this.colPhotos.Text = "Photos";
-			this.colPhotos.TextAlign = 1;
+            this.colPhotos.TextAlign = HorizontalAlignment.Right;
 			this.colPhotos.Width = 50;
 			this.menuAlbum.MenuItems.AddRange(new MenuItem[]
 			{

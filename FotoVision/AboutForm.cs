@@ -216,7 +216,7 @@ namespace FotoVision
 			Control arg_1AF_0 = this.pictLogo;
 			size = new Size(290, 41);
 			arg_1AF_0.Size = size;
-			this.pictLogo.SizeMode = 2;
+            this.pictLogo.SizeMode = PictureBoxSizeMode.AutoSize;
 			this.pictLogo.TabIndex = 3;
 			this.pictLogo.TabStop = false;
 			this.labelAssemblies.FlatStyle = FlatStyle.System;
@@ -245,7 +245,7 @@ namespace FotoVision
 			this.textPhotoLocation.Multiline = true;
 			this.textPhotoLocation.Name = "textPhotoLocation";
 			this.textPhotoLocation.ReadOnly = true;
-			this.textPhotoLocation.ScrollBars = 2;
+            this.textPhotoLocation.ScrollBars = ScrollBars.Vertical;
 			Control arg_304_0 = this.textPhotoLocation;
 			size = new Size(288, 32);
 			arg_304_0.Size = size;
@@ -262,7 +262,7 @@ namespace FotoVision
 			this.listAssemblies.TabIndex = 6;
 			this.linkCompany.ActiveLinkColor = Color.RoyalBlue;
 			this.linkCompany.FlatStyle = FlatStyle.System;
-			this.linkCompany.LinkBehavior = 2;
+            this.linkCompany.LinkBehavior = LinkBehavior.HoverUnderline;
 			this.linkCompany.LinkColor = SystemColors.ControlText;
 			Control arg_3CD_0 = this.linkCompany;
 			location = new Point(6, 56);

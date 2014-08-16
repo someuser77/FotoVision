@@ -78,7 +78,7 @@ namespace FotoVision
 		{
 			string text = photoPath + ".xml";
 			XmlTextWriter xmlTextWriter = new XmlTextWriter(text, null);
-			xmlTextWriter.Formatting = 1;
+			xmlTextWriter.Formatting = Formatting.Indented;
 			xmlTextWriter.WriteStartElement("metadata");
 			xmlTextWriter.WriteStartElement("photo");
 			xmlTextWriter.WriteStartAttribute("filename", null);

@@ -665,7 +665,7 @@ namespace FotoVision
 			this.textError.Multiline = true;
 			this.textError.Name = "textError";
 			this.textError.ReadOnly = true;
-			this.textError.ScrollBars = 2;
+            this.textError.ScrollBars = ScrollBars.Vertical;
 			Control arg_64A_0 = this.textError;
 			size = new Size(464, 32);
 			arg_64A_0.Size = size;

@@ -116,7 +116,7 @@ namespace FotoVision
 		public void Write()
 		{
 			XmlTextWriter xmlTextWriter = new XmlTextWriter(this.FilePath, null);
-			xmlTextWriter.Formatting = 1;
+			xmlTextWriter.Formatting = Formatting.Indented;
 			xmlTextWriter.WriteStartElement("configuration");
 			xmlTextWriter.WriteStartElement("appSettings");
 			IDictionaryEnumerator enumerator = this._list.GetEnumerator();

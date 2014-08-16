@@ -322,7 +322,7 @@ namespace FotoVision
 			Control arg_168_0 = this.pictCurrent;
 			size = new Size(60, 60);
 			arg_168_0.Size = size;
-			this.pictCurrent.SizeMode = 3;
+            this.pictCurrent.SizeMode = PictureBoxSizeMode.CenterImage;
 			this.pictCurrent.TabIndex = 1;
 			this.pictCurrent.TabStop = false;
 			this.labelExisting.FlatStyle = FlatStyle.System;
@@ -354,7 +354,7 @@ namespace FotoVision
 			Control arg_2D6_0 = this.pictNew;
 			size = new Size(60, 60);
 			arg_2D6_0.Size = size;
-			this.pictNew.SizeMode = 3;
+            this.pictNew.SizeMode = PictureBoxSizeMode.CenterImage;
 			this.pictNew.TabIndex = 1;
 			this.pictNew.TabStop = false;
 			this.buttonOK.DialogResult = DialogResult.OK;
@@ -417,7 +417,7 @@ namespace FotoVision
 			this.textCurrent.Multiline = true;
 			this.textCurrent.Name = "textCurrent";
 			this.textCurrent.ReadOnly = true;
-			this.textCurrent.ScrollBars = 2;
+			this.textCurrent.ScrollBars = ScrollBars.Vertical;
 			Control arg_5A1_0 = this.textCurrent;
 			size = new Size(224, 60);
 			arg_5A1_0.Size = size;
@@ -430,7 +430,7 @@ namespace FotoVision
 			this.textNew.Multiline = true;
 			this.textNew.Name = "textNew";
 			this.textNew.ReadOnly = true;
-			this.textNew.ScrollBars = 2;
+            this.textNew.ScrollBars = ScrollBars.Vertical;
 			Control arg_638_0 = this.textNew;
 			size = new Size(224, 60);
 			arg_638_0.Size = size;

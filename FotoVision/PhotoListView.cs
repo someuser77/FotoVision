@@ -368,7 +368,7 @@ namespace FotoVision
 		{
 			if (!Global.PerformingDrag)
 			{
-				DragDropEffects dragDropEffects = 1;
+                DragDropEffects dragDropEffects = DragDropEffects.Copy;
 				if (this._dropData.MouseButtons == 2097152)
 				{
 					dragDropEffects = new DropContextMenu
@@ -376,7 +376,7 @@ namespace FotoVision
 						EnableMove = false
 					}.Display(this);
 				}
-				if (dragDropEffects == 1)
+                if (dragDropEffects == DragDropEffects.Copy)
 				{
 					string[] array = this._dropData.Drop(drgevent);
 					if (array != null && array.Length > 0 && this.FilesDroppedEvent != null)

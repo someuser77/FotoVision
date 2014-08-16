@@ -340,7 +340,7 @@ namespace FotoVision
 			Control arg_16B_0 = this.pictThumbnail;
 			size = new Size(48, 48);
 			arg_16B_0.Size = size;
-			this.pictThumbnail.SizeMode = 3;
+            this.pictThumbnail.SizeMode = PictureBoxSizeMode.CenterImage;
 			this.pictThumbnail.TabIndex = 2;
 			this.pictThumbnail.TabStop = false;
 			this.tabControl.Controls.Add(this.pageFile);
@@ -395,7 +395,7 @@ namespace FotoVision
 			this.textActions.Multiline = true;
 			this.textActions.Name = "textActions";
 			this.textActions.ReadOnly = true;
-			this.textActions.ScrollBars = 2;
+            this.textActions.ScrollBars = ScrollBars.Vertical;
 			Control arg_41D_0 = this.textActions;
 			size = new Size(272, 160);
 			arg_41D_0.Size = size;

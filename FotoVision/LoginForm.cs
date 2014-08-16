@@ -182,7 +182,7 @@ namespace FotoVision
 			Control arg_25F_0 = this.image;
 			size = new Size(32, 32);
 			arg_25F_0.Size = size;
-			this.image.SizeMode = 2;
+            this.image.SizeMode = PictureBoxSizeMode.AutoSize;
 			this.image.TabIndex = 5;
 			this.image.TabStop = false;
 			this.AcceptButton = this.buttonOK;

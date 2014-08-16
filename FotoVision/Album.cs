@@ -89,7 +89,7 @@ namespace FotoVision
 			try
 			{
 				XmlTextWriter xmlTextWriter = new XmlTextWriter(text, null);
-				xmlTextWriter.Formatting = 1;
+				xmlTextWriter.Formatting = Formatting.Indented;
 				xmlTextWriter.WriteStartElement("metadata");
 				xmlTextWriter.WriteStartElement("album");
 				xmlTextWriter.WriteStartAttribute("publish", null);

@@ -385,7 +385,7 @@ namespace FotoVision
 			this._textDate.BorderStyle = BorderStyle.None;
 			this._textDesc.Multiline = true;
 			this._textDesc.WordWrap = true;
-			this._textDesc.ScrollBars = 2;
+            this._textDesc.ScrollBars = ScrollBars.Vertical;
 			this._textTitle.Width = 196;
 			this._textTitle.Height = this._textHeight;
 			this._textDesc.Width = 196;
