@@ -194,7 +194,7 @@ namespace FotoVision
 			this._brushSelected = new SolidBrush(PhotoListView.Consts.SelectedColor);
 			this._brushBack = new SolidBrush(PhotoListView.Consts.BackColor);
 			this._format = new StringFormat();
-			this._format.Alignment = 1;
+			this._format.Alignment = StringAlignment.Center;
             this._format.Trimming = System.Drawing.StringTrimming.EllipsisCharacter;
 		}
 		protected override void OnAfterLabelEdit(LabelEditEventArgs e)
