@@ -572,7 +572,7 @@ namespace FotoVision
 			this.statusBar.TabIndex = 6;
 			this.statusTasks.Width = 75;
 			this.statusErrors.Width = 75;
-			this.statusMessage.AutoSize = 2;
+            this.statusMessage.AutoSize = StatusBarPanelAutoSize.Spring;
 			this.statusMessage.Width = 306;
 			this.colErrors.Width = 404;
 			ImageList arg_221_0 = this.imageList;

@@ -1722,7 +1722,7 @@ namespace FotoVision
 			this.statusBar.TabIndex = 3;
 			this.statusPaneLeft.Style = 2;
 			this.statusPaneLeft.Width = 150;
-			this.statusPaneRight.AutoSize = 2;
+            this.statusPaneRight.AutoSize = StatusBarPanelAutoSize.Spring;
 			this.statusPaneRight.Style = 2;
 			this.statusPaneRight.Width = 576;
 			this.toolBar.Appearance = 1;
