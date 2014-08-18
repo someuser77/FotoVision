@@ -1291,11 +1291,11 @@ namespace FotoVision
 		{
 			if (this.FullScreen)
 			{
-				if (e.Button == 1048576 && this.PhotosMenuClickedEvent != null)
+                if (e.Button == MouseButtons.Left && this.PhotosMenuClickedEvent != null)
 				{
 					this.PhotosMenuClickedEvent(this, new PhotosMenuClickedEventArgs(PhotosContextAction.NextPhoto));
 				}
-				if (e.Button == 2097152 && this.PhotosMenuClickedEvent != null)
+                if (e.Button == MouseButtons.Right && this.PhotosMenuClickedEvent != null)
 				{
 					this.PhotosMenuClickedEvent(this, new PhotosMenuClickedEventArgs(PhotosContextAction.PreviousPhoto));
 				}

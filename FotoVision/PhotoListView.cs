@@ -369,7 +369,7 @@ namespace FotoVision
 			if (!Global.PerformingDrag)
 			{
                 DragDropEffects dragDropEffects = DragDropEffects.Copy;
-				if (this._dropData.MouseButtons == 2097152)
+                if (this._dropData.MouseButtons == MouseButtons.Right)
 				{
 					dragDropEffects = new DropContextMenu
 					{
