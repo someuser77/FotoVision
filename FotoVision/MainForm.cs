@@ -1855,7 +1855,7 @@ namespace FotoVision
 			this.menuSep2.Text = "-";
 			this.menuOpen.Enabled = false;
 			this.menuOpen.Index = 5;
-			this.menuOpen.Shortcut = 131151;
+            this.menuOpen.Shortcut = Shortcut.CtrlO;
 			this.menuOpen.Text = "&Open";
 			this.menuRename.Enabled = false;
 			this.menuRename.Index = 6;
@@ -1867,7 +1867,7 @@ namespace FotoVision
 			this.menuSep3.Text = "-";
 			this.menuSave.Enabled = false;
 			this.menuSave.Index = 9;
-			this.menuSave.Shortcut = 131155;
+            this.menuSave.Shortcut = Shortcut.CtrlS;
 			this.menuSave.Text = "&Save";
 			this.menuSep4.Index = 10;
 			this.menuSep4.Text = "-";
@@ -1884,7 +1884,7 @@ namespace FotoVision
 			this.menuSep6.Text = "-";
 			this.menuPrint.Enabled = false;
 			this.menuPrint.Index = 16;
-			this.menuPrint.Shortcut = 131152;
+            this.menuPrint.Shortcut = Shortcut.CtrlP;
 			this.menuPrint.Text = "&Print...";
 			this.menuSep7.Index = 17;
 			this.menuSep7.Text = "-";
@@ -1907,11 +1907,11 @@ namespace FotoVision
 			this.menuEdit.Text = "&Edit";
 			this.menuUndo.Enabled = false;
 			this.menuUndo.Index = 0;
-			this.menuUndo.Shortcut = 131162;
+            this.menuUndo.Shortcut = Shortcut.CtrlZ;
 			this.menuUndo.Text = "&Undo";
 			this.menuRedo.Enabled = false;
 			this.menuRedo.Index = 1;
-			this.menuRedo.Shortcut = 131161;
+            this.menuRedo.Shortcut = Shortcut.CtrlY;
 			this.menuRedo.Text = "&Redo";
 			this.menuDiscardChanges.Enabled = false;
 			this.menuDiscardChanges.Index = 2;
@@ -1943,17 +1943,17 @@ namespace FotoVision
 			this.menuSep9.Text = "-";
 			this.menuCopy.Enabled = false;
 			this.menuCopy.Index = 6;
-			this.menuCopy.Shortcut = 131139;
+            this.menuCopy.Shortcut = Shortcut.CtrlC;
 			this.menuCopy.Text = "&Copy";
 			this.menuPaste.Enabled = false;
 			this.menuPaste.Index = 7;
-			this.menuPaste.Shortcut = 131158;
+            this.menuPaste.Shortcut = Shortcut.CtrlV;
 			this.menuPaste.Text = "&Paste";
 			this.menuSep10.Index = 8;
 			this.menuSep10.Text = "-";
 			this.menuSelectAll.Enabled = false;
 			this.menuSelectAll.Index = 9;
-			this.menuSelectAll.Shortcut = 131137;
+			this.menuSelectAll.Shortcut = Shortcut.CtrlA;
 			this.menuSelectAll.Text = "&Select All";
 			this.menuView.Index = 2;
 			this.menuView.MenuItems.AddRange(new MenuItem[]
@@ -1971,7 +1971,7 @@ namespace FotoVision
 			this.menuSep11.Index = 2;
 			this.menuSep11.Text = "-";
 			this.menuFullScreen.Index = 3;
-			this.menuFullScreen.Shortcut = 131142;
+            this.menuFullScreen.Shortcut = Shortcut.CtrlF;
 			this.menuFullScreen.Text = "&Full Screen";
 			this.menuTools.Index = 3;
 			this.menuTools.MenuItems.AddRange(new MenuItem[]
