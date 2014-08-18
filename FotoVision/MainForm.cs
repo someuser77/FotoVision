@@ -1725,7 +1725,7 @@ namespace FotoVision
             this.statusPaneRight.AutoSize = StatusBarPanelAutoSize.Spring;
             this.statusPaneRight.Style = StatusBarPanelStyle.OwnerDraw;
 			this.statusPaneRight.Width = 576;
-			this.toolBar.Appearance = 1;
+            this.toolBar.Appearance = ToolBarAppearance.Flat;
 			this.toolBar.Buttons.AddRange(new ToolBarButton[]
 			{
 				this.tbNewAlbum,
@@ -1763,7 +1763,7 @@ namespace FotoVision
 			size = new Size(742, 39);
 			arg_95E_0.Size = size;
 			this.toolBar.TabIndex = 4;
-			this.toolBar.TextAlign = 1;
+            this.toolBar.TextAlign = ToolBarTextAlign.Right;
 			this.toolBar.Wrappable = false;
 			this.tbNewAlbum.ImageIndex = 5;
 			this.tbNewAlbum.ToolTipText = "New Album";
