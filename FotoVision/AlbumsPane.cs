@@ -540,7 +540,7 @@ namespace FotoVision
 			arg_187_0.Size = size;
 			this.listView.SmallImageList = this.imageList;
 			this.listView.TabIndex = 1;
-			this.listView.View = 1;
+            this.listView.View = View.Details;
 			this.colName.Text = "Album Name";
 			this.colName.Width = 162;
 			this.colPhotos.Text = "Photos";

@@ -642,7 +642,7 @@ namespace FotoVision
 			arg_4EC_0.Size = size;
 			this.listTasks.SmallImageList = this.imageList;
 			this.listTasks.TabIndex = 0;
-			this.listTasks.View = 1;
+            this.listTasks.View = View.Details;
 			this.colMessage.Width = 404;
 			this.pageErrors.Controls.Add(this.textError);
 			this.pageErrors.Controls.Add(this.listErrors);
@@ -686,7 +686,7 @@ namespace FotoVision
 			arg_6E2_0.Size = size;
 			this.listErrors.SmallImageList = this.imageList;
 			this.listErrors.TabIndex = 1;
-			this.listErrors.View = 1;
+            this.listErrors.View = View.Details;
 			this.labelMessage.FlatStyle = FlatStyle.System;
 			Control arg_72D_0 = this.labelMessage;
 			location = new Point(8, 8);
