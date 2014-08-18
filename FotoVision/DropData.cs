@@ -133,7 +133,7 @@ namespace FotoVision
 			{
                 return DragDropEffects.Copy;
 			}
-			return IntegerType.FromObject(Interaction.IIf((e.KeyState & 8) == 8, 1, 2));
+            return (e.KeyState & 8) == 8 ? DragDropEffects.Copy : DragDropEffects.Move;
 		}
 		private bool PhotosInList(string[] files)
 		{
