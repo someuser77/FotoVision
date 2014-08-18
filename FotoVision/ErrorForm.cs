@@ -308,7 +308,7 @@ namespace FotoVision
 			this.MinimumSize = size;
 			this.Name = "ErrorForm";
 			this.ShowInTaskbar = false;
-			this.SizeGripStyle = 1;
+            this.SizeGripStyle = SizeGripStyle.Show;
 			this.StartPosition = FormStartPosition.CenterParent;
 			this.Text = "Error";
 			this.ResumeLayout(false);

@@ -464,7 +464,7 @@ namespace FotoVision
 			this.MinimizeBox = false;
 			this.Name = "PropertiesForm";
 			this.ShowInTaskbar = false;
-			this.SizeGripStyle = 1;
+            this.SizeGripStyle = SizeGripStyle.Show;
 			this.StartPosition = FormStartPosition.CenterParent;
 			this.Text = "PropertiesForm";
 			this.tabControl.ResumeLayout(false);

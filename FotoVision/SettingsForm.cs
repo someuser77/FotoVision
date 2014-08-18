@@ -887,7 +887,7 @@ namespace FotoVision
 			this.MinimumSize = size;
 			this.Name = "SettingsForm";
 			this.ShowInTaskbar = false;
-			this.SizeGripStyle = 1;
+            this.SizeGripStyle = SizeGripStyle.Show;
 			this.StartPosition = FormStartPosition.CenterParent;
 			this.Text = "Options";
 			this.tabControl.ResumeLayout(false);
