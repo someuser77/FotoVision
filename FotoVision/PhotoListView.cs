@@ -405,7 +405,7 @@ namespace FotoVision
 					DataObject dataObject = new DataObject();
 					dataObject.SetData(DataFormats.FileDrop, array);
                     DragDropEffects dragDropEffects = this.DoDragDrop(dataObject, DragDropEffects.Copy | DragDropEffects.Move);
-					if (dragDropEffects != 1 && this.FilesDraggedEvent != null)
+                    if (dragDropEffects != DragDropEffects.Copy && this.FilesDraggedEvent != null)
 					{
 						this.FilesDraggedEvent(this, EventArgs.Empty);
 					}

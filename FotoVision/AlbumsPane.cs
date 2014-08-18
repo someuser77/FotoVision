@@ -594,7 +594,7 @@ namespace FotoVision
 			openFileDialog.Filter = FileManager.OpenFilter;
 			openFileDialog.FilterIndex = Global.Settings.GetInt(SettingKey.ImportFilterIndex);
 			openFileDialog.InitialDirectory = Global.Settings.GetString(SettingKey.ImportLocation);
-			if (openFileDialog.ShowDialog() == 1)
+			if (openFileDialog.ShowDialog() == DialogResult.OK)
 			{
 				Global.Settings.SetValue(SettingKey.ImportFilterIndex, openFileDialog.FilterIndex);
 				if (openFileDialog.FileNames.Length > 0)
@@ -610,7 +610,7 @@ namespace FotoVision
 			folderBrowserDialog.Description = "Please select a folder to import. If you delete this album in PhotoVision, the source files will not be deleted, only the copied files will be erased.";
 			folderBrowserDialog.ShowNewFolderButton = false;
 			folderBrowserDialog.SelectedPath = Global.Settings.GetString(SettingKey.ImportLocation);
-			if (folderBrowserDialog.ShowDialog() == 1)
+			if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
 			{
 				Global.Settings.SetValue(SettingKey.ImportLocation, folderBrowserDialog.SelectedPath);
 				this.ProcessDroppedFilesRoot(new string[]
@@ -627,7 +627,7 @@ namespace FotoVision
 			}
 			if (this.listView.SelectedItems.Count == 1)
 			{
-				this.listView.SelectedItems[0].BeginEdit;
+				this.listView.SelectedItems[0].BeginEdit();
 			}
 		}
 		public void Delete()
@@ -1032,7 +1032,7 @@ namespace FotoVision
 				int arg_5A_0 = 0;
 				int num3 = files.Length - 1;
 				int num4 = arg_5A_0;
-				while (num4 <= num3 && dialogResult != 2)
+                while (num4 <= num3 && dialogResult != DialogResult.Cancel)
 				{
 					if (Directory.Exists(files[num4]))
 					{
@@ -1064,13 +1064,13 @@ namespace FotoVision
 			{
 				int num = files.Length - 1;
 				int num2 = arg_0A_0;
-				while (num2 <= num && result != 2)
+                while (num2 <= num && result != DialogResult.Cancel)
 				{
 					Global.Progress.Update(this, string.Format("{0} files", RuntimeHelpers.GetObjectValue(Interaction.IIf(moveFiles, "Moving", "Copying"))), num2 + 1, files.Length);
 					if (FileManager.IsSupportedFile(files[num2]))
 					{
 						result = this.AddFile(folder, files[num2], alwaysReplaceFile, moveFiles);
-						if (result == 6)
+						if (result == DialogResult.Yes)
 						{
 							alwaysReplaceFile = true;
 						}
@@ -1109,7 +1109,7 @@ namespace FotoVision
 					ConfirmPhotoForm confirmPhotoForm = new ConfirmPhotoForm(text, file);
 					dialogResult = confirmPhotoForm.ShowDialog(this.ParentForm);
 				}
-				if (dialogResult == 1 | dialogResult == 6)
+                if (dialogResult == DialogResult.OK | dialogResult == DialogResult.Yes)
 				{
 					FileManager.CopyMetaFile(file, text);
 					FileManager.CopyFile(file, text);
@@ -1156,7 +1156,7 @@ namespace FotoVision
 				this.ReselectOrgSelection();
 				return;
 			}
-			if (this._dropData.MouseButtons == 2097152)
+			if (this._dropData.MouseButtons == MouseButtons.Right)
 			{
 				DropContextMenu dropContextMenu = new DropContextMenu();
 				if (!Global.PerformingDrag)
@@ -1171,7 +1171,7 @@ namespace FotoVision
 				return;
 			}
 			this.ReselectOrgSelection();
-			bool moveFiles = BooleanType.FromObject(Interaction.IIf(e.Effect == 2, true, false));
+            bool moveFiles = BooleanType.FromObject(Interaction.IIf(e.Effect == DragDropEffects.Move, true, false));
 			if (this._dropData.TargetItem != null)
 			{
 				this.ProcessDroppedFiles(array, this._dropData.TargetItem, moveFiles);

@@ -104,7 +104,7 @@ namespace FotoVision
 					XmlTextReader xmlTextReader = new XmlTextReader(this.FilePath);
 					while (xmlTextReader.Read())
 					{
-						if (xmlTextReader.NodeType == 1 & StringType.StrCmp(xmlTextReader.Name, "add", false) == 0)
+                        if (xmlTextReader.NodeType == XmlNodeType.Element & StringType.StrCmp(xmlTextReader.Name, "add", false) == 0)
 						{
 							this._list.Add(xmlTextReader.GetAttribute("key"), xmlTextReader.GetAttribute("value"));
 						}

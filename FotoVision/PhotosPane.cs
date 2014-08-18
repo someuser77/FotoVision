@@ -1037,7 +1037,7 @@ namespace FotoVision
 			}
 			if (this.listView.SelectedItems.Count == 1)
 			{
-				this.listView.SelectedItems[0].BeginEdit;
+				this.listView.SelectedItems[0].BeginEdit();
 			}
 		}
 		public void Delete()
@@ -1049,7 +1049,7 @@ namespace FotoVision
 			if (Global.Settings.GetBool(SettingKey.PromptFileDelete) && new DeletePhotoForm
 			{
 				Count = this.SelectedCount
-			}.ShowDialog() == 2)
+			}.ShowDialog() == DialogResult.Cancel)
 			{
 				return;
 			}

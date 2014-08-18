@@ -398,7 +398,7 @@ namespace FotoVision
 				return;
 			}
 			base.OnMouseDown(e);
-			if (Control.MouseButtons != 1048576)
+            if (Control.MouseButtons != MouseButtons.Left)
 			{
 				return;
 			}

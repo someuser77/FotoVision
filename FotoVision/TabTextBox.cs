@@ -46,7 +46,7 @@ namespace FotoVision
 			if (msg.Msg == 256 & msg.WParam.ToInt32() == 9)
 			{
 				TabbedControlNavigateEventArgs tabbedControlNavigateEventArgs = new TabbedControlNavigateEventArgs(false);
-				if (Control.ModifierKeys == 65536)
+                if (Control.ModifierKeys == Keys.Shift)
 				{
 					if (this.PreviousControlEvent != null)
 					{
