@@ -211,7 +211,7 @@ namespace FotoVision
 			if (FileManager.IsFileReadOnly(destFileName))
 			{
 				FileAttributes fileAttributes = File.GetAttributes(destFileName);
-				fileAttributes &= -2;
+                fileAttributes &= ~FileAttributes.ReadOnly;
 				File.SetAttributes(destFileName, fileAttributes);
 			}
 		}
@@ -260,7 +260,7 @@ namespace FotoVision
 			bool result;
 			try
 			{
-				result = BooleanType.FromObject(Interaction.IIf((File.GetAttributes(path) & 1) > 0, true, false));
+                result = BooleanType.FromObject(Interaction.IIf((File.GetAttributes(path) & FileAttributes.ReadOnly) > 0, true, false));
 			}
 			catch (Exception expr_24)
 			{
