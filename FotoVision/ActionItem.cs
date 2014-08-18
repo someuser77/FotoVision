@@ -77,7 +77,7 @@ namespace FotoVision
 			this._sliderValues.Gamma = gamma;
 			this._sliderValues.Saturation = saturation;
 		}
-		public string ToString()
+		public override string ToString()
 		{
 			return this.ToString(false);
 		}

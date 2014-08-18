@@ -218,7 +218,7 @@ namespace FotoVision
 			}
 			return this.ThumbnailPath.CompareTo(((Photo)obj).ThumbnailPath);
 		}
-		public bool Equals(object obj)
+        public override bool Equals(object obj)
 		{
 			return BooleanType.FromObject(Interaction.IIf(this.CompareTo(RuntimeHelpers.GetObjectValue(obj)) == 0, true, false));
 		}

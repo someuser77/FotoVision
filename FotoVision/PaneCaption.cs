@@ -32,7 +32,7 @@ namespace FotoVision
 		private StringFormat _format;
 		private IContainer components;
 		[Browsable(true), Category("Appearance"), Description("Text that is displayed in the label."), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
-		public string Text
+        public override string Text
 		{
 			get
 			{
