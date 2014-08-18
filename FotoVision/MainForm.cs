@@ -2645,7 +2645,7 @@ namespace FotoVision
 				return base.ProcessCmdKey(ref msg, keyData);
 			}
 			bool flag = this.panePhotos.Active && this.panePhotos.Mode == PhotosMode.PhotoShow;
-			if (keyData == 46)
+            if (keyData == Keys.Delete)
 			{
 				if (!this.FullScreen && this.IsCommandEnabled(MainForm.Command.Delete))
 				{
@@ -2654,7 +2654,7 @@ namespace FotoVision
 			}
 			else
 			{
-				if (keyData == 113)
+                if (keyData == Keys.F2)
 				{
 					if (!this.FullScreen && this.IsCommandEnabled(MainForm.Command.Rename))
 					{
@@ -2663,7 +2663,7 @@ namespace FotoVision
 				}
 				else
 				{
-					if (keyData == 37)
+					if (keyData == Keys.Left)
 					{
 						if (flag)
 						{
@@ -2675,7 +2675,7 @@ namespace FotoVision
 					}
 					else
 					{
-						if (keyData == 39)
+                        if (keyData == Keys.Right)
 						{
 							if (flag)
 							{
@@ -2687,7 +2687,7 @@ namespace FotoVision
 						}
 						else
 						{
-							if (keyData == 27 && flag && this.FullScreen)
+                            if (keyData == Keys.Escape && flag && this.FullScreen)
 							{
 								this.FullScreen = false;
 								return true;
