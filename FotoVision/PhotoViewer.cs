@@ -113,12 +113,13 @@ namespace FotoVision
 		{
 			get
 			{
-				Bitmap result;
+				Bitmap result = null;
+                Bitmap bitmap = null;
 				try
 				{
 					Cursor.Current = Cursors.WaitCursor;
 					Global.Progress.Update(this, "Processing photo", 1, 2);
-					Bitmap bitmap = new Bitmap(this._photo.PhotoPath);
+                    bitmap = new Bitmap(this._photo.PhotoPath);
 					Global.Progress.Complete(this);
 					Cursor.Current = Cursors.Default;
 					OptimizeActions optimizeActions = new OptimizeActions();
@@ -136,7 +137,6 @@ namespace FotoVision
 				}
 				finally
 				{
-					Bitmap bitmap;
 					if (bitmap != null)
 					{
 						bitmap.Dispose();
@@ -163,6 +163,8 @@ namespace FotoVision
 		}
 		public void SavePhoto()
 		{
+            Bitmap bitmap = null;
+            Bitmap bitmap2 = null;
 			try
 			{
 				Cursor.Current = Cursors.WaitCursor;
@@ -171,8 +173,8 @@ namespace FotoVision
 				{
 					throw new ApplicationException(string.Format("The photo '{0}' is read-only.", this._photo.PhotoPath));
 				}
-				Bitmap bitmap = new Bitmap(this._photo.PhotoPath);
-				Bitmap bitmap2 = new Bitmap(bitmap);
+				bitmap = new Bitmap(this._photo.PhotoPath);
+				bitmap2 = new Bitmap(bitmap);
 				ImageFormat rawFormat = bitmap.RawFormat;
 				Global.Progress.Complete(this);
 				Cursor.Current = Cursors.Default;
@@ -197,12 +199,10 @@ namespace FotoVision
 			}
 			finally
 			{
-				Bitmap bitmap;
 				if (bitmap != null)
 				{
 					bitmap.Dispose();
 				}
-				Bitmap bitmap2;
 				if (bitmap2 != null)
 				{
 					bitmap2.Dispose();
@@ -278,11 +278,12 @@ namespace FotoVision
 		}
 		private void CreateImage()
 		{
+            Bitmap bitmap = null;
 			try
 			{
 				Cursor.Current = Cursors.WaitCursor;
 				Global.Progress.Update(this, "Loading photo", 1, 2);
-				Bitmap bitmap = new Bitmap(this._photo.PhotoPath);
+                bitmap = new Bitmap(this._photo.PhotoPath);
 				Global.Progress.Update(this, "Loading photo", 2, 2);
 				this.OnNewPhoto(this._photo.PhotoPath, bitmap, bitmap.RawFormat);
 			}
@@ -295,7 +296,6 @@ namespace FotoVision
 			}
 			finally
 			{
-				Bitmap bitmap;
 				if (bitmap != null)
 				{
 					bitmap.Dispose();

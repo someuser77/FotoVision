@@ -527,9 +527,10 @@ namespace FotoVision
 		}
 		private void GetInfo()
 		{
+            Bitmap bitmap = null;
 			try
 			{
-				Bitmap bitmap = new Bitmap(this._pathCur);
+				bitmap = new Bitmap(this._pathCur);
 				this.textCurrent.Text = this.GetPhotoInfo(this._pathCur, bitmap);
 				this.pictCurrent.Image = PhotoHelper.GetThumbnail(bitmap, this.pictCurrent.Width);
 				bitmap.Dispose();
@@ -544,7 +545,6 @@ namespace FotoVision
 			}
 			finally
 			{
-				Bitmap bitmap;
 				if (bitmap != null)
 				{
 					bitmap.Dispose();

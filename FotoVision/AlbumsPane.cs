@@ -191,9 +191,10 @@ namespace FotoVision
 			}
 			set
 			{
+                IEnumerator enumerator = null;
 				try
 				{
-					IEnumerator enumerator = this.listView.Items.GetEnumerator();
+                    enumerator = this.listView.Items.GetEnumerator();
 					while (enumerator.MoveNext())
 					{
 						ListViewItem listViewItem = (ListViewItem)enumerator.Current;
@@ -206,7 +207,6 @@ namespace FotoVision
 				}
 				finally
 				{
-					IEnumerator enumerator;
 					if (enumerator is IDisposable)
 					{
 						((IDisposable)enumerator).Dispose();
@@ -699,10 +699,12 @@ namespace FotoVision
 		{
 			checked
 			{
-				int num;
+				int num = 0;
+                IEnumerator enumerator = null;
+
 				try
 				{
-					IEnumerator enumerator = this.listView.Items.GetEnumerator();
+					enumerator = this.listView.Items.GetEnumerator();
 					while (enumerator.MoveNext())
 					{
 						ListViewItem listViewItem = (ListViewItem)enumerator.Current;
@@ -714,7 +716,6 @@ namespace FotoVision
 				}
 				finally
 				{
-					IEnumerator enumerator;
 					if (enumerator is IDisposable)
 					{
 						((IDisposable)enumerator).Dispose();
@@ -725,15 +726,18 @@ namespace FotoVision
 					return null;
 				}
 				string[] array = new string[num - 1 + 1];
+                
+                IEnumerator enumerator2 = null;
 				try
 				{
-					IEnumerator enumerator2 = this.listView.Items.GetEnumerator();
+					enumerator2 = this.listView.Items.GetEnumerator();
+                    int num2 = 0;
+
 					while (enumerator2.MoveNext())
 					{
 						ListViewItem listViewItem2 = (ListViewItem)enumerator2.Current;
 						if (listViewItem2.ImageIndex == 0)
 						{
-							int num2;
 							array[num2] = listViewItem2.Text;
 							num2++;
 						}
@@ -741,7 +745,6 @@ namespace FotoVision
 				}
 				finally
 				{
-					IEnumerator enumerator2;
 					if (enumerator2 is IDisposable)
 					{
 						((IDisposable)enumerator2).Dispose();
@@ -898,9 +901,10 @@ namespace FotoVision
 		}
 		private ListViewItem FindItem(string itemName)
 		{
+            IEnumerator enumerator = null;
 			try
 			{
-				IEnumerator enumerator = this.listView.Items.GetEnumerator();
+				enumerator = this.listView.Items.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
 					ListViewItem listViewItem = (ListViewItem)enumerator.Current;
@@ -912,7 +916,6 @@ namespace FotoVision
 			}
 			finally
 			{
-				IEnumerator enumerator;
 				if (enumerator is IDisposable)
 				{
 					((IDisposable)enumerator).Dispose();
@@ -1022,7 +1025,7 @@ namespace FotoVision
 					flag2 = FileManager.IsSupportedFile(files[num2]);
 					num2++;
 				}
-				ListViewItem listViewItem;
+				ListViewItem listViewItem = null;
 				if (flag2)
 				{
 					string text = FileManager.AddNewAlbum();

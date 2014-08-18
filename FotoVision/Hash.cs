@@ -13,6 +13,9 @@ namespace FotoVision
 		public static string ComputeFileHash(string filePath)
 		{
 			string result;
+            FileStream fileStream = null;
+            MD5CryptoServiceProvider mD5CryptoServiceProvider = null;
+
 			try
 			{
 				if (!File.Exists(filePath))
@@ -21,8 +24,8 @@ namespace FotoVision
 				}
 				else
 				{
-					FileStream fileStream = new FileStream(filePath, FileMode.Open);
-					MD5CryptoServiceProvider mD5CryptoServiceProvider = new MD5CryptoServiceProvider();
+                    fileStream = new FileStream(filePath, FileMode.Open);
+                    mD5CryptoServiceProvider = new MD5CryptoServiceProvider();
 					byte[] array = mD5CryptoServiceProvider.ComputeHash(fileStream);
 					result = Convert.ToBase64String(array);
 				}
@@ -35,12 +38,10 @@ namespace FotoVision
 			}
 			finally
 			{
-				FileStream fileStream;
 				if (fileStream != null)
 				{
 					fileStream.Close();
 				}
-				MD5CryptoServiceProvider mD5CryptoServiceProvider;
 				if (mD5CryptoServiceProvider != null)
 				{
 					mD5CryptoServiceProvider.Clear();

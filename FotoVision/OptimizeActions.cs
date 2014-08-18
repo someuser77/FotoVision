@@ -48,11 +48,11 @@ namespace FotoVision
 			checked
 			{
 				int num = Global.ActionList.Count - 1;
-				OptimizeActions.ConvertColor convertColor;
-				int percent;
-				int percent2;
-				int percent3;
-				int percent4;
+                OptimizeActions.ConvertColor convertColor = OptimizeActions.ConvertColor.None;
+				int percent = 0;
+                int percent2 = 0;
+                int percent3 = 0;
+                int percent4 = 0;
 				for (int i = arg_0F_0; i <= num; i++)
 				{
 					ActionItem at = Global.ActionList.GetAt(i);
@@ -207,6 +207,7 @@ namespace FotoVision
 		}
 		private void ApplyType(ref Bitmap image)
 		{
+            Bitmap bitmap = null;
 			if (this._curType == OptimizeActions.ActionType.None)
 			{
 				return;
@@ -220,7 +221,7 @@ namespace FotoVision
 					RotateFlipType rotateFlipType = this.GetRotateFlipType();
 					if (rotateFlipType != 0)
 					{
-						Bitmap bitmap = new Bitmap(image);
+						bitmap = new Bitmap(image);
 						PhotoHelper.Rotate(bitmap, rotateFlipType);
 						image.Dispose();
 						image = new Bitmap(bitmap);
@@ -241,7 +242,7 @@ namespace FotoVision
 					break;
 				case OptimizeActions.ActionType.Crop:
 				{
-					Bitmap bitmap = PhotoHelper.Crop(image, this._crop);
+					bitmap = PhotoHelper.Crop(image, this._crop);
 					image.Dispose();
 					image = new Bitmap(bitmap);
 					break;
@@ -255,7 +256,6 @@ namespace FotoVision
 			}
 			finally
 			{
-				Bitmap bitmap;
 				if (bitmap != null)
 				{
 					bitmap.Dispose();

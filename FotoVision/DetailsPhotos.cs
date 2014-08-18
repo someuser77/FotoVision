@@ -266,12 +266,13 @@ namespace FotoVision
 		{
 			checked
 			{
+                Image thumbnail = null;
 				try
 				{
 					if (index < this.Items.Count)
 					{
 						Photo photo = (Photo)this.Items[index];
-						Image thumbnail = PhotoHelper.GetThumbnail(photo.ThumbnailPath, 50);
+                        thumbnail = PhotoHelper.GetThumbnail(photo.ThumbnailPath, 50);
 						int num = (50 - thumbnail.Width) / 2;
 						Rectangle rectangle = new Rectangle(5 + num + 3, 5 + top + 3, thumbnail.Width, thumbnail.Height);
 						g.DrawImage(thumbnail, rectangle);
@@ -287,7 +288,6 @@ namespace FotoVision
 				}
 				finally
 				{
-					Image thumbnail;
 					if (thumbnail != null)
 					{
 						thumbnail.Dispose();

@@ -414,10 +414,11 @@ namespace FotoVision
 		{
 			checked
 			{
-				Bitmap bitmap2;
+				Bitmap bitmap2 = null;
+                Bitmap bitmap = null;
 				try
 				{
-					Bitmap bitmap = new Bitmap(imagePath);
+					bitmap = new Bitmap(imagePath);
 					float num = SingleType.FromObject(Interaction.IIf(bitmap.Width > bitmap.Height, (double)longestSide / (double)bitmap.Width, (double)longestSide / (double)bitmap.Height));
 					int num2 = (int)Math.Round((double)unchecked((float)bitmap.Width * num));
 					int num3 = (int)Math.Round((double)unchecked((float)bitmap.Height * num));
@@ -435,7 +436,6 @@ namespace FotoVision
 				}
 				finally
 				{
-					Bitmap bitmap;
 					if (bitmap != null)
 					{
 						bitmap.Dispose();
@@ -446,10 +446,11 @@ namespace FotoVision
 		}
 		public static Image GetThumbnail(string imagePath, int longestSide)
 		{
-			Image thumbnail;
+			Image thumbnail = null;
+            Bitmap bitmap = null;
 			try
 			{
-				Bitmap bitmap = new Bitmap(imagePath);
+				bitmap = new Bitmap(imagePath);
 				thumbnail = PhotoHelper.GetThumbnail(bitmap, longestSide);
 			}
 			catch (Exception expr_11)
@@ -459,7 +460,6 @@ namespace FotoVision
 			}
 			finally
 			{
-				Bitmap bitmap;
 				if (bitmap != null)
 				{
 					bitmap.Dispose();
@@ -471,7 +471,7 @@ namespace FotoVision
 		{
 			checked
 			{
-				Image thumbnailImage;
+				Image thumbnailImage = null;
 				try
 				{
 					float num = SingleType.FromObject(Interaction.IIf(image.Width > image.Height, (double)longestSide / (double)image.Width, (double)longestSide / (double)image.Height));

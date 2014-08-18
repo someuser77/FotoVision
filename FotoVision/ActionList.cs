@@ -48,9 +48,10 @@ namespace FotoVision
 		{
 			get
 			{
+                IEnumerator enumerator = null;
 				try
 				{
-					IEnumerator enumerator = this._list.GetEnumerator();
+                    enumerator = this._list.GetEnumerator();
 					while (enumerator.MoveNext())
 					{
 						ActionItem actionItem = (ActionItem)enumerator.Current;
@@ -62,7 +63,6 @@ namespace FotoVision
 				}
 				finally
 				{
-					IEnumerator enumerator;
 					if (enumerator is IDisposable)
 					{
 						((IDisposable)enumerator).Dispose();

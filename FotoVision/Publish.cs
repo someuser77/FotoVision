@@ -271,6 +271,7 @@ namespace FotoVision
 			}
 			checked
 			{
+                Bitmap bitmap = null;
 				try
 				{
 					string photoFileName = this.GetPhotoFileName(photo);
@@ -279,7 +280,7 @@ namespace FotoVision
 					PublishData publishData = new PublishData(photoFileName, photo);
 					if (StringType.StrCmp(publishData.HashCode, text2, false) != 0 || !File.Exists(text))
 					{
-						Bitmap bitmap = PhotoHelper.Resize(photo.PhotoPath, this._photoSize);
+                        bitmap = PhotoHelper.Resize(photo.PhotoPath, this._photoSize);
 						if (bitmap != null)
 						{
 							JpegQuality.Save(text, bitmap, this._quality);
@@ -301,7 +302,6 @@ namespace FotoVision
 				catch (Exception expr_F8)
 				{
 					ProjectData.SetProjectError(expr_F8);
-					Bitmap bitmap;
 					if (bitmap != null)
 					{
 						bitmap.Dispose();

@@ -497,9 +497,10 @@ namespace FotoVision
 		}
 		private void GetInfo()
 		{
+            Bitmap bitmap = null;
 			try
 			{
-				Bitmap bitmap = new Bitmap(this._path);
+				bitmap = new Bitmap(this._path);
 				this._photoInfo = default(PhotoInfo);
 				this._photoInfo.Read(this._path, bitmap, bitmap.RawFormat);
 				this._exif = new Exif();
@@ -516,7 +517,6 @@ namespace FotoVision
 			}
 			finally
 			{
-				Bitmap bitmap;
 				if (bitmap != null)
 				{
 					bitmap.Dispose();

@@ -2071,11 +2071,11 @@ namespace FotoVision
 			checked
 			{
 				int num = this.toolBar.Buttons.Count - 1;
+                int num2 = 0;
 				for (int i = arg_14_0; i <= num; i++)
 				{
                     if (this.toolBar.Buttons[i].Style != ToolBarButtonStyle.Separator)
 					{
-						int num2;
 						this.toolBar.Buttons[i].Tag = num2;
 						num2++;
 					}
@@ -2580,8 +2580,7 @@ namespace FotoVision
 				this.FullScreen = false;
 				return true;
 			}
-			bool result;
-			return result;
+			return false;
 		}
 		private bool HandleUncheckedNextPhoto()
 		{
@@ -2595,8 +2594,7 @@ namespace FotoVision
 				this.FullScreen = false;
 				return true;
 			}
-			bool result;
-			return result;
+			return false;
 		}
 		private void DisplayFullScreen(bool fullScreen)
 		{
@@ -2822,6 +2820,9 @@ namespace FotoVision
 		private void menuPrint_Click(object sender, EventArgs e)
 		{
 			bool flag = BooleanType.FromObject(Interaction.IIf(this.panePhotos.Mode == PhotosMode.Thumbnails, true, false));
+            Bitmap imageWithActions = null;
+            string tempFileName = null;
+
 			try
 			{
 				if (flag)
@@ -2837,11 +2838,11 @@ namespace FotoVision
 					else
 					{
 						Cursor.Current = Cursors.WaitCursor;
-						Bitmap imageWithActions = this.panePhotos.ImageWithActions;
+                        imageWithActions = this.panePhotos.ImageWithActions;
 						if (imageWithActions != null)
 						{
 							Cursor.Current = Cursors.WaitCursor;
-							string tempFileName = Path.GetTempFileName();
+                            tempFileName = Path.GetTempFileName();
 							imageWithActions.Save(tempFileName);
 							Cursor.Current = Cursors.Default;
 							Print.PrintFile(tempFileName);
@@ -2858,12 +2859,10 @@ namespace FotoVision
 			}
 			finally
 			{
-				Bitmap imageWithActions;
 				if (imageWithActions != null)
 				{
 					imageWithActions.Dispose();
 				}
-				string tempFileName;
 				if (tempFileName != null)
 				{
 					FileManager.DeleteFile(tempFileName);
@@ -2934,24 +2933,26 @@ namespace FotoVision
 		private void menuCopy_Click(object sender, EventArgs e)
 		{
 			Cursor.Current = Cursors.WaitCursor;
+            Bitmap bitmap = null;
+            Bitmap bitmap2 = null;
 			try
 			{
 				Cursor.Current = Cursors.WaitCursor;
 				Global.Progress.Update(this, "Copying to clipboard", 1, 2);
 				bool flag = BooleanType.FromObject(Interaction.IIf(this.panePhotos.Mode == PhotosMode.Thumbnails, true, false));
-				Bitmap bitmap2;
+                
 				if (flag)
 				{
 					Photo selectedPhoto = this.panePhotos.SelectedPhoto;
 					if (selectedPhoto != null)
 					{
-						Bitmap bitmap = new Bitmap(selectedPhoto.PhotoPath);
+						bitmap = new Bitmap(selectedPhoto.PhotoPath);
 						bitmap2 = new Bitmap(bitmap);
 					}
 				}
 				if (!flag && !this.panePhotos.PhotoDirty)
 				{
-					Bitmap bitmap = new Bitmap(this.panePhotos.PhotoInfo.Path);
+					bitmap = new Bitmap(this.panePhotos.PhotoInfo.Path);
 					bitmap2 = new Bitmap(bitmap);
 				}
 				if (!flag && this.panePhotos.PhotoDirty)
@@ -2973,7 +2974,6 @@ namespace FotoVision
 			}
 			finally
 			{
-				Bitmap bitmap;
 				if (bitmap != null)
 				{
 					bitmap.Dispose();

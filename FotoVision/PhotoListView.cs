@@ -159,13 +159,14 @@ namespace FotoVision
 		}
 		public int GetThumbnailIndex(Photo photo)
 		{
+            IEnumerator enumerator = null;
 			if (photo == null)
 			{
 				return -1;
 			}
 			try
 			{
-				IEnumerator enumerator = this.Items.GetEnumerator();
+                enumerator = this.Items.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
 					ListViewItem listViewItem = (ListViewItem)enumerator.Current;
@@ -178,7 +179,6 @@ namespace FotoVision
 			}
 			finally
 			{
-				IEnumerator enumerator;
 				if (enumerator is IDisposable)
 				{
 					((IDisposable)enumerator).Dispose();
@@ -220,13 +220,14 @@ namespace FotoVision
 		{
 			ListViewItem listViewItem = this.Items[index];
 			int height = this.Font.Height;
+            Bitmap bitmap = null;
 			checked
 			{
 				Rectangle rectangle = new Rectangle(listViewItem.Bounds.Left + (listViewItem.Bounds.Width - 120) / 2, listViewItem.Bounds.Top + 2, 120, 120);
 				try
 				{
 					Photo photo = (Photo)listViewItem.Tag;
-					Bitmap bitmap = new Bitmap(photo.ThumbnailPath);
+					bitmap = new Bitmap(photo.ThumbnailPath);
 					g.DrawImage(bitmap, rectangle.Left + (120 - bitmap.Width) / 2, rectangle.Top + (120 - bitmap.Height) / 2, bitmap.Width, bitmap.Height);
 				}
 				catch (Exception expr_AF)
@@ -236,7 +237,6 @@ namespace FotoVision
 				}
 				finally
 				{
-					Bitmap bitmap;
 					if (bitmap != null)
 					{
 						bitmap.Dispose();

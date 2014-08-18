@@ -145,12 +145,14 @@ namespace FotoVision
 		public static bool CreateThumbnail(string photoPath, string thumbnailFolder)
 		{
 			bool result = false;
+            Image thumbnail = null;
+
 			try
 			{
 				string text = Path.Combine(thumbnailFolder, Photo.GetThumbnailName(photoPath));
 				if (!File.Exists(text))
 				{
-					Image thumbnail = PhotoHelper.GetThumbnail(photoPath, 120);
+                    thumbnail = PhotoHelper.GetThumbnail(photoPath, 120);
 					thumbnail.Save(text, ImageFormat.Jpeg);
 					result = true;
 				}
@@ -162,7 +164,6 @@ namespace FotoVision
 			}
 			finally
 			{
-				Image thumbnail;
 				if (thumbnail != null)
 				{
 					thumbnail.Dispose();

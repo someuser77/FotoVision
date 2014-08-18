@@ -408,12 +408,12 @@ namespace FotoVision
 				this.UpdateMessageEvent(this, new UploadMessageEventArgs("Processing photo " + photoName, true, false));
 			}
 			PhotoHashCode photoHashCode = Publish.GetPhotoHashCode(albumName, photoName);
-			byte[] array;
+			byte[] array = null;
 			if (hashCode == null || StringType.StrCmp(photoHashCode.ImageHash, hashCode.ImageHash, false) != 0)
 			{
 				array = this.ReadFile(photoHashCode.ImageFileName);
 			}
-			byte[] array2;
+			byte[] array2 = null;
 			if (hashCode == null || StringType.StrCmp(photoHashCode.MetaDataHash, hashCode.MetaDataHash, false) != 0)
 			{
 				array2 = this.ReadFile(photoHashCode.MetaDataFileName);
@@ -452,7 +452,7 @@ namespace FotoVision
 				this.UpdateMessageEvent(this, new UploadMessageEventArgs("Processing album " + albumName, true, false));
 			}
 			AlbumHashCode albumHashCode = Publish.GetAlbumHashCode(albumName);
-			byte[] array;
+			byte[] array = null;
 			if (hashCode == null || StringType.StrCmp(albumHashCode.MetaDataHash, hashCode.MetaDataHash, false) != 0)
 			{
 				array = this.ReadFile(albumHashCode.MetaDataFileName);
@@ -493,23 +493,24 @@ namespace FotoVision
 			checked
 			{
 				byte[] result;
+                BinaryReader binaryReader = null;
+                FileStream fileStream = null;
 				try
 				{
 					FileInfo fileInfo = new FileInfo(filePath);
 					byte[] array = new byte[(int)fileInfo.Length + 1];
-					FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-					BinaryReader binaryReader = new BinaryReader(fileStream);
+                    fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+					binaryReader = new BinaryReader(fileStream);
 					array = binaryReader.ReadBytes((int)fileInfo.Length);
 					result = array;
 				}
 				finally
 				{
-					BinaryReader binaryReader;
 					if (binaryReader != null)
 					{
 						binaryReader.Close();
 					}
-					FileStream fileStream;
+
 					if (fileStream != null)
 					{
 						fileStream.Close();

@@ -819,9 +819,10 @@ namespace FotoVision
 		}
 		public void SelectAll()
 		{
+            IEnumerator enumerator = null;
 			try
 			{
-				IEnumerator enumerator = this.listView.Items.GetEnumerator();
+                enumerator = this.listView.Items.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
 					ListViewItem listViewItem = (ListViewItem)enumerator.Current;
@@ -830,7 +831,6 @@ namespace FotoVision
 			}
 			finally
 			{
-				IEnumerator enumerator;
 				if (enumerator is IDisposable)
 				{
 					((IDisposable)enumerator).Dispose();
@@ -840,9 +840,10 @@ namespace FotoVision
 		}
 		public void UnselectAll()
 		{
+            IEnumerator enumerator = null;
 			try
 			{
-				IEnumerator enumerator = this.listView.Items.GetEnumerator();
+                enumerator = this.listView.Items.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
 					ListViewItem listViewItem = (ListViewItem)enumerator.Current;
@@ -851,7 +852,6 @@ namespace FotoVision
 			}
 			finally
 			{
-				IEnumerator enumerator;
 				if (enumerator is IDisposable)
 				{
 					((IDisposable)enumerator).Dispose();
@@ -949,9 +949,10 @@ namespace FotoVision
 		}
 		public void UpdateMetadata(Photo photo)
 		{
+            IEnumerator enumerator = null;
 			try
 			{
-				IEnumerator enumerator = this.listView.Items.GetEnumerator();
+                enumerator = this.listView.Items.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
 					ListViewItem listViewItem = (ListViewItem)enumerator.Current;
@@ -970,7 +971,6 @@ namespace FotoVision
 			}
 			finally
 			{
-				IEnumerator enumerator;
 				if (enumerator is IDisposable)
 				{
 					((IDisposable)enumerator).Dispose();
@@ -1170,13 +1170,16 @@ namespace FotoVision
 		{
 			checked
 			{
+                IEnumerator enumerator = null;
+                Bitmap bitmap = null;
+                Bitmap bitmap2 = null;
 				try
 				{
 					int num = 1;
 					string message = string.Format("Processing photo{0}", RuntimeHelpers.GetObjectValue(Interaction.IIf(this.listView.SelectedItems.Count == 1, "", "s")));
 					try
 					{
-						IEnumerator enumerator = this.listView.SelectedItems.GetEnumerator();
+                        enumerator = this.listView.SelectedItems.GetEnumerator();
 						while (enumerator.MoveNext())
 						{
 							ListViewItem listViewItem = (ListViewItem)enumerator.Current;
@@ -1203,8 +1206,8 @@ namespace FotoVision
 							{
 								throw new ApplicationException(string.Format("The photo '{0}' is read-only.", photo.PhotoPath));
 							}
-							Bitmap bitmap = new Bitmap(photo.PhotoPath);
-							Bitmap bitmap2 = new Bitmap(bitmap);
+							bitmap = new Bitmap(photo.PhotoPath);
+							bitmap2 = new Bitmap(bitmap);
 							ImageFormat rawFormat = bitmap.RawFormat;
 							bitmap2.RotateFlip(rotateFlipType);
 							if (Global.Settings.GetBool(SettingKey.MaintainExifInfo))
@@ -1220,7 +1223,6 @@ namespace FotoVision
 					}
 					finally
 					{
-						IEnumerator enumerator;
 						if (enumerator is IDisposable)
 						{
 							((IDisposable)enumerator).Dispose();
@@ -1231,12 +1233,12 @@ namespace FotoVision
 				{
 					ProjectData.SetProjectError(expr_15D);
 					Exception ex = expr_15D;
-					Bitmap bitmap;
+					
 					if (bitmap != null)
 					{
 						bitmap.Dispose();
 					}
-					Bitmap bitmap2;
+
 					if (bitmap2 != null)
 					{
 						bitmap2.Dispose();
