@@ -7,7 +7,6 @@ using System.Security.Permissions;
 [assembly: AssemblyCompany("Vertigo Software, Inc.")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyDescription("FotoVision desktop application, share photos sample.")]
-[assembly: AssemblyKeyFile("..\\..\\FotoVision.snk")]
 [assembly: AssemblyProduct("FotoVision")]
 [assembly: AssemblyTitle("FotoVision")]
 [assembly: AssemblyTrademark("")]
