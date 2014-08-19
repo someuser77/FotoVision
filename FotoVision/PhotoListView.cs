@@ -216,7 +216,7 @@ namespace FotoVision
 			}
 			base.OnAfterLabelEdit(e);
 		}
-		private void DrawItem(Graphics g, int index)
+		private void DrawPhotoListViewItem(Graphics g, int index)
 		{
 			ListViewItem listViewItem = this.Items[index];
 			int height = this.Font.Height;
@@ -302,7 +302,7 @@ namespace FotoVision
 						Graphics graphics = Graphics.FromHdc(nMCUSTOMDRAW.hdc);
 						try
 						{
-							this.DrawItem(graphics, nMCUSTOMDRAW.dwItemSpec);
+                            this.DrawPhotoListViewItem(graphics, nMCUSTOMDRAW.dwItemSpec);
 							result = true;
 							return result;
 						}
