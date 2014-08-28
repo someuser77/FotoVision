@@ -223,7 +223,7 @@ namespace FotoVision
             this._format.FormatFlags = StringFormatFlags.NoWrap;
 			this._format.LineAlignment = StringAlignment.Center;
             this._format.Trimming = System.Drawing.StringTrimming.EllipsisCharacter;
-            this.Font = new Font("arial", 9f, GraphicsUnit.Display);
+            this.Font = new Font("arial", 9f, FontStyle.Bold);
 			this.ActiveTextColor = this._colorActiveText;
 			this.InactiveTextColor = this._colorInactiveText;
 			this.CreateGradientBrushes();
