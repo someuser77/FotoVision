@@ -59,7 +59,7 @@ namespace FotoVision
 		}
 		public void SetValue(SettingKey key, object value)
 		{
-            this._list.Add(key.ToString(), RuntimeHelpers.GetObjectValue(value));
+            this._list[key.ToString()] = RuntimeHelpers.GetObjectValue(value);
 			if (this._autoWrite)
 			{
 				this.Write();
@@ -106,7 +106,7 @@ namespace FotoVision
 					{
                         if (xmlTextReader.NodeType == XmlNodeType.Element & StringType.StrCmp(xmlTextReader.Name, "add", false) == 0)
 						{
-							this._list.Add(xmlTextReader.GetAttribute("key"), xmlTextReader.GetAttribute("value"));
+							this._list[xmlTextReader.GetAttribute("key")] = xmlTextReader.GetAttribute("value");
 						}
 					}
 					xmlTextReader.Close();
